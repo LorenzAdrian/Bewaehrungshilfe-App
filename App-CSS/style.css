@@ -1,0 +1,94 @@
+.gesamtcontainer{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr) ;
+    /*----------*/
+    grid-template-rows: 150px 110px 50px 500px;
+    /*----------Höhe  1.Reihe 2.R   3.R  4.R---*/
+    grid-gap: 10px;
+    grid-template-areas: 
+        "lo lo ko ko ko ko ko ko ko ko ko ko "
+        "lo lo m m m m m m m m m m"
+        "up up up up up up ut ut ut ut ut ut"
+        "l l l l l l k k k k k k"
+}
+
+.logobereich{
+    grid-area: lo; 
+    background-image: url(img/1000-Berliner_Baer.svg.png);
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.kopfbereich{
+    grid-area: ko;
+    background:lightblue;
+    text-align: center;
+    line-height:150px;
+    font-size: 90px;
+    font-family: 'Anton', sans-serif;
+    color: #466675;
+}
+
+.menu{
+    grid-area: m;
+    background: pink;
+}
+
+.menu img{
+    height: 80px;
+    width: 80px;
+    color: #466675;
+}
+
+.menu li{
+    list-style: none;
+    float: right;
+    padding: 10px;
+}
+
+.menu li a{
+    font-family: 'Anton', sans-serif;
+    text-decoration: none;
+    color: #466675;
+    text-align: center;
+}
+
+.uberschriftProband{
+    grid-area: up;
+    text-align: center;
+    background: yellow;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    color: #466675;
+}
+
+.uberschriftTermin{
+    grid-area: ut;
+    text-align: center;
+    background: grey;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    color: #466675;
+}
+
+.listenbereich{
+    grid-area: l;
+    background: red;
+    text-align: center;
+    line-height: 150px;
+    font-size: 50px;
+    font-family: 'Anton', sans-serif;
+    color: #466675;
+}
+
+.kalenderbereich{
+    grid-area: k;
+    background: blue;
+    text-align: center;
+    line-height: 150px;
+    font-size: 50px;
+    font-family: 'Anton', sans-serif;
+    color: #466675;
+}
