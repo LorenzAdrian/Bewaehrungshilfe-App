@@ -1,0 +1,1 @@
+Der FullCalendar "packages"-Ordner muss in diesem Ordner abgelegt werden.
