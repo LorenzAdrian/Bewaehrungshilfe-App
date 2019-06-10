@@ -2,14 +2,16 @@ body{
     box-sizing: border-box;
     background: steelblue;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 100px 100px 100px 500px;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 100px 100px 100px 500px 50px 50px;
     grid-gap: 10px;
-    grid-template-areas: 
+    /*grid-template-areas:
         "lo ha "
         "me me "
         "ub1 ub2"
         "ra ca"
+        "bu ca"
+        "kn ca" */
 }
 
 .logo{
@@ -21,6 +23,8 @@ body{
     background-color:ghostwhite;
     border: 3px white solid;
     border-radius: 150px 400px ;
+    grid-column: 1/2;
+    grid-row:1 / 2;
 }
 
 .hallobox{
@@ -36,6 +40,8 @@ body{
     color: ghostwhite;
     line-height: 100px;
     box-sizing: border-box;
+    grid-column:2/3;
+    grid-row:1 / 2;
 }
 
 .menu{
@@ -44,6 +50,8 @@ body{
     border: 3px white solid;
     border-radius: 150px 400px;
     box-sizing: border-box;
+    grid-column:1/4;
+    grid-row:2 / 3;
 }
 
 .menu img{
@@ -79,12 +87,14 @@ body{
     background:steelblue;
     font-size: 40px;
     text-transform: uppercase;
-    text-decoration: overline underline; 
+    text-decoration: overline underline;
     font-family: 'Raleway', sans-serif;
     color: floralwhite;
     text-align: center;
     line-height: 100px;
-    box-sizing: border-box,
+    box-sizing: border-box;
+    grid-column: 1 / 2;
+    grid-row:3 / 4;
 }
 
 .uberschrift2{
@@ -100,6 +110,8 @@ body{
     padding-left: 30px;
     line-height: 100px;
     box-sizing: border-box;
+    grid-column: 3 / 4;
+    grid-row:3 / 4;
 }
 
 .rahmen{
@@ -110,6 +122,8 @@ body{
     box-sizing: border-box;
     font-size: 30px;
     text-transform: uppercase;
+    grid-column: 1 / 2;
+    grid-row:4 / 5;
 }
 
 .rahmen a{
@@ -142,8 +156,13 @@ body{
     border-radius: 50px;
     position: absolute;
 }
+.calendar{
+  grid-column: 3 / 4;
+  grid-row:4 / 5;
+}
 
 .button{
+    grid-area: bu;
     background: floralwhite;
     color: steelblue;
     text-align: center;
@@ -154,13 +173,22 @@ body{
     font-size: 30px;
     border-radius: 50px;
     line-height: 50px;
+    grid-column: 1 / 2;
+    grid-row:5 / 6;
 }
 
-
-
-
-
-
-
-
-
+.knopf{
+    grid-area: kn;
+    background: floralwhite;
+    color: steelblue;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Anton', sans-serif;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 50px;
+    line-height: 50px;
+    grid-column: 1 / 2;
+    grid-row:6 / 7;
+}
