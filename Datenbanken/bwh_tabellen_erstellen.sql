@@ -2,7 +2,7 @@ CREATE TABLE Standort(
 	SID int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	Straße varchar(50) NOT NULL,
 	Hausnr varchar(5) NOT NULL,
-	PLZ int(5) NOT NULL,
+	PLZ varchar(5) NOT NULL,
 	Ort varchar(30) NOT NULL
 );
 
@@ -20,7 +20,7 @@ CREATE TABLE Betreuer(
 	UserName varchar(30) NOT NULL UNIQUE,
 	Passwort varchar(100) NOT NULL UNIQUE,
 	Email varchar(30) NOT NULL UNIQUE,
-	TelNr int(15) NOT NULL UNIQUE,
+	TelNr varchar(20) NOT NULL UNIQUE,
 	Stellenzeichen varchar(30),
 	Zimmernr varchar(10) NOT NULL,
 	Vertretung int(30) NULL,
@@ -36,7 +36,7 @@ CREATE TABLE Proband(
 	UserName varchar(30) NOT NULL UNIQUE,
 	Passwort varchar(100) NOT NULL UNIQUE,
 	Email varchar(30) NOT NULL UNIQUE,
-	TelNr int(15) NOT NULL UNIQUE,
+	TelNr varchar(20) NOT NULL UNIQUE,
 	Aktenzeichen varchar(10),
 	Betreuungsanfang date,
 	Betreuungsende date,
@@ -71,7 +71,7 @@ CREATE TABLE Nachricht(
     Status varchar(20) NOT NULL,
 	BID int(30) NULL,
 	PID int(30) NULL,
-	BSender boolean NOT NULL,
+	BSender tinyint(1) NOT NULL,
 	FOREIGN KEY(BID) REFERENCES Betreuer(BID),
 	FOREIGN KEY(PID) REFERENCES Proband(PID),
     FOREIGN KEY(BezugID) REFERENCES Nachricht(NID) 
