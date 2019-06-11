@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Startseite</title>
+
+    <!--Stylesheet, das sich auf das style.css verweist-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Spracheinstellung----->
+    <meta lang="de" charset="utf-8">
+
+    <!--Schriftart aus google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="gesamtcontainer">
+
+        <div class="logobereich"></div>
+
+        <div class="kopfbereich">Hallo ...</div>
+
+        <div class="menu">
+
+            <li><a href ="https://cssgridgarden.com/#de"><img src="img/search.svg" style="font-size: 40px">Suchen</a>
+            </li>
+
+            <li><a href ="#"><img src="img/user-circle.svg" style="background-size:40px">Mein Bereich</a>
+            </li>
+
+        </div>
+
+        <div class="uberschriftProband">Meine Probanden</div>
+
+        <div class="uberschriftTermin">Meine Termine
+        </div>
+
+        <div class="listenbereich">Liste</div>
+
+        <div class="kalenderbereich">Kalender</div>
+
+    </div>
+
+</body>
+
+</html>
