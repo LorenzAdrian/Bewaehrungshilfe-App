@@ -4,14 +4,15 @@
 <style>
 
   <link rel="stylesheet" href="style.css">
-  
-    
+
+
 </style>
   </head>
   <body>
-  
+
+
     <div id="testid">
-   
+
 <?php
 
 //if(isset($_POST['list-prob'])) {
@@ -53,7 +54,8 @@ if (empty($testarray)) {
  foreach($testarray as $testtest){
 // echo "<a href=\"https://www.google.de\" target=\"blank\">".$testtest['Vorname']." ".$testtest['Nachname']."</a><br></br>";
 echo "<tr>";
-echo "<td> <a href=\"https://www.google.de\" target=\"blank\">".$testtest['vorname']." ".$testtest['nachname']."</td>";
+echo "<td> <a href=\"test1.php\" target=\"blank\">".$testtest['Vorname']." ".$testtest['Nachname']."</td>";
+
 //echo "<td>".$testtest['Nachname']."</td>";
 echo "</tr>";
  }
@@ -79,6 +81,7 @@ catch(PDOException $e)
     {
     echo "Connection failed: " . $e->getMessage();
     }
+
 //  }
 //  else{
 
