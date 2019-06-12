@@ -2,3 +2,5 @@ Alle Dateien in einem Ordner zusammenfassen und diesen dann nach htdocs in XAMPP
 
 Hier sind die Login-/ und die Registrieren-Funktion ohne JQuery & AJAX. 
 Für die Login-Funktion mit JQuery & AJAX siehe den Ordner Login_Registrierung(JQuery).
+
+Pfade und Datenbankname müssen ggf. angepasst werden.
