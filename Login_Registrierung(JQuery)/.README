@@ -1,1 +1,4 @@
+Die Dateien müssen in einen Ordner kopieren und dann in den localhost-Ordner auf XAMPP verschieben.
 
+!!!ACHTUNG: Nur Login funktioniert, Registrierung ist noch fehlerhaft. Zum Registrieren (mit gehashtem Passwort)
+siehe den Ordner Login_Registrierung in GitHub.
