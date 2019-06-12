@@ -2,3 +2,5 @@ Alle Dateien in einem Ordner zusammenfassen und diesen dann nach htdocs in XAMPP
 
 !!!ACHTUNG: Nur Login funktioniert, Registrierung ist noch fehlerhaft. Zum Registrieren (mit gehashtem Passwort)
 siehe den Ordner Login_Registrierung in GitHub.
+
+Pfade und Datenbankname müssen ggf. angepasst werden.
