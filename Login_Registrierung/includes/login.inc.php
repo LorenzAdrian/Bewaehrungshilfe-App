@@ -5,7 +5,10 @@ if(isset($_POST['login'])) {
 
 	require 'dbh.inc.php';
 
-	$rolle = $_POST['rolle'];
+	$rolle = "proband";
+	if (isset($_POST['rolle'])) {
+		$rolle = "betreuer";
+	}
 	$mailuid = $_POST['mailuid'];
 	$passwort = $_POST['pwd'];
 
