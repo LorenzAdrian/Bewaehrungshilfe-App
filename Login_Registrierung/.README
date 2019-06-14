@@ -4,3 +4,8 @@ Hier sind die Login-/ und die Registrieren-Funktion ohne JQuery & AJAX.
 Für die Login-Funktion mit JQuery & AJAX siehe den Ordner Login_Registrierung(JQuery).
 
 Pfade und Datenbankname müssen ggf. angepasst werden.
+
+UPDATE 14.06.: 
+Anpassungen vorgenommen.
+Proband ist jetzt Default, Betreuer muss extra Checkbox anklicken.
+Registrierung ist vorerst auskommentiert, da noch nicht nötig.
