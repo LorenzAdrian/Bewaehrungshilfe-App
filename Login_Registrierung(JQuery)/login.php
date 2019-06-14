@@ -10,11 +10,14 @@
 
 	<body>
 		<main>
+			<div>
+				<h1>Login</h1>
+			</div>
 			<div id="message"></div>
-			<br>			
-			<input type="radio" name="rolle" id="betreuer" value="betreuer" checked>Betreuer
+			<br>	
+			<span>Sind Sie ein Betreuer?</span>
+			<input type="checkbox" name="rolle" id="betreuer" value="betreuer">
 			<br> 
-			<input type="radio" name="rolle" id="proband" value="proband">Proband
 			<br>
 			<div id="error"></div>
 			<input type="text" name="mailuid" id="mailuid" placeholder="Username/Email">				
@@ -22,12 +25,14 @@
 			<br>
 			<br>
 			<input type="button"  name="login" id="login_btn" value="Login">		
+			<!--
 			<br>
 			<br>			
 			<div>
 				Neu hier?
 				<a href="signupRolle.php">Registrierung</a>
 			</div>
+			-->
 		</main>
 	</body>
 </html>
