@@ -53,10 +53,8 @@ session_start();
 						//Login Felder, falls noch kein Login vorgenommen wurde
 						else {
 							echo  '<form class="" action="includes/login.inc.php" method="post">
-								<input type="radio" name="rolle" value="betreuer" checked>Betreuer
+								<input type="checkbox" name="rolle" value="betreuer">Betreuer
 								<br> 
-								<input type="radio" name="rolle" value="proband">Proband
-								<br>
 								<input type="text" name="mailuid" placeholder="Username/Email">
 								<input type="password" name="pwd" placeholder="Passwort">
 								<button type="submit" name="login">Login</button>
