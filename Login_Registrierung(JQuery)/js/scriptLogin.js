@@ -2,7 +2,13 @@ $(document).ready(function(){
 	
 	//Funktion für Login Button
     $("#login_btn").click(function(){
-		var rolle = $('input[name=rolle]:checked').val();
+		var rolle;
+		if ($("#betreuer").is(":checked")) {
+			rolle = "betreuer";
+		}
+		else {
+			rolle = "proband";
+		}
         var mailuid = $("#mailuid").val().trim();
         var passwort = $("#passwort").val().trim();
 		
@@ -36,6 +42,9 @@ $(document).ready(function(){
     });
 });	
 	
+
+
+
 
 
 
