@@ -4,3 +4,8 @@ Alle Dateien in einem Ordner zusammenfassen und diesen dann nach htdocs in XAMPP
 siehe den Ordner Login_Registrierung in GitHub.
 
 Pfade und Datenbankname müssen ggf. angepasst werden.
+
+UPDATE 14.06.: 
+Anpassungen vorgenommen.
+Proband ist jetzt Default, Betreuer muss extra Checkbox anklicken.
+Registrierung ist vorerst auskommentiert, da noch nicht nötig.
