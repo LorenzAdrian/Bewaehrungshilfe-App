@@ -22,7 +22,7 @@ if(isset($_POST['but_logout'])){
     <!--Pfad zu dem Ordner, wo sich die Logos befinden-->
     <link rel="stylesheet" href="file:///Users/adrianschuetz/Desktop/site/css/fontawesome.min.css">
     <!--- Pfad zur style.css--------------------------->    
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <!------------Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed&display=swap" rel="stylesheet">
     <!-- Stylesheet für Icons-->
