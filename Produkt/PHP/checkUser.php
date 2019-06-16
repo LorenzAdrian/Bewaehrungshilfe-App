@@ -1,5 +1,5 @@
 <?php
-require 'includes/dbh.inc.php';
+require 'dbh.inc.php';
 
 $rolle;
 if($_POST['rolle']=='betreuer') {
@@ -46,12 +46,12 @@ else {
 			echo 1;
 		}
 		else {
-			//header("Location:../Login.php?wrongpswd");
+			//header("Location:../login.php?wrongpswd");
 			echo 0;
 		}
 	}
 	else {
-		//header("Location:../Login.php?nouser");
+		//header("Location:../login.php?nouser");
 		echo 0;
 	}
 }
