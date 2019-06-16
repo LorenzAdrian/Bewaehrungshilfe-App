@@ -29,7 +29,7 @@ if(isset($_POST['signup-submit'])) {
 		if (empty($username) || empty($email) || empty($passwort) || empty($passwortRepeat) 
 					|| empty($vorname) || empty($nachname) || empty($telnr) || empty($zimmernr) || empty($sz) 
 					|| empty($ag)){
-			header("Location: ../signup1.php?error=emptyfields");
+			header("Location: ../signup.php?error=emptyfields");
 			exit();
 		}
 	}
@@ -37,37 +37,37 @@ if(isset($_POST['signup-submit'])) {
 		if (empty($username) || empty($email) || empty($passwort) || empty($passwortRepeat) 
 					|| empty($vorname) || empty($nachname) || empty($telnr) || empty($az) || empty($ende) 
 					|| empty($betreuer)){
-			header("Location: ../signup1.php?error=emptyfields");
+			header("Location: ../signup.php?error=emptyfields");
 			exit();
 		}
 	}
 	else{
-		header("Location: ../signup1.php?error=emptyfieldsnorole");
+		header("Location: ../signup.php?error=emptyfieldsnorole");
 		exit;
 	}
 	  
 	//Check, ob E-Mail/Username im richtigen Format eingegeben wurde.  
 	if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-		header("Location: ../signup1.php?error=invalidmailuid&uid");
+		header("Location: ../signup.php?error=invalidmailuid&uid");
 		exit();
 	}
 	elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		header("Location: ../signup1.php?error=invalidmail&uid".$username);
+		header("Location: ../signup.php?error=invalidmail&uid".$username);
 		exit();
 	}
 	elseif (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-		header("Location: ../signup1.php?error=invalidusername&mail".$email);
+		header("Location: ../signup.php?error=invalidusername&mail".$email);
 		exit();
 	}
 	elseif ($passwort !== $passwortRepeat) {
-		header("Location: ../signup1.php?error=passwortcheck&uid=".$username."&mail=".$email);
+		header("Location: ../signup.php?error=passwortcheck&uid=".$username."&mail=".$email);
 		exit();
 	}
 	else{
 		$sql = "SELECT username FROM " .$rolle. " WHERE username = ?";
 		$stmt = mysqli_stmt_init($conn);
 		if(!mysqli_stmt_prepare($stmt, $sql)){
-			header("Location: ../signup1.php?error=sqlerror");
+			header("Location: ../signup.php?error=sqlerror");
 			exit();
 		}
 		
@@ -80,7 +80,7 @@ if(isset($_POST['signup-submit'])) {
 			
 			//Check, ob Username schon vergeben.
 			if ($resultCheck > 0) {
-				header("Location: ../signup1.php?error=usertaken&mail=".$email);
+				header("Location: ../signup.php?error=usertaken&mail=".$email);
 				exit();
 			}
 			 
@@ -97,7 +97,7 @@ if(isset($_POST['signup-submit'])) {
 				$stmt = mysqli_stmt_init($conn);
 				if (!mysqli_stmt_prepare($stmt, $sql)) {
 					//trigger_error(mysqli_error($conn), E_USER_ERROR);
-					header("Location: ../signup1.php?error=sqlerror");
+					header("Location: ../signup.php?error=sqlerror");
 					exit();
 				}
 				else {
@@ -112,7 +112,7 @@ if(isset($_POST['signup-submit'])) {
 								$telnr, $zimmernr, $sz, $vertretung, $ag);
 					}
 					mysqli_stmt_execute($stmt);
-					header("Location: ../signup1.php?signup=success".$username);
+					header("Location: ../login.php?signup=success".$username);
 					exit();
 				}
 			}
@@ -123,7 +123,7 @@ if(isset($_POST['signup-submit'])) {
 				$stmt = mysqli_stmt_init($conn);
 				if (!mysqli_stmt_prepare($stmt, $sql)) {
 					//trigger_error(mysqli_error($conn), E_USER_ERROR);
-					header("Location: ../signup1.php?error=sqlerror2");
+					header("Location: ../signup.php?error=sqlerror2");
 					exit();
 				}
 				else {
@@ -132,7 +132,7 @@ if(isset($_POST['signup-submit'])) {
 					mysqli_stmt_bind_param($stmt, "sssssissi", $vorname, $nachname, $email, $username, $hashedPwd, 
 					$telnr, $az, $ende, $betreuer);
 					mysqli_stmt_execute($stmt);
-					header("Location: ../signup1.php?signup=success");
+					header("Location: ../login.php?signup=success.$username");
 					exit();
 				}
 			}
@@ -144,6 +144,6 @@ if(isset($_POST['signup-submit'])) {
 
 }
 else {
-	header("Location:../signup1.php");
+	header("Location:../signup.php");
 	exit();
 }
