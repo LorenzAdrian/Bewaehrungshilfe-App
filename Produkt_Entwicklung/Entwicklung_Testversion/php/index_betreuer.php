@@ -2,7 +2,10 @@
 include '../includes/events_aktualisieren.inc.php';
 
 include 'dbh.inc.php';
-session_start();
+if(!isset($_SESSION))
+{
+      session_start();
+}
 
 // Check user login or not
 if(!isset($_SESSION['userId'])){
@@ -71,7 +74,7 @@ if(isset($_POST['but_logout'])){
 <div class="liste">
     <div class="rahmen">
     <?php include'probliste.php';?>
-  
+
     </div>
 </div>
 
