@@ -1,8 +1,3 @@
-<?php
-//require "header_Betreuer.php";
-//include ("includes/login.inc.php");
- ?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -30,19 +25,16 @@
 			<br>			
 			<div>
 				Neu hier?
-				<a href="signupcheck.php">Registrierung (nur zur befüllung der Datenbank, wegen gehashtem Passwort)</a> 
-				<!-- <a href="signupRolle.php">  -->
+				<a href="signupcheck.php">Registrierung (nur zur Befüllung der Datenbank, wegen gehashtem Passwort)</a> 
+				<!-- <a href="signupRolle.php"> für JQuery Registrierung  -->
 			</div>
 			
 		</main>
 	</body>
 </html>
 
-<script src="js/jquery-3.4.1.js"></script>
-<script src="js/scriptLogin.js"></script>
+<script src="../JS/jquery-3.4.1.js"></script>
+<script src="../JS/scriptLogin.js"></script>
 
-<?php
-//require 'footer.php';
-?>
 
 
