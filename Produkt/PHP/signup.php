@@ -1,7 +1,3 @@
-<?php
-require 'header_Betreuer.php';
- ?>
- 
  <?php
  //Check, ob die vorherige Seite bearbeitet wurde.
 if(isset($_POST['signupcheck-submit'])) {
@@ -94,6 +90,3 @@ if(isset($_POST['signupcheck-submit'])) {
 }
 ?>
 
-<?php
-require 'footer.php';
-?>
