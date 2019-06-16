@@ -112,7 +112,7 @@ if(isset($_POST['signup-submit'])) {
 								$telnr, $zimmernr, $sz, $vertretung, $ag);
 					}
 					mysqli_stmt_execute($stmt);
-					header("Location: ../login.php?signup=success".$username);
+					header("Location: login.php?signup=success".$username);
 					exit();
 				}
 			}
@@ -132,7 +132,7 @@ if(isset($_POST['signup-submit'])) {
 					mysqli_stmt_bind_param($stmt, "sssssissi", $vorname, $nachname, $email, $username, $hashedPwd, 
 					$telnr, $az, $ende, $betreuer);
 					mysqli_stmt_execute($stmt);
-					header("Location: ../login.php?signup=success.$username");
+					header("Location: login.php?signup=success.$username");
 					exit();
 				}
 			}
