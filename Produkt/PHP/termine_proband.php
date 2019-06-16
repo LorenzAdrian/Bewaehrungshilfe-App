@@ -34,7 +34,7 @@ if(isset($_POST['but_logout'])){
     
 <div class="willkommencontainer">
     <a href="index_proband.php">
-		<img src="IMG/Logo.png" alt="Logo" height="130px">
+		<img src="../IMG/Logo.png" alt="Logo" height="130px">
 	</a>
     <h1>Hallo <?php echo $_SESSION["username"]; ?></h1> 
 	
