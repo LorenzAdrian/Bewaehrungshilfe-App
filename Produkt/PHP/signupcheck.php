@@ -1,7 +1,3 @@
-<?php
-require 'header_Betreuer.php';
-?>
-
 <!-- Check, ob ein Proband oder ein Betreuer (in der Datenbank) registriert werden soll.-->
 <!DOCTYPE html>
 <html>
@@ -26,7 +22,4 @@ require 'header_Betreuer.php';
 	</body>
 </html>
 
-<?php
-require 'footer.php';
-?>
 
