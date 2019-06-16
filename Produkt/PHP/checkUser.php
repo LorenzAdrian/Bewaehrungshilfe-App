@@ -42,16 +42,16 @@ else {
 				$_SESSION['userId'] = $row['PID'];
 			}
 			$_SESSION['username'] = $row['Username'];
-			//header("Location:../Login.php?login=success");
+			//header("Location: login.php?login=success");
 			echo 1;
 		}
 		else {
-			//header("Location:../login.php?wrongpswd");
+			//header("Location: login.php?wrongpswd");
 			echo 0;
 		}
 	}
 	else {
-		//header("Location:../login.php?nouser");
+		//header("Location: login.php?nouser");
 		echo 0;
 	}
 }
