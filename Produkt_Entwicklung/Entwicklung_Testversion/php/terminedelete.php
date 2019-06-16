@@ -19,7 +19,7 @@
       <input type="submit" value="Termin löschen">
     </form>
 
-    <a href="Startseite.php">Startseite</a>
+    <a href="index_betreuer.php">Startseite</a>
 
   </body>
 

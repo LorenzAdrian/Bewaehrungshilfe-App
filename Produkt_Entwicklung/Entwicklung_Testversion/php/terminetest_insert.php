@@ -55,7 +55,7 @@ if (mysqli_stmt_prepare($stmt, $sql)) {
   echo "</form>";
 
   echo "<ul>";
-  echo "<li><a href=\"Startseite.php\">Startseite</a></li>";
+  echo "<li><a href=\"index_betreuer.php\">Startseite</a></li>";
   //echo "<li><a href=\"index.html\">Index</a></li>";
   echo "</ul>";
 } else {

@@ -3,7 +3,7 @@ $(document).ready(function(){
 	//Funktion für Login Button
     $("#login_btn").click(function(){
 		var rolle;
-		if ($("#betreuer").is(":checked")) {
+		if ($("#betreuer").prop("checked")) {
 			rolle = "betreuer";
 		}
 		else {
@@ -14,20 +14,21 @@ $(document).ready(function(){
 
         if( mailuid != "" && passwort != "" ){
             $.ajax({
-                url:'../php/checkUser.php',
+                url:'checkUser.php',
                 type:'post',
                 data:{mailuid:mailuid,passwort:passwort,rolle:rolle},
                 success:function(response){
                     var msg = "";
                     if(response == 1){
 						if (rolle == 'betreuer'){
-							window.location = "../Startseite_Betreuer/index_betreuer.php"; //Link zur Startseite muss hier rein!
+							window.location = "../php/index_betreuer.php"; //Link zur Startseite muss hier rein!
 						}
 						else if (rolle == 'proband'){
-							window.location = "../Startseite_Proband/index_proband.php"; //Link zur Startseite muss hier rein!
+							window.location = "../php/index_proband.php"; //Link zur Startseite muss hier rein!
 						}
-                    }else{
-                        msg = "Die Kombination aus Username/Email und Passwort ist ungültig Warum?!";
+                    }
+					else{
+                        msg = "Die Kombination aus Username/Email und Passwort ist ungültig!";
 						$("#passwort").val("");
                     }
                     $("#message").html(msg);

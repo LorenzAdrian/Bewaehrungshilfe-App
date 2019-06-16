@@ -19,7 +19,7 @@ if (mysqli_stmt_prepare($stmt, $sql)) {
   echo "<input type ='submit' value ='Weitere Termine löschen'>";
   echo "</form> <p>";
 
-  echo "<a href=\"Startseite.php\">Startseite</a>";
+  echo "<a href=\"index_betreuer.php\">Startseite</a>";
 } else {
     echo "Fehler: " .$sql . "<br>" .mysqli_error($conn);
 }

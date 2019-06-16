@@ -1,5 +1,6 @@
 <?php
-require '../database/dbh.inc.php';
+require 'dbh.inc.php';
+
 $rolle;
 if($_POST['rolle']=='betreuer') {
 	$rolle = 'betreuer';
@@ -9,13 +10,17 @@ elseif($_POST['rolle']=='proband') {
 }
 $mailuid = mysqli_real_escape_string($conn,$_POST['mailuid']);
 $passwort = mysqli_real_escape_string($conn,$_POST['passwort']);
+
+
 $sql = "SELECT * FROM " .$rolle. " WHERE Username = ? OR Email = ?;";
 $stmt = mysqli_stmt_init($conn);
+
 //Check, ob das stmt vorbereitet (prepared) werden konnte.
 if (!mysqli_stmt_prepare($stmt, $sql)) {
 	//echo '<script>alert("SQL Fehler")</script>';
 	echo 0;
 }
+
 //Eingaben (Username/Email/Passwort) werden auf Korrektheit geprüft.
 //Sind alle Angaben in der Datenbank zu finden, dann erfolgt der Login.
 else {
@@ -36,17 +41,17 @@ else {
 			elseif ($rolle == 'proband') {
 				$_SESSION['userId'] = $row['PID'];
 			}
-			$_SESSION['username'] = $row['Username'];
-			//header("Location:../Login.php?login=success");
+			$_SESSION['username'] = $row['UserName'];
+			//header("Location: login.php?login=success");
 			echo 1;
 		}
 		else {
-			//header("Location:../Login.php?wrongpswd");
+			//header("Location: login.php?wrongpswd");
 			echo 0;
 		}
 	}
 	else {
-		//header("Location:../Login.php?nouser");
+		//header("Location: login.php?nouser");
 		echo 0;
 	}
 }

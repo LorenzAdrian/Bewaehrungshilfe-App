@@ -5,7 +5,7 @@
 
     </head>
     <body>
-              <form action="Startseite.php" method="post">
+              <form action="index_betreuer.php" method="post">
               <input type="submit"  value="Startseite">
             </form>
         </body>
