@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "module": "AMD",
+    "allowJs": false,
+    "checkJs": false,
+    "declaration": true,
+    "outFile": "tmp/all.js"
+  }
+}

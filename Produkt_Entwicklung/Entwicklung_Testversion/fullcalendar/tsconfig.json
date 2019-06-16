@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es6",
+    "moduleResolution": "node",
+    "lib": [
+      "dom",
+      "es2015",
+      "scripthost"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "checkJs": true,
+    "noUnusedLocals": true,
+    "noImplicitUseStrict": true,
+    "importHelpers": true,
+    "baseUrl": ".",
+    "paths": {
+      "@fullcalendar/core": [ "src/core/main" ],
+      "@fullcalendar/interaction": [ "src/interaction/main" ],
+      "@fullcalendar/daygrid": [ "src/daygrid/main" ],
+      "@fullcalendar/timegrid": [ "src/timegrid/main" ],
+      "@fullcalendar/list": [ "src/list/main" ],
+      "@fullcalendar/google-calendar": [ "src/google-calendar/main" ],
+      "@fullcalendar/rrule": [ "src/rrule/main" ],
+      "@fullcalendar/luxon": [ "src/luxon/main" ],
+      "@fullcalendar/moment": [ "src/moment/main" ],
+      "@fullcalendar/moment-timezone": [ "src/moment-timezone/main" ],
+      "@fullcalendar/bootstrap": [ "src/bootstrap/main" ]
+    },
+    "types": [
+      "luxon",
+      "jquery",
+      "jasmine",
+      "jasmine-jquery"
+    ],
+    "outDir": "tmp/tsc-output"
+  },
+  "include": [
+    "src/*/main.ts",
+    "locales/*.js",
+    "tests/automated/global-defs.d.ts",
+    "tests/automated/**/*.js"
+  ]
+}
