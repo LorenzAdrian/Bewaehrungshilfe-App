@@ -1,18 +1,11 @@
 
-v4.2.0 (2019-06-02)
--------------------
-- fix recurring event expansion when event starts before view and has duration (#4617, #4635)
-- simple event recurring now allows a duration property on the event object
-- internal Calendar::setOptions method removed (never meant to be public)
-
-
 v4.1.0 (2019-04-24)
 -------------------
 
-- scrollToTime method (#467)
+- scrollToTime method
 - ISO8601 datetime strings with no 'T' not parsed in Safari (#4610)
 - all-day dropped events after third not being draggable (#4616)
-- dateClick/selecting sometime report wrong dates after calendar resize (#4608)
+- dateClick/selecting sometime report wrong dates after calendar resize (#4680)
 - js error when using navLinks with header=false (#4619)
 - js error when more+ link and multiple async event sources (#4585)
 - timeGridEventMinHeight is not defined in OptionsInput interface (#4605)
