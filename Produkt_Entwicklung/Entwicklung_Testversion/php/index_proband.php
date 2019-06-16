@@ -1,17 +1,17 @@
 <?php
-include '../Login_JQuery/includes/dbh.inc.php';
+include '../database/dbh.inc.php';
 session_start();
 
 // Check user login or not
 if(!isset($_SESSION['userId'])){
-    header('Location: ../Login_JQuery/Login.php');
+    header('Location: Login.php');
 }
 
 // logout
 
 if(isset($_POST['but_logout'])){
     session_destroy();
-    header('Location: ../Login_JQuery/Login.php');
+    header('Location: Login.php');
 }
 ?>
 
@@ -21,24 +21,24 @@ if(isset($_POST['but_logout'])){
     <meta charset="utf-8">
     <!--Pfad zu dem Ordner, wo sich die Logos befinden-->
     <link rel="stylesheet" href="file:///Users/adrianschuetz/Desktop/site/css/fontawesome.min.css">
-    <!--- Pfad zur style.css--------------------------->    
+    <!--- Pfad zur style.css--------------------------->
     <link rel="stylesheet" href="style.css">
     <!------------Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed&display=swap" rel="stylesheet">
     <!-- Stylesheet für Icons-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Startseite</title>
-    
+
 </head>
- 
-<body> 
-    
+
+<body>
+
 <div class="willkommencontainer">
     <img src="IMG/Logo.png" alt="Logo" height="130px">
-    <h1>Hallo <?php echo $_SESSION["username"]; ?></h1> 
-	
+    <h1>Hallo <?php echo $_SESSION["username"]; ?></h1>
+
 </div>
-    
+
 <ul>
     <li>
         <a href="#">
@@ -47,7 +47,7 @@ if(isset($_POST['but_logout'])){
             <div class="name">Suchen</div>
         </a>
     </li>
-    
+
     <li>
         <a href="#">
             <div class="icon">
@@ -60,7 +60,7 @@ if(isset($_POST['but_logout'])){
             <input type="submit" value="Logout" name="but_logout">
         </form>
     </li>
-	
+
 </ul>
 
 <table>
@@ -113,7 +113,7 @@ if(isset($_POST['but_logout'])){
 		</td>
 	</tr>
 </table>
-  
+
 
 </body>
-</html> 
+</html>

@@ -1,6 +1,21 @@
 <?php
 include '../includes/events_aktualisieren.inc.php';
- ?>
+
+include 'dbh.inc.php';
+session_start();
+
+// Check user login or not
+if(!isset($_SESSION['userId'])){
+    header('Location: login.php');
+}
+
+// logout
+
+if(isset($_POST['but_logout'])){
+    session_destroy();
+    header('Location: login.php');
+}
+?>
 
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
@@ -21,7 +36,7 @@ include '../includes/events_aktualisieren.inc.php';
 
 <div class="willkommencontainer">
     <img src="../CSS/image/Logo.png" alt="Logo" height="130px">
-    <h1>Hallo...</h1>
+    <h1>Hallo <?php echo $_SESSION["username"]; ?></h1>
 </div>
 
 <ul>
@@ -39,6 +54,11 @@ include '../includes/events_aktualisieren.inc.php';
                 <i class="fa fa-user" style="font-size:80px"></i></div>
             <div class="name">Mein Konto</div>
         </a>
+    </li>
+	<li>
+        <form method='post' action="">
+            <input type="submit" value="Logout" name="but_logout">
+        </form>
     </li>
 </ul>
 
