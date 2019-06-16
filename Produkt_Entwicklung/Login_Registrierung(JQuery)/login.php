@@ -25,14 +25,14 @@
 			<br>
 			<br>
 			<input type="button"  name="login" id="login_btn" value="Login">		
-			<!--
+			
 			<br>
 			<br>			
 			<div>
 				Neu hier?
-				<a href="signupRolle.php">Registrierung</a>
+				<a href="signupcheck.php">Registrierung (nur zur befüllung der Datenbank, wegen gehashtem Passwort)</a> 
+				<!-- <a href="signupRolle.php">  -->
 			</div>
-			-->
 		</main>
 	</body>
 </html>
