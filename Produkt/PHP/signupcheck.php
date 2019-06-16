@@ -1,7 +1,7 @@
 <!-- Check, ob ein Proband oder ein Betreuer (in der Datenbank) registriert werden soll.-->
 <!DOCTYPE html>
 <html>
-    <head>
+   	<head>
 	</head>
 
 	<body>
