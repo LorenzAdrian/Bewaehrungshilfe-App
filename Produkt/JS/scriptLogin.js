@@ -21,10 +21,10 @@ $(document).ready(function(){
                     var msg = "";
                     if(response == 1){
 						if (rolle == 'betreuer'){
-							window.location = "../Startseite_Betreuer/index_betreuer.php"; //Link zur Startseite muss hier rein!
+							window.location = "../index_betreuer.php"; //Link zur Startseite muss hier rein!
 						}
 						else if (rolle == 'proband'){
-							window.location = "../Startseite_Proband/index_proband.php"; //Link zur Startseite muss hier rein!
+							window.location = "../index_proband.php"; //Link zur Startseite muss hier rein!
 						}
                     }else{
                         msg = "Die Kombination aus Username/Email und Passwort ist ungültig!";
