@@ -92,15 +92,3 @@ input[type="button"]:hover{
     color: steelblue;
 }
 
-.bild{
-    margin-top: 50px;
-    height: 350px;
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-    background-image: url(img/4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
