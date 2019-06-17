@@ -1,17 +1,17 @@
 <?php
-include '../Login_JQuery/includes/dbh.inc.php';
+include '../database/dbh.inc.php';
 session_start();
 
 // Check user login or not
 if(!isset($_SESSION['userId'])){
-    header('Location: ../Login_JQuery/login.php');
+    header('Location: login.php');
 }
 
 // logout
 
 if(isset($_POST['but_logout'])){
     session_destroy();
-    header('Location: ../Login_JQuery/login.php');
+    header('Location: login.php');
 }
 ?>
 
