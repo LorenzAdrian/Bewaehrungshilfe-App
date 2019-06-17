@@ -42,14 +42,6 @@
     <?php include 'FullCalendar.php';?>
 </div>
 
-<div class="button">
-    <a href="#" class="button">Proband hinzufügen</a>
-</div>
-
-<div class="knopf">
-    <a href="#" class="knopf">Proband löschen</a>
-</div>
-
 </body>
 
 </html>
