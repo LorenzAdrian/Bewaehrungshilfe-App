@@ -29,7 +29,7 @@
 			<br>
 			<input type="button"  name="login" id="login_btn" value="Login">
             </div>
-            <div class="bild"></div>
+        
 			<!--
 			<br>
 			<br>			
