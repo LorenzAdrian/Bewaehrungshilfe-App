@@ -142,3 +142,19 @@ body{
    /*grid-column: 1 / 2;
     grid-row:4 / 5;*/
 }
+
+.knopf{
+    grid-area: kn;
+    background: floralwhite;
+    color: steelblue;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Anton', sans-serif;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 50px;
+    line-height: 50px;
+    grid-column: 1 / 2;
+    grid-row: 5/6;
+}
