@@ -6,7 +6,7 @@
     <meta charset="utf-8">
 
     <!--- Pfad zur style.css--------------------------->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <!--Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
@@ -41,6 +41,11 @@
 <div class="calendar">
     <?php include 'FullCalendar.php';?>
 </div>
+
+<div class="knopf">
+    <a href="javascript:history.back()" class="knopf">Zurück</a>
+</div>
+
 
 
 
