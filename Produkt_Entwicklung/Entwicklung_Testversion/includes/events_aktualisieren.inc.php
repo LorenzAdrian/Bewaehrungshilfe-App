@@ -15,12 +15,21 @@ function get_data()
   $event_data = array();
   while ($row = mysqli_fetch_array($result))
 {
+  if ($row['Status'] == 'b' || $row['Status'] == '1'){ //'b' muss noch weg
+	  $row['Status'] = 'green';
+  }
+  if ($row['Status'] == 'o' || $row['Status'] == '2'){ //'o' muss noch weg
+	  $row['Status'] = 'blue';
+  }
+  if ($row['Status'] == '3'){
+	  $row['Status'] = 'grey';
+  }
   $event_data [] = array(
     'id'        => $row['TID'],
     'start'     => $row['Beginn'],
     'end'       => $row['Ende'],
     'title'     => $row['Titel'],
-    'status'    => $row['Status'],
+    'color'    => $row['Status'],
     'PID'       =>  $row['PID'],
     'BID'       =>  $row['BID']
   );
