@@ -20,69 +20,66 @@ if(isset($_POST['but_logout'])){
 }
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
+
 <head>
+
     <meta charset="utf-8">
-    <!--Pfad zu dem Ordner, wo sich die Logos befinden-->
-    <!--<link rel="stylesheet" href="file:///Users/adrianschuetz/Desktop/site/css/fontawesome.min.css">-->
+
     <!--- Pfad zur style.css--------------------------->
     <link rel="stylesheet" href="../CSS/style.css">
-    <!------------Schriftart aus google fonts------------------>
-    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed&display=swap" rel="stylesheet">
+    <!--Schriftart aus google fonts------------------>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
-    <title>Startseite</title>
+    <title>Start</title>
 
 </head>
 
 <body>
 
-<div class="willkommencontainer">
-    <img src="../CSS/image/Logo.png" alt="Logo" height="130px">
-    <h1>Hallo <?php echo $_SESSION["username"]; ?></h1>
+<div class="logo"></div>
+
+<div class="hallobox">Hallo <?php echo $_SESSION["username"]; ?></div>
+
+<div class="menu">
+
+            <li><a href ="https://cssgridgarden.com/#de"><img src="../CSS/image/search.svg">Suchen</a>
+            </li>
+
+            <li><a href ="#"><img src="../CSS/image/user-circle.svg">Mein Bereich</a>
+            </li>
+            <li>    <form method='post' action="">
+                <input type="submit" value="Logout" name="but_logout">
+            </form>
+          </li>
+
 </div>
 
-<ul>
-    <li>
-        <a href="#">
-            <div class="icon">
-                <i class="fa fa-search" style="font-size:80px"></i></div>
-            <div class="name">Suchen</div>
-        </a>
-    </li>
+<div class="uberschrift1">Meine Probanden</div>
 
-    <li>
-        <a href="#">
-            <div class="icon">
-                <i class="fa fa-user" style="font-size:80px"></i></div>
-            <div class="name">Mein Konto</div>
-        </a>
-    </li>
-	<li>
-        <form method='post' action="">
-            <input type="submit" value="Logout" name="but_logout">
-        </form>
-    </li>
-</ul>
+<div class="uberschrift2">Mein Kalender</div>
 
-<div class="beschriftung">
-    <li>Meine Termine</li>
-</div>
-
-<div class="Kalenderliste">
-
-<div class="liste">
-    <div class="rahmen">
+<div class="rahmen">
     <?php include'probliste.php';?>
-
-    </div>
 </div>
 
-<div id="calendar">
-    <?php
-    include 'FullCalendar.php';?>
-</div>
+<div class="calendar">
+    <?php include 'FullCalendar.php';?>
+
+
+	<a target="popup" onclick="window.open('', 'popup', 'width=580,height=360,scrollbars=no, toolbar=no,status=no, resizable=yes,menubar=no,location=no,directories=no,top=10,left=10')
+	"href="termineinsert.php"><button type="submit"
+	name="button">Termin anlegen</button></a>
+<br>
+
+   <a target="popup" onclick="window.open('', 'popup', 'width=580,height=360,scrollbars=no, toolbar=no,status=no, resizable=yes,menubar=no,location=no,directories=no,top=10,left=10')
+	"href="terminedelete.php"><button type="submit"
+	name="button">Termin loeschen</button></a>
 </div>
 
 </body>
+
 </html>

@@ -114,40 +114,9 @@ body{
     grid-row:3 / 4;
 }
 
-.rahmen{
-    grid-area: ra;
-    width: 100%;
-    background: steelblue;
-    text-align: center;
-    box-sizing: border-box;
-    font-size: 30px;
-    text-transform: uppercase;
-    grid-column: 1 / 2;
-    grid-row:4 / 5;
-}
 
-.rahmen a{
-    padding-left: 25px;
-    text-decoration: none;
-    color: ghostwhite;
-    font-family: 'Raleway', sans-serif;
-}
 
-.rahmen a:hover{
-    padding-left: 25px;
-    text-decoration: underline;
-    color: #1435B7;
-    background: floralwhite;
-}
 
-#testid{
-    overflow: scroll;
-    margin-top: -275px;
-    background:steelblue;
-    height: 470px;
-    border: 10px solid floralwhite;
-    border-radius: 50px;
-}
 
 #calendar{
     grid-area: ca;
@@ -160,35 +129,16 @@ body{
   grid-column: 3 / 4;
   grid-row:4 / 5;
 }
-
-.button{
-    grid-area: bu;
-    background: floralwhite;
-    color: steelblue;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    font-family: 'Anton', sans-serif;
-    height: 50px;
-    font-size: 30px;
+#calendar1{
+    /*grid-area: ca;*/
+    background: ghostwhite;
+    border: 10px solid floralwhite;
     border-radius: 50px;
-    line-height: 50px;
-    grid-column: 1 / 2;
-    grid-row:5 / 6;
+    /*position: absolute;*/
 }
-
-.knopf{
-    grid-area: kn;
-    background: floralwhite;
-    color: steelblue;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    font-family: 'Anton', sans-serif;
-    height: 50px;
-    font-size: 30px;
-    border-radius: 50px;
-    line-height: 50px;
-    grid-column: 1 / 2;
-    grid-row:6 / 7;
+.calendar1{
+  display: flex;
+  float: left;
+   /*grid-column: 1 / 2;
+    grid-row:4 / 5;*/
 }

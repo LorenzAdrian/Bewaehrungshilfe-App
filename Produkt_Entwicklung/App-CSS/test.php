@@ -1,3 +1,27 @@
+<?php
+include '../includes/events_aktualisieren.inc.php';
+
+include 'dbh.inc.php';
+if(!isset($_SESSION))
+{
+      session_start();
+}
+
+// Check user login or not
+if(!isset($_SESSION['userId'])){
+    header('Location: login.php');
+}
+
+// logout
+
+if(isset($_POST['but_logout'])){
+    session_destroy();
+    header('Location: login.php');
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
 
@@ -18,7 +42,7 @@
 
 <div class="logo"></div>
 
-<div class="hallobox">Hallo...</div>
+<div class="hallobox">Hallo <?php echo $_SESSION["username"]; ?></div>
 
 <div class="menu">
 
@@ -35,7 +59,7 @@
 <div class="uberschrift2">Mein Kalender</div>
 
 <div class="rahmen">
-    <?php include'includes/listeprob.inc.test.php';?>
+    <?php include'probliste.php';?>
 </div>
 
 <div class="calendar">

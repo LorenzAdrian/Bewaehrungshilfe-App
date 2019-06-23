@@ -18,7 +18,7 @@
       <input type = "submit" value = "Termin speichern">
     </form>
 
-    <a href="fullcalendar/fullcalendar.php">Kalendar</a>
+  <!--  <a href="fullcalendar/fullcalendar.php">Kalendar</a>-->
 
   </body>
 

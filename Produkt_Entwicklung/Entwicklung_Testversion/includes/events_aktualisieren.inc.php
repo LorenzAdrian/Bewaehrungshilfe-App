@@ -22,6 +22,7 @@ function get_data()
 	  $row['Status'] = 'blue';
   }
   if ($row['Status'] == '3'){
+ 
 	  $row['Status'] = 'grey';
   }
   $event_data [] = array(
