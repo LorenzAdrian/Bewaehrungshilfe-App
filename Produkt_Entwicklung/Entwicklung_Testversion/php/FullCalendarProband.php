@@ -88,6 +88,37 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         alert(clickedDate);
 
       },
+	  
+	  eventClick: function(info) {
+		  if (info.event.backgroundColor == "blue") {
+				var tid = parseInt(info.event.id, 10);
+				var status;
+				if(confirm("Möchten Sie diesen Termin akzeptieren?")) {
+					status = "1"; // Status wird auf bestätigt gesetzt.
+				}
+			  
+				else {
+					status = "3"; //Status wird auf abgelehnt gesetzt.
+				}
+				$.ajax({
+					url:'terminStatusChange.php',
+					type:'post',
+					data:{status:status, tid:tid},
+					success:function(response){
+						if (response = 1) {
+							location.reload();
+						}
+						
+						else {
+							alert('Es ist ein Fehler aufgetreten.');
+						}
+						
+						//alert(response);
+					}
+				});
+
+		  }
+	  },
 
 
       events: {
@@ -117,3 +148,5 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 
   </body>
 </html>
+
+<script src="../javascript/jquery-3.4.1.js"></script>
