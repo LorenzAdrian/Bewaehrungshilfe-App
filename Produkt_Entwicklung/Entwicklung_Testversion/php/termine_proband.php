@@ -19,12 +19,10 @@ if(isset($_POST['but_logout'])){
 <html lang="de" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <!--Pfad zu dem Ordner, wo sich die Logos befinden-->
-    <link rel="stylesheet" href="file:///Users/adrianschuetz/Desktop/site/css/fontawesome.min.css">
-    <!--- Pfad zur style.css--------------------------->    
-    <link rel="stylesheet" href="style.css">
-    <!------------Schriftart aus google fonts------------------>
-    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed&display=swap" rel="stylesheet">
+	<!--- Pfad zur style.css--------------------------->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!--Schriftart aus google fonts------------------>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     
     <title>Startseite</title>
     
@@ -34,7 +32,7 @@ if(isset($_POST['but_logout'])){
     
 <div class="willkommencontainer">
     <a href="index_proband.php">
-		<img src="IMG/Logo.png" alt="Logo" height="130px">
+		<img src="../CSS/image/Logo.png" alt="Logo" height="130px">
 	</a>
     <h1>Hallo <?php echo $_SESSION["username"]; ?></h1> 
 	
@@ -73,7 +71,8 @@ if(isset($_POST['but_logout'])){
 
 <div id="calendar">
     <?php
-    include 'FullCalendar.php';?>
+    include 'FullCalendarProband.php';
+	?>
 </div>
 </div>
 <div>
@@ -83,3 +82,5 @@ if(isset($_POST['but_logout'])){
     
 </body>
 </html> 
+
+<script src="../javascript/jquery-3.4.1.js"></script>

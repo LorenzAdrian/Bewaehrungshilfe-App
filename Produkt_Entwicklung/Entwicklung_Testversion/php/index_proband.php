@@ -18,13 +18,10 @@ if(isset($_POST['but_logout'])){
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
 <head>
-    <meta charset="utf-8">
-    <!--Pfad zu dem Ordner, wo sich die Logos befinden-->
-    <link rel="stylesheet" href="file:///Users/adrianschuetz/Desktop/site/css/fontawesome.min.css">
     <!--- Pfad zur style.css--------------------------->
     <link rel="stylesheet" href="../CSS/style.css">
-    <!------------Schriftart aus google fonts------------------>
-    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed&display=swap" rel="stylesheet">
+    <!--Schriftart aus google fonts------------------>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <!-- Stylesheet für Icons-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Startseite</title>
@@ -34,7 +31,7 @@ if(isset($_POST['but_logout'])){
 <body>
 
 <div class="willkommencontainer">
-    <img src="IMG/Logo.png" alt="Logo" height="130px">
+    <img src="../CSS/image/Logo.png" alt="Logo" height="130px">
     <h1>Hallo <?php echo $_SESSION["username"]; ?></h1>
 
 </div>
