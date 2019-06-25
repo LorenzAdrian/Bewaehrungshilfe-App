@@ -1,15 +1,23 @@
+
+
+
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="../CSS/styleAnmeldung.css">
+ <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+ <meta charset="utf-8">
 	</head>
 
 	<body>
 		<main>
+
 			<div>
 				<h1>Login</h1>
 			</div>
 			<div id="message"></div>
 			<br>
+				<div class=Menue>
 			<span>Sind Sie ein Betreuer?</span>
 			<input type="checkbox" name="rolle" id="betreuer" value="betreuer">
 			<br>
@@ -20,7 +28,7 @@
 			<br>
 			<br>
 			<input type="button"  name="login" id="login_btn" value="Login">
-
+  </div>
 			<br>
 			<br>
 			<div>

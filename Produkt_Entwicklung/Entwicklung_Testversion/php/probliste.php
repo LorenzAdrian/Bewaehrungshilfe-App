@@ -2,10 +2,22 @@
 // Javascript Double Click: http://javascript-coder.com/javascript-form/javascript-form-submit.phtml
 //require "../includes/tabelle.inc.php";
 
+if(!isset($_SESSION))
+{
+      session_start();
+}
+
+// Check user login or not
+if(!isset($_SESSION['userId'])){
+    header('Location: login.php');
+}
+
+
 // Probanden-Info aus der DB holen
 require '../database/dbh.inc.php';
+$probID = $_SESSION['userId'];
 
-$sql = "SELECT * FROM proband";
+$sql = "SELECT * FROM proband WHERE BID = $probID";
 $result = mysqli_query($conn, $sql);
 $probanden = array();
 if (mysqli_num_rows($result) > 0) {
