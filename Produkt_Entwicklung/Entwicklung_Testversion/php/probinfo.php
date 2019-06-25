@@ -92,9 +92,9 @@ file_put_contents($file_name, get_data($probID));
 //echo "<li><a href=\"index.html\">Index </a></li>";
 //echo "</ul>";
 
-include 'FullCalendarProband.php';
+//include 'FullCalendarProband.php';
 
-include 'FullCalendar.php';
+//include 'FullCalendar.php';
 
 ?>
 
@@ -104,6 +104,19 @@ include 'FullCalendar.php';
 
     </head>
     <body>
+		<table>
+		<tr>
+		<td>
+		<?php include 'FullCalendarProband.php';
+		?>
+		</td>
+		<td>
+		<?php include 'FullCalendar.php';
+		?>
+		</td>
+		</tr>
+		</table>
+	
       <table>
         <tr>
           <td>
