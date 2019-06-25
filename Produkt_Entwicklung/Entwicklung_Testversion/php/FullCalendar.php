@@ -91,6 +91,29 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         alert(clickedDate);
 
       },
+	  
+	  
+	  
+	  eventClick: function(info) {
+		var tid = parseInt(info.event.id, 10);
+		if(confirm("Möchten Sie diesen Termin löschen?")) {
+			$.ajax({
+				url:'termineLoeschen.php',
+				type:'post',
+				data:{tid:tid},
+				success:function(response){
+					if (response = 1) {
+						location.reload();
+					}
+					
+					else 
+					{
+						alert('Es ist ein Fehler aufgetreten.');
+					}
+				}
+			});
+		}
+	  },
 
 
       events: {
