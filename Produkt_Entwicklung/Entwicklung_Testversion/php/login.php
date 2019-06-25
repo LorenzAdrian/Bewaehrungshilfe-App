@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-        <link rel="stylesheet" href="loginstyle.css">
+        <link rel="stylesheet" href="../CSS/loginstyle.css">
         
             <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	</head>
@@ -34,20 +34,21 @@
 			<br>
 			<input type="button"  name="login" id="login_btn" value="Login">
             </div>
-			<!--
+			
 			<br>
 			<br>			
 			<div>
 				Neu hier?
-				<a href="signupRolle.php">Registrierung</a>
+				<a href="signupcheck.php">Registrierung</a>
 			</div>
-			-->
+			
 		</main>
 	</body>
 </html>
 
-<script src="js/jquery-3.4.1.js"></script>
-<script src="js/scriptLogin.js"></script>
+
+<script src="../javascript/jquery-3.4.1.js"></script>
+<script src="../javascript/scriptLogin.js"></script>
 
 <?php
 //require 'footer.php';
