@@ -24,43 +24,32 @@ if(isset($_POST['but_logout'])){
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <!-- Stylesheet für Icons-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Startseite</title>
+    <title>Start</title>
 
 </head>
 
 <body>
 
-<div class="willkommencontainer">
-    <img src="../CSS/image/Logo.png" alt="Logo" height="130px">
-    <h1>Hallo <?php echo $_SESSION["username"]; ?></h1>
+<div class="logo"></div>
+
+<div class="hallobox">Hallo <?php echo $_SESSION["username"]; ?></div>
+
+<div class="menu">
+
+            <li><a href ="https://cssgridgarden.com/#de"><img src="../CSS/image/search.svg">Suchen</a>
+            </li>
+
+            <li><a href ="#"><img src="../CSS/image/user-circle.svg">Mein Bereich</a>
+            </li>
+            <li>    <form method='post' action="">
+                <input type="submit" value="Logout" name="but_logout">
+            </form>
+          </li>
 
 </div>
 
-<ul>
-    <li>
-        <a href="#">
-            <div class="icon">
-                <i class="fa fa-search" style="font-size:80px"></i></div>
-            <div class="name">Suchen</div>
-        </a>
-    </li>
-
-    <li>
-        <a href="#">
-            <div class="icon">
-                <i class="fa fa-user" style="font-size:80px"></i></div>
-            <div class="name">Mein Konto</div>
-        </a>
-    </li>
-	<li>
-        <form method='post' action="">
-            <input type="submit" value="Logout" name="but_logout">
-        </form>
-    </li>
-
-</ul>
-
-<table>
+<div class="rahmen">
+   <table>
 	<tr>
 		<td>
 			<a href="#">
@@ -110,7 +99,12 @@ if(isset($_POST['but_logout'])){
 		</td>
 	</tr>
 </table>
+</div>
+
 
 
 </body>
+
 </html>
+	
+	
