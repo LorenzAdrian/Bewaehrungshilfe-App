@@ -9,14 +9,28 @@
               <input type="submit"  value="Startseite">
             </form>
         </body>
-  </html>
+</html>
+  
+
 
 
 <?php
 
+if(!isset($_SESSION))
+{
+      session_start();
+}
+
+// Check user login or not
+if(!isset($_SESSION['userId'])){
+    header('Location: login.php');
+}
+
+
 //require "includes/tabelle.inc.php";
 require "../database/dbh.inc.php";
 
+$betrID = $_POST['betreuer'];
 $probID = $_POST['proband'];
 
 $sql = "SELECT * FROM proband WHERE PID = ".$probID;
@@ -121,6 +135,8 @@ file_put_contents($file_name, get_data($probID));
         <tr>
           <td>
             <form action="termineinsert.php" method="post">
+			  <input type="hidden" name = "probID" value ="<?php echo $probID ?>">
+			  <input type="hidden" name = "betrID" value ="<?php echo $betrID ?>">
               <input type="submit"  value="Termin anlegen">
             </form>
           </td>

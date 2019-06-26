@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
   <head>
@@ -11,9 +13,9 @@
       <p> Datum: <input name = "terDatum" type = "date" </p>
       <p> Start: <input name = "terStart" type = "time" </p>
       <p> End: <input name = "terEnde" type = "time"  </p>
-      <p> Status: <input name = "terStatus" type = "text" size="50" placeholder = "Status"  </p>
-      <p> PID: <input name = "terPID" type = "text"  size ="3" placeholder="Probanden ID"</p>
-      <p> BID: <input name = "terBID" type = "text" size = "3" placeholder = "Betreuer ID" </p>
+      <p><!-- Status: --><input name = "terStatus" type = "hidden" size="50" value="2"  </p>
+      <p><!-- PID: --><input name = "terPID" type = "hidden"  size ="3" value="<?php echo $_POST['probID'] ?>"</p>
+      <p><!-- BID: --><input name = "terBID" type = "hidden" size = "3" value="<?php echo $_POST['betrID'] ?>" </p>
       <p>
       <input type = "submit" value = "Termin speichern">
     </form>

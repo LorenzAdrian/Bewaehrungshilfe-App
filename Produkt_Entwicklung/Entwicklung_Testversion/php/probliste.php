@@ -50,10 +50,12 @@ echo "<form name=\"probliste\" action = \"probinfo.php\" method = \"post\">";
 // Double Click: Einen Name für das Formular muss gegeben werden, weil die Function etwas ansprechen muss
 echo "<select name = \"proband\" size = \"5\" ondblclick=\"mydblclick(this)\";>";
 foreach ($probanden as $proband) {
-  echo "<option value = ".$proband['PID'].">".$proband['Vorname']." ".$proband['Nachname']."</option>";
+  echo "<option value = ".$proband['PID'].">".$proband['Vorname']." ".$proband['Nachname']."</option>>";
 }
 // Submit-Button
 echo "</select>";
+
+echo "<input type='hidden' name='betreuer' value='".$probID."'>";
 // Double Click: input button brauchen wir nicht mehr
 // echo "<input type= \"submit\" value = \"Proband auswählen\">";
 echo "</form>";
