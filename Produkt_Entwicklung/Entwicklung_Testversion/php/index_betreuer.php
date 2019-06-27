@@ -1,5 +1,5 @@
 <?php
-include '../includes/events_aktualisieren.inc.php';
+//include '../includes/events_aktualisieren.inc.php';
 
 include 'dbh.inc.php';
 if(!isset($_SESSION))
@@ -68,7 +68,7 @@ if(isset($_POST['but_logout'])){
 
 <div class="calendar">
     <?php include 'FullCalendar.php';?>
-<!--	
+<!--
 	<a target="popup" onclick="window.open('', 'popup', 'width=580,height=360,scrollbars=no, toolbar=no,status=no, resizable=yes,menubar=no,location=no,directories=no,top=10,left=10')
 	"href="termineinsert.php"><button type="submit"
 	name="button">Termin anlegen</button></a>

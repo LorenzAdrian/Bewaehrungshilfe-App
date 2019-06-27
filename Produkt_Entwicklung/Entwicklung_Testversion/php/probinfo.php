@@ -10,7 +10,7 @@
             </form>
         </body>
 </html>
-  
+
 
 
 
@@ -27,11 +27,19 @@ if(!isset($_SESSION['userId'])){
 }
 
 
+
 //require "includes/tabelle.inc.php";
 require "../database/dbh.inc.php";
 
 $betrID = $_POST['betreuer'];
 $probID = $_POST['proband'];
+
+$_SESSION['probID'] = $probID;
+
+
+
+
+
 
 $sql = "SELECT * FROM proband WHERE PID = ".$probID;
 $result = mysqli_query($conn, $sql);
@@ -51,43 +59,7 @@ foreach ($probInfo as $info) {
 //if(isset($_POST['refresh-event'])) {
 //require 'dbh.inc.php';
 
-function get_data($probID)
-{
-  $conn = mysqli_connect('localhost','root','','bewaehrungshilfe');
-  $event_sql = "SELECT * FROM termin WHERE PID = $probID";
 
-  $result2 = mysqli_query($conn, $event_sql);
-  $event_data = array();
-
-  while ($row = mysqli_fetch_array($result2))
-{
-  if ($row['Status'] == 'b' || $row['Status'] == '1'){ //'b' muss noch weg
-	  $row['Status'] = 'green';
-  }
-  if ($row['Status'] == 'o' || $row['Status'] == '2'){ //'o' muss noch weg
-	  $row['Status'] = 'blue';
-  }
-  if ($row['Status'] == '3'){
-	  $row['Status'] = 'grey';
-  }
-  $event_data [] = array(
-	
-    'id'        => $row['TID'],
-    'start'     => $row['Beginn'],
-    'end'       => $row['Ende'],
-    'title'     => $row['Titel'],
-    'color'     => $row['Status'],
-    'PID'       =>  $row['PID'],
-    'BID'       =>  $row['BID']
-  );
-
-}
-
- return json_encode($event_data);
-}
-
-$file_name = 'JSON/proband_events.json';
-file_put_contents($file_name, get_data($probID));
 //header("Location: ../index_Login.php?JSONdateierstellt");
 
 
@@ -130,7 +102,7 @@ file_put_contents($file_name, get_data($probID));
 		</td>
 		</tr>
 		</table>
-	
+
       <table>
         <tr>
           <td>
@@ -150,5 +122,5 @@ file_put_contents($file_name, get_data($probID));
 
     </body>
   </html>
-  
+
   <script src="../javascript/jquery-3.4.1.js"></script>

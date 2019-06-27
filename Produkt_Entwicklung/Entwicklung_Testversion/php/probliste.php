@@ -15,9 +15,9 @@ if(!isset($_SESSION['userId'])){
 
 // Probanden-Info aus der DB holen
 require '../database/dbh.inc.php';
-$probID = $_SESSION['userId'];
+$betID = $_SESSION['userId'];
 
-$sql = "SELECT * FROM proband WHERE BID = $probID";
+$sql = "SELECT * FROM proband WHERE BID = $betID";
 $result = mysqli_query($conn, $sql);
 $probanden = array();
 if (mysqli_num_rows($result) > 0) {
@@ -37,6 +37,7 @@ if (mysqli_num_rows($result) > 0) {
       function mydblclick(){
         // probliste = Name des Formulars, das angesprochen werden soll
         document.probliste.submit();
+
       }
     </script>
   </body>
@@ -46,16 +47,16 @@ if (mysqli_num_rows($result) > 0) {
 <?php
 
 // Tabelle erzeugen und füllen
-echo "<form name=\"probliste\" action = \"probinfo.php\" method = \"post\">";
+echo "<form name=\"probliste\" action = \"probinfo.php\"  method = \"post\">";
 // Double Click: Einen Name für das Formular muss gegeben werden, weil die Function etwas ansprechen muss
-echo "<select name = \"proband\" size = \"5\" ondblclick=\"mydblclick(this)\";>";
+echo "<select name = \"proband\"   size = \"5\"  ondblclick=\" mydblclick(this); \" ;>";
 foreach ($probanden as $proband) {
   echo "<option value = ".$proband['PID'].">".$proband['Vorname']." ".$proband['Nachname']."</option>>";
 }
 // Submit-Button
 echo "</select>";
 
-echo "<input type='hidden' name='betreuer' value='".$probID."'>";
+echo "<input type='hidden' name='betreuer' value='".$betID."'>";
 // Double Click: input button brauchen wir nicht mehr
 // echo "<input type= \"submit\" value = \"Proband auswählen\">";
 echo "</form>";

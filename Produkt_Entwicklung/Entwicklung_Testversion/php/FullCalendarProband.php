@@ -88,7 +88,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         alert(clickedDate);
 
       },
-	  
+
 	  eventClick: function(info) {
 		  if (info.event.backgroundColor == "blue") {
 				var tid = parseInt(info.event.id, 10);
@@ -96,7 +96,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 				if(confirm("Möchten Sie diesen Termin akzeptieren?")) {
 					status = "1"; // Status wird auf bestätigt gesetzt.
 				}
-			  
+
 				else {
 					status = "3"; //Status wird auf abgelehnt gesetzt.
 				}
@@ -108,11 +108,11 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 						if (response = 1) {
 							location.reload();
 						}
-						
+
 						else {
 							alert('Es ist ein Fehler aufgetreten.');
 						}
-						
+
 						//alert(response);
 					}
 				});
@@ -122,7 +122,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 
 
       events: {
-        url: 'JSON/proband_events.json'
+        url: 'Proband_events_aktualisieren.php'
 
         }
 

@@ -4,6 +4,7 @@ session_start();
 
 // Check user login or not
 if(!isset($_SESSION['userId'])){
+  $_SESSION['probID'] = $_SESSION['userId'];
     header('Location: login.php');
 }
 
@@ -23,9 +24,9 @@ if(isset($_POST['but_logout'])){
     <link rel="stylesheet" href="../CSS/style.css">
     <!--Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    
+
     <title>Startseite</title>
-    
+
 </head>
 
 
@@ -42,7 +43,7 @@ if(isset($_POST['but_logout'])){
 
             <li><a href ="#"><img src="../CSS/image/user-circle.svg">Mein Bereich</a>
             </li>
-            <li>    
+            <li>
 				<form method='post' action="">
 					<input type="submit" value="Logout" name="but_logout">
 				</form>
@@ -65,6 +66,6 @@ if(isset($_POST['but_logout'])){
 </body>
 
 </html>
- 
+
 
 <script src="../javascript/jquery-3.4.1.js"></script>
