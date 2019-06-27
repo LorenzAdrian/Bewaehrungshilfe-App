@@ -63,7 +63,7 @@ if(isset($_POST['but_logout'])){
 <div class="uberschrift2">Mein Kalender</div>
 
 <div class="rahmen">
-    <?php include'dataTbl.php';?>
+    <?php include 'dataTbl.php';?>
 </div>
 
 <div class="calendar">
@@ -83,4 +83,4 @@ if(isset($_POST['but_logout'])){
 </body>
 
 </html>
-<script src="../javascript/jquery-3.4.1.js"></script>
+
