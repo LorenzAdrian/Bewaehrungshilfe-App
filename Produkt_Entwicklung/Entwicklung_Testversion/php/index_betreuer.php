@@ -83,3 +83,4 @@ if(isset($_POST['but_logout'])){
 </body>
 
 </html>
+<script src="../javascript/jquery-3.4.1.js"></script>
