@@ -3,6 +3,9 @@ $('#example').DataTable( {
   bInfo: false,
   scrollY:        "100px",
   scrollCollapse: true,
+  language: {
+  search: "Suchen:"
+  },
   // Select Erweiterung
   //select: {
   //  style: 'single'
