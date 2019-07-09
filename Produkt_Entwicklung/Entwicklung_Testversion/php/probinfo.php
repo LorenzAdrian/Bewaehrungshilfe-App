@@ -31,10 +31,19 @@ if(!isset($_SESSION['userId'])){
 //require "includes/tabelle.inc.php";
 require "../database/dbh.inc.php";
 
+
+
+
 $betrID = $_POST['betreuer'];
 $probID = $_POST['proband'];
 
-$_SESSION['probID'] = $probID;
+if(!isset($_SESSION['prodID'])){
+$_SESSION['probID'] = $probID;}
+
+else {
+	$probID = $_POST['terPID'];
+}
+	
 
 
 
@@ -106,17 +115,17 @@ foreach ($probInfo as $info) {
       <table>
         <tr>
           <td>
-            <form action="termineinsert.php" method="post">
+            <form action="termineinsert.php" method="post" target="_blank">
 			  <input type="hidden" name = "probID" value ="<?php echo $probID ?>">
 			  <input type="hidden" name = "betrID" value ="<?php echo $betrID ?>">
               <input type="submit"  value="Termin anlegen">
             </form>
           </td>
-          <td>
+         <!-- <td>
             <form action="terminedelete.php" method="post">
               <input type="submit"  value="Termin löschen">
             </form>
-          </td>
+          </td>-->
         </tr>
       </table>
 

@@ -7,7 +7,7 @@
 <html>
 	<head>
         <link rel="stylesheet" href="../CSS/loginstyle.css">
-        
+
             <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	</head>
     <title>Login</title>
@@ -23,25 +23,25 @@
             <div class="loginfenster">
 			<span>Sind Sie ein Betreuer?</span>
 			<input type="checkbox" name="rolle" id="betreuer" value="betreuer">
-			<br> 
+			<br>
 			<br>
 			<div id="error"></div>
 			<input type="text" name="mailuid" id="mailuid" placeholder="Username/Email">
-            
+
             <br>
 			<input type="password" name="passwort" id="passwort" placeholder="Passwort">
 			<br>
 			<br>
 			<input type="button"  name="login" id="login_btn" value="Login">
             </div>
-			
+
 			<br>
-			<br>			
-			<div>
+			<br>
+		<!--	<div>
 				Neu hier?
 				<a href="signupcheck.php">Registrierung</a>
-			</div>
-			
+			</div>-->
+
 		</main>
 	</body>
 </html>

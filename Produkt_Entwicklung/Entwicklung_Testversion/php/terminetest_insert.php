@@ -19,8 +19,11 @@ $stmt = mysqli_stmt_init($conn);
 if (mysqli_stmt_prepare($stmt, $sql)) {
   mysqli_stmt_bind_param($stmt, "ssssss", $start, $end, $title, $status, $ProbandID, $BetreuerID);
   mysqli_stmt_execute($stmt);
-  echo "Termin erfolgreich gespeichert<p>";
+  header('Location: index_betreuer.php');
+  //echo "Termin erfolgreich gespeichert<p>";
+  
   //Ergebnisse in einer HTML-Tabelle ausgeben
+  /*
   echo "<table>";
   echo "<tr>";
   echo "<td> Titel: </td>";
@@ -57,7 +60,7 @@ if (mysqli_stmt_prepare($stmt, $sql)) {
   echo "<ul>";
   echo "<li><a href=\"index_betreuer.php\">Startseite</a></li>";
   //echo "<li><a href=\"index.html\">Index</a></li>";
-  echo "</ul>";
+  echo "</ul>";*/
 } else {
     echo "Fehler: " .$sql . "<br>" .mysqli_error($conn);
 }

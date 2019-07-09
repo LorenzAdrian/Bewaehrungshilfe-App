@@ -19,7 +19,7 @@
     }
 
 /* Hier wird dann das div vom Kalendar angepasst*/
-    #calendar {
+    #mycalendar {
       margin-top: 50px;
       float: right;
       box-sizing: border-box;
@@ -51,9 +51,9 @@
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
+        var calendarEl = document.getElementById('mycalendar');
 
-var calendar = new FullCalendar.Calendar(calendarEl, {
+var mycalendar = new FullCalendar.Calendar(calendarEl, {
       plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
       defaultView: 'dayGridMonth',
 	  <!--height: 'auto',-->
@@ -72,7 +72,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 			var testTitle = prompt('please Enter a Title');
 
             if (!isNaN(date.valueOf())) { // valid?
-              calendar.addEvent({
+              mycalendar.addEvent({
                 title: testTitle,
                 start: date,
                 allDay: true
@@ -87,7 +87,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 
 		   dateClick: function(info) {
 		   var clickedDate = info.dateStr;
-		   calendar.changeView('timeGridDay',clickedDate);
+		   mycalendar.changeView('timeGridDay',clickedDate);
         alert(clickedDate);
 
       },
@@ -128,7 +128,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 
 
 
-        calendar.render();
+        mycalendar.render();
       });
 
 
@@ -138,7 +138,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
   </head>
   <body>
 
-    <div id='calendar'></div>
+    <div id='mycalendar'></div>
 
 
   </body>

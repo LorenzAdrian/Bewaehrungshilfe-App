@@ -1,8 +1,8 @@
 body{
     box-sizing: border-box;
-    background: steelblue;
+    background: #ECECEC;
     display: grid;
-    grid-template-columns: 40% 20% 40%;
+    grid-template-columns: 40% 10% 40%;
     grid-template-rows: 100px 100px 100px 500px 50px 50px;
     grid-gap: 10px;
     /*grid-template-areas:
@@ -16,12 +16,12 @@ body{
 
 .logo{
     grid-area: lo;
-    background-image: url(img/1000-Berliner_Baer.svg.png);
+    background-image: url(image/1000-Berliner_Baer.svg.png);
     background-size: 50px;
     background-repeat: no-repeat;
     background-position: center;
-    background-color:ghostwhite;
-    border: 3px white solid;
+    background-color:#B20505;
+    border: 3px #CAC8C8 solid;
     border-radius: 150px 400px ;
     grid-column: 1/2;
     grid-row:1 / 2;
@@ -29,15 +29,16 @@ body{
 
 .hallobox{
     grid-area: ha;
-    background:steelblue;
+    background:#ECECEC;
     font-family: 'Raleway', sans-serif;
-    font-size: 110px;
+    font-size: 80px;
     font-weight:bolder;
     text-align: left;
-    text-shadow: 2px 2px 5px dodgerblue;
+direction: ltr;
+    text-shadow: 2px 2px 5px #CAC8C8;
     padding-left: 40px;
     text-transform: uppercase;
-    color: ghostwhite;
+    color: #B20505;
     line-height: 100px;
     box-sizing: border-box;
     grid-column:2/3;
@@ -47,7 +48,7 @@ body{
 .menu{
     grid-area: me;
     background: ghostwhite;
-    border: 3px white solid;
+    border: 3px #CAC8C8 solid;
     border-radius: 150px 400px;
     box-sizing: border-box;
     grid-column:1/4;
@@ -75,7 +76,7 @@ body{
 .menu li a{
     font-family: 'Anton', sans-serif;
     text-decoration: none;
-    color: dodgerblue;
+    color: #B20505;
     text-align: center;
     box-sizing: border-box;
     font-size: 20px;
@@ -84,12 +85,12 @@ body{
 .uberschrift1{
     display: grid;
     grid-area: ub1;
-    background:steelblue;
+    background:#ECECEC;
     font-size: 40px;
     text-transform: uppercase;
     text-decoration: overline underline;
     font-family: 'Raleway', sans-serif;
-    color: floralwhite;
+    color: #B20505;
     text-align: center;
     line-height: 100px;
     box-sizing: border-box;
@@ -100,12 +101,12 @@ body{
 .uberschrift2{
     display: grid;
     grid-area: ub2;
-    background: steelblue;
+    background: #ECECEC;
     font-size: 40px;
     text-transform: uppercase;
     text-decoration: underline overline;
     font-family: 'Raleway', sans-serif;
-    color: floralwhite;
+    color: #B20505;
     text-align: left;
     padding-left: 30px;
     line-height: 100px;
@@ -117,19 +118,21 @@ body{
 .rahmen{
     grid-area: ra;
     width: 100%;
-    background: steelblue;
-    text-align: center;
+    background: #ECECEC;
     box-sizing: border-box;
-    font-size: 30px;
-    text-transform: uppercase;
+    font-size: 15px;
+    /*text-transform: uppercase;*/
     grid-column: 1 / 2;
     grid-row:4 / 5;
+display: flex;
+margin: auto;
+justify-content: center;
 }
 
 .rahmen a{
     padding-left: 25px;
     text-decoration: none;
-    color: ghostwhite;
+    color: #B20505;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -140,19 +143,23 @@ body{
     background: floralwhite;
 }
 
+.dataTables_filter {
+	float: left !important;
+}
+
 #testid{
     overflow: scroll;
     margin-top: -275px;
-    background:steelblue;
+    background:#ECECEC;
     height: 470px;
-    border: 10px solid floralwhite;
+    border: 10px solid #CAC8C8;
     border-radius: 50px;
 }
 
 #calendar{
     grid-area: ca;
-    background: ghostwhite;
-    border: 10px solid floralwhite;
+    background: #ECECEC;
+    border: 10px solid #CAC8C8;
     border-radius: 50px;
     position: absolute;
 }

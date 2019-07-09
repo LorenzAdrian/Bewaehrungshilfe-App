@@ -58,7 +58,7 @@ if(isset($_POST['but_logout'])){
 
 </div>
 
-<div class="uberschrift1">Meine Probanden</div>
+<div class="uberschrift1">Probanden</div>
 
 <div class="uberschrift2">Mein Kalender</div>
 

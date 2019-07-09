@@ -1,8 +1,8 @@
 $(document).ready(function() {
 $('#example').DataTable( {
   bInfo: false,
-  scrollY:        "100px",
-  scrollCollapse: true,
+  scrollY:        '100vh',
+  scrollCollapse: false,
   language: {
   search: "Suchen:"
   },
