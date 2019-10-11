@@ -29,7 +29,9 @@ require "problisteDT.inc.php";
     <table id="example" class="display" style="width:100%">
             <thead>
                 <tr>
-                  <th></th>
+                  <th>Name</th>
+                  <th>PID</th>
+                  <th>BID</th>
                 </tr>
             </thead>
             <tfoot>

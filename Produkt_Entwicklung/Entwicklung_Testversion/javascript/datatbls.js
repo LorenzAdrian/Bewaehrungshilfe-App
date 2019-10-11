@@ -21,8 +21,9 @@ $('#example').DataTable( {
         { data: null, render: function ( data, type, row ) {
           // Vorname und Nachname zusammen unter der Spalte "Name" in der Tabelle darstellen
           return data.Vorname+' '+data.Nachname;
-       } }//,
-        //{ data: 'BID'}
+       } },
+        { data: 'PID'},
+        { data: 'BID'},
       ]
   });
 
