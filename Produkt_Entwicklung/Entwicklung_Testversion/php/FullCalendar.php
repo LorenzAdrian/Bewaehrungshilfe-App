@@ -93,26 +93,40 @@ var mycalendar = new FullCalendar.Calendar(calendarEl, {
       },
 
 
-
 	  eventClick: function(info) {
-		var tid = parseInt(info.event.id, 10);
-		if(confirm("Möchten Sie diesen Termin löschen?")) {
-			$.ajax({
-				url:'termineLoeschen.php',
-				type:'post',
-				data:{tid:tid},
-				success:function(response){
-					if (response = 1) {
-						location.reload();
-					}
-
-					else
-					{
-						alert('Es ist ein Fehler aufgetreten.');
-					}
+		  if (info.event.backgroundColor == "blue") {
+				var tid = parseInt(info.event.id, 10);
+				var status;
+				if(confirm("Möchten Sie diesen Termin akzeptieren?")) {
+					status = "1"; // Status wird auf bestätigt gesetzt.
 				}
-			});
-		}
+
+				else {
+					if (confirm("Soll der Termin abgelehnt werden?")) {		
+						status = "3"; //Status wird auf abgelehnt gesetzt.
+					}
+					else {
+						return;
+					}	
+				}
+				$.ajax({
+					url:'terminStatusChange.php',
+					type:'post',
+					data:{status:status, tid:tid},
+					success:function(response){
+						if (response = 1) {
+							location.reload();
+						}
+
+						else {
+							alert('Es ist ein Fehler aufgetreten.');
+						}
+
+						//alert(response);
+					}
+				});
+
+		  }
 	  },
 
 
