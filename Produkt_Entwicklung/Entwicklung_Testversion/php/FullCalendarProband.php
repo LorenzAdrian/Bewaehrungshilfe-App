@@ -98,7 +98,12 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 				}
 
 				else {
-					status = "3"; //Status wird auf abgelehnt gesetzt.
+					if (confirm("Soll der Termin abgelehnt werden?")) {		
+						status = "3"; //Status wird auf abgelehnt gesetzt.
+					}
+					else {
+						return;
+					}	
 				}
 				$.ajax({
 					url:'terminStatusChange.php',

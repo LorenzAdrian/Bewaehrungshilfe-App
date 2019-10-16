@@ -51,14 +51,14 @@ if(isset($_POST['but_logout'])){
 <div class="rahmen">
    <table>
 	<tr>
-		<td>
-			<a href="#">
+		<td> <!-- Die Seite "Meine Nachrichten" wird bei Klicken des Buttons geöffnet-->
+			<a href="MeineNachrichten.php">
 				<div class="icon">
 					<i class="fa fa-envelope" style="font-size:80px"></i></div>
 				<div class="name">Meine Nachrichten</div>
 			</a>
 		</td>
-		<td>
+		<td><!-- Die Seite mit dem eigenenn Kalender wird bei Klicken des Buttons geöffnet-->
 			<a href="termine_proband.php">
 				<div class="icon">
 					<i class="fa fa-calendar" style="font-size:80px"></i></div>
@@ -67,31 +67,31 @@ if(isset($_POST['but_logout'])){
 		</td>
 	</tr>
 	<tr>
-		<td>
-			<a href="#">
+		<td><!-- Die Seite "Informationen" wird bei Klicken des Buttons geöffnet-->
+			<a href="Informationen.php">
 				<div class="icon">
 					<i class="fa fa-info-circle" style="font-size:80px"></i></div>
 				<div class="name">Informationen</div>
 			</a>
 		</td>
-		<td>
-			<a href="#">
+		<td><!-- Die Seite "Dokumente" wird bei Klicken des Buttons geöffnet-->
+			<a href="Dokumente.php">
 				<div class="icon">
 					<i class="fa fa-file" style="font-size:80px"></i></div>
 				<div class="name">Dokumente</div>
 			</a>
-		</td>
+		</td> 
 	</tr>
 	<tr>
-		<td>
-			<a href="#">
+		<td><!-- Die Seite "Notfallkontakte" wird bei Klicken des Buttons geöffnet-->
+			<a href="Notfall.php">
 				<div class="icon">
 					<i class="fa fa-ambulance" style="font-size:80px"></i></div>
 				<div class="name">Notfall</div>
 			</a>
 		</td>
-		<td>
-			<a href="#">
+		<td><!-- Die Seite mit der eigenen To-Do-Liste wird bei Klicken des Buttons geöffnet-->
+			<a href="To_Do_Liste.php">
 				<div class="icon">
 					<i class="fa fa-list-alt" style="font-size:80px"></i></div>
 				<div class="name">To-Do-Liste</div>
@@ -101,10 +101,4 @@ if(isset($_POST['but_logout'])){
 </table>
 </div>
 
-
-
-</body>
-
-</html>
-	
 	
