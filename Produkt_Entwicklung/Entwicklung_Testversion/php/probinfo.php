@@ -111,23 +111,43 @@ foreach ($probInfo as $info) {
 		</td>
 		</tr>
 		</table>
-
-      <table>
+		
+		 <table>
         <tr>
           <td>
-            <form action="termineinsert.php" method="post" target="_blank">
-			  <input type="hidden" name = "probID" value ="<?php echo $probID ?>">
-			  <input type="hidden" name = "betrID" value ="<?php echo $betrID ?>">
-              <input type="submit"  value="Termin anlegen">
-            </form>
+		  
+		  <!-- <details> ist ein HTML5 Element, das das Ausklappen ermöglicht. Kein Button notwendig.
+				<summary> legt den Text fest, der vor dem ausklappen sichtbar ist -->
+           <details>
+  
+				<summary> Termin anlegen </summary>
+	
+						<form action = "terminetest_insert.php" method = "post">
+						
+						  <p> Title: <input name = "terTitel" type = "text" size = "50" placeholder = "Titel" > </p>
+						  <p> Datum: <input name = "terDatum" type = "date" </p>
+						  <p> Start: <input name = "terStart" type = "time" </p>
+						  <p><!-- Status: --><input name = "terStatus" type = "hidden" size="50" value="2"  </p>
+						  <p><!-- PID: --><input name = "terPID" type = "hidden"  size ="3" value="<?php echo $probID ?>"</p>
+						  <p><!-- BID: --><input name = "terBID" type = "hidden" size = "3" value="<?php echo $betrID ?>" </p>
+						  <p>
+						  <input type = "submit" value = "Termin speichern">
+						</form>
+
+			</details>
+ 
           </td>
-         <!-- <td>
-            <form action="terminedelete.php" method="post">
-              <input type="submit"  value="Termin löschen">
-            </form>
-          </td>-->
+			<td>
+				<form action="terminedelete.php" method="post">
+				<input type="submit"  value="Termin löschen">
+				</form>
+			</td>
         </tr>
       </table>
+
+
+
+
 
     </body>
   </html>
