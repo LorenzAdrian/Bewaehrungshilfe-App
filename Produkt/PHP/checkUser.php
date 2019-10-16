@@ -41,7 +41,7 @@ else {
 			elseif ($rolle == 'proband') {
 				$_SESSION['userId'] = $row['PID'];
 			}
-			$_SESSION['username'] = $row['UserName'];
+			$_SESSION['username'] = $row['Username'];
 			//header("Location: login.php?login=success");
 			echo 1;
 		}

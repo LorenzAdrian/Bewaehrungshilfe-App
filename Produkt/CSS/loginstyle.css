@@ -1,16 +1,16 @@
 *{
-    background: steelblue;
+    background:#ECECEC;
     box-sizing: border-box;
 }
 
 .logo{
-    background-image: url(img/1000-Berliner_Baer.svg.png);
+    background-image: url(../CSS/image/1000-Berliner_Baer.svg.png);
     height: 80px;
     background-size: 40px;
     background-repeat: no-repeat;
     background-position: center;
-    background-color:ghostwhite;
-    border: 3px white solid;
+    background-color: #B20505;
+    border: 3px #CAC8C8 solid;
     border-radius: 150px 400px;
     width: 100%;
 }
@@ -26,14 +26,13 @@
 h1{
     box-sizing: border-box;
     font-size: 50px;
-    border: 5px solid snow;
     border-radius: 50px;
     margin: 0px;
     padding: 0px;
     text-align: center;
-    color: snow;
-    background:steelblue;
-    border: 2px solid snow;
+    color: #B20505;
+    background:snow;
+    border: 2px solid #CAC8C8;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -42,7 +41,7 @@ h1{
     height: 250px;
     width: 330px;
     position:relative;
-    border: 3px solid snow;
+    border: 3px solid #CAC8C8;
     border-radius: 20px;
     box-shadow: 1px 5px 10px snow;
     box-sizing: border-box;
@@ -51,7 +50,7 @@ h1{
 span{
     padding-left:70px;
     font-size: 20px;
-    color: snow;
+    color: #B20505;
     border-radius: 180px;
     font-family: 'Raleway', sans-serif;
 }
@@ -83,11 +82,11 @@ input[type="button"] {
     margin: 0px;
     padding: 0px;
     margin-left: 70px;
-    color: snow; 
+    color:#B20505; 
     font-family: 'Raleway', sans-serif;
 }
 
 input[type="button"]:hover{
-    background: snow;
-    color: steelblue;
+    background:#B20505;
+    color:snow;
 }
