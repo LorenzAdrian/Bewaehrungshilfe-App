@@ -127,6 +127,7 @@ foreach ($probInfo as $info) {
 						  <p> Title: <input name = "terTitel" type = "text" size = "50" placeholder = "Titel" > </p>
 						  <p> Datum: <input name = "terDatum" type = "date" </p>
 						  <p> Start: <input name = "terStart" type = "time" </p>
+						  <p> End: <input name = "terEnde" type = "time"  </p>
 						  <p><!-- Status: --><input name = "terStatus" type = "hidden" size="50" value="2"  </p>
 						  <p><!-- PID: --><input name = "terPID" type = "hidden"  size ="3" value="<?php echo $probID ?>"</p>
 						  <p><!-- BID: --><input name = "terBID" type = "hidden" size = "3" value="<?php echo $betrID ?>" </p>
