@@ -1,5 +1,7 @@
 <?php
 
+// DIe Events der Probanden werden als JSON feed ausgegeben.
+
 
   if(!isset($_SESSION))
   {

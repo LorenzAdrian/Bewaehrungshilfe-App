@@ -2,6 +2,9 @@
 include '../database/dbh.inc.php';
 session_start();
 
+// Die Startseite des Probanden wird erzeugt.
+
+
 // Check user login or not
 if(!isset($_SESSION['userId'])){
     header('Location: Login.php');
@@ -60,7 +63,7 @@ if (mysqli_num_rows($result) > 0) {
    <table>
 	<tr>
 		<td> <!-- Die Seite "Meine Nachrichten" wird bei Klicken des Buttons geöffnet-->
-			<a href="MeineNachrichten.php">
+			<a href="Nachrichten_menu.php">
 				<div class="icon">
 					<i class="fa fa-envelope" style="font-size:80px"></i></div>
 				<div class="name">
@@ -97,7 +100,7 @@ if (mysqli_num_rows($result) > 0) {
 					<i class="fa fa-file" style="font-size:80px"></i></div>
 				<div class="name">Dokumente</div>
 			</a>
-		</td> 
+		</td>
 	</tr>
 	<tr>
 		<td><!-- Die Seite "Notfallkontakte" wird bei Klicken des Buttons geöffnet-->
@@ -117,5 +120,3 @@ if (mysqli_num_rows($result) > 0) {
 	</tr>
 </table>
 </div>
-
-	

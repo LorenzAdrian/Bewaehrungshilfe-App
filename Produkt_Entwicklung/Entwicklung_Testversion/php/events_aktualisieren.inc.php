@@ -1,6 +1,10 @@
 <?php
 //if(isset($_POST['refresh-event'])) {
 //require 'dbh.inc.php';
+
+// Die Events der Fullcalender werden als JSON feed ausgegeben. 
+
+
 if(!isset($_SESSION))
 {
       session_start();
