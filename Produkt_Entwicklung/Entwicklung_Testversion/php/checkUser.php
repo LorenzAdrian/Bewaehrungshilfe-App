@@ -42,6 +42,7 @@ else {
 				$_SESSION['userId'] = $row['PID'];
 			}
 			$_SESSION['username'] = $row['Username'];
+			$_SESSION['rolle'] = $rolle;
 			//header("Location: login.php?login=success");
 			echo 1;
 		}
