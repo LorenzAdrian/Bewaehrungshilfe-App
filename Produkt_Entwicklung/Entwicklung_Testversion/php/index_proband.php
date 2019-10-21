@@ -13,6 +13,14 @@ if(isset($_POST['but_logout'])){
     session_destroy();
     header('Location: Login.php');
 }
+
+//Check, ob neue Nachrichten vorhanden oder nicht
+$nachrichtNeu = false;
+$sql = "SELECT * FROM nachricht WHERE PID = ".$_SESSION['userId']." AND Status = 'neu'";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+	$nachrichtNeu = True;
+}
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +63,16 @@ if(isset($_POST['but_logout'])){
 			<a href="MeineNachrichten.php">
 				<div class="icon">
 					<i class="fa fa-envelope" style="font-size:80px"></i></div>
-				<div class="name">Meine Nachrichten</div>
+				<div class="name">
+					<?php
+					if ($nachrichtNeu == True) {
+						echo('Meine Nachrichten <br>(ungelesene Nachricht!)');
+					}
+					else {
+						echo('Meine Nachrichten');
+					}
+					?>
+				</div>
 			</a>
 		</td>
 		<td><!-- Die Seite mit dem eigenenn Kalender wird bei Klicken des Buttons geöffnet-->
