@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	//Funktion für Login Button
+	//Funktion für Login Button auf login.php
     $("#login_btn").click(function(){
 		var rolle;
 		if ($("#betreuer").prop("checked")) {
@@ -11,7 +11,8 @@ $(document).ready(function(){
 		}
         var mailuid = $("#mailuid").val().trim();
         var passwort = $("#passwort").val().trim();
-
+		
+		//Eingaben werden das erste mal geprüft und an checkUser.php weitergegeben.
         if( mailuid != "" && passwort != "" ){
             $.ajax({
                 url:'checkUser.php',

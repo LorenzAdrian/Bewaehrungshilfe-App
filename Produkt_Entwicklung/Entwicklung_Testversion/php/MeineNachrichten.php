@@ -1,4 +1,6 @@
 <?php
+#Seite für die Nachrichten des Probanden
+
 include '../database/dbh.inc.php';
 if(!isset($_SESSION))
 {

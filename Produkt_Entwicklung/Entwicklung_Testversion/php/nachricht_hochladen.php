@@ -1,4 +1,6 @@
 <?php
+#Die in Meinenachricht.php eingegebene Nachricht wird verschickt, also in die Datenbank eingetragen.
+
 include '../database/dbh.inc.php';
 if(!isset($_SESSION))
 {
@@ -34,12 +36,14 @@ else {
 	}
 	$bsender = 0;#Weil Proband.
 }
+#bezugID wird aus der Datenbank ausgelesen.
 $query = "SELECT NID FROM nachricht WHERE PID=".$pid." AND BID=".$bid." ORDER BY Zeitstempel DESC LIMIT 1"; #AND WHERE BID = $bid funktioniert bei Betreuer nicht.
 $result = mysqli_query($conn, $query);
 while($row = mysqli_fetch_assoc($result)) {
 		$bezugID = $row['NID'];
 	} 
 
+#Daten werden in Datenbanktabelle nachricht übertragen.
 $sql = "INSERT INTO nachricht (Zeitstempel, Text, BezugID,  Status, PID, BID, BSender) VALUES (?, ?, ?, ?, ?, ?,?)";
 $stmt = mysqli_stmt_init($conn);
 if (mysqli_stmt_prepare($stmt, $sql)) {
@@ -51,6 +55,7 @@ else {
 	echo "Fehler: " .$sql . "<br>" .mysqli_error($conn);
 }
 
+#Die Seite wird neu geladen. Ggf. besser mit ajax zu lösen.
 header("Location: MeineNachrichten.php");
 
 ?>

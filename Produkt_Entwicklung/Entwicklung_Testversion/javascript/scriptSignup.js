@@ -1,9 +1,12 @@
+//Script zum registrieren von neuen Nutzern (Betreuer und Probanden). 
+//Fehlerhaft befüllte Felder werden leider nicht immer richtig angezeigt.
+
 $(document).ready(function(){
 	
-//Funktion für Betreuer registrieren
-	
+//Funktion für Betreuer registrieren (Nach Klick auf den Button)
 	$("#signup_betreuer_btn").click(function(e) {
 		
+		//Variablen
 		var username = $("#uid").val().trim();
         var mail = $("#mail").val().trim();
 		var pwd = $("#pwd").val().trim();
@@ -26,7 +29,7 @@ $(document).ready(function(){
 		$("#general_err").html("");
 		
 		
-		
+		//Prüfen, ob die Felder befüllt sind und gibt Daten an checkSignup.php weiter.
 		if(username !="" && mail !="" && pwd !="" && pwdrepeat !="" && vorname !="" && nachname !="" 
 				&& telnr !="" && zimmernr !="" && sz !="" && ag !="") {		//Vertretung nicht dabei, da NULL Feld			
 			$.ajax({
@@ -36,10 +39,14 @@ $(document).ready(function(){
 						nachname:nachname, telnr:telnr, zimmernr:zimmernr, sz:sz, 
 						vertretung:vertretung, ag:ag, rolle:rolle},
                 success:function(response){
+					//Response abhängig von Rückgabewert von checkSignup.php
+					
                     if(response == 1){
 						alert("Registrierung des Betreuers erfolgreich");
 						window.location = "login.php"; //Link zur Startseite muss hier rein!
                     }
+					
+					//Folgendes nur relevant, um fehlerhaft eingetragene Werte zu markieren.
 					if(response.includes("username")) {
 						$("#uid_err").html("Bitte geben Sie einen gültigen Usernamen ein!");
 						
@@ -80,9 +87,10 @@ $(document).ready(function(){
 	});
 
 
-	//Funktion für Probanden registrieren
+	//Funktion für Probanden registrieren (Nach Klick auf den Button)
 	$("#signup_proband_btn").click(function(e) {
 		
+		//Variablen
 		var username = $("#uid").val().trim();
         var mail = $("#mail").val().trim();
 		var pwd = $("#pwd").val().trim();
@@ -104,7 +112,7 @@ $(document).ready(function(){
 		$("#general_err").html("");
 		
 		
-		
+		//Prüfen, ob die Felder befüllt sind und gibt Daten an checkSignup.php weiter.
 		if(username !="" && mail !="" && pwd !="" && pwdrepeat !="" && vorname !="" && nachname !="" 
 				&& telnr !="" && az !="" && ende !="" && bid !="") {		//Vertretung nicht dabei, da NULL Feld			
 			$.ajax({
@@ -113,10 +121,14 @@ $(document).ready(function(){
                 data:{username:username, mail:mail, pwd:pwd, pwdrepeat:pwdrepeat, vorname:vorname, 
 						nachname:nachname, telnr:telnr, az:az, ende:ende, bid:bid, rolle:rolle},
                 success:function(response){
+					//Response abhängig von Rückgabewert von checkSignup.php
+					
                     if(response == 1){
 						alert("Registrierung des Betreuers erfolgreich");
 						window.location = "login.php"; //Link zur Startseite muss hier rein!
                     }
+					
+					//Folgendes nur relevant, um fehlerhaft eingetragene Werte zu markieren.
 					if(response.includes("username")) {
 						$("#uid_err").html("Bitte geben Sie einen gültigen Usernamen ein!");
 						$("#pwd").val("");

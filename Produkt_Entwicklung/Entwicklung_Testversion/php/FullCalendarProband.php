@@ -88,7 +88,9 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         alert(clickedDate);
 
       },
-
+		
+		
+		//Event zum annehmen oder ablehnen eines Termins
 	  eventClick: function(info) {
 		  if (info.event.backgroundColor == "blue") {
 				var tid = parseInt(info.event.id, 10);
@@ -105,6 +107,8 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 						return;
 					}
 				}
+				
+				//Status-Variable wird an terminStatusChange.php weitergebgeben.
 				$.ajax({
 					url:'terminStatusChange.php',
 					type:'post',

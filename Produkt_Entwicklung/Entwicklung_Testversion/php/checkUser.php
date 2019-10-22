@@ -1,6 +1,9 @@
 <?php
+#Es wird geprüft, ob die beim Login eingegebenen Daten mit denen in der Datenbank übereinstimmen.
+
 require 'dbh.inc.php';
 
+#Variablen
 $rolle;
 if($_POST['rolle']=='betreuer') {
 	$rolle = 'betreuer';
@@ -11,11 +14,12 @@ elseif($_POST['rolle']=='proband') {
 $mailuid = mysqli_real_escape_string($conn,$_POST['mailuid']);
 $passwort = mysqli_real_escape_string($conn,$_POST['passwort']);
 
-
+#Query für die Überprüfung
 $sql = "SELECT * FROM " .$rolle. " WHERE Username = ? OR Email = ?;";
 $stmt = mysqli_stmt_init($conn);
 
 //Check, ob das stmt vorbereitet (prepared) werden konnte.
+#Rückgabewert (echo) ist für scriptLogin.js wichtig. (Also 0/Fehler oder 1/Erfolg)
 if (!mysqli_stmt_prepare($stmt, $sql)) {
 	//echo '<script>alert("SQL Fehler")</script>';
 	echo 0;
