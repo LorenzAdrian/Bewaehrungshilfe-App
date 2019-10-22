@@ -63,7 +63,7 @@ if (mysqli_num_rows($result) > 0) {
    <table>
 	<tr>
 		<td> <!-- Die Seite "Meine Nachrichten" wird bei Klicken des Buttons geöffnet-->
-			<a href="Nachrichten_menu.php">
+			<a href="MeineNachrichten.php">
 				<div class="icon">
 					<i class="fa fa-envelope" style="font-size:80px"></i></div>
 				<div class="name">

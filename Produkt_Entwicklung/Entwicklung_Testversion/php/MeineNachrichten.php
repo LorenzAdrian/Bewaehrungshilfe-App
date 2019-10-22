@@ -169,7 +169,7 @@ echo "<textarea cols=\"200\" rows=\"200\">".$nachrichten3."</textarea>";
 
 		</main>
 	</body>
-</html>*/
+</html>
 
 
 <script src="../javascript/jquery-3.4.1.js"></script>
