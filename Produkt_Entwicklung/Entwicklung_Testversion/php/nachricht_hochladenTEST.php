@@ -17,7 +17,7 @@ $bsender = 0;
 
 print "<h2>Dies ist ein Test mit statischen Daten</h2>Zeitstempel: $datum<br>Text: $nachricht<br>Status: $status<br>BID: $bid<br>PID: $pid<br>BSender: $bsender";
 
-$sql = "INSERT INTO nachricht(Zeitstempel, Text, Status, BID, PID, BSender) VALUES ('$datum', '$nachricht', '$status', '$bid', '$pid', '$bsender')";//Variablen, die Zeichenketten enthalten, müssen in Hochkommata gesetzt werden. Bei Variablen, die Integer-Werte enthalten, können die Hochkommata auch weggelassen werden.
+$sql = "INSERT INTO nachricht(Zeitstempel, Text, Status, BID, PID, BSender) VALUES ('$datum', '$nachricht', '$status', '$bid', '$pid', '$bsender')";//Zeichenketten als Werte einer INSERT-Anweisung müssen in Hochkommata gesetzt werden. Bei Integer-Werten können die Hochkommata auch weggelassen werden. Weil die SQL-Anweisung in Anführungszeichen eingeschlossen ist, müssen die Variablen nicht verknüpft werden. Variablen zwischen Anführungszeichen werden interpretiert. 
 mysqli_query($conn, $sql); //$conn wurde durch dbh.inc.php eingeführt
 mysqli_close($conn);
 
