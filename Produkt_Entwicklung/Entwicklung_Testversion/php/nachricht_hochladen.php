@@ -15,7 +15,7 @@ if(!isset($_SESSION['userId'])){
 
 #Variablen für die Datenbank
 $timestamp = time();
-$datum =  /*'2019.10.14 10:00:00';*/date("Y.m.d - H:i:s", $timestamp);
+$datum =  /*'2019.10.14 10:00:00';*/date("Y.m.d H:i:s", $timestamp);
 $nachricht = $_POST['textarea1'];
 $status = 'neu';
 $bid;
@@ -41,7 +41,7 @@ $query = "SELECT NID FROM nachricht WHERE PID=".$pid." AND BID=".$bid." ORDER BY
 $result = mysqli_query($conn, $query);
 while($row = mysqli_fetch_assoc($result)) {
 		$bezugID = $row['NID'];
-	} 
+	}
 
 #Daten werden in Datenbanktabelle nachricht übertragen.
 $sql = "INSERT INTO nachricht (Zeitstempel, Text, BezugID,  Status, PID, BID, BSender) VALUES (?, ?, ?, ?, ?, ?,?)";
