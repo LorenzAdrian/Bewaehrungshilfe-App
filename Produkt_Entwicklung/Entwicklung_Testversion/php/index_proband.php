@@ -2,6 +2,9 @@
 include '../database/dbh.inc.php';
 session_start();
 
+// Die Startseite des Probanden wird erzeugt.
+
+
 // Check user login or not
 if(!isset($_SESSION['userId'])){
     header('Location: Login.php');
@@ -12,6 +15,14 @@ if(!isset($_SESSION['userId'])){
 if(isset($_POST['but_logout'])){
     session_destroy();
     header('Location: Login.php');
+}
+
+//Check, ob neue Nachrichten vorhanden oder nicht
+$nachrichtNeu = false;
+$sql = "SELECT * FROM nachricht WHERE PID = ".$_SESSION['userId']." AND Status = 'neu'";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+	$nachrichtNeu = True;
 }
 ?>
 
@@ -55,7 +66,16 @@ if(isset($_POST['but_logout'])){
 			<a href="MeineNachrichten.php">
 				<div class="icon">
 					<i class="fa fa-envelope" style="font-size:80px"></i></div>
-				<div class="name">Meine Nachrichten</div>
+				<div class="name">
+					<?php
+					if ($nachrichtNeu == True) {
+						echo('Meine Nachrichten <br>(ungelesene Nachricht!)');
+					}
+					else {
+						echo('Meine Nachrichten');
+					}
+					?>
+				</div>
 			</a>
 		</td>
 		<td><!-- Die Seite mit dem eigenenn Kalender wird bei Klicken des Buttons geöffnet-->
@@ -80,7 +100,7 @@ if(isset($_POST['but_logout'])){
 					<i class="fa fa-file" style="font-size:80px"></i></div>
 				<div class="name">Dokumente</div>
 			</a>
-		</td> 
+		</td>
 	</tr>
 	<tr>
 		<td><!-- Die Seite "Notfallkontakte" wird bei Klicken des Buttons geöffnet-->
@@ -100,5 +120,3 @@ if(isset($_POST['but_logout'])){
 	</tr>
 </table>
 </div>
-
-	

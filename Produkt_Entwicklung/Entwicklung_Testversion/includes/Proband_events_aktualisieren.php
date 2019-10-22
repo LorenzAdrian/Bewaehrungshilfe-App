@@ -3,6 +3,9 @@
 //if(isset($_POST['refresh-event'])) {
 //require 'dbh.inc.php';
 
+// Die Termine vom Probanden werden ausgegeben!!
+// ALTE VERSION!!!!
+
 function get_data()
 {
   $conn = mysqli_connect('localhost','root','','bewaehrungshilfe');

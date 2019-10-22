@@ -1,6 +1,6 @@
 
 <?php
-
+// Hier befindet sich der Fullcalendar der Betreuer.
 
  ?>
 <!DOCTYPE html>
