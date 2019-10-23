@@ -19,7 +19,7 @@ if(isset($_POST['but_logout'])){
 
 //Check, ob neue Nachrichten vorhanden oder nicht
 $nachrichtNeu = false;
-$sql = "SELECT * FROM nachricht WHERE PID = ".$_SESSION['userId']." AND Status = 'neu'";
+$sql = "SELECT * FROM nachricht_test6 WHERE PID = ".$_SESSION['userId']." AND Status = 'neu'";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
 	$nachrichtNeu = True;
