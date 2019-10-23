@@ -3,6 +3,11 @@
     box-sizing: border-box;
 }
 
+header{
+    height: 30vh;
+    background: yellow;
+}
+
 .logo{
     background-image: url(../CSS/image/1000-Berliner_Baer.svg.png);
     height: 80px;
