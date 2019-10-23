@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 // Die Nachrichten werden ausgelesen
 include '../database/dbh.inc.php';
@@ -31,7 +31,7 @@ if (isset($probID)) {
 }
 else{
 
-$event_sql = "SELECT * FROM nachricht_test6 WHERE ".$personenID." = ".$_SESSION['userId']." ORDER BY Zeitstempel";}
+$event_sql = "SELECT * FROM nachricht WHERE ".$personenID." = ".$_SESSION['userId']." ORDER BY Zeitstempel";}
 $result = mysqli_query($conn, $event_sql);
 $event_data = array();
 while ($row = mysqli_fetch_array($result))
