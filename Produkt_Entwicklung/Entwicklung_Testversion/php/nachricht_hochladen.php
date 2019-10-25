@@ -24,7 +24,7 @@ $pid;
 if($_SESSION['rolle'] == 'betreuer') {
 	$bid = $_SESSION['userid'];
 	$pid = 0; #Variable mit ID aus Datatables übertragen?
-	$bsender = $_SESSION['userId']; #Weil Betreuer.
+	$bsender = 1; #Weil Betreuer.
 }
 else {
 	$pid = $_SESSION['userId'];
