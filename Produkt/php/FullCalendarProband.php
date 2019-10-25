@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang='en'>
-
+<!-- Hier befindet sich der Fullcalendar der Probanden-->
   <head>
  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -88,7 +88,9 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         alert(clickedDate);
 
       },
-	/*
+		
+		
+		//Event zum annehmen oder ablehnen eines Termins
 	  eventClick: function(info) {
 		  if (info.event.backgroundColor == "blue") {
 				var tid = parseInt(info.event.id, 10);
@@ -98,13 +100,15 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 				}
 
 				else {
-					if (confirm("Soll der Termin abgelehnt werden?")) {		
+					if (confirm("Soll der Termin abgelehnt werden?")) {
 						status = "3"; //Status wird auf abgelehnt gesetzt.
 					}
 					else {
 						return;
-					}	
+					}
 				}
+				
+				//Status-Variable wird an terminStatusChange.php weitergebgeben.
 				$.ajax({
 					url:'terminStatusChange.php',
 					type:'post',
@@ -124,7 +128,6 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 
 		  }
 	  },
-	  */
 
 
       events: {

@@ -1,92 +1,163 @@
 *{
-    background:#ECECEC;
-    box-sizing: border-box;
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	font-family: 'Assistant', sans-serif;
+}
+
+body{
+	background: url(../CSS/image/aerial-view-alexanderplatz-architecture-1128408.jpg)no-repeat;
+    background-size: cover;
+    height: 110vh;
+}
+
+header{
+	height: 15vh;
+    background: white;
+}
+
+.menubar{
+    display: flex;   
+    height: 15vh; 
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.menu li{
+    list-style: none;
+    line-height: 100px;
+}
+
+.menu li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color:black;
+    font-family: 'Assistant', sans-serif;
+    font-size: 30px;
 }
 
 .logo{
-    background-image: url(../CSS/image/1000-Berliner_Baer.svg.png);
-    height: 80px;
-    background-size: 40px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #B20505;
-    border: 3px #CAC8C8 solid;
-    border-radius: 150px 400px;
-    width: 100%;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: -20px;
 }
+
+.berlin_logo{
+    width: 60px;
+    height: 60px;
+}
+
+.soziale{
+    padding-top: 30px;
+    line-height: 60px;
+}
+
+.soziale h1{
+    font-size: 3.4rem;
+    font-family: 'Assistant', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    animation: blinker 12s ease;
+    z-index: 3;
+}
+
+.soziale h2{
+    font-size: 2rem;
+    font-family: 'Assistant', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    animation: blinker 12s ease;
+}
+
+@keyframes blinker {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 
 .login{
-    box-sizing: border-box;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
+	width: 80%;
+	height:10vh;
+	justify-content: flex-end;
+	align-items: flex-end;
+	text-align: right;
+    display: flex;
 }
 
-h1{
-    box-sizing: border-box;
-    font-size: 50px;
-    border-radius: 50px;
-    margin: 0px;
-    padding: 0px;
+.login h1{
+	font-size: 2rem;
+    padding-top: 20px;
     text-align: center;
-    color: #B20505;
-    background:snow;
-    border: 2px solid #CAC8C8;
-    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: black;
 }
 
 .loginfenster{
-    left: 38%;
-    height: 250px;
-    width: 330px;
-    position:relative;
-    border: 3px solid #CAC8C8;
-    border-radius: 20px;
-    box-shadow: 1px 5px 10px snow;
-    box-sizing: border-box;
+	padding-top: 10px;
+	width: 50%;
+	align-items: right;
+	justify-content: right;
+	text-align: center;
+	float: right;
 }
 
-span{
-    padding-left:70px;
-    font-size: 20px;
-    color: #B20505;
-    border-radius: 180px;
-    font-family: 'Raleway', sans-serif;
+.loginfenster span{
+	font-family: 'Assistant', sans-serif;
+	text-transform: uppercase;
+	font-size: 20px;
 }
 
 input[type="text"]{
-    width: 250px;
-    height: 40px;
-    font-size: 20px;
-    text-align: center;
-    margin-left: 45px;
-}
-    
-input[type="checkbox"] {
-    zoom: 1.5;
+    font-size: 16px;
+    border: 1px solid yellow;
+    box-shadow: 0 1.2em 0 -0.9em wheat;
 }
 
 input[type="password"]{
-    width: 250px;
-    height: 40px;
-    font-size: 20px;
-    text-align: center;
-    margin-left: 45px;
-    margin-top: 20px;
+    font-size: 16px;
+    border: 1px solid yellow;
+    box-shadow: 0 1.2em 0 -0.9em wheat;
 }
 
 input[type="button"] {
-    width: 80px;
+    margin-left: 25px;
+    border-radius: 20px;
+    width: 250px;
+    height: 30px;
     zoom: 1.5;
-    margin: 0px;
-    padding: 0px;
-    margin-left: 70px;
-    color:#B20505; 
-    font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	border: 1px solid yellow;
 }
 
-input[type="button"]:hover{
-    background:#B20505;
-    color:snow;
+#mailuid{
+    height: 60px;
+    width: 450px;
+    text-align: center;
+}
+
+#passwort{
+    height: 60px;
+    width: 450px;
+    text-align: center;
+}
+
+.checkbox{
+    margin-left: 5px;
+    zoom: 2;
+}
+
+input[type="button"]:hover {
+   background: black;
+   color: wheat;
 }

@@ -1,6 +1,9 @@
 <?php
 //if(isset($_POST['refresh-event'])) {
 //require 'dbh.inc.php';
+
+// Die Termine für den Fullcalender der Betreuer werden im JSON-Format ausgegeben
+// ALTE VERSION!!!!!
 if(!isset($_SESSION))
 {
       session_start();
@@ -22,7 +25,7 @@ function get_data()
 	  $row['Status'] = 'blue';
   }
   if ($row['Status'] == '3'){
- 
+
 	  $row['Status'] = 'grey';
   }
   $event_data [] = array(

@@ -1,4 +1,6 @@
 <?php
+#Der Terminstatus wird je nach Eingabe des Nutzers zu angenommen oder abgelehnt geändert.
+
 include 'dbh.inc.php';
 
 $tid = $_POST['tid'];
