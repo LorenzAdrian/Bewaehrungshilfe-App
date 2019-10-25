@@ -1,6 +1,8 @@
 <?php
 //include '../includes/events_aktualisieren.inc.php';
 
+// Die Startseite des Betreuers wird erzeugt.
+
 include 'dbh.inc.php';
 if(!isset($_SESSION))
 {
@@ -83,4 +85,3 @@ if(isset($_POST['but_logout'])){
 </body>
 
 </html>
-

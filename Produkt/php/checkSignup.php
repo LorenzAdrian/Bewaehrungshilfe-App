@@ -3,6 +3,7 @@
 
 require 'dbh.inc.php';
 
+#Variablen aus Formular von signup.php
 $rolle = $_POST['rolle'];
 $username = $_POST['username'];
 $email = $_POST['mail'];
