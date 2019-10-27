@@ -1,0 +1,51 @@
+  header {
+    font-family: 'Roboto', sans-serif;
+    height: 20vh;
+    background: coral;
+    width: 100%;
+  }
+
+  .menu{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+  }
+
+  .menu li{
+    list-style: none;
+  }
+
+  .menu li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: black;
+
+  }
+
+  .menubar {
+   display: flex;
+   height: 15vh;
+   align-items: center;
+  }
+  .titel {
+   text-align: center;
+   width: 64%;
+   align-items: center;
+  }
+  .titel h1{
+   font-size: 3rem;
+   text-transform: uppercase;
+  }
+  .logo{
+   width: 20%;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+
+  }
+  .berlin_logo{
+   z-index: 3;
+   width: 15%;
+   height: auto
+  }
