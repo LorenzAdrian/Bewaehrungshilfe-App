@@ -2,7 +2,7 @@
 //if(isset($_POST['refresh-event'])) {
 //require 'dbh.inc.php';
 
-// Die Events der Fullcalender werden als JSON feed ausgegeben. 
+// Die Events der Fullcalender werden als JSON feed ausgegeben.
 
 
 if(!isset($_SESSION))
@@ -36,7 +36,8 @@ if(!isset($_SESSION))
     'title'     => $row['Titel'],
     'color'    => $row['Status'],
     'PID'       =>  $row['PID'],
-    'BID'       =>  $row['BID']
+    'BID'       =>  $row['BID'],
+    'description' => $row['Beschreibung']
   );
 }
 

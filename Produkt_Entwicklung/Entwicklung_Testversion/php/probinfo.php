@@ -104,6 +104,7 @@ if (mysqli_num_rows($result) > 0) {
 					  <p> Datum: <input name = "terDatum" type = "date"> </p>
 					  <p> Start: <input name = "terStart" type = "time"> </p>
 					  <p> End: <input name = "terEnde" type = "time">  </p>
+            <p> Beschreibung: <input name="terBeschreibung" type="text" size="50" placeholder="Beschreibung"</P>
 					  <p><!-- Status: --><input name = "terStatus" type = "hidden" value="2">  </p>
 					  <p><!-- PID: --><input name = "terPID" type = "hidden" value="<?php echo $probID ?>"></p>
 					  <p><!-- BID: --><input name = "terBID" type = "hidden" value="<?php echo $betrID ?>"> </p>
