@@ -92,9 +92,18 @@ foreach($event_data as $nachricht){
 	}
 }
 
-#Alle Nachrichten des Nutzers auf "gelesen" setzen.
-#ACHTUNG: Im Moment nur für Proband nutzbar.
-$sql = "UPDATE nachricht SET Status='gelesen' WHERE ".$personenID."=".$_SESSION['userId'];
+#Alle Nachrichten des Gesrpächspartners auf "gelesen" setzen.
+if ($_SESSION['rolle'] == 'proband'){
+	$sql = "UPDATE nachricht SET Status='gelesen' 
+	WHERE ".$personenID."=".$_SESSION['userId']." 
+	AND BSender= 1";
+}
+else if($_SESSION['rolle'] == 'betreuer'){
+	$sql = "UPDATE nachricht SET Status='gelesen' 
+	WHERE ".$personenID."=".$_SESSION['userId']." 
+	AND BSender= 0";
+}
+
 
 /*if ($personenID == 'BID') {
 	$sql .= "AND WHERE 'PID'= /übergebener Wert aus Datatables?/" Wert ggf. per POST weitergeben?
