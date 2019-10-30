@@ -22,7 +22,7 @@
             </div>
             <ul class="menu">
                 <li>
-                    <a href="index.html" class="nav-link">Über Uns</a>
+                    <a href="index.html" class="nav-link">Über Uns1</a>
                 </li>
                 <li>
                         <a href="#kontakt" class="nav-link">Kontakt</a>
@@ -33,7 +33,6 @@
             </ul>
 		</div>
 	</header>
-	<div class="strich"></div>
     <section class="soziale">
         <h1>Herzlich Willkommen</h1>
         <h2>bei den Sozialen Diensten Berlin</h2>
