@@ -69,7 +69,7 @@ if (mysqli_num_rows($result) > 0) {
       <div>
         <!-- <details> ist ein HTML5-Element, das das Ausklappen ermöglicht. Kein Button notwendig. <summary> legt den Text fest, der vor dem Ausklappen sichtbar ist. -->
         <details>
-  			<summary> Termin anlegen </summary>
+  			<summary class="termin"> Termin anlegen </summary>
   			<form action = "terminetest_insert.php" method = "post">
   			  <p>
           Titel: <input name = "terTitel" type = "text" size = "50" placeholder = "Titel">&nbsp;&nbsp;&nbsp;

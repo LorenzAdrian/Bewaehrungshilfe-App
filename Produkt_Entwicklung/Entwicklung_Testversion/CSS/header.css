@@ -1,4 +1,4 @@
-header {
+  header {
     font-size: 10pt;
     font-family: 'Roboto', sans-serif;
     height: 20vh;
@@ -52,7 +52,7 @@ header {
   }
 
   hr{
-    background-color: NavajoWhite ;
+    background-color: darkred ;
     border: none;
     height: 15pt;
     width: 100%;
