@@ -1,4 +1,5 @@
-  header {
+header {
+    font-size: 10pt;
     font-family: 'Roboto', sans-serif;
     height: 20vh;
     background: white;
@@ -45,6 +46,14 @@
 
   }
   .berlin_logo{
+   
    width: 15%;
    height: auto
+  }
+
+  hr{
+    background-color: coral;
+    border: none;
+    height: 15pt;
+    width: 100%;
   }
