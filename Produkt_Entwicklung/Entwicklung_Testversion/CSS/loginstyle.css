@@ -54,6 +54,10 @@ header{
     height: 60px;
 }
 
+main{
+    height: 90vh;
+}
+
 .soziale{
     padding-top: 30px;
     line-height: 60px;
@@ -165,6 +169,7 @@ input[type="button"]:hover {
 }
 
 footer{
-    height: 20vh;
-    color: red;
+    height: 10vh;
+    background-color: yellow;
+    text-align: center;
 }
