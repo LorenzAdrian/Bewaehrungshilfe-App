@@ -12,10 +12,11 @@ if(!isset($_SESSION['userId'])){
 
 require "../database/dbh.inc.php";
 
-include "Nachrichten_menu.php";
 
 $betrID = $_POST['betreuer'];
 $probID = $_POST['proband'];
+
+include "Nachrichten_menu.php";
 
 if(!isset($_SESSION['prodID'])){
 $_SESSION['probID'] = $probID;}
