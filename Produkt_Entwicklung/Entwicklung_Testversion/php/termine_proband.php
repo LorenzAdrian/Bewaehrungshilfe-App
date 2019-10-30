@@ -21,45 +21,17 @@ if(isset($_POST['but_logout'])){
 <head>
     <meta charset="utf-8">
 	<!--- Pfad zur style.css--------------------------->
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/termine_proband.css">
     <!--Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
     <title>Startseite</title>
-
+	<?php include '../includes/header.html';
+	?>
 </head>
 
 
 <body>
-
-<header>
-        <div class="menubar">
-           
-			<div class="logo">
-                <img src="../CSS/image/1000-Berliner_Baer.svg.png" alt="logo" class="berlin_logo">
-            </div>
-		   <ul class="menu">
-				
-				<li>                      
-					  <a href="index_proband.php" class="nav-link1">Startseite</a>
-                </li>
-				<li>
-					<a href ="#"><img src="../CSS/image/user-circle.svg" class="nav-link2">Mein Bereich</a>
-				</li>
-				<li>
-				</li>
-				<li>
-				</li>
-				<li>
-				</li> 
-				<li>
-					<a href="login.php" class="nav-link3">Logout <!-- (<?php echo $_SESSION["username"]; ?>)--> </a>
-				</li>
-								
-            </ul>
-				
-		</div>
-	</header>
 	
 <section class="calendar">
        <h1>Meine Termine</h1>
