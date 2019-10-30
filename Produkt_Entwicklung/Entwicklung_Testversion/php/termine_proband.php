@@ -43,7 +43,6 @@ if(isset($_POST['but_logout'])){
 
     <?php include 'FullCalendarProband.php';?>
 </div>
-<div></div>
 </body>
 
 </html>
