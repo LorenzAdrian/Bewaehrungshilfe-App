@@ -43,9 +43,11 @@ input {
     background-color: white;
 }
 
+
 input:hover[type="submit"]
 		{
 			background: darkred ;
+      color: white;
 		}
 
   p.ueberschrift{
@@ -69,5 +71,6 @@ details{
 }
 
 summary:hover{
-  background-color: darkred;
+  text-decoration: underline;
+  color: darkred;
 }
