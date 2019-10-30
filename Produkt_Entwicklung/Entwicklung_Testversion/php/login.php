@@ -36,7 +36,7 @@
 				<input type="checkbox" class="checkbox" name="rolle" id="betreuer" value="betreuer">
 				<br><br>
 				<div id="error"></div>
-				<input type="text" name="mailuid" id="mailuid" placeholder="Geben Sie bitte Ihren Bernutzernamen ein. (Beispiel: MaxMueller)">
+				<input type="text" name="mailuid" id="mailuid" placeholder="Geben Sie bitte Ihren Benutzernamen ein. (Beispiel: MaxMueller)">
 				<br><br>
 				<input type="password" name="passwort" id="passwort" placeholder="Geben Sie bitte Ihr Passwort ein.">
 				<br><br><br>
@@ -51,6 +51,7 @@
 			</div>-->
 
 	</main>
+  <?php include '../includes/footer.inc.php' ?>
 	</body>
 </html>
 

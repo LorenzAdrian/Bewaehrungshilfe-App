@@ -8,7 +8,6 @@ body{
 }
 .toggle{
   max-width: 15%;
-  border: 1px solid NavajoWhite ;
 }
 
 .kalender{
@@ -35,15 +34,10 @@ body{
 
 
 summary{
-  max-width: 15%;
-/*  border: 1px solid coral;*/
+
   font-size: 15pt;
 }
-/*
-summary:hover{
-  background-color: coral;
-}
-*/
+
 input {
     font-size: 12pt;
     background-color: white;
@@ -51,7 +45,7 @@ input {
 
 input:hover[type="submit"]
 		{
-			background: NavajoWhite ;
+			background: darkred ;
 		}
 
   p.ueberschrift{
@@ -60,3 +54,20 @@ input:hover[type="submit"]
     font-style: italic;
     margin-bottom: -35px;
   }
+
+.termin{
+  width: 30%;
+  text-align: left;
+  font-size: 16pt;
+}
+
+details{
+  display: flex;
+  width: 80%;
+  float: right;
+
+}
+
+summary:hover{
+  background-color: darkred;
+}

@@ -54,11 +54,6 @@ header{
     height: 60px;
 }
 
-.strich{
-    height: 2vh;
-    background-color: coral;
-}
-
 .soziale{
     padding-top: 30px;
     line-height: 60px;
@@ -167,4 +162,9 @@ input[type="button"] {
 input[type="button"]:hover {
    background: black;
    color: wheat;
+}
+
+footer{
+    height: 20vh;
+    color: red;
 }

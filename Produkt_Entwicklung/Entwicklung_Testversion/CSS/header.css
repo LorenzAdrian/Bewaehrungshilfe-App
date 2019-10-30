@@ -1,4 +1,4 @@
-header {
+  header {
     font-size: 10pt;
     font-family: 'Roboto', sans-serif;
     height: 20vh;
@@ -21,7 +21,6 @@ header {
     text-transform: uppercase;
     letter-spacing: 3px;
     color: black;
-
   }
 
   .menubar {
@@ -52,8 +51,16 @@ header {
   }
 
   hr{
-    background-color: NavajoWhite ;
+    background-color: darkred ;
     border: none;
     height: 15pt;
     width: 100%;
+  }
+
+  main{
+    height: 60vh;
+  }
+
+  footer{
+    color: red;
   }
