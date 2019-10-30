@@ -12,6 +12,7 @@ if(!isset($_SESSION['userId'])){
 
 require "../database/dbh.inc.php";
 
+
 $betrID = $_POST['betreuer'];
 $probID = $_POST['proband'];
 
@@ -94,36 +95,48 @@ if (mysqli_num_rows($result) > 0) {
         ?>
         </div>
 
-        <div class="bkalender">
-        <p class="ueberschrift"> Mein Kalender </p>
-        <?php include 'FullCalendar.php';
-        ?>
-        </div>
-        
+      <div class="toggle" onclick="openNav()">
+        &#9776; Nachrichten
+      </div>
+      <div>
+        <!-- <details> ist ein HTML5-Element, das das Ausklappen ermöglicht. Kein Button notwendig.
+  				<summary> legt den Text fest, der vor dem Ausklappen sichtbar ist. -->
+          <details>
+  				<summary> Termin anlegen </summary>
+					<form action = "terminetest_insert.php" method = "post">
+					  <p>
+            Titel: <input name = "terTitel" type = "text" size = "50" placeholder = "Titel">&nbsp;&nbsp;&nbsp;
+            Beschreibung: <input name="terBeschreibung" type="text" size="50" placeholder="Beschreibung"
+            </p>
+					  <p> Datum: <input name = "terDatum" type = "date">&nbsp;&nbsp;&nbsp;
+              Beginn: <input name = "terStart" type = "time">&nbsp;&nbsp;&nbsp;
+              Ende: <input name = "terEnde" type = "time"></p>
+            <p> </P>
+					  <p><!-- Status: --><input name = "terStatus" type = "hidden" value="2">  </p>
+					  <p><!-- PID: --><input name = "terPID" type = "hidden" value="<?php echo $probID ?>"></p>
+					  <p><!-- BID: --><input name = "terBID" type = "hidden" value="<?php echo $betrID ?>"> </p>
+					  <p>
+					  <input type = "submit" value = "Termin speichern"></p>
+					</form>
+  			</details>
       </div>
 
-        <div>
-               <!-- <details> ist ein HTML5-Element, das das Ausklappen ermöglicht. Kein Button notwendig.
-         				<summary> legt den Text fest, der vor dem Ausklappen sichtbar ist. -->
-                 <details>
-         				<summary> Termin anlegen </summary>
-       					<form action = "terminetest_insert.php" method = "post">
-       					  <p>
-                   Titel: <input name = "terTitel" type = "text" size = "50" placeholder = "Titel">&nbsp;&nbsp;&nbsp;
-                   Beschreibung: <input name="terBeschreibung" type="text" size="50" placeholder="Beschreibung"
-                   </p>
-       					  <p> Datum: <input name = "terDatum" type = "date">&nbsp;&nbsp;&nbsp;
-                     Beginn: <input name = "terStart" type = "time">&nbsp;&nbsp;&nbsp;
-                     Ende: <input name = "terEnde" type = "time"></p>
-                   <p> </P>
-       					  <p><!-- Status: --><input name = "terStatus" type = "hidden" value="2">  </p>
-       					  <p><!-- PID: --><input name = "terPID" type = "hidden" value="<?php echo $probID ?>"></p>
-       					  <p><!-- BID: --><input name = "terBID" type = "hidden" value="<?php echo $betrID ?>"> </p>
-       					  <p>
-       					  <input type = "submit" value = "Termin speichern"></p>
-       					</form>
-         			</details>
-             </div>
+      <div>
+      <table>
+      <tr>
+      <td>
+      <?php include 'FullCalendarProband.php';
+      ?>
+      </td>
+      <td>
+      <?php include 'FullCalendar.php';
+      ?>
+      </td>
+      </tr>
+      </table>
+      </div>
+
+
 
     </div>
 

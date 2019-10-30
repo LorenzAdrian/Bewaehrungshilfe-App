@@ -11,10 +11,59 @@ body{
     height: 110vh;
 }
 
+header{
+	height: 15vh;
+    background: white;
+}
+
+.menubar{
+    display: flex;
+    height: 15vh;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.menu li{
+    list-style: none;
+    line-height: 100px;
+}
+
+.menu li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color:black;
+    font-family: 'Assistant', sans-serif;
+    font-size: 10pt;
+}
+
+.logo{
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: -20px;
+}
+
+.berlin_logo{
+    width: auto;
+    height: 60px;
+}
+
+.strich{
+    height: 2vh;
+    background-color: coral;
+}
 
 .soziale{
     padding-top: 30px;
     line-height: 60px;
+    width: 50%;
+    float: right;
 }
 
 .soziale h1{
@@ -24,7 +73,7 @@ body{
     text-transform: uppercase;
     font-weight: 400;
     animation: blinker 12s ease;
-    z-index: 3;
+    z-index: 1;
 }
 
 .soziale h2{

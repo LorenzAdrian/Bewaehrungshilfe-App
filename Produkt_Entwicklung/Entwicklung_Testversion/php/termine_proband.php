@@ -32,37 +32,46 @@ if(isset($_POST['but_logout'])){
 
 <body>
 
-<div class="logo"></div>
+<header>
+        <div class="menubar">
+           
+			<div class="logo">
+                <img src="../CSS/image/1000-Berliner_Baer.svg.png" alt="logo" class="berlin_logo">
+            </div>
+		   <ul class="menu">
+				
+				<li>                      
+					  <a href="index_proband.php" class="nav-link1">Startseite</a>
+                </li>
+				<li>
+					<a href ="#"><img src="../CSS/image/user-circle.svg" class="nav-link2">Mein Bereich</a>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li> 
+				<li>
+					<a href="login.php" class="nav-link3">Logout <!-- (<?php echo $_SESSION["username"]; ?>)--> </a>
+				</li>
+								
+            </ul>
+				
+		</div>
+	</header>
+	
+<section class="calendar">
+       <h1>Meine Termine</h1>
+       	   
+</section>
 
-<div class="hallobox">Hallo <?php echo $_SESSION["username"]; ?></div>
 
-<div class="menu">
+<div class="fullcalendar">
 
-            <li><a href ="https://cssgridgarden.com/#de"><img src="../CSS/image/search.svg">Suchen</a>
-            </li>
-
-            <li><a href ="#"><img src="../CSS/image/user-circle.svg">Mein Bereich</a>
-            </li>
-            <li>
-				<form method='post' action="">
-					<input type="submit" value="Logout" name="but_logout">
-				</form>
-			</li>
-			<li>
-				<a href="index_proband.php">
-					<button>Zurück zur Startseite</button>
-				</a>
-			</li>
-
-</div>
-
-
-<div></div>
-
-<div class="">
     <?php include 'FullCalendarProband.php';?>
 </div>
-
+<div></div>
 </body>
 
 </html>

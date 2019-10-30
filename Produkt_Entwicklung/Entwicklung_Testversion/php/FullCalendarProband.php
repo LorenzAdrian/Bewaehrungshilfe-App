@@ -4,8 +4,10 @@
 <html lang='en'>
 <!-- Hier befindet sich der Fullcalendar der Probanden-->
   <head>
+    <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
+    <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+ <link rel="stylesheet" type="text/css" href="../CSS/style_tooltip.css">
     <style>
     html, body {
       display: grid;
@@ -59,6 +61,14 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         left: 'prev,next today',
         center: 'title,',
 	    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      eventRender: function(info) {
+        var tooltip = new Tooltip(info.el, {
+          title: info.event.extendedProps.description,
+          placement: 'top',
+          trigger: 'hover',
+          container: 'body'
+        });
       },
 	        customButtons: {
         addEventButton: {

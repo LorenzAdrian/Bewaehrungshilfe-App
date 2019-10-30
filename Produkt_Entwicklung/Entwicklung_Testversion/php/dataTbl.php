@@ -31,7 +31,7 @@ require "problisteDT.inc.php";
                 <tr>
                   <th>Name</th>
                   <th>PID</th>
-                  <th>BID</th>
+                  <th>Ungelesene Nachrichten</th>
                 </tr>
             </thead>
             <tfoot>

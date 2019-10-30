@@ -1,201 +1,83 @@
+{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	font-family: 'Assistant', sans-serif;
+}
 body{
-    box-sizing: border-box;
-    background: #ECECEC;
-    display: grid;
-    grid-template-columns: 40% 10% 40%;
-    grid-template-rows: 100px 100px 100px 500px 50px 50px;
-    grid-gap: 10px;
-    /*grid-template-areas:
-        "lo ha "
-        "me me "
-        "ub1 ub2"
-        "ra ca"
-        "bu ca"
-        "kn ca" */
+	/*background: linear-gradient(0deg, #9BCD9B  , white);*/
+
+	background: url(../CSS/image/berlin-307382.svg)no-repeat;
+    background-size: cover;
+    height: 110vh;
+}
+header{
+ height: 15vh;
+
+ background: ButtonFace;
+ }
+
+.menubar{
+ display: flex;
+ height: 15vh;
+ align-items: center;
+
 }
 
 .logo{
-    grid-area: lo;
-    background-image: url(image/1000-Berliner_Baer.svg.png);
-    background-size: 50px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color:#B20505;
-    border: 3px #CAC8C8 solid;
-    border-radius: 150px 400px ;
-    grid-column: 1/2;
-    grid-row:1 / 2;
+ width: 10%;
+ align-items: center;
+ justify-content: center;
+ display: flex;
+ margin-top: -20px;
 }
 
-.hallobox{
-    grid-area: ha;
-    background:#ECECEC;
-    font-family: 'Raleway', sans-serif;
-    font-size: 80px;
-    font-weight:bolder;
-    text-align: left;
-    direction: ltr;
-    text-shadow: 2px 2px 5px #CAC8C8;
-    padding-left: 40px;
-    text-transform: uppercase;
-    color: #B20505;
-    line-height: 100px;
-    box-sizing: border-box;
-    grid-column:2/3;
-    grid-row:1 / 2;
+.berlin_logo{
+ width: 60px;
+ height: 60px;
 }
 
 .menu{
-    grid-area: me;
-    background: ghostwhite;
-    border: 3px #CAC8C8 solid;
-    border-radius: 150px 400px;
-    box-sizing: border-box;
-    grid-column:1/4;
-    grid-row:2 / 3;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.menu li{
+    list-style: none;
+    line-height: 100px;
+}
+
+.menu li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color:black;
+    font-family: 'Assistant', sans-serif;
+    font-size: 30px;
 }
 
 .menu img{
     height: 80px;
     width: 80px;
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
-
-.menu img:hover{
-    height: 85px;
-    width: 85px;
-}
-
-.menu li{
-    list-style: none;
-    float: right;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.menu li a{
-    font-family: 'Anton', sans-serif;
-    text-decoration: none;
-    color: #B20505;
-    text-align: center;
-    box-sizing: border-box;
-    font-size: 20px;
-}
-
-.uberschrift1{
-    display: grid;
-    grid-area: ub1;
-    background:#ECECEC;
-    font-size: 40px;
-    text-transform: uppercase;
-    text-decoration: overline underline;
-    font-family: 'Raleway', sans-serif;
-    color: #B20505;
-    text-align: center;
-    line-height: 100px;
-    box-sizing: border-box;
-    grid-column: 1 / 2;
-    grid-row:3 / 4;
-}
-
-.uberschrift2{
-    display: grid;
-    grid-area: ub2;
-    background: #ECECEC;
-    font-size: 40px;
-    text-transform: uppercase;
-    text-decoration: underline overline;
-    font-family: 'Raleway', sans-serif;
-    color: #B20505;
-    text-align: left;
-    padding-left: 30px;
-    line-height: 100px;
-    box-sizing: border-box;
-    grid-column: 3 / 4;
-    grid-row:3 / 4;
-}
-
-.rahmen{
-    grid-area: ra;
-    width: 100%;
-    background: #ECECEC;
-    box-sizing: border-box;
-    font-size: 15px;
-    /*text-transform: uppercase;*/
-    grid-column: 1 / 2;
-    grid-row:4 / 5;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-}
-
-.rahmen a{
-    padding-left: 25px;
-    text-decoration: none;
-    color: #B20505;
-    font-family: 'Raleway', sans-serif;
-}
-
-.rahmen a:hover{
-    padding-left: 25px;
-    text-decoration: underline;
-    color: #1435B7;
-    background: floralwhite;
-}
-
-.dataTables_filter {
-	float: left !important;
-}
-
-#testid{
-    overflow: scroll;
-    margin-top: -275px;
-    background:#ECECEC;
-    height: 470px;
-    border: 10px solid #CAC8C8;
-    border-radius: 50px;
-}
-
-#calendar{
-    grid-area: ca;
-    background: #ECECEC;
-  
-    border-radius: 50px;
-    position: absolute;
-}
+--
 .calendar{
-  grid-column: 3 / 4;
-  grid-row:4 / 5;
+    padding-top: 30px;
+    line-height: 60px;
 }
 
-.button{
-    grid-area: bu;
-    background: floralwhite;
-    color: steelblue;
+.calendar h1{
+    font-size: 40px;
+    font-family: 'Assistant', sans-serif;
     text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    font-family: 'Anton', sans-serif;
-    height: 50px;
-    font-size: 30px;
-    border-radius: 50px;
-    line-height: 50px;
-    grid-column: 1 / 2;
-    grid-row:5 / 6;
+    text-transform: uppercase;
+    font-weight: 400;
+
 }
 
-.knopf{
-    grid-area: kn;
-    background: floralwhite;
-    color: steelblue;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    font-family: 'Anton', sans-serif;
-    height: 50px;
-    font-size: 30px;
-    border-radius: 50px;
-    line-height: 50px;
-    grid-column: 1 / 2;
-    grid-row:6 / 7;
+.fullcalendar {
+	margin: auto;
+
 }
