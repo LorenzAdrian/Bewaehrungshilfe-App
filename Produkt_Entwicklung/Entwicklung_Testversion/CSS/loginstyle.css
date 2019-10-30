@@ -163,3 +163,8 @@ input[type="button"]:hover {
    background: black;
    color: wheat;
 }
+
+footer{
+    height: 20vh;
+    background-color: red;
+}

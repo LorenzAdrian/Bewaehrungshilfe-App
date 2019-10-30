@@ -51,6 +51,7 @@
 			</div>-->
 
 	</main>
+	<?php '../includes/footer.inc.php'?>
 	</body>
 </html>
 
