@@ -50,6 +50,7 @@ if (mysqli_num_rows($result) > 0) {
   </head>
 
   <body>
+    <!-- Hier wird der Inhalt der Nachrichten-Sidebar erstellt -->
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <?php
@@ -58,7 +59,7 @@ if (mysqli_num_rows($result) > 0) {
         echo $neueNachrichten;
         ?>
     </div>
-
+    <!-- Zurück-Button -->
     <div id="main">
       <div class="zuruck">
         <form action="index_betreuer.php" method="post">
@@ -86,7 +87,7 @@ if (mysqli_num_rows($result) > 0) {
   			</form>
   		</details>
       </div>
-
+      <!-- Element zum Einblenden der Nachrichten-Sidebar -->
       <div class="toggle" onclick="openNav()">
         &#9776; Nachrichten
       </div>
