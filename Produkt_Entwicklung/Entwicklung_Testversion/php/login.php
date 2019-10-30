@@ -33,7 +33,6 @@
             </ul>
 		</div>
 	</header>
-	<div class="strich"></div>
     <section class="soziale">
         <h1>Herzlich Willkommen</h1>
         <h2>bei den Sozialen Diensten Berlin</h2>
