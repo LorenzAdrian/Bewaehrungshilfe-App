@@ -92,7 +92,6 @@ if (mysqli_num_rows($result) > 0) {
       </div>
 
       <!-- Kalender -->
-
       <div class="kalender">
         <div class="pkalender">
         <p class="ueberschrift">
