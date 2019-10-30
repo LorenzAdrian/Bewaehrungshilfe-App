@@ -8,7 +8,7 @@
 body{
 	background: url(../CSS/image/aerial-view-alexanderplatz-architecture-1128408.jpg)no-repeat;
     background-size: cover;
-    height: 110vh;
+    height: 80vh;
 }
 
 header{
@@ -55,7 +55,7 @@ header{
 }
 
 main{
-    height: 90vh;
+    height: 80vh;
 }
 
 .soziale{
@@ -168,8 +168,4 @@ input[type="button"]:hover {
    color: wheat;
 }
 
-footer{
-    height: 10vh;
-    background-color: yellow;
-    text-align: center;
-}
+
