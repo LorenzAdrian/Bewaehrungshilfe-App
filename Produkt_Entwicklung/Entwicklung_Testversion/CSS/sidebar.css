@@ -3,8 +3,12 @@ body {
 }
 
 .toggle {
-  font-size:30px;
+  font-size:16pt;
   cursor:pointer;
+}
+
+.toggle:hover{
+  background-color: NavajoWhite 
 }
 
 .sidenav {

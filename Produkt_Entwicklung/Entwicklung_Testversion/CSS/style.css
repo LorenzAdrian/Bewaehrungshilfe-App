@@ -34,7 +34,7 @@ body{
     font-size: 80px;
     font-weight:bolder;
     text-align: left;
-direction: ltr;
+    direction: ltr;
     text-shadow: 2px 2px 5px #CAC8C8;
     padding-left: 40px;
     text-transform: uppercase;
@@ -124,9 +124,9 @@ direction: ltr;
     /*text-transform: uppercase;*/
     grid-column: 1 / 2;
     grid-row:4 / 5;
-display: flex;
-margin: auto;
-justify-content: center;
+    display: flex;
+    margin: auto;
+    justify-content: center;
 }
 
 .rahmen a{
@@ -159,7 +159,7 @@ justify-content: center;
 #calendar{
     grid-area: ca;
     background: #ECECEC;
-    border: 10px solid #CAC8C8;
+  
     border-radius: 50px;
     position: absolute;
 }

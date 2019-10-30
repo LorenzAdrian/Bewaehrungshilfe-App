@@ -1,0 +1,62 @@
+*{
+  font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.toggle{
+  max-width: 15%;
+  border: 1px solid NavajoWhite ;
+}
+
+.kalender{
+  width: 80%;
+  margin: 0 auto;
+}
+.pkalender, .bkalender{
+  margin: 2%;
+  width: 46%;
+}
+
+.bkalender{
+  float: left;
+}
+
+.pkalender{
+  float: left;
+}
+
+.zuruck{
+  float: right;
+
+}
+
+
+summary{
+  max-width: 15%;
+/*  border: 1px solid coral;*/
+  font-size: 15pt;
+}
+/*
+summary:hover{
+  background-color: coral;
+}
+*/
+input {
+    font-size: 12pt;
+    background-color: white;
+}
+
+input:hover[type="submit"]
+		{
+			background: NavajoWhite ;
+		}
+
+  p.ueberschrift{
+    margin: 2rem;
+    font-size: 20pt;
+    font-style: italic;
+    margin-bottom: -35px;
+  }

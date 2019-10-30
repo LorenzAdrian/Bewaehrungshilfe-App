@@ -114,14 +114,10 @@ body{
     grid-row:3 / 4;
 }
 
-
-
-
-
 #calendar{
     grid-area: ca;
     background: ghostwhite;
-    border: 10px solid floralwhite;
+    border: 10px;
     border-radius: 50px;
     position: absolute;
 }

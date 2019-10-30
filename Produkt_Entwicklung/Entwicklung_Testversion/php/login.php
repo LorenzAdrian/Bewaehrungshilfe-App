@@ -9,30 +9,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    
+    <?php include '../includes/header.html';
+    ?>
 	<link rel="stylesheet" href="../CSS/loginstyle.css">
 
 	</head>
 
 	<body>
-	<header>
-        <div class="menubar">
-            <div class="logo">
-                <img src="../CSS/image/1000-Berliner_Baer.svg.png" alt="logo" class="berlin_logo">
-            </div>
-            <ul class="menu">
-                <li>
-                    <a href="index.html" class="nav-link">Über Uns</a>
-                </li>
-                <li>
-                        <a href="#kontakt" class="nav-link">Kontakt</a>
-                </li>
-                <li>
-                        <a href="#fragen" class="nav-link">Fragen</a>
-                </li>
-            </ul>
-		</div>
-	</header>
+
     <section class="soziale">
         <h1>Herzlich Willkommen</h1>
         <h2>bei den Sozialen Diensten Berlin</h2>

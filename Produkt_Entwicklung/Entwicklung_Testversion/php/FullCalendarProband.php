@@ -20,15 +20,15 @@
       margin-top: 50px;
       float: right;
       box-sizing: border-box;
-      min-width: 100px;
-      width: 900px;
+      height: auto;
+      width: 5 rem;
       padding-right: 20px;
       padding-left: 20px;
       padding-top: 10px;
-      background: floralwhite;
-      border: 2px solid blue;
+      background: white;
+      border: 2px solid black;
       border-radius: 30px;
-        box-shadow: -9px 0px 23px 5px rgba(123,164,235,0.4);
+      box-shadow: -9px 0px 23px 5px rgba(123,164,235,0.4);
     }
 
 
@@ -88,8 +88,8 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         alert(clickedDate);
 
       },
-		
-		
+
+
 		//Event zum annehmen oder ablehnen eines Termins
 	  eventClick: function(info) {
 		  if (info.event.backgroundColor == "blue") {
@@ -107,7 +107,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 						return;
 					}
 				}
-				
+
 				//Status-Variable wird an terminStatusChange.php weitergebgeben.
 				$.ajax({
 					url:'terminStatusChange.php',
