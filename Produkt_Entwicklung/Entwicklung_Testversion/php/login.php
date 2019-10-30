@@ -9,6 +9,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	
+	<?php include '../includes/header.html';
+   	 ?>
     
 	<link rel="stylesheet" href="../CSS/loginstyle.css">
 
