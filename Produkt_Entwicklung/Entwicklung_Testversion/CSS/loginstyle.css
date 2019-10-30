@@ -54,6 +54,11 @@ header{
     height: 60px;
 }
 
+.strich{
+    height: 10vh;
+    background-color: coral;
+}
+
 .soziale{
     padding-top: 30px;
     line-height: 60px;
