@@ -73,31 +73,6 @@ if (mysqli_num_rows($result) > 0) {
             <input type="submit"  value="Zurück">
         </form>
       </div>
-
-      <div class="toggle" onclick="openNav()">
-        &#9776; Nachrichten
-      </div>
-
-                        <!-- Kalender -->
-
-      <div class="kalender">
-
-        <div class="pkalender">
-        <p class="ueberschrift">
-        <?php
-        // Info des ausgewählten Probandes
-        foreach ($probInfo as $info) {
-          echo "Proband: ".$info['Vorname']." ".$info['Nachname'];
-          }
-          ?>
-        </p>
-        <?php include 'FullCalendarProband.php';
-        ?>
-        </div>
-
-      <div class="toggle" onclick="openNav()">
-        &#9776; Nachrichten
-      </div>
       <div>
         <!-- <details> ist ein HTML5-Element, das das Ausklappen ermöglicht. Kein Button notwendig.
   				<summary> legt den Text fest, der vor dem Ausklappen sichtbar ist. -->
@@ -121,24 +96,34 @@ if (mysqli_num_rows($result) > 0) {
   			</details>
       </div>
 
-      <div>
-      <table>
-      <tr>
-      <td>
-      <?php include 'FullCalendarProband.php';
-      ?>
-      </td>
-      <td>
-      <?php include 'FullCalendar.php';
-      ?>
-      </td>
-      </tr>
-      </table>
+      <div class="toggle" onclick="openNav()">
+        &#9776; Nachrichten
       </div>
 
+                        <!-- Kalender -->
 
-
+    <div class="kalender">
+        <div class="pkalender">
+        <p class="ueberschrift">
+        <?php
+        // Info des ausgewählten Probandes
+        foreach ($probInfo as $info) {
+          echo "Proband: ".$info['Vorname']." ".$info['Nachname'];
+          }
+          ?>
+        </p>
+        <?php include 'FullCalendarProband.php';
+        ?>
+        </div>
+        <div class="bkalender">
+          <p class="ueberschrift">
+            Mein Kalender
+            </p>
+        <?php include 'FullCalendar.php';
+        ?>
+        </div>
     </div>
+  </div>
 
   </body>
 
