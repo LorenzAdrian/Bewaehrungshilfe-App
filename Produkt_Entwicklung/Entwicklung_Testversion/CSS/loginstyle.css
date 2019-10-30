@@ -38,7 +38,7 @@ header{
     letter-spacing: 3px;
     color:black;
     font-family: 'Assistant', sans-serif;
-    font-size: 30px;
+    font-size: 10pt;
 }
 
 .logo{
@@ -50,13 +50,20 @@ header{
 }
 
 .berlin_logo{
-    width: 60px;
+    width: auto;
     height: 60px;
+}
+
+.strich{
+    height: 2vh;
+    background-color: coral;
 }
 
 .soziale{
     padding-top: 30px;
     line-height: 60px;
+    width: 50%;
+    float: right;
 }
 
 .soziale h1{
@@ -66,7 +73,7 @@ header{
     text-transform: uppercase;
     font-weight: 400;
     animation: blinker 12s ease;
-    z-index: 3;
+    z-index: 1;
 }
 
 .soziale h2{

@@ -13,13 +13,14 @@
       <p> Datum: <input name = "terDatum" type = "date" </p>
       <p> Start: <input name = "terStart" type = "time" </p>
       <p> End: <input name = "terEnde" type = "time"  </p>
+      <p> Beschreibung: <input name="terBeschreibung" type="text" size="50" placeholder="Beschreibung"</P>
       <p><!-- Status: --><input name = "terStatus" type = "hidden" size="50" value="2"  </p>
       <p><!-- PID: --><input name = "terPID" type = "hidden"  size ="3" value="<?php echo $_POST['probID'] ?>"</p>
       <p><!-- BID: --><input name = "terBID" type = "hidden" size = "3" value="<?php echo $_POST['betrID'] ?>" </p>
       <p>
       <input type = "submit" value = "Termin speichern">
     </form>
-	
+
 
 
   <!--  <a href="fullcalendar/fullcalendar.php">Kalendar</a>-->

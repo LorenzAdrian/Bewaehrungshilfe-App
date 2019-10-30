@@ -17,13 +17,16 @@ $('#example').DataTable( {
     //keys: true,
     /* Spaltendarstellung: https://editor.datatables.net/examples/advanced/formOnlyData.html
        Nur die DataTable javascript Zeile sind hier relevant, Editor spielt keine Rolle*/
-    columns: [
+     columnDefs: [
+		{"className": "dt-center", "targets": "_all"}
+	],
+	columns: [
         { data: null, render: function ( data, type, row ) {
           // Vorname und Nachname zusammen unter der Spalte "Name" in der Tabelle darstellen
           return data.Vorname+' '+data.Nachname;
        } },
         { data: 'PID'},
-        { data: 'BID'},
+        { data: 'ungeleseneNachrichten'},
       ]
   });
 
