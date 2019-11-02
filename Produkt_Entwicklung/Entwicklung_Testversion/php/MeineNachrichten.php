@@ -32,7 +32,7 @@ $event_sql =
 $result = mysqli_query($conn, $event_sql);
 
 $sql = "UPDATE nachricht SET Status='gelesen'
-WHERE PID = ".$_SESSION['userId'];
+WHERE PID = ".$_SESSION['userId']." AND BSender=1";
 
 if ($conn->query($sql) != TRUE) {
     echo "Es ist ein Fehler aufgetreten: ".$conn->error;
@@ -66,6 +66,8 @@ if ($conn->query($sql) != TRUE) {
 		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 		<!-- Stylesheet für Icons-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="../javascript/jquery-3.4.1.js"></script>
+		<script src="../javascript/message.js"></script>
 		<title>Meine Nachrichten</title>
 
     <style>
@@ -163,12 +165,14 @@ if ($conn->query($sql) != TRUE) {
               <table class="">
                 <tr>
                   <td>
-                    <form  action="nachricht_hochladen.php" method="POST">
-            				<textarea class="nachrichtenfeld" name="textarea1" rows="5" cols="50" value="" placeholder="Meine Nachricht"></textarea>
-                  </td>
-                  <td>
-            				<button class="" type="submit" name="signup-submit">Abschicken</button>
-            				</form>
+                    <form  id="msgform" method="POST">
+						<span>Nachrichten</span>
+						<br>
+						<textarea name="textarea1" rows="5" cols="50" value=""></textarea>
+						<br>
+						<button type="submit" name="signup-submit">Abschicken</button>
+						<br><br><br><br><br><br>
+				    </form>
                   </td>
                 </tr>
               </table>
@@ -186,4 +190,4 @@ if ($conn->query($sql) != TRUE) {
 </html>
 
 
-<script src="../javascript/jquery-3.4.1.js"></script>
+

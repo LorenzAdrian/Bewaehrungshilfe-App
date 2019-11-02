@@ -16,14 +16,14 @@ require "../database/dbh.inc.php";
 $betrID = $_POST['betreuer'];
 $probID = $_POST['proband'];
 
-include "Nachrichten_menu.php";
+//include "Nachrichten_menu.php";
 
-if(!isset($_SESSION['prodID'])){
+if(!isset($_SESSION['probID'])){
 $_SESSION['probID'] = $probID;}
-
+/*
 else {
 	$probID = $_POST['terPID'];
-}
+}*/
 
 $sql = "SELECT * FROM proband WHERE PID = ".$probID;
 $result = mysqli_query($conn, $sql);
@@ -47,17 +47,23 @@ if (mysqli_num_rows($result) > 0) {
     <link rel="stylesheet" href="../CSS/sidebar.css">
     <script src="../javascript/jquery-3.4.1.js"></script>
     <script src="../javascript/sidebar.js"></script>
+	<script src="../javascript/message.js"></script>
   </head>
 
   <body>
     <!-- Hier wird der Inhalt der Nachrichten-Sidebar erstellt -->
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <?php
-        echo $alteNachrichten;
-        echo "<br>";
-        echo $neueNachrichten;
-        ?>
+      <div id='msgdiv'></div>
+      <form  id="msgform" method="POST">
+				<span>Nachrichten</span>
+				<br>
+				<textarea name="textarea1" rows="5" cols="50" value=""></textarea>
+				<input name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
+				<br>
+				<button type="submit" name="signup-submit">Abschicken</button>
+				<br><br><br><br><br><br>
+		    </form>
     </div>
     <!-- Zurück-Button -->
     <div id="main">
@@ -88,7 +94,7 @@ if (mysqli_num_rows($result) > 0) {
   		</details>
       </div>
       <!-- Element zum Einblenden der Nachrichten-Sidebar -->
-      <div class="toggle" onclick="openNav()">
+      <div class="toggle"  id="msgbar">
         &#9776; Nachrichten
       </div>
 
