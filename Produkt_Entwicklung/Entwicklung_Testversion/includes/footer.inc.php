@@ -1,4 +1,4 @@
-<?php echo '<head>
+<head>
 <link rel="stylesheet" href="../CSS/footer.css" >
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -17,5 +17,4 @@
 </li>
 
 </ul>
-</footer>'
-?>
+</footer>
