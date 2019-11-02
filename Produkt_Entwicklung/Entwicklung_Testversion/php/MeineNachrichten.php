@@ -109,6 +109,15 @@ if ($conn->query($sql) != TRUE) {
     .datumuhrzeit.proband {
       color: dimgray;
     }
+    .nachrichtenfeld {
+      border-width: thin;
+      border-style: solid;
+      border-color: darkgrey;
+      border-radius: 1em;
+      padding: 0.5em;
+      width: 80%;
+      font-family: 'Assistant', sans-serif;
+    }
     </style>
 
 	</head>
@@ -151,11 +160,18 @@ if ($conn->query($sql) != TRUE) {
 					</tr>
           <tr>
             <td>
-              <form  action="nachricht_hochladen.php" method="POST">
-      				<textarea class="" name="textarea1" rows="5" cols="50" value=""></textarea>
-      				<br>
-      				<button class="" type="submit" name="signup-submit">Abschicken</button>
-      				</form>
+              <table class="">
+                <tr>
+                  <td>
+                    <form  action="nachricht_hochladen.php" method="POST">
+            				<textarea class="nachrichtenfeld" name="textarea1" rows="5" cols="50" value="" placeholder="Meine Nachricht"></textarea>
+                  </td>
+                  <td>
+            				<button class="" type="submit" name="signup-submit">Abschicken</button>
+            				</form>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
 				</table>
