@@ -61,8 +61,8 @@ main{
 .soziale{
     padding-top: 30px;
     line-height: 60px;
-    width: 80%;
-    text-align: center;
+    width: 50%;
+    float: right;
 }
 
 .soziale h1{
@@ -71,7 +71,7 @@ main{
     text-align: center;
     text-transform: uppercase;
     font-weight: 400;
-    animation: blinker 1s ease;
+    animation: blinker 12s ease;
     z-index: 1;
 }
 
