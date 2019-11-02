@@ -58,8 +58,10 @@ if ($conn->query($sql) != TRUE) {
  ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="de">
 	<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!--- Pfad zur style.css--------------------------->
 		<link rel="stylesheet" href="../CSS/style.css">
 		<!--Schriftart aus google fonts------------------>
@@ -73,7 +75,8 @@ if ($conn->query($sql) != TRUE) {
       font-family: 'Assistant', sans-serif;
     }
     .nachrichten {
-      width: 40%;
+      min-width: 300px;
+      max-width: 40%;
     }
     .nachricht {
       margin-top: 1em;
@@ -84,6 +87,9 @@ if ($conn->query($sql) != TRUE) {
     }
     .proband {
       margin-left: 3em;
+    }
+    .betreuer {
+      margin-right: 3em;
     }
     .betreuer.nachricht.neu {
       background-color: darkred;
@@ -115,8 +121,12 @@ if ($conn->query($sql) != TRUE) {
       border-color: darkgrey;
       border-radius: 1em;
       padding: 0.5em;
-      width: 80%;
+      width: 100%;
+      height: 3em;
       font-family: 'Assistant', sans-serif;
+    }
+    .feldnachricht {
+      min-width: 80%;
     }
     </style>
 
@@ -130,29 +140,31 @@ if ($conn->query($sql) != TRUE) {
 					<tr>
             <td>
               <?php
+
               while ($dsatz = mysqli_fetch_assoc($result))
               {
                 //Erzeugt aus der Zeichenkette des Zeitstempels ein DateTime-Objekt
-                $datum = date_create($dsatz['Zeitstempel']);
+                setlocale(LC_ALL, "");
+                $datum = date_create($dsatz['Zeitstempel'])->getTimestamp();
                 //Wenn der Betreuer der Sender der Nachricht und die Nachricht neu ist.
                 if($dsatz['BSender'] == 1 && $dsatz['Status'] == 'neu')
                   {
                   echo '<table class="betreuer nachricht neu"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
                       .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
-                      .date_format($datum,'D').' '.date_format($datum,'j.m.y').', '.date_format($datum,'H:i').'</td></tr></table>';
+                      .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
                   }
                 //Wenn der Betreuer der Sender der schon gelesenen Nachricht ist.
                 elseif($dsatz['BSender'] == 1)
                   {
                     echo '<table class="betreuer nachricht"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
                         .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
-                        .date_format($datum,'D').' '.date_format($datum,'j.m.y').', '.date_format($datum,'H:i').'</td></tr></table>';
+                        .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
                   }
                 //Wenn die Nachricht vom Probanden stammt.
                 else
                   {
                     echo '<table class="proband nachricht"><tr class="nachricht"><td>'.$dsatz['Text'].'</td></tr><tr class="datumuhrzeit proband"><td>'
-                    .date_format($datum,'D').' '.date_format($datum,'j.m.y').', '.date_format($datum,'H:i').'</td></tr></table>';
+                    .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
                   }
               };
                ?>
@@ -160,16 +172,16 @@ if ($conn->query($sql) != TRUE) {
 					</tr>
           <tr>
             <td>
-              <table class="">
+              <table class="" id="textfeld">
                 <tr>
-                  <td>
-                    <form  action="nachricht_hochladen.php" method="POST">
-            				<textarea class="nachrichtenfeld" name="textarea1" rows="5" cols="50" value="" placeholder="Meine Nachricht"></textarea>
+                  <form  action="nachricht_hochladen.php" method="POST">
+                  <td class="feldnachricht">
+            				<textarea class="nachrichtenfeld" name="textarea1" value="" placeholder="Meine Nachricht"></textarea>
                   </td>
                   <td>
             				<button class="" type="submit" name="signup-submit">Abschicken</button>
-            				</form>
                   </td>
+                  </form>
                 </tr>
               </table>
             </td>

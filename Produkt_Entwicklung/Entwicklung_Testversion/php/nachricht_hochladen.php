@@ -56,6 +56,6 @@ else {
 }
 
 #Die Seite wird neu geladen. Ggf. besser mit ajax zu lösen.
-header("Location: MeineNachrichten.php");
+header("Location: MeineNachrichten.php#textfeld");
 
 ?>
