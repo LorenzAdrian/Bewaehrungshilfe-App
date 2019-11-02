@@ -71,7 +71,7 @@ main{
     text-align: center;
     text-transform: uppercase;
     font-weight: 400;
-    animation: blinker 12s ease;
+    animation: blinker 1s ease;
     z-index: 1;
 }
 
