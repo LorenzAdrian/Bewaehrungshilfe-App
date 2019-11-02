@@ -1,6 +1,6 @@
 footer{
     font-family: 'Roboto', sans-serif;
-    height: 10vh;
+    height: 8vh;
     text-align: center;
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@ footer{
 .footer-nav li a{
     text-transform: uppercase;
     text-decoration: none;
-    color: gray;
+    color: black;
     font-weight: 300;
     letter-spacing: 2px;
     font-size: 10pt;

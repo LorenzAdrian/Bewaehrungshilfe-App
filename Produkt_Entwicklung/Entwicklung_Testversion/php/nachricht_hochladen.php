@@ -1,5 +1,5 @@
 <?php
-#Die in Meinenachricht.php eingegebene Nachricht wird verschickt, also in die Datenbank eingetragen.
+#Die in MeineNachrichten.php eingegebene Nachricht wird verschickt, also in die Datenbank eingetragen.
 
 include '../database/dbh.inc.php';
 if(!isset($_SESSION))
@@ -12,7 +12,7 @@ if(!isset($_SESSION['userId'])){
     header('Location: login.php');
 }
 
-
+echo("<script>console.log('PHP: blablablabla');</script>");
 #Variablen für die Datenbank
 $timestamp = time();
 $datum =  /*'2019.10.14 10:00:00';*/date("Y.m.d H:i:s", $timestamp);
@@ -22,8 +22,8 @@ $bid;
 $pid;
 #Prüfen, welche Rolle angemeldet ist.
 if($_SESSION['rolle'] == 'betreuer') {
-	$bid = $_SESSION['userid'];
-	$pid = 0; #Variable mit ID aus Datatables übertragen?
+	$bid = $_SESSION['userId'];
+	$pid = $_POST['hiddenProbID'];
 	$bsender = 1; #Weil Betreuer.
 }
 else {
@@ -38,6 +38,7 @@ else {
 }
 #bezugID wird aus der Datenbank ausgelesen.
 $query = "SELECT NID FROM nachricht WHERE PID=".$pid." AND BID=".$bid." ORDER BY Zeitstempel DESC LIMIT 1"; #AND WHERE BID = $bid funktioniert bei Betreuer nicht.
+echo("<script>console.log('PHP: " . $query . "');</script>");
 $result = mysqli_query($conn, $query);
 while($row = mysqli_fetch_assoc($result)) {
 		$bezugID = $row['NID'];

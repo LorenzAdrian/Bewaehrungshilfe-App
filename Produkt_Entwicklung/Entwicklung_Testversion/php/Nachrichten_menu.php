@@ -98,9 +98,12 @@ foreach($event_data as $nachricht){
 	}
 }
 
+$nachrichten = $alteNachrichten.$neueNachrichten;
+echo $nachrichten;
+
 #Alle Nachrichten des Nutzers auf "gelesen" setzen.
 #ACHTUNG: Im Moment nur für Proband nutzbar.
-$sql = "UPDATE nachricht SET Status='gelesen' WHERE ".$personenID."=".$_SESSION['userId'];
+$sql = "UPDATE nachricht SET Status='gelesen' WHERE BID=".$_SESSION['userId'];
 
 /*if ($personenID == 'BID') {
 	$sql .= "AND WHERE 'PID'= /übergebener Wert aus Datatables?/" Wert ggf. per POST weitergeben?
