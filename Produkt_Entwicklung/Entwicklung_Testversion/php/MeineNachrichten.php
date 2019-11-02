@@ -67,8 +67,9 @@ if ($conn->query($sql) != TRUE) {
 		<!-- Stylesheet für Icons-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<title>Meine Nachrichten</title>
+
     <style>
-    * {
+    .meinenachrichten {
       font-family: 'Assistant', sans-serif;
     }
     .nachrichten {
@@ -98,23 +99,23 @@ if ($conn->query($sql) != TRUE) {
     .betreuername {
       font-weight: bold;
     }
-    .datumuhrzeitbetreuer {
+    .datumuhrzeit {
       font-size: 0.8em;
+      text-align: right;
+    }
+    .datumuhrzeit.betreuer {
       color: silver;
-      text-align: right;
     }
-    .datumuhrzeitproband {
-      font-size: 0.8em;
+    .datumuhrzeit.proband {
       color: dimgray;
-      text-align: right;
     }
-
     </style>
+
 	</head>
 	<body>
     <?php include '../includes/header.html'; ?>
 
-		<main>
+		<main class="meinenachrichten">
       <div>
 				<table class="nachrichten">
 					<tr>
@@ -128,20 +129,20 @@ if ($conn->query($sql) != TRUE) {
                 if($dsatz['BSender'] == 1 && $dsatz['Status'] == 'neu')
                   {
                   echo '<table class="betreuer nachricht neu"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
-                      .$dsatz['Text'].'</td></tr><tr class="datumuhrzeitbetreuer"><td>'
+                      .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
                       .date_format($datum,'D').' '.date_format($datum,'j.m.y').', '.date_format($datum,'H:i').'</td></tr></table>';
                   }
                 //Wenn der Betreuer der Sender der schon gelesenen Nachricht ist.
                 elseif($dsatz['BSender'] == 1)
                   {
                     echo '<table class="betreuer nachricht"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
-                        .$dsatz['Text'].'</td></tr><tr class="datumuhrzeitbetreuer"><td>'
+                        .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
                         .date_format($datum,'D').' '.date_format($datum,'j.m.y').', '.date_format($datum,'H:i').'</td></tr></table>';
                   }
                 //Wenn die Nachricht vom Probanden stammt.
                 else
                   {
-                    echo '<table class="proband nachricht"><tr class="nachricht"><td>'.$dsatz['Text'].'</td></tr><tr class="datumuhrzeitproband"><td>'
+                    echo '<table class="proband nachricht"><tr class="nachricht"><td>'.$dsatz['Text'].'</td></tr><tr class="datumuhrzeit proband"><td>'
                     .date_format($datum,'D').' '.date_format($datum,'j.m.y').', '.date_format($datum,'H:i').'</td></tr></table>';
                   }
               };
