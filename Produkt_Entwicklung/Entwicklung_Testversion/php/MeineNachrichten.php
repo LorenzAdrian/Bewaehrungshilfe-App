@@ -195,6 +195,6 @@ if ($conn->query($sql) != TRUE) {
     <!-- Footer: Hier stimmt die Höhe noch nicht. Footer wird mitten im Main-Bereich angezeigt.
     <?php include '../includes/footer.inc.php' ?>
     -->
-
+    <?php mysqli_close($conn); ?>
 	</body>
 </html>
