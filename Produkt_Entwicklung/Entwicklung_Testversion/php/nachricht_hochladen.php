@@ -12,7 +12,6 @@ if(!isset($_SESSION['userId'])){
     header('Location: login.php');
 }
 
-echo("<script>console.log('PHP: blablablabla');</script>");
 #Variablen für die Datenbank
 $timestamp = time();
 $datum =  /*'2019.10.14 10:00:00';*/date("Y.m.d H:i:s", $timestamp);
@@ -56,7 +55,8 @@ else {
 	echo "Fehler: " .$sql . "<br>" .mysqli_error($conn);
 }
 
+/*
 #Die Seite wird neu geladen. Ggf. besser mit ajax zu lösen.
 header("Location: MeineNachrichten.php#textfeld");
-
+*/
 ?>

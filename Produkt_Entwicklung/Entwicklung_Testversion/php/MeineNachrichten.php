@@ -176,7 +176,7 @@ if ($conn->query($sql) != TRUE) {
             <td>
               <table class="" id="textfeld">
                 <tr>
-                  <form  action="nachricht_hochladen.php" method="POST">
+                  <form  id="msgform" method="POST">
                   <td class="feldnachricht">
             				<textarea class="nachrichtenfeld" name="textarea1" value="" placeholder="Meine Nachricht"></textarea>
                   </td>
