@@ -26,7 +26,7 @@ if(isset($_POST['but_logout'])){
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
     <title>Startseite</title>
-	<?php include '../includes/header.html';
+	<?php include '../includes/header2.php';
 	?>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
 </head>
