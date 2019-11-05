@@ -41,7 +41,7 @@
           <ul class="menu">
               
               <li>
-                      <p>Sodi App</p>
+                      <p>SoDi</p>
               </li>
 
            
