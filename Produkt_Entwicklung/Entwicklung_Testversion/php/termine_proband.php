@@ -44,6 +44,7 @@ if(isset($_POST['but_logout'])){
 
     <?php include 'FullCalendarProband.php';?>
 </div>
+<?php include '../includes/footer.inc.php' ?>
 </body>
 
 </html>
