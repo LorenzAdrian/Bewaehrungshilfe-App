@@ -85,14 +85,14 @@ if(isset($_POST['but_logout'])){
 	</tr>
 	<tr>
 		<td>
-			<a href="#">
+			<a href="Informationen.php">
 				<div class="icon">
 					<i class="fa fa-info-circle" style="font-size:80px"></i></div>
 				<div class="name">Informationen</div>
 			</a>
 		</td>
 		<td>
-			<a href="#">
+			<a href="Dokumente.php">
 				<div class="icon1">
 					<i class="fa fa-file" style="font-size:80px"></i></div>
 				<div class="name1">Dokumente</div>
@@ -101,14 +101,14 @@ if(isset($_POST['but_logout'])){
 	</tr>
 	<tr>
 		<td>
-			<a href="#">
+			<a href="Notfall.php">
 				<div class="icon">
 					<i class="fa fa-ambulance" style="font-size:80px"></i></div>
 				<div class="name">Notfall</div>
 			</a>
 		</td>
 		<td>
-			<a href="#">
+			<a href="To_Do_Liste.php">
 				<div class="icon1">
 					<i class="fa fa-list-alt" style="font-size:80px"></i></div>
 				<div class="name1">Leitfaden</div>
