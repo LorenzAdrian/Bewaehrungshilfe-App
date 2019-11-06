@@ -38,8 +38,7 @@ if (mysqli_num_rows($result) > 0) {
 <!DOCTYPE html>
 <html lang="de">
   <head>
-  <?php include '../includes/headerBet.php';
-?>
+    <?php include '../includes/header.html'; ?>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
