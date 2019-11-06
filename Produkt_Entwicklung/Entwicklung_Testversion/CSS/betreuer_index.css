@@ -1,6 +1,7 @@
 body{
     box-sizing: border-box;
 	/*background-image: url("image/aerial-alex.jpg");*/
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
     background-color: #ECECEC;
 	/*overflow: hidden; */
 }
