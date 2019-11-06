@@ -1,0 +1,65 @@
+body{
+    box-sizing: border-box;
+	/*background-image: url("image/aerial-alex.jpg");*/
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    background-color: #ECECEC;
+	/*overflow: hidden; */
+}
+
+
+.uberschrift1{
+    background:#ECECEC;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-decoration: overline underline;
+    font-family: 'Raleway', sans-serif;
+    color: #B20505;
+    text-align: left;
+    line-height: 80px;
+    box-sizing: border-box;
+    margin-top: 2%;
+	padding-left: 2%;
+	width: 20%;
+}
+
+
+
+.rahmen{
+    /*width: 15%;*/
+    background: #ECECEC;
+    box-sizing: border-box;
+    font-size: 15px;
+	display: flex;
+	padding-left: 2%;
+	margin-bottom: -80%;
+	/*justify-content: left;*/
+	height:20vh;
+	
+}
+
+.rahmen a{
+    padding-left: 5px;
+    text-decoration: none;
+    color: #B20505;
+    font-family: 'Raleway', sans-serif;
+}
+
+.rahmen a:hover{
+    padding-left: 5px;
+    text-decoration: underline;
+    color: #1435B7;
+    background: floralwhite;
+}
+
+
+.dataTables_filter {
+	float: left !important;
+}
+
+
+.calendar{
+	display: flex;
+	margin: 1px auto;
+	width: 50%;
+
+}

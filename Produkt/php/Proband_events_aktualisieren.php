@@ -45,7 +45,8 @@ $probID = $_SESSION['probID'];
     'title'     => $row['Titel'],
     'color'     => $row['Status'],
     'PID'       =>  $row['PID'],
-    'BID'       =>  $row['BID']
+    'BID'       =>  $row['BID'],
+    'description' => $row['Beschreibung']
   );
 
 }

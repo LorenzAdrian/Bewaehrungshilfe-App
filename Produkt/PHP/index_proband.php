@@ -1,9 +1,6 @@
-﻿<?php
+<?php
 include '../database/dbh.inc.php';
 session_start();
-
-// Die Startseite des Probanden wird erzeugt.
-
 
 // Check user login or not
 if(!isset($_SESSION['userId'])){
@@ -16,107 +13,115 @@ if(isset($_POST['but_logout'])){
     session_destroy();
     header('Location: Login.php');
 }
-
-//Check, ob neue Nachrichten vorhanden oder nicht
-$nachrichtNeu = false;
-$sql = "SELECT * FROM nachricht WHERE PID = ".$_SESSION['userId']." AND Status = 'neu'";
-$result = mysqli_query($conn, $sql);
-if (mysqli_num_rows($result) > 0) {
-	$nachrichtNeu = True;
-}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
 <head>
+
+		
     <!--- Pfad zur style.css--------------------------->
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/index_proband.css">
     <!--Schriftart aus google fonts------------------>
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700&display=swap"  rel="stylesheet">
     <!-- Stylesheet für Icons-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Start</title>
+	<?php include '../includes/header2.php'?>
 
 </head>
 
 <body>
+<!---- siehe jz includes->header2.php
+<header>
+<div class="menubar">
+    <div class="logo">
+        <img src="../CSS/image/1000-Berliner_Baer.svg.png" alt="logo" class="berlin_logo">
+    </div>
 
-<div class="logo"></div>
+    <ul class="menu">
+	
+		<div class="hallobox">Hallo <?php echo $_SESSION["username"]; ?></div> 
+	
+		 <li>
+			<a href ="#suchen"><img src="../CSS/image/search.svg">Suchen</a>
+		 </li>
 
-<div class="hallobox">Hallo <?php echo $_SESSION["username"]; ?></div>
-
-<div class="menu">
-
-            <li><a href ="https://cssgridgarden.com/#de"><img src="../CSS/image/search.svg">Suchen</a>
-            </li>
-
-            <li><a href ="#"><img src="../CSS/image/user-circle.svg">Mein Bereich</a>
-            </li>
-            <li>    <form method='post' action="">
-                <input type="submit" value="Logout" name="but_logout">
+         <li>
+			<a href ="#mein_bereich"><img src="../CSS/image/user-circle.svg">Mein Bereich</a>
+		 </li>
+		 
+		 <li>    
+			<form method='post' action="">
+                <input type="submit" value="Logout" class="button_logout" name="but_logout">
             </form>
-          </li>
+         </li>
 
-</div>
+    </ul>
+
+  </div>
+</header>
+--->
 
 <div class="rahmen">
    <table>
 	<tr>
-		<td> <!-- Die Seite "Meine Nachrichten" wird bei Klicken des Buttons geöffnet-->
+		<td>
 			<a href="MeineNachrichten.php">
 				<div class="icon">
 					<i class="fa fa-envelope" style="font-size:80px"></i></div>
-				<div class="name">
-					<?php
-					if ($nachrichtNeu == True) {
-						echo('Meine Nachrichten <br>(ungelesene Nachricht!)');
-					}
-					else {
-						echo('Meine Nachrichten');
-					}
-					?>
-				</div>
+				<div class="name">Nachrichten</div>
 			</a>
 		</td>
-		<td><!-- Die Seite mit dem eigenenn Kalender wird bei Klicken des Buttons geöffnet-->
+		<td>
 			<a href="termine_proband.php">
-				<div class="icon">
+				<div class="icon1">
 					<i class="fa fa-calendar" style="font-size:80px"></i></div>
-				<div class="name">Meine Termine</div>
+				<div class="name1">Termine</div>
 			</a>
 		</td>
 	</tr>
 	<tr>
-		<td><!-- Die Seite "Informationen" wird bei Klicken des Buttons geöffnet-->
+		<td>
 			<a href="Informationen.php">
 				<div class="icon">
 					<i class="fa fa-info-circle" style="font-size:80px"></i></div>
 				<div class="name">Informationen</div>
 			</a>
 		</td>
-		<td><!-- Die Seite "Dokumente" wird bei Klicken des Buttons geöffnet-->
+		<td>
 			<a href="Dokumente.php">
-				<div class="icon">
+				<div class="icon1">
 					<i class="fa fa-file" style="font-size:80px"></i></div>
-				<div class="name">Dokumente</div>
+				<div class="name1">Dokumente</div>
 			</a>
 		</td>
 	</tr>
 	<tr>
-		<td><!-- Die Seite "Notfallkontakte" wird bei Klicken des Buttons geöffnet-->
+		<td>
 			<a href="Notfall.php">
 				<div class="icon">
 					<i class="fa fa-ambulance" style="font-size:80px"></i></div>
 				<div class="name">Notfall</div>
 			</a>
 		</td>
-		<td><!-- Die Seite mit der eigenen To-Do-Liste wird bei Klicken des Buttons geöffnet-->
+		<td>
 			<a href="To_Do_Liste.php">
-				<div class="icon">
+				<div class="icon1">
 					<i class="fa fa-list-alt" style="font-size:80px"></i></div>
-				<div class="name">To-Do-Liste</div>
+				<div class="name1">Leitfaden</div>
 			</a>
 		</td>
 	</tr>
 </table>
 </div>
+
+
+<?php include '../includes/footer.inc.php' ?>
+</body>
+
+</html>
+	
+	

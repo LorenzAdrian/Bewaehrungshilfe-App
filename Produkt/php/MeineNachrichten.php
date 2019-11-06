@@ -25,151 +25,181 @@ else {
 	$personenID = 'BID';
 }
 
-$event_sql = "SELECT * FROM nachricht WHERE ".$personenID." = ".$_SESSION['userId']." ORDER BY Zeitstempel";
+$event_sql =
+"SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, B.Vorname AS vorname_betreuer, B.Nachname AS nachname_betreuer FROM nachricht AS N INNER JOIN betreuer AS B ON N.BID = B.BID WHERE N.PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
+
+//Mit mysqli_query wird die SQL-Abfrage ausgeführt. Die Methode liefert ein Objekt der Klasse mysqli_result zurück. $result enthält die Referenz auf dieses Objekt.
 $result = mysqli_query($conn, $event_sql);
-$event_data = array();
-while ($row = mysqli_fetch_array($result))
-{
 
-  #if ($row['Status' == 'neu']) {
-	 $event_data[] = array(
-    'Zeit'     => $row['Zeitstempel'],
-    'Text'       => $row['Text'],
-    'Bezug'     => $row['BezugID'],
-    'Status'     => $row['Status'],
-    'PID'       =>  $row['PID'],
-    'BID'       =>  $row['BID'],
-    'Sender'   => $row['BSender']
-	);
-  #}
-}
-
-//foreach($event_data) {
-//echo "<td>".$event_data['Zeitstempel'];."<td>";
-//}
-
-#Variablen für die ausgelesenen Nachrichten
-$alteNachrichten = "";
-$neueNachrichten = "";
-
-
-foreach($event_data as $nachricht){
-//  echo "<input type\"text\" value=".$nachricht['Zeit'].">";
-//  echo "<textarea cols=\"150\" rows=\"20\">".$nachricht['Text']."</textarea><br>";
-
-	if ($nachricht['Status']!='neu') {
-		#Benutzer ist Sender der Nachricht.
-		if($nachricht['Sender'] == 0 && $_SESSION['rolle'] == 'proband' || $nachricht['Sender'] > 0 && $_SESSION['rolle'] == 'betreuer') {
-			$alteNachrichten .=  "<table><tr>".$_SESSION["username"].":</tr>";
-		}
-		#Benutzer ist Empfänger der Nachricht.
-		elseif ($nachricht['Sender'] == 0 && $_SESSION['rolle'] == 'betreuer' || $nachricht['Sender'] > 0 && $_SESSION['rolle'] == 'proband') {
-			$alteNachrichten .=  "<table><tr>Konversationspartner:</tr>";
-		}
-		else {
-			echo "Es ist ein Fehler aufgetreten.";
-			return;
-		}
-		$alteNachrichten .=  "<tr><td>".$nachricht['Zeit']."</td><td>".$nachricht['Text']."</td></tr>";
-		$alteNachrichten .=  "</table><br>";
-	}
-
-	else {
-		#Benutzer ist Sender der Nachricht.
-		if($nachricht['Sender'] == 0 && $_SESSION['rolle'] == 'proband' || $nachricht['Sender'] > 0 && $_SESSION['rolle'] == 'betreuer') {
-			$neueNachrichten .=  "<table bgcolor='yellow'><tr>".$_SESSION["username"].":</tr>";
-		}
-		#Benutzer ist Empfänger der Nachricht.
-		elseif ($nachricht['Sender'] == 0 && $_SESSION['rolle'] == 'betreuer' || $nachricht['Sender'] > 0 && $_SESSION['rolle'] == 'proband') {
-			$neueNachrichten .=  "<table bgcolor='yellow'><tr>Konversationspartner:</tr>";
-		}
-		else {
-			echo "Es ist ein Fehler aufgetreten.";
-			return;
-		}
-		$neueNachrichten .=  "<tr><td>".$nachricht['Zeit']."</td><td>".$nachricht['Text']."</td></tr>";
-		$neueNachrichten .=  "</table>";
-	}
-}
-
-#Alle Nachrichten des Nutzers auf "gelesen" setzen.
-#ACHTUNG: Im Moment nur für Proband nutzbar.
-$sql = "UPDATE nachricht SET Status='gelesen' WHERE ".$personenID."=".$_SESSION['userId'];
-
-/*if ($personenID == 'BID') {
-	$sql .= "AND WHERE 'PID'= /übergebener Wert aus Datatables?/" Wert ggf. per POST weitergeben?
-}*/
+$sql = "UPDATE nachricht SET Status='gelesen'
+WHERE PID = ".$_SESSION['userId']." AND BSender=1";
 
 if ($conn->query($sql) != TRUE) {
     echo "Es ist ein Fehler aufgetreten: ".$conn->error;
 }
 
-
-/*print_r($event_data);
-$nachrichten3 =json_encode($event_data);
-echo "<textarea cols=\"200\" rows=\"200\">".$nachrichten3."</textarea>";
+/*
+#Alle Nachrichten des Gesprächspartners auf "gelesen" setzen.
+if ($_SESSION['rolle'] == 'proband'){
+	$sql = "UPDATE nachricht SET Status='gelesen'
+	WHERE ".$personenID."=".$_SESSION['userId']."
+	AND BSender= 1";
+}
+else if($_SESSION['rolle'] == 'betreuer'){
+	$sql = "UPDATE nachricht SET Status='gelesen'
+	WHERE ".$personenID."=".$_SESSION['userId']."
+	AND BSender= 0";
+}
+if ($conn->query($sql) != TRUE) {
+    echo "Es ist ein Fehler aufgetreten: ".$conn->error;
+}
 */
+
  ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="de">
 	<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!--- Pfad zur style.css--------------------------->
 		<link rel="stylesheet" href="../CSS/style.css">
 		<!--Schriftart aus google fonts------------------>
 		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 		<!-- Stylesheet für Icons-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<title>Start</title>
+		<script src="../javascript/jquery-3.4.1.js"></script>
+    <script src="../javascript/message.js"></script>
+    <?php include '../includes/headerBet.php';?>
+    <link rel="stylesheet" href="../CSS/headerBet.css" >
+		<title>Meine Nachrichten</title>
+
+    <style>
+    .meinenachrichten {
+      font-family: 'Assistant', sans-serif;
+    }
+    .nachrichten {
+      min-width: 300px;
+      max-width: 40%;
+    }
+    .nachricht {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      width: 80%;
+      padding: 0.5em;
+      border-radius: 1em;
+    }
+    .proband {
+      margin-left: 3em;
+    }
+    .betreuer {
+      margin-right: 3em;
+    }
+    .betreuer.nachricht.neu {
+      background-color: darkred;
+      color: ivory;
+    }
+    .betreuer.nachricht {
+      background-color: darkblue;
+      color: ivory;
+    }
+    .proband.nachricht{
+      background-color: darkgrey;
+    }
+    .betreuername {
+      font-weight: bold;
+    }
+    .datumuhrzeit {
+      font-size: 0.8em;
+      text-align: right;
+    }
+    .datumuhrzeit.betreuer {
+      color: silver;
+    }
+    .datumuhrzeit.proband {
+      color: dimgray;
+    }
+    .nachrichtenfeld {
+      border-width: thin;
+      border-style: solid;
+      border-color: darkgrey;
+      border-radius: 1em;
+      padding: 0.5em;
+      width: 100%;
+      height: 3em;
+      font-family: 'Assistant', sans-serif;
+    }
+    .feldnachricht {
+      min-width: 80%;
+    }
+
+    .abschicken{
+      margin-left: 50px;
+    }
+    </style>
+
 	</head>
 	<body>
-		<div class="logo"></div>
 
-		<div class="hallobox">Hallo <?php echo $_SESSION["username"]; ?></div>
-
-		<div class="menu">
-
-					<li><a href ="https://cssgridgarden.com/#de"><img src="../CSS/image/search.svg">Suchen</a>
-					</li>
-
-					<li><a href ="#"><img src="../CSS/image/user-circle.svg">Mein Bereich</a>
-					</li>
-					<li>    <form method='post' action="">
-						<input type="submit" value="Logout" name="but_logout">
-					</form>
-				  </li>
-
-		</div>
-		<br>
-		<main>
-			<div>
-				<table>
+		<main class="meinenachrichten">
+      <div>
+				<table class="nachrichten">
 					<tr>
-					<?php
-						echo $alteNachrichten;
-						echo "<br>";
-						echo $neueNachrichten;
-					?>
+            <td>
+              <?php
+
+              while ($dsatz = mysqli_fetch_assoc($result))
+              {
+                //Erzeugt aus der Zeichenkette des Zeitstempels ein DateTime-Objekt
+                setlocale(LC_ALL, "");
+                $datum = date_create($dsatz['Zeitstempel'])->getTimestamp();
+                //Wenn der Betreuer der Sender der Nachricht und die Nachricht neu ist.
+                if($dsatz['BSender'] == 1 && $dsatz['Status'] == 'neu')
+                  {
+                  echo '<table class="betreuer nachricht neu"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
+                      .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
+                      .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
+                  }
+                //Wenn der Betreuer der Sender der schon gelesenen Nachricht ist.
+                elseif($dsatz['BSender'] == 1)
+                  {
+                    echo '<table class="betreuer nachricht"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
+                        .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
+                        .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
+                  }
+                //Wenn die Nachricht vom Probanden stammt.
+                else
+                  {
+                    echo '<table class="proband nachricht"><tr class="nachricht"><td>'.$dsatz['Text'].'</td></tr><tr class="datumuhrzeit proband"><td>'
+                    .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
+                  }
+              };
+               ?>
+             </td>
 					</tr>
+          <tr>
+            <td>
+              <table class="" id="textfeld">
+                <tr>
+                  <form  id="msgform" method="POST">
+                  <td class="feldnachricht">
+            				<textarea class="nachrichtenfeld" name="textarea1" value="" placeholder="Meine Nachricht"></textarea>
+                  </td>
+                  <td>
+            				<button class="abschicken" type="submit" name="signup-submit">Abschicken</button>
+                  </td>
+                  </form>
+                </tr>
+              </table>
+            </td>
+          </tr>
 				</table>
-
-				<form  action="nachricht_hochladen.php" method="POST">
-				<span>Nachrichten</span>
-				<br>
-				<textarea name="textarea1" rows="5" cols="50" value=""></textarea>
-				<br>
-				<button type="submit" name="signup-submit">Abschicken</button>
-				</form>
-
-				<!--	<div>
-					Neu hier?
-					<a href="signupcheck.php">Registrierung</a>
-				</div>-->
 			</div>
-
 		</main>
+
+    <!-- Footer: Hier stimmt die Höhe noch nicht. Footer wird mitten im Main-Bereich angezeigt.
+    <?php include '../includes/footer.inc.php' ?>
+    -->
+    <?php mysqli_close($conn); ?>
 	</body>
 </html>
-
-
-<script src="../javascript/jquery-3.4.1.js"></script>

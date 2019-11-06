@@ -1,0 +1,126 @@
+  header {
+    font-size: 15pt;
+    font-family: 'Roboto', sans-serif;
+    height: 20vh;
+    background: white;
+    width: 100%;
+  }
+
+  .menu{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+  }
+
+  .menu li{
+    list-style: none;
+  }
+
+  .menu p{
+    text-decoration: none;
+    letter-spacing: 7px;
+    color: black;
+	font-size: 40pt;
+	padding-top: 7px;
+	text-align: center;
+/*	text-transform: uppercase; */
+  }
+
+  .menubar {
+   display: flex;
+   height: 15vh;
+   align-items: center;
+  }
+  .titel {
+   text-align: center;
+   width: 64%;
+   align-items: center;
+  }
+  .titel h1{
+   font-size: 3rem;
+   text-transform: uppercase;
+  }
+  .logo{
+   width: 20%;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+
+  }
+  .berlin_logo{
+
+   width: 15%;
+   height: auto
+  }
+
+  hr{
+    background-color: darkred ;
+    border: none;
+    height: 15pt;
+    width: 100%;
+	padding-top: 1px;
+  }
+
+  main{
+    height: 60vh;
+  }
+
+  footer{
+    color: red;
+  }
+  
+  /* Dropdown */
+  .dropbtn {
+  background-color: white;
+  color: darkred;
+  padding: 16px;
+  font-size: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: white;}
+
+.show {display: block;}
+
+/* Icon */
+
+.btn {
+  background-color: white;
+  border: none;
+  color: darkred;
+  padding: 12px 16px;
+  font-size: 55px;
+  cursor: pointer;
+  margin-right: 0px;
+  position: right;
+}
+
+
+
+/* Darker background on mouse-over 
+.btn:hover {
+  background-color: grey;
+}*/
