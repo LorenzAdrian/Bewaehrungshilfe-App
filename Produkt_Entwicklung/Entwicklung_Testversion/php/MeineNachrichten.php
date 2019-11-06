@@ -69,7 +69,9 @@ if ($conn->query($sql) != TRUE) {
 		<!-- Stylesheet für Icons-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="../javascript/jquery-3.4.1.js"></script>
-		<script src="../javascript/message.js"></script>
+    <script src="../javascript/message.js"></script>
+    <?php include '../includes/headerBet.php';?>
+    <link rel="stylesheet" href="../CSS/headerBet.css" >
 		<title>Meine Nachrichten</title>
 
     <style>
@@ -138,7 +140,6 @@ if ($conn->query($sql) != TRUE) {
 
 	</head>
 	<body>
-    <?php include '../includes/header.html'; ?>
 
 		<main class="meinenachrichten">
       <div>
