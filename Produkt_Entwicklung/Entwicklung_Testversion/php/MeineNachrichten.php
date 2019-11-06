@@ -130,6 +130,10 @@ if ($conn->query($sql) != TRUE) {
     .feldnachricht {
       min-width: 80%;
     }
+
+    .abschicken{
+      margin-left: 50px;
+    }
     </style>
 
 	</head>
@@ -181,7 +185,7 @@ if ($conn->query($sql) != TRUE) {
             				<textarea class="nachrichtenfeld" name="textarea1" value="" placeholder="Meine Nachricht"></textarea>
                   </td>
                   <td>
-            				<button class="" type="submit" name="signup-submit">Abschicken</button>
+            				<button class="abschicken" type="submit" name="signup-submit">Abschicken</button>
                   </td>
                   </form>
                 </tr>
