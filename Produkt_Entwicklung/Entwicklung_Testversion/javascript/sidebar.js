@@ -15,8 +15,15 @@ $(document).ready(function(){
 	document.getElementById("main").style.marginLeft = "25%";
 	});
 
-});
+  //Nachrichten werden alle 10 Sekunden von der DB abgerufen
+  var $container =$("#msgdiv");
+  $container.load('Nachrichten_menu.php');
+  var refreshID = setInterval (function ()
+  {
+    $container.load('Nachrichten_menu.php');
+  }, 10000);
 
+});
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
