@@ -1,8 +1,6 @@
 <?php
 //include '../includes/events_aktualisieren.inc.php';
 
-// Die Startseite des Betreuers wird erzeugt.
-
 include 'dbh.inc.php';
 if(!isset($_SESSION))
 {
@@ -32,37 +30,37 @@ if(isset($_POST['but_logout'])){
     <meta charset="utf-8">
 
     <!--- Pfad zur style.css--------------------------->
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/Betreuer_index.css">
     <!--Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
     <title>Start</title>
-
+<?php include '../includes/headerBet.php';
+?>
 </head>
 
 <body>
 
 <div class="logo"></div>
-
+<!---
 <div class="hallobox">Hallo <?php echo $_SESSION["username"]; ?></div>
 
 <div class="menu">
 
-            <li><a href ="https://cssgridgarden.com/#de"><img src="../CSS/image/search.svg">Suchen</a>
+            <li><form method='post' action="">
+					<img src="../CSS/image/logout.svg">
+					<input type="submit" value="Logout" name="but_logout">
+				</form>
+			</li>
+            <li><a href ="#"><img src="../CSS/image/user-circle.svg"></a>
             </li>
-
-            <li><a href ="#"><img src="../CSS/image/user-circle.svg">Mein Bereich</a>
+			<li><a href ="https://cssgridgarden.com/#de"><img src="../CSS/image/search.svg"></a>
             </li>
-            <li>    <form method='post' action="">
-                <input type="submit" value="Logout" name="but_logout">
-            </form>
-          </li>
-
 </div>
-
+-->
 <div class="uberschrift1">Probanden</div>
 
-<div class="uberschrift2">Mein Kalender</div>
+<!---<div class="uberschrift2">Mein Kalender</div>--->
 
 <div class="rahmen">
     <?php include 'dataTbl.php';?>
@@ -82,6 +80,7 @@ if(isset($_POST['but_logout'])){
 -->
 </div>
 
+<?php include '../includes/footer.inc.php' ?>
 </body>
-
 </html>
+

@@ -25,13 +25,18 @@ require "problisteDT.inc.php";
     <script type="text/javascript" src="../javascript/jquery.redirect.js"></script>
 
   </head>
+  <style>
+    #example{
+      position: absolute;
+    }
+  </style>
   <body>
     <table id="example" class="display" style="width:100%">
             <thead>
                 <tr>
                   <th>Name</th>
                   <th>PID</th>
-                  <th>BID</th>
+                  <th>Ungelesene Nachrichten</th>
                 </tr>
             </thead>
             <tfoot>

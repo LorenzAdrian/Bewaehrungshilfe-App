@@ -80,6 +80,8 @@ if (mysqli_num_rows($result) > 0) {
   			<form action = "terminetest_insert.php" method = "post">
   			  <p>
           Titel: <input name = "terTitel" type = "text" size = "50" placeholder = "Titel">&nbsp;&nbsp;&nbsp;
+          <br>
+          <br>
           Beschreibung: <input name="terBeschreibung" type="text" size="50" placeholder="Beschreibung"
           </p>
   			  <p> Datum: <input name = "terDatum" type = "date">&nbsp;&nbsp;&nbsp;

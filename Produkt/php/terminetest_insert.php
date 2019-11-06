@@ -9,19 +9,19 @@ $end = $_POST['terDatum'].'T'.$_POST['terEnde'].':00';
 $status = $_POST['terStatus'];
 $ProbandID = $_POST['terPID'];
 $BetreuerID = $_POST['terBID'];
-
+$Beschr = $_POST['terBeschreibung'];
 
 
 
 // Werte hinfügen mit "prepared statements" (mySQLi Procedural)
-$sql = "INSERT INTO termin (Beginn, Ende, Titel, Status, PID, BID) VALUES (?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO termin (Beginn, Ende, Titel, Status, PID, BID, Beschreibung) VALUES (?, ?, ?, ?, ?, ?,?)";
 $stmt = mysqli_stmt_init($conn);
 if (mysqli_stmt_prepare($stmt, $sql)) {
-  mysqli_stmt_bind_param($stmt, "ssssss", $start, $end, $title, $status, $ProbandID, $BetreuerID);
+  mysqli_stmt_bind_param($stmt, "sssssss", $start, $end, $title, $status, $ProbandID, $BetreuerID,$Beschr);
   mysqli_stmt_execute($stmt);
   header('Location: index_betreuer.php');
   //echo "Termin erfolgreich gespeichert<p>";
-  
+
   //Ergebnisse in einer HTML-Tabelle ausgeben
   /*
   echo "<table>";

@@ -1,0 +1,29 @@
+footer{
+    font-family: 'Roboto', sans-serif;
+    height: 8vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    opacity: 0.8;
+}
+
+.footer-nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.footer-nav li{
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+
+.footer-nav li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 10pt;
+}

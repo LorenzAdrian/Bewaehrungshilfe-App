@@ -13,7 +13,11 @@ if (!isset($_SESSION['userId'])){
 require '../database/dbh.inc.php';
 $betID = $_SESSION['userId'];
 
-$sql = "SELECT * FROM proband WHERE BID = $betID";
+$sql = "SELECT Vorname, Nachname, PID, BID, (SELECT COUNT(NID) FROM nachricht AS n WHERE n.PID = p.PID AND Status = 'neu' AND BSender = 0) AS 'ungeleseneNachrichten'
+
+FROM proband AS p
+
+WHERE BID = $betID";
 $result = mysqli_query($conn, $sql);
 $probanden = array();
 if (mysqli_num_rows($result) > 0) {

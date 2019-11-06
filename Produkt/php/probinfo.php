@@ -1,21 +1,3 @@
-
-<html lang='en' dir='ltr'>
-<!-- FULLCALENDAR
-Die Betreuer ansicht mit den zwei Kalendern
--->
-  <head>
-
-    </head>
-    <body>
-              <form action="index_betreuer.php" method="post">
-              <input type="submit"  value="Startseite">
-            </form>
-        </body>
-</html>
-
-
-
-
 <?php
 
 if(!isset($_SESSION))
@@ -28,29 +10,20 @@ if(!isset($_SESSION['userId'])){
     header('Location: login.php');
 }
 
-
-
-//require "includes/tabelle.inc.php";
 require "../database/dbh.inc.php";
-
-include "Nachrichten_menu.php";
 
 
 $betrID = $_POST['betreuer'];
 $probID = $_POST['proband'];
 
-if(!isset($_SESSION['prodID'])){
-$_SESSION['probID'] = $probID;}
+//include "Nachrichten_menu.php";
 
+if(!isset($_SESSION['probID'])){
+$_SESSION['probID'] = $probID;}
+/*
 else {
 	$probID = $_POST['terPID'];
-}
-
-
-
-
-
-
+}*/
 
 $sql = "SELECT * FROM proband WHERE PID = ".$probID;
 $result = mysqli_query($conn, $sql);
@@ -60,174 +33,97 @@ if (mysqli_num_rows($result) > 0) {
     $probInfo[] = $row;
   }
 }
-
-// Info des ausgewählten Probandes
-foreach ($probInfo as $info) {
-  echo "Nachname: ".$info['Nachname']."<br>";
-  echo "Vorname: ".$info['Vorname']."<br>";
-  //echo "Geburtsdatum: ".$info['Geburtsdatum']."<br>";
-}
-//if(isset($_POST['refresh-event'])) {
-//require 'dbh.inc.php';
-
-
-//header("Location: ../index_Login.php?JSONdateierstellt");
-
-
-  //  mysqli_close($conn);
-
-//}
-
-
-
-
-
-// "unordered list" von Hypertext-Links, um von Seite zur Seite zu navigieren
-//echo "<ul>";
-//echo "<li><a href=\"probanlegen.html\">Probanden anlegen </a></li>";
-//echo "<li><a href=\"probliste.php\">Probandenliste </a></li>";
-//echo "<li><a href=\"index.html\">Index </a></li>";
-//echo "</ul>";
-
-//include 'FullCalendarProband.php';
-
-//include 'FullCalendar.php';
-
 ?>
 
-<html lang='en' dir='ltr'>
-<!-- FULLCALENDAR -->
+<!DOCTYPE html>
+<html lang="de">
   <head>
-<!-- Script um das menu zu erzeugen, die Styles für das aussehen des menus-->
+  <?php include '../includes/headerBet.php';
+?>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proband: Nachrichten und Termine</title>
+    <link rel="stylesheet" href="../CSS/probinfo.css" >
+    <link rel="stylesheet" href="../CSS/sidebar.css">
+    <script src="../javascript/jquery-3.4.1.js"></script>
+    <script src="../javascript/sidebar.js"></script>
+	<script src="../javascript/message.js"></script>
+  </head>
 
-    <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "15%";
-      document.getElementById("main").style.marginLeft = "15.1%";
-    }
-
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("main").style.marginLeft= "0";
-    }
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    body {
-      font-family: "Lato", sans-serif;
-    }
-
-    .sidenav {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: whitesmoke;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 60px;
-    }
-
-    .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-    }
-
-    .sidenav a:hover {
-      color: #f1f1f1;
-    }
-
-    .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
-
-    #main {
-      transition: margin-left .5s;
-      padding: 16px;
-    }
-
-    @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
-    }
-    </style>
-    </head>
-    <body>
-      <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <?php
-          echo $alteNachrichten;
-          echo "<br>";
-          echo $neueNachrichten;
-          ?>
+  <body>
+    <!-- Hier wird der Inhalt der Nachrichten-Sidebar erstellt -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div id='msgdiv'></div>
+      <form  id="msgform" method="POST">
+				<span>Nachrichten</span>
+				<br>
+				<textarea name="textarea1" rows="5" cols="50" value=""></textarea>
+				<input name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
+				<br>
+				<button type="submit" name="signup-submit">Abschicken</button>
+				<br><br><br><br><br><br>
+		    </form>
+    </div>
+    <!-- Zurück-Button -->
+    <div id="main">
+      <div class="zuruck">
+        <form action="index_betreuer.php" method="post">
+            <input type="submit"  value="Zurück">
+        </form>
+      </div>
+      <div>
+        <!-- <details> ist ein HTML5-Element, das das Ausklappen ermöglicht. Kein Button notwendig. <summary> legt den Text fest, der vor dem Ausklappen sichtbar ist. -->
+        <details>
+  			<summary class="termin"> Termin anlegen </summary>
+  			<form action = "terminetest_insert.php" method = "post">
+  			  <p>
+          Titel: <input name = "terTitel" type = "text" size = "50" placeholder = "Titel">&nbsp;&nbsp;&nbsp;
+          <br>
+          <br>
+          Beschreibung: <input name="terBeschreibung" type="text" size="50" placeholder="Beschreibung"
+          </p>
+  			  <p> Datum: <input name = "terDatum" type = "date">&nbsp;&nbsp;&nbsp;
+            Beginn: <input name = "terStart" type = "time">&nbsp;&nbsp;&nbsp;
+            Ende: <input name = "terEnde" type = "time"></p>
+          <p> </P>
+  			  <p><!-- Status: --><input name = "terStatus" type = "hidden" value="2">  </p>
+  			  <p><!-- PID: --><input name = "terPID" type = "hidden" value="<?php echo $probID ?>"></p>
+  			  <p><!-- BID: --><input name = "terBID" type = "hidden" value="<?php echo $betrID ?>"> </p>
+  			  <p>
+  			  <input type = "submit" value = "Termin speichern"></p>
+  			</form>
+  		</details>
+      </div>
+      <!-- Element zum Einblenden der Nachrichten-Sidebar -->
+      <div class="toggle"  id="msgbar">
+        &#9776; Nachrichten
       </div>
 
-      <div id="main">
-
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Nachrichten</span>
-
-		<table>
-		<tr>
-		<td>
-		<?php include 'FullCalendarProband.php';
-		?>
-		</td>
-		<td>
-		<?php include 'FullCalendar.php';
-		?>
-		</td>
-		</tr>
-		</table>
-
-		 <table>
-        <tr>
-          <td>
-</div>
-		  <!-- <details> ist ein HTML5 Element, das das Ausklappen ermöglicht. Kein Button notwendig.
-				<summary> legt den Text fest, der vor dem ausklappen sichtbar ist -->
-           <details>
-
-				<summary> Termin anlegen </summary>
-
-						<form action = "terminetest_insert.php" method = "post">
-
-						  <p> Title: <input name = "terTitel" type = "text" size = "50" placeholder = "Titel" > </p>
-						  <p> Datum: <input name = "terDatum" type = "date" </p>
-						  <p> Start: <input name = "terStart" type = "time" </p>
-						  <p> End: <input name = "terEnde" type = "time"  </p>
-						  <p><!-- Status: --><input name = "terStatus" type = "hidden" size="50" value="2"  </p>
-						  <p><!-- PID: --><input name = "terPID" type = "hidden"  size ="3" value="<?php echo $probID ?>"</p>
-						  <p><!-- BID: --><input name = "terBID" type = "hidden" size = "3" value="<?php echo $betrID ?>" </p>
-						  <p>
-						  <input type = "submit" value = "Termin speichern">
-						</form>
-
-			</details>
-
-          </td>
-			<td>
-				<form action="terminedelete.php" method="post">
-				<input type="submit"  value="Termin löschen">
-				</form>
-			</td>
-        </tr>
-      </table>
-
-
-
-
-
-    </body>
-  </html>
-
-  <script src="../javascript/jquery-3.4.1.js"></script>
+      <!-- Kalender -->
+      <div class="kalender">
+        <div class="pkalender">
+        <p class="ueberschrift">
+        <?php
+        // Info des ausgewählten Probandes
+        foreach ($probInfo as $info) {
+          echo "Proband: ".$info['Vorname']." ".$info['Nachname'];
+          }
+          ?>
+        </p>
+        <?php include 'FullCalendarProband.php';
+        ?>
+        </div>
+        <div class="bkalender">
+          <p class="ueberschrift">
+            Mein Kalender
+            </p>
+        <?php include 'FullCalendar.php';
+        ?>
+        </div>
+      </div>
+    </div>
+    <?php include '../includes/footer.inc.php' ?>
+  </body>
+</html>

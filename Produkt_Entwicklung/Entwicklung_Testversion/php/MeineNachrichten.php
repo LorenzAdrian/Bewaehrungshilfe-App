@@ -69,7 +69,9 @@ if ($conn->query($sql) != TRUE) {
 		<!-- Stylesheet für Icons-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="../javascript/jquery-3.4.1.js"></script>
-		<script src="../javascript/message.js"></script>
+    <script src="../javascript/message.js"></script>
+    <?php include '../includes/headerBet.php';?>
+    <link rel="stylesheet" href="../CSS/headerBet.css" >
 		<title>Meine Nachrichten</title>
 
     <style>
@@ -130,11 +132,14 @@ if ($conn->query($sql) != TRUE) {
     .feldnachricht {
       min-width: 80%;
     }
+
+    .abschicken{
+      margin-left: 50px;
+    }
     </style>
 
 	</head>
 	<body>
-    <?php include '../includes/header.html'; ?>
 
 		<main class="meinenachrichten">
       <div>
@@ -181,7 +186,7 @@ if ($conn->query($sql) != TRUE) {
             				<textarea class="nachrichtenfeld" name="textarea1" value="" placeholder="Meine Nachricht"></textarea>
                   </td>
                   <td>
-            				<button class="" type="submit" name="signup-submit">Abschicken</button>
+            				<button class="abschicken" type="submit" name="signup-submit">Abschicken</button>
                   </td>
                   </form>
                 </tr>

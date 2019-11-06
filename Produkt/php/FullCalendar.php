@@ -7,8 +7,10 @@
 <html lang='en'>
 
   <head>
+    <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
+    <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+ <link rel="stylesheet" type="text/css" href="../CSS/style_tooltip.css">
     <style>
     html, body {
       display: grid;
@@ -23,15 +25,15 @@
       margin-top: 50px;
       float: right;
       box-sizing: border-box;
-      min-width: 100px;
-      width: 900px;
+      height: auto;
+      width: 5 rem;
       padding-right: 20px;
       padding-left: 20px;
       padding-top: 10px;
-      background: floralwhite;
-      border: 2px solid blue;
+      background: white;
+      border: 2px solid black;
       border-radius: 30px;
-        box-shadow: -9px 0px 23px 5px rgba(123,164,235,0.4);
+      box-shadow: -9px 0px 23px 5px rgba(123,164,235,0.4);
     }
 
 
@@ -62,6 +64,14 @@ var mycalendar = new FullCalendar.Calendar(calendarEl, {
         left: 'prev,next today',
         center: 'title,',
 	    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      eventRender: function(info) {
+        var tooltip = new Tooltip(info.el, {
+          title: info.event.extendedProps.description,
+          placement: 'top',
+          trigger: 'hover',
+          container: 'body'
+        });
       },
 	        customButtons: {
         addEventButton: {

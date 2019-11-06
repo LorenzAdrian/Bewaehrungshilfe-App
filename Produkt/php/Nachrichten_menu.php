@@ -66,11 +66,11 @@ foreach($event_data as $nachricht){
 	if ($nachricht['Status']!='neu') {
 		#Benutzer ist Sender der Nachricht.
 		if($nachricht['Sender'] == 0 && $_SESSION['rolle'] == 'proband' || $nachricht['Sender'] > 0 && $_SESSION['rolle'] == 'betreuer') {
-			$alteNachrichten .=  "<table><tr>".$_SESSION["username"].":</tr>";
+			$alteNachrichten .=  "<table><tr><td>".$_SESSION["username"].":</td><td></td></tr>";
 		}
 		#Benutzer ist Empfänger der Nachricht.
 		elseif ($nachricht['Sender'] == 0 && $_SESSION['rolle'] == 'betreuer' || $nachricht['Sender'] > 0 && $_SESSION['rolle'] == 'proband') {
-			$alteNachrichten .=  "<table><tr>Konversationspartner:</tr>";
+			$alteNachrichten .=  "<table><tr><td>Konversationspartner:</td><td></td></tr>";
 		}
 		else {
 			echo "Es ist ein Fehler aufgetreten.";
@@ -83,11 +83,11 @@ foreach($event_data as $nachricht){
 	else {
 		#Benutzer ist Sender der Nachricht.
 		if($nachricht['Sender'] == 0 && $_SESSION['rolle'] == 'proband' || $nachricht['Sender'] > 0 && $_SESSION['rolle'] == 'betreuer') {
-			$neueNachrichten .=  "<table bgcolor='yellow'><tr>".$_SESSION["username"].":</tr>";
+			$neueNachrichten .=  "<table bgcolor='yellow'><tr><td>".$_SESSION["username"].":</td><td></td></tr>";
 		}
 		#Benutzer ist Empfänger der Nachricht.
 		elseif ($nachricht['Sender'] == 0 && $_SESSION['rolle'] == 'betreuer' || $nachricht['Sender'] > 0 && $_SESSION['rolle'] == 'proband') {
-			$neueNachrichten .=  "<table bgcolor='yellow'><tr>Konversationspartner:</tr>";
+			$neueNachrichten .=  "<table bgcolor='yellow'><tr><td>Konversationspartner:</td><td></td></tr>";
 		}
 		else {
 			echo "Es ist ein Fehler aufgetreten.";
@@ -98,9 +98,12 @@ foreach($event_data as $nachricht){
 	}
 }
 
+$nachrichten = $alteNachrichten.$neueNachrichten;
+echo $nachrichten;
+
 #Alle Nachrichten des Nutzers auf "gelesen" setzen.
 #ACHTUNG: Im Moment nur für Proband nutzbar.
-$sql = "UPDATE nachricht SET Status='gelesen' WHERE ".$personenID."=".$_SESSION['userId'];
+$sql = "UPDATE nachricht SET Status='gelesen' WHERE BID=".$_SESSION['userId'];
 
 /*if ($personenID == 'BID') {
 	$sql .= "AND WHERE 'PID'= /übergebener Wert aus Datatables?/" Wert ggf. per POST weitergeben?
