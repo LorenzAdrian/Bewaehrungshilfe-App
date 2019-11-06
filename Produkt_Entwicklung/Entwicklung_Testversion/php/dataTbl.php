@@ -25,6 +25,11 @@ require "problisteDT.inc.php";
     <script type="text/javascript" src="../javascript/jquery.redirect.js"></script>
 
   </head>
+  <style>
+    #example{
+      position: absolute;
+    }
+  </style>
   <body>
     <table id="example" class="display" style="width:100%">
             <thead>
