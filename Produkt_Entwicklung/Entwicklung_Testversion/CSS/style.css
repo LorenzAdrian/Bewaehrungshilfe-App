@@ -5,11 +5,7 @@
 	font-family: 'Assistant', sans-serif;
 }
 body{
-	/*background: linear-gradient(0deg, #9BCD9B  , white);*/
-
-	background: url(../CSS/image/berlin-307382.svg)no-repeat;
-    background-size: cover;
-    height: 110vh;
+	background: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 }
 header{
  height: 15vh;
