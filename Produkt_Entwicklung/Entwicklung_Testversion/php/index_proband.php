@@ -69,7 +69,7 @@ if(isset($_POST['but_logout'])){
    <table>
 	<tr>
 		<td>
-			<a href="#">
+			<a href="Nachrichten_prob.php">
 				<div class="icon">
 					<i class="fa fa-envelope" style="font-size:80px"></i></div>
 				<div class="name">Nachrichten</div>
