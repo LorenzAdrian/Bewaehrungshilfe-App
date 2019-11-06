@@ -10,54 +10,8 @@ body{
 }
 
 
-.menubar{
- display: flex;
- height: 15vh;
- align-items: center;
-
-}
-
-.logo{
- width: 10%;
- align-items: center;
- justify-content: center;
- display: flex;
- margin-top: -20px;
-}
-
-.berlin_logo{
- width: 60px;
- height: 60px;
-}
-
-.menu{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.menu li{
-    list-style: none;
-    line-height: 100px;
-}
-
-.menu li a{
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color:black;
-    font-family: 'Assistant', sans-serif;
-    font-size: 30px;
-}
-
-.menu img{
-    height: 80px;
-    width: 80px;
-	box-sizing: border-box;
-}
---
 .calendar{
-  
+margin: 0px;  
    
 }
 
@@ -74,6 +28,15 @@ body{
 .fullcalendar {
 	margin: 1px auto;
 	width: 46%;
+}
+
+.verschieben{
+	margin-top: 10px;
+
+} 
+.verschieben.responsive {
 	
+	margin-top: 400px;
+}
 
 }

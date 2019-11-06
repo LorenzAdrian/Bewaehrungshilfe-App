@@ -24,30 +24,37 @@ if(isset($_POST['but_logout'])){
     <link rel="stylesheet" href="../CSS/termine_proband.css">
     <!--Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-
-    <title>Startseite</title>
-	<?php include '../includes/header2.php';
-	?>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+
+    <title>Termine</title>
+
+<!-- Header--> 
+	<script src="../javascript/header_pro.js"></script>
+	<?php include '../includes/header_pro.inc.php';
+	?>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../CSS/header_pro.css" > 
+ 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	
 </head>
 
 
 <body>
+
+<div class="verschieben" id="verschieben">
 	
 <section class="calendar">
-       <h1>Meine Termine</h1>
-       	   
+       <h1>Meine Termine</h1>      	   
 </section>
 
 
 <div class="fullcalendar">
 
     <?php include 'FullCalendarProband.php';?>
-</div>
+</div> </div>
 <?php include '../includes/footer.inc.php' ?>
 </body>
 
 </html>
 
-
-<script src="../javascript/jquery-3.4.1.js"></script>
