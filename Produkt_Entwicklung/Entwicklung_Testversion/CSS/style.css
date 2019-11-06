@@ -20,19 +20,6 @@ header{
 
 }
 
-.logo{
- width: 10%;
- align-items: center;
- justify-content: center;
- display: flex;
- margin-top: -20px;
-}
-
-.berlin_logo{
- width: 60px;
- height: 60px;
-}
-
 .menu{
     display: flex;
     justify-content: space-around;
