@@ -5,15 +5,15 @@
 <footer>
 <ul class="footer-nav">
 <li>
-    <a href="index.html" class="footer-datenschutz">Datenschutz</a>
+    <a href="Datenschutz.php" class="footer-datenschutz">Datenschutz</a>
 </li>
 
 <li>
-        <a href="#kontakt" class="footer-impressum">Impressum</a>
+        <a href="Impressum.php" class="footer-impressum">Impressum</a>
 </li>
 
 <li>
-        <a href="#fragen" class="footer-kontakt">Kontakt</a>
+        <a href="Kontakt.php" class="footer-kontakt">Kontakt</a>
 </li>
 
 </ul>
