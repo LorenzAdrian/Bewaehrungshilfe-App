@@ -70,17 +70,19 @@ if ($conn->query($sql) != TRUE) {
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="../javascript/jquery-3.4.1.js"></script>
     <script src="../javascript/message.js"></script>
-   
-   <!-- Header--> 
-	<script src="../javascript/header_pro.js"></script>
-	<?php include '../includes/header_pro.inc.php';
-	?>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../CSS/header_pro.css" > 
- 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   
-		<title>Meine Nachrichten</title>
+    <link rel="stylesheet" href="../CSS/meineNachrichten.css">
 
+    <!-- Header-->
+  	<script src="../javascript/header_pro.js"></script>
+  	<?php include '../includes/header_pro.inc.php';?>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link rel="stylesheet" href="../CSS/header_pro.css" >
+   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	   <title>Meine Nachrichten</title>
+
+    <!--
+    Kommentar: Style-CSS-Code befinden sich jetzt in "meineNachrichten.css"
     <style>
     .meinenachrichten {
       font-family: 'Assistant', sans-serif;
@@ -143,16 +145,15 @@ if ($conn->query($sql) != TRUE) {
     .abschicken{
       margin-left: 50px;
     }
-    </style>
+  </style>-->
 
 	</head>
 	<body>
-
 		<main class="meinenachrichten">
       <div>
 				<table class="nachrichten">
 					<tr>
-            <td>
+            <td id="probNachrichtenFenster">
               <?php
 
               while ($dsatz = mysqli_fetch_assoc($result))
@@ -181,7 +182,7 @@ if ($conn->query($sql) != TRUE) {
                     .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
                   }
               };
-               ?>
+              ?>
              </td>
 					</tr>
           <tr>
@@ -203,7 +204,6 @@ if ($conn->query($sql) != TRUE) {
 				</table>
 			</div>
 		</main>
-
     <!-- Footer: Hier stimmt die Höhe noch nicht. Footer wird mitten im Main-Bereich angezeigt.
     <?php include '../includes/footer.inc.php' ?>
     -->

@@ -18,4 +18,13 @@ $(document).ready(function(){
 		});
 		return false;
 	});
+
+//Nachrichten werden vom Server alle 10 Sekunden abgerufen
+	var $container =$("#probNachrichtenFenster");
+	$container.load('MeineNachrichtenAbrufen.php');
+	var refreshID = setInterval (function ()
+	{
+		$container.load('MeineNachrichtenAbrufen.php');
+	}, 10000);
+
 });
