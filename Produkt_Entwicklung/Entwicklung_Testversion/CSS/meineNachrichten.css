@@ -1,0 +1,61 @@
+.meinenachrichten {
+  font-family: 'Assistant', sans-serif;
+}
+.nachrichten {
+  min-width: 300px;
+  max-width: 40%;
+}
+.nachricht {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 80%;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+.proband {
+  margin-left: 3em;
+}
+.betreuer {
+  margin-right: 3em;
+}
+.betreuer.nachricht.neu {
+  background-color: darkred;
+  color: ivory;
+}
+.betreuer.nachricht {
+  background-color: darkblue;
+  color: ivory;
+}
+.proband.nachricht{
+  background-color: darkgrey;
+}
+.betreuername {
+  font-weight: bold;
+}
+.datumuhrzeit {
+  font-size: 0.8em;
+  text-align: right;
+}
+.datumuhrzeit.betreuer {
+  color: silver;
+}
+.datumuhrzeit.proband {
+  color: dimgray;
+}
+.nachrichtenfeld {
+  border-width: thin;
+  border-style: solid;
+  border-color: darkgrey;
+  border-radius: 1em;
+  padding: 0.5em;
+  width: 100%;
+  height: 3em;
+  font-family: 'Assistant', sans-serif;
+}
+.feldnachricht {
+  min-width: 80%;
+}
+
+.abschicken{
+  margin-left: 50px;
+}
