@@ -49,7 +49,26 @@ body {
   .berlin_logo {
    min-height: 4%;
    min-width: 4%;
-  }  }
+  margin-right: 0px;
+   margin-left: 0px;
+   margin-top: 0px;
+   margin-bottom: 0px; 
+
+  }  
+  
+  .topnav a {
+  float: left; 
+  display: none;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-right: 25px;
+}
+}
+
  
  .berlin_logo{
 
