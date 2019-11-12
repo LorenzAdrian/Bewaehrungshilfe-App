@@ -201,7 +201,22 @@ if ($conn->query($sql) != TRUE) {
               </table>
             </td>
           </tr>
-				</table>
+            <td>
+              <tr>
+                <table class="">
+                  <tr>
+        						<form class="w3-container" action="upload.php" method="POST" name="DAFORM" enctype="multipart/form-data" target="_self">
+                    <input id="upload" name="upload" class="w3-input" type="file" >
+
+                    <!-- CAPTCHA -->
+        						<p class="textend"></p>
+        						<button type="submit" class="w3-btn w3-blue-grey">Absenden</button>
+        						<button type="reset" class="w3-btn w3-red">Zurücksetzen</button>
+        					  </form>
+                  </tr>
+  				    </table>
+            </tr>
+          </td>
 			</div>
 		</main>
     <!-- Footer: Hier stimmt die Höhe noch nicht. Footer wird mitten im Main-Bereich angezeigt.
