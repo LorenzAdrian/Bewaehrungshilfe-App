@@ -182,46 +182,27 @@ if ($conn->query($sql) != TRUE) {
                   }
               };
                ?>
-         </td>
-	    </tr>
+             </td>
+					</tr>
           <tr>
             <td>
               <table class="" id="textfeld">
                 <tr>
-						 <form  id="msgform" method="POST">
-						  <td class="feldnachricht">
-									<textarea class="nachrichtenfeld" name="textarea1" value="" placeholder="Meine Nachricht"></textarea>
-						  </td>
-						   <td>
-									<button class="abschicken" type="submit" name="signup-submit">Abschicken</button>
-						  </td>
-						 </form>
-				 </tr>
+                  <form  id="msgform" method="POST">
+                  <td class="feldnachricht">
+            				<textarea class="nachrichtenfeld" name="textarea1" value="" placeholder="Meine Nachricht"></textarea>
+                  </td>
+                  <td>
+            				<button class="abschicken" type="submit" name="signup-submit">Abschicken</button>
+                  </td>
+                  </form>
+                </tr>
               </table>
-			</td>
-		  </tr>
-			<td>
-			  <tr>
-			    <table class="" id="textfeld">
-                  <tr>
-						<form class="w3-container" action="upload.php" method="POST" name="DAFORM" enctype="multipart/form-data" target="_self">
-                        <input id="upload" name="upload" class="w3-input" type="file" >
-						
-						    <!-- CAPTCHA -->
-							<p class="textend"></p>
-							<button type="submit" class="w3-btn w3-blue-grey">Absenden</button>      
-							<button type="reset" class="w3-btn w3-red">Zurücksetzen</button>
-								 
-						</form> 
-                  </tr>
-                </table>
-			   </tr>
-			  </td>
-             </td>
-            </tr>
-		   </table>
-		  </div>
-		 </main>
+            </td>
+          </tr>
+				</table>
+			</div>
+		</main>
 
     <!-- Footer: Hier stimmt die Höhe noch nicht. Footer wird mitten im Main-Bereich angezeigt.
     <?php include '../includes/footer.inc.php' ?>
