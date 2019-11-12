@@ -76,4 +76,8 @@ CREATE TABLE Nachricht(
 	FOREIGN KEY(PID) REFERENCES Proband(PID),
     FOREIGN KEY(BezugID) REFERENCES Nachricht(NID) 
 );
-	
+ 
+ CREATE TABLE fileupload (
+	 id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	 image blob NOT NULL
+ );
