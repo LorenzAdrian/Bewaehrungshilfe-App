@@ -85,7 +85,7 @@ body {
   header {
     font-size: 15pt;
     font-family: 'Roboto', sans-serif;
-    height: 18vh;
+    height: 22vh;
     width: 100%;
 	margin-bottom: 0px;
   }
@@ -96,3 +96,15 @@ body {
     width: 100%;
 	padding-top: 1px;
   }
+  
+  .verschieben{
+	margin-top: 10px;
+
+} 
+.verschieben.responsive {
+	
+	margin-top: 540px;
+}
+
+
+

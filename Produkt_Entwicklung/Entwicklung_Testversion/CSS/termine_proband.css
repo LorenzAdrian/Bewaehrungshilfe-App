@@ -19,7 +19,7 @@ margin: 0px;
     font-size: 40px;
     font-family: 'Assistant', sans-serif;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: uppercase
     font-weight: 400;
 	
 
@@ -29,7 +29,7 @@ margin: 0px;
 	margin: 1px auto;
 	width: 46%;
 }
-
+/*
 .verschieben{
 	margin-top: 10px;
 
@@ -37,6 +37,6 @@ margin: 0px;
 .verschieben.responsive {
 	
 	margin-top: 400px;
-}
+}*/
 
 
