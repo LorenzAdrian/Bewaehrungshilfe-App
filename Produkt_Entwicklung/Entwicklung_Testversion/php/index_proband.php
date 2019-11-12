@@ -126,7 +126,7 @@ if(isset($_POST['but_logout'])){
 </div>
 
 
-<?php include '../includes/footer.inc.php' ?>
+<?php include '../includes/footer_proband.inc.php' ?>
 </body>
 
 </html>

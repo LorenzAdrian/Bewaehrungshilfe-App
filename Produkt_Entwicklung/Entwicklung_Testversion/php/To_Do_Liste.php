@@ -43,7 +43,7 @@ if(isset($_POST['but_logout'])){
 <body>
 hier ist Platz für den Leitfaden
 
-<?php include '../includes/footer.inc.php' ?>
+<?php include '../includes/footer_proband.inc.php' ?>
 </body>
 
 </html>

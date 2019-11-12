@@ -124,6 +124,6 @@ if (mysqli_num_rows($result) > 0) {
         </div>
       </div>
     </div>
-    <?php include '../includes/footer.inc.php' ?>
+    <?php include '../includes/footer_betreuer.inc.php' ?>
   </body>
 </html>

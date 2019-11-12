@@ -219,9 +219,7 @@ if ($conn->query($sql) != TRUE) {
           </td>
 			</div>
 		</main>
-    <!-- Footer: Hier stimmt die Höhe noch nicht. Footer wird mitten im Main-Bereich angezeigt.
-    <?php include '../includes/footer.inc.php' ?>
-    -->
+    <?php include '../includes/footer_proband.inc.php' ?>
     <?php mysqli_close($conn); ?>
 	</body>
 </html>

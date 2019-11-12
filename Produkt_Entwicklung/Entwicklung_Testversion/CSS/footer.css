@@ -6,6 +6,12 @@ footer{
     align-items: center;
     background-color: white;
     opacity: 0.8;
+	
+	position: fixed;
+	padding: 10px;
+	bottom: 0;
+	left: 0;
+	right:0;
 }
 
 .footer-nav{
