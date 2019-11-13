@@ -1,3 +1,15 @@
+<?php 
+if (!isset($_SESSION['userId'])) {
+	header('Location:login.php');
+}
+
+if (isset($_POST['but_logout'])) {
+	session_destroy();
+	header('Location:login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
