@@ -35,13 +35,12 @@ if (!empty($_FILES['upload']['name']))
     	}
     	$bsender = 0;#Weil Proband.
     }
-    $dateiname = $_FILES['upload'];
-    $dateityp = $_FILES['name'];
+    $dateiname = $_FILES['upload']['name'];
 
     /*
     $sql = "INSERT INTO fileupload (image, BID, PID, BSender, dateiname, dateityp) VALUES (0x" .  bin2hex($content) . ", ".$bid.", ".$pid.", ".$bsender.", ".$dateiname.", ".$dateityp.")";
     */
-    $sql = "INSERT INTO fileupload (zeit, image, Status, BID, PID, BSender, dateiname, dateityp) values ('$datum', 0x" .  bin2hex($content) . ", '$status', $bid, $pid, $bsender, '$dateiname', '$dateityp')";
+    $sql = "INSERT INTO fileupload (zeit, image, Status, BID, PID, BSender, dateiname) values ('$datum', 0x" .  bin2hex($content) . ", '$status', $bid, $pid, $bsender, '$dateiname')";
 
     //Einfügen in Datenbank
     if ($conn->query($sql) == TRUE)
