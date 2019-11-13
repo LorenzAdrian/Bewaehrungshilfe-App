@@ -22,7 +22,7 @@
 	<h1>Kontakt LOGIN</h1>
 	<main>
 	</main>
-	<?php include '../includes/footer.inc.php' ?>
+	<?php include '../includes/footer_login.inc.php' ?>
 	</body>
 	
 </html>
