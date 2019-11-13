@@ -21,7 +21,7 @@
 
         <li>
             <form method='post' action="">
-                <input type="submit" value="Logout" class="button_logout" name="but_logout">
+                <input type="submit" value="Abmelden" class="button_logout" name="but_logout">
             </form>
         </li>
 		

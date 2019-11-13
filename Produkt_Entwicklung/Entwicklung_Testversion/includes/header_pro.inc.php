@@ -12,7 +12,7 @@
 						<a href="../php/Informationen.php">Informationen</a>
 						<a href="../php/To_Do_Liste.php">Leitfaden</a>
 						<a href="../php/Notfall.php">Notfall</a>
-						<a href="../php/Login.php">Logout</a>
+						<a href="../php/Login.php">Abmelden</a>
 						<a href="javascript:void(0);" class="icon" id="icon" onclick="myFunction()"> SoDi 4u&nbsp;&nbsp;&nbsp; Menü
 						<i class="fa fa-bars"></i></a>
 </div>
