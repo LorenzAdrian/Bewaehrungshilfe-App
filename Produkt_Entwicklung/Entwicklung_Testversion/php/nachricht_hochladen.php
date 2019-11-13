@@ -35,6 +35,7 @@ else {
 	}
 	$bsender = 0;#Weil Proband.
 }
+/*
 #bezugID wird aus der Datenbank ausgelesen.
 $query = "SELECT NID FROM nachricht WHERE PID=".$pid." AND BID=".$bid." ORDER BY Zeitstempel DESC LIMIT 1"; #AND WHERE BID = $bid funktioniert bei Betreuer nicht.
 echo("<script>console.log('PHP: " . $query . "');</script>");
@@ -42,12 +43,13 @@ $result = mysqli_query($conn, $query);
 while($row = mysqli_fetch_assoc($result)) {
 		$bezugID = $row['NID'];
 	}
+  */
 
 #Daten werden in Datenbanktabelle nachricht übertragen.
-$sql = "INSERT INTO nachricht (Zeitstempel, Text, BezugID,  Status, PID, BID, BSender) VALUES (?, ?, ?, ?, ?, ?,?)";
+$sql = "INSERT INTO nachricht (Zeitstempel, Text, Status, PID, BID, BSender) VALUES (?, ?, ?, ?, ?,?)";
 $stmt = mysqli_stmt_init($conn);
 if (mysqli_stmt_prepare($stmt, $sql)) {
-  mysqli_stmt_bind_param($stmt, "sssssss", $datum, $nachricht ,$bezugID, $status, $pid, $bid, $bsender);
+  mysqli_stmt_bind_param($stmt, "ssssss", $datum, $nachricht, $status, $pid, $bid, $bsender);
   mysqli_stmt_execute($stmt);
   //header('Location: index_betreuer.php');
 }

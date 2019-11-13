@@ -219,6 +219,10 @@ if ($conn->query($sql) != TRUE) {
           </td>
 			</div>
 		</main>
+    <br>
+    <br>
+    <br>
+    <br>
     <?php include '../includes/footer_proband.inc.php' ?>
     <?php mysqli_close($conn); ?>
 	</body>
