@@ -215,6 +215,10 @@ if ($conn->query($sql) != TRUE) {
         					  </form>
                   </tr>
   				    </table>
+					<br>
+					<br>
+					<br>
+					<br>
             </tr>
           </td>
 			</div>
