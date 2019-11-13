@@ -1,7 +1,8 @@
 <?php
 #Seite für die Nachrichten des Probanden
 
-include '../database/dbh.inc.php';
+require '../database/dbh.inc.php';
+
 if(!isset($_SESSION))
 {
       session_start();
@@ -28,8 +29,12 @@ else {
 $event_sql =
 "SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, B.Vorname AS vorname_betreuer, B.Nachname AS nachname_betreuer FROM nachricht AS N INNER JOIN betreuer AS B ON N.BID = B.BID WHERE N.PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
 
+$event_imgsql = "SELECT dateiname FROM fileupload WHERE PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
+
 //Mit mysqli_query wird die SQL-Abfrage ausgeführt. Die Methode liefert ein Objekt der Klasse mysqli_result zurück. $result enthält die Referenz auf dieses Objekt.
 $result = mysqli_query($conn, $event_sql);
+
+$result1 = mysqli_query($conn, $event_imgsql);
 
 $sql = "UPDATE nachricht SET Status='gelesen'
 WHERE PID = ".$_SESSION['userId']." AND BSender=1";
@@ -185,6 +190,18 @@ if ($conn->query($sql) != TRUE) {
               ?>
              </td>
 					</tr>
+          <!--
+          <tr>
+            <td>
+              <?php
+              while ($img = mysqli_fetch_assoc($result1))
+              {
+                echo '<table class="proband nachricht"><tr class="nachricht"><td>'.$img['dateiname'].'</td></tr></table>';
+              }
+              ?>
+            </td>
+          </tr>
+          -->
           <tr>
             <td>
               <table class="" id="textfeld">

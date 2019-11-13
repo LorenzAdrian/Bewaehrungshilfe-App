@@ -28,7 +28,7 @@ CREATE TABLE Betreuer(
 	FOREIGN KEY(Vertretung) REFERENCES Betreuer(BID),
     FOREIGN KEY(AGID) REFERENCES Arbeitsgruppe(AGID)
 );
-	
+
 CREATE TABLE Proband(
 	PID int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	Vorname varchar(30) NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE Proband(
 	Betreuungsende date,
     BID int(30) NOT NULL,
     FOREIGN KEY(BID) REFERENCES Betreuer(BID)
-);	
+);
 
 CREATE TABLE Aktivität(
         Zeitstempel date NOT NULL,
@@ -67,17 +67,24 @@ CREATE TABLE Nachricht(
 	NID int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	Zeitstempel datetime NOT NULL,
 	Text text NOT NULL,
-    BezugID int(30),
-    Status varchar(20) NOT NULL,
+  BezugID int(30),
+  Status varchar(20) NOT NULL,
 	BID int(30) NULL,
 	PID int(30) NULL,
 	BSender tinyint(1) NOT NULL,
 	FOREIGN KEY(BID) REFERENCES Betreuer(BID),
 	FOREIGN KEY(PID) REFERENCES Proband(PID),
-    FOREIGN KEY(BezugID) REFERENCES Nachricht(NID) 
+  FOREIGN KEY(BezugID) REFERENCES Nachricht(NID)
 );
- 
- CREATE TABLE fileupload (
-	 id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	 image blob NOT NULL
- );
+
+CREATE TABLE fileupload(
+FID int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+zeit datetime NOT NULL,
+image mediumblob NOT NULL,
+Status varchar(20) NOT NULL,
+BID int(30) NOT NULL,
+PID int(30) NOT NULL,
+BSender tinyint(1) NOT NULL,
+dateiname varchar(50) NOT NULL,
+dateityp char(4) NOT NULL
+);
