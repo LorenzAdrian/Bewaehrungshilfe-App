@@ -35,8 +35,8 @@ if(isset($_POST['but_logout'])){
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
     <title>Start</title>
-<?php include '../includes/headerBet.php';
-?>
+    
+    <?php include '../includes/headerBet.php';?> 
 </head>
 
 <body>
