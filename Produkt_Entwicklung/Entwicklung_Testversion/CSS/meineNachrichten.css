@@ -6,17 +6,17 @@
   max-width: 40%;
 }
 .nachricht {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   width: 80%;
-  padding: 0.5em;
-  border-radius: 1em;
+  padding: 0.5rem;
+  border-radius: 1rem;
 }
 .proband {
-  margin-left: 3em;
+  margin-left: 3rem;
 }
 .betreuer {
-  margin-right: 3em;
+  margin-right: 3rem;
 }
 .betreuer.nachricht.neu {
   background-color: darkred;
@@ -33,7 +33,7 @@
   font-weight: bold;
 }
 .datumuhrzeit {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   text-align: right;
 }
 .datumuhrzeit.betreuer {
@@ -46,10 +46,10 @@
   border-width: thin;
   border-style: solid;
   border-color: darkgrey;
-  border-radius: 1em;
-  padding: 0.5em;
+  border-radius: 1rem;
+  padding: 0.5rem;
   width: 100%;
-  height: 3em;
+  height: 3rem;
   font-family: 'Assistant', sans-serif;
 }
 .feldnachricht {

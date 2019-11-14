@@ -64,18 +64,22 @@ if ($conn->query($sql) != TRUE) {
 
 <!DOCTYPE html>
 <html lang="de">
+
 	<head>
     <meta charset="utf-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!--- Pfad zur style.css--------------------------->
 		<link rel="stylesheet" href="../CSS/style.css">
 		<!--Schriftart aus google fonts------------------>
-		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap">
 		<!-- Stylesheet für Icons-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Stylesheet für Darstellung der Nachrichten -->
+    <link rel="stylesheet" href="../CSS/meineNachrichten.css">
+
 		<script src="../javascript/jquery-3.4.1.js"></script>
     <script src="../javascript/message.js"></script>
-    <link rel="stylesheet" href="../CSS/meineNachrichten.css">
 
     <!-- Header-->
   	<script src="../javascript/header_pro.js"></script>
@@ -86,73 +90,8 @@ if ($conn->query($sql) != TRUE) {
 
 	   <title>Meine Nachrichten</title>
 
-    <!--
-    Kommentar: Style-CSS-Code befinden sich jetzt in "meineNachrichten.css"
-    <style>
-    .meinenachrichten {
-      font-family: 'Assistant', sans-serif;
-    }
-    .nachrichten {
-      min-width: 300px;
-      max-width: 40%;
-    }
-    .nachricht {
-      margin-top: 1em;
-      margin-bottom: 1em;
-      width: 80%;
-      padding: 0.5em;
-      border-radius: 1em;
-    }
-    .proband {
-      margin-left: 3em;
-    }
-    .betreuer {
-      margin-right: 3em;
-    }
-    .betreuer.nachricht.neu {
-      background-color: darkred;
-      color: ivory;
-    }
-    .betreuer.nachricht {
-      background-color: darkblue;
-      color: ivory;
-    }
-    .proband.nachricht{
-      background-color: darkgrey;
-    }
-    .betreuername {
-      font-weight: bold;
-    }
-    .datumuhrzeit {
-      font-size: 0.8em;
-      text-align: right;
-    }
-    .datumuhrzeit.betreuer {
-      color: silver;
-    }
-    .datumuhrzeit.proband {
-      color: dimgray;
-    }
-    .nachrichtenfeld {
-      border-width: thin;
-      border-style: solid;
-      border-color: darkgrey;
-      border-radius: 1em;
-      padding: 0.5em;
-      width: 100%;
-      height: 3em;
-      font-family: 'Assistant', sans-serif;
-    }
-    .feldnachricht {
-      min-width: 80%;
-    }
-
-    .abschicken{
-      margin-left: 50px;
-    }
-  </style>-->
-
 	</head>
+
 	<body>
 		<main class="meinenachrichten">
       <div>

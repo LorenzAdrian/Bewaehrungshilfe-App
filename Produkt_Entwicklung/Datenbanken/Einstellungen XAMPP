@@ -1,0 +1,8 @@
+Einstellungen für XAMPP
+
+MySQL-Datenbankserver: ..\xampp\mysql\bin\my.ini
+  max_allowed_packet auf 128M setzen
+  innodb_log_file_size auf 128M setzen
+
+Apache-Webserver: ..\xampp\php\php.ini
+  upload_max_filesize auf 128M setzen

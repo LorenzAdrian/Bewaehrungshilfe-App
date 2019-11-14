@@ -1,4 +1,4 @@
-CREATE TABLE Standort(
+CREATE TABLE standort(
 	SID int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	Straße varchar(50) NOT NULL,
 	Hausnr varchar(5) NOT NULL,
@@ -6,14 +6,14 @@ CREATE TABLE Standort(
 	Ort varchar(30) NOT NULL
 );
 
-CREATE TABLE Arbeitsgruppe(
+CREATE TABLE arbeitsgruppe(
 	AGID int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	Name varchar(30) NOT NULL,
 	Standort int(30) NOT NULL,
 	FOREIGN KEY(Standort) REFERENCES Standort(SID)
 );
 
-CREATE TABLE Betreuer(
+CREATE TABLE betreuer(
 	BID int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	Vorname varchar(30) NOT NULL,
 	Nachname varchar(30) NOT NULL,
@@ -24,12 +24,12 @@ CREATE TABLE Betreuer(
 	Stellenzeichen varchar(30),
 	Zimmernr varchar(10) NOT NULL,
 	Vertretung int(30) NULL,
-    AGID int(30) NOT NULL,
+  AGID int(30) NOT NULL,
 	FOREIGN KEY(Vertretung) REFERENCES Betreuer(BID),
-    FOREIGN KEY(AGID) REFERENCES Arbeitsgruppe(AGID)
+  FOREIGN KEY(AGID) REFERENCES Arbeitsgruppe(AGID)
 );
 
-CREATE TABLE Proband(
+CREATE TABLE proband(
 	PID int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	Vorname varchar(30) NOT NULL,
 	Nachname varchar(30) NOT NULL,
@@ -40,18 +40,18 @@ CREATE TABLE Proband(
 	Aktenzeichen varchar(10),
 	Betreuungsanfang date,
 	Betreuungsende date,
-    BID int(30) NOT NULL,
-    FOREIGN KEY(BID) REFERENCES Betreuer(BID)
+  BID int(30) NOT NULL,
+  FOREIGN KEY(BID) REFERENCES Betreuer(BID)
 );
 
-CREATE TABLE Aktivität(
-        Zeitstempel date NOT NULL,
-        PID int(30) NOT NULL,
-        FOREIGN KEY(PID) REFERENCES Proband(PID),
-        PRIMARY KEY (Zeitstempel, PID)
+CREATE TABLE aktivität(
+  Zeitstempel date NOT NULL,
+  PID int(30) NOT NULL,
+  FOREIGN KEY(PID) REFERENCES Proband(PID),
+  PRIMARY KEY (Zeitstempel, PID)
 );
 
-CREATE TABLE Termin(
+CREATE TABLE termin(
 	TID int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	Beginn datetime NOT NULL,
 	Ende datetime NOT NULL,
@@ -59,22 +59,21 @@ CREATE TABLE Termin(
 	Status varchar(1) NOT NULL,
 	BID int(30) NOT NULL,
 	PID int(30) NOT NULL,
+	Beschreibung varchar(100),
 	FOREIGN KEY(BID) REFERENCES Betreuer(BID),
 	FOREIGN KEY(PID) REFERENCES Proband(PID)
 );
 
-CREATE TABLE Nachricht(
+CREATE TABLE nachricht(
 	NID int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	Zeitstempel datetime NOT NULL,
 	Text text NOT NULL,
-  BezugID int(30),
   Status varchar(20) NOT NULL,
 	BID int(30) NULL,
 	PID int(30) NULL,
 	BSender tinyint(1) NOT NULL,
 	FOREIGN KEY(BID) REFERENCES Betreuer(BID),
-	FOREIGN KEY(PID) REFERENCES Proband(PID),
-  FOREIGN KEY(BezugID) REFERENCES Nachricht(NID)
+	FOREIGN KEY(PID) REFERENCES Proband(PID)
 );
 
 CREATE TABLE fileupload(
