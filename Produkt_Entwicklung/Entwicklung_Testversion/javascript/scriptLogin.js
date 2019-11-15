@@ -11,7 +11,7 @@ $(document).ready(function(){
 		}
         var mailuid = $("#mailuid").val().trim();
         var passwort = $("#passwort").val().trim();
-		
+
 		//Eingaben werden das erste mal geprüft und an checkUser.php weitergegeben.
         if( mailuid != "" && passwort != "" ){
             $.ajax({
@@ -41,5 +41,12 @@ $(document).ready(function(){
 			$("#message").html(msg);
 			$("#passwort").val("");
 		}
+    });
+    
+  //Funktion für Eingabetaste auf Login.php - click auf login_btn wird ausgeführt, wenn Eingabetaste (Taste 13) gedrückt wird und wiederhochkommt
+    $("#passwort").keyup(function(e){
+      if(e.which == 13){
+        $("#login_btn").click();
+      }
     });
 });
