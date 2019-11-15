@@ -13,25 +13,49 @@
       display: grid;
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-      font-size: 14px;
-    }
+       }
 
 /* Hier wird dann das div vom Kalendar angepasst*/
-    #calendar {
-      margin-top: 50px;
+    #calendar {   
+	  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 14px;
+      margin-top: 10px;
       float: right;
       box-sizing: border-box;
       height: auto;
-      width: 5 rem;
+      width: 1 rem;
       padding-right: 20px;
       padding-left: 20px;
       padding-top: 10px;
+	  padding-bottom: 10px;
       background: white;
       border: 2px solid black;
       border-radius: 30px;
       box-shadow: -9px 0px 23px 5px rgba(123,164,235,0.4);
-    }
+	}
+
+	@media screen and (max-width: 600px) {
+ 
+#calendar {   
+	  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 8px;
+      margin-top: 10px;
+      float: right;
+      box-sizing: border-box;
+      height: auto;
+      width: 1 rem;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 10px;
+	  padding-bottom: 10px;
+      background: white;
+      border: 2px solid black;
+      border-radius: 30px;
+      box-shadow: -9px 0px 23px 5px rgba(123,164,235,0.4);
+	}
+
+  }  
+	}
 
 
   </style>
