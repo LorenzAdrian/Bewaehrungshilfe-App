@@ -19,11 +19,11 @@
     #calendar {   
 	  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
       font-size: 14px;
-      margin-top: 10px;
+      margin-top: 50px;
       float: right;
       box-sizing: border-box;
       height: auto;
-      width: 1 rem;
+      width: 5 rem;
       padding-right: 20px;
       padding-left: 20px;
       padding-top: 10px;
@@ -55,7 +55,7 @@
 	}
 
   }  
-	}
+	
 
 
   </style>
