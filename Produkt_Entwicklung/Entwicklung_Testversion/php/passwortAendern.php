@@ -104,7 +104,7 @@ $userID = $_SESSION['userId'];
       <tr>
         <td>Benutzername</td>
         <td>
-          <input type="text" name="username" autocomplete="off" value="<?php echo htmlspecialchars($_SESSION['username']); ?>">
+          <input type="text" name="username" autocomplete="off" value="<?php echo htmlspecialchars($_SESSION['username']); ?>" readonly>
         </td>
       </tr>
       <tr>

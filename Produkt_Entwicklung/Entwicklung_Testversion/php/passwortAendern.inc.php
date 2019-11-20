@@ -20,12 +20,13 @@ if(isset($_POST['passwortAendern'])) {
     exit();
     }
 
+  //"Neues Passwort" und "Neues Passwort wiederholen" stimmen überein?
   if ($passwort !== $passwortRepeat){
     header ("Location: passwortAendern.php?error=pwd_nicht_gleich");
     exit();
   }
 
-  #Query für die Überprüfung
+  //Überprüfung des alten Passwort
   $sql = "SELECT * FROM proband WHERE PID = $userID";
   $result = mysqli_query($conn, $sql);
   if (mysqli_num_rows($result) > 0) {
@@ -38,7 +39,7 @@ if(isset($_POST['passwortAendern'])) {
     exit();
   }
 
-  #Passwort aktualisieren
+  //Passwort aktualisieren
   $sql = "UPDATE proband SET Passwort = ? WHERE PID = ?";
   $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
