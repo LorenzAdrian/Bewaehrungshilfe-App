@@ -1,21 +1,20 @@
 <?php
-include '../database/dbh.inc.php';
-session_start();
+#Seite um ein Passwort zu ändern
+
+require '../database/dbh.inc.php';
+
+if(!isset($_SESSION))
+{
+      session_start();
+}
 
 // Check user login or not
 if(!isset($_SESSION['userId'])){
-    header('Location: Login.php');
+    header('Location: login.php');
 }
-
-// logout
-
-if(isset($_POST['but_logout'])){
-    session_destroy();
-    header('Location: Login.php');
-}
+//userID wird für den Formular unten deklariert
+$userID = $_SESSION['userId'];
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
@@ -39,7 +38,7 @@ if(isset($_POST['but_logout'])){
     <!-- Stylesheet für Icons-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Startseite</title>
+    <title>Passwort ändern</title>
 
 </head>
 		<header>
@@ -95,132 +94,44 @@ if(isset($_POST['but_logout'])){
     <span class="navbar-toggler-icon"></span>
   </button>
   </nav>
-
-
 <hr>
 </header>
 
-
-<div class="container">
-
-	<div class="row">
-
-    <div class="col-sm-6">
-     			<a href="MeineNachrichten.php">
-				<div class="icon">
-					<i class="fa fa-envelope" style="font-size:80px"></i></div>
-				<div class="name">Nachrichten</div>
-			</a>
-    </div>
-    <div class="col-sm-6">
-				<a href="termine_proband.php">
-				<div class="icon1">
-					<i class="fa fa-calendar" style="font-size:80px"></i></div>
-				<div class="name1">Termine</div>
-			</a>
-	</div>		
-
-      
-    
-  </div>
-  <div class="row">
- 
-    <div class="col-sm-6">
-      <a href="Informationen.php">
-				<div class="icon">
-					<i class="fa fa-info-circle" style="font-size:80px"></i></div>
-				<div class="name">Informationen</div>
-			</a>
-    </div>
-    <div class="col-sm-6">
-      <a href="Dokumente.php">
-				<div class="icon1">
-					<i class="fa fa-file" style="font-size:80px"></i></div>
-				<div class="name1">Dokumente</div>
-			</a>
-    </div>
-	</div>
-
-	 <div class="row">
-
-	
-	<div class="col-sm-6">
-      			<a href="Notfall.php">
-				<div class="icon">
-					<i class="fa fa-ambulance" style="font-size:80px"></i></div>
-				<div class="name">Notfall</div>
-				</a>
-    </div>
-	 <div class="col-sm-6">
-	 			<a href="To_Do_Liste.php">
-				<div class="icon1">
-					<i class="fa fa-list-alt" style="font-size:80px"></i></div>
-				<div class="name1">Leitfaden</div>
-			</a>
-
-      
-    </div>
-	
-	
-  </div>
- 
-  
-  <!-- <table class="table">
-   <tbody>
-	<tr>
-		<td>
-			<a href="MeineNachrichten.php">
-				<div class="icon">
-					<i class="fa fa-envelope" style="font-size:80px"></i></div>
-				<div class="name">Nachrichten</div>
-			</a>
-		</td>
-		<td>
-			<a href="termine_proband.php">
-				<div class="icon1">
-					<i class="fa fa-calendar" style="font-size:80px"></i></div>
-				<div class="name1">Termine</div>
-			</a>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<a href="Informationen.php">
-				<div class="icon">
-					<i class="fa fa-info-circle" style="font-size:80px"></i></div>
-				<div class="name">Informationen</div>
-			</a>
-		</td>
-		<td>
-			<a href="Dokumente.php">
-				<div class="icon1">
-					<i class="fa fa-file" style="font-size:80px"></i></div>
-				<div class="name1">Dokumente</div>
-			</a>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<a href="Notfall.php">
-				<div class="icon">
-					<i class="fa fa-ambulance" style="font-size:80px"></i></div>
-				<div class="name">Notfall</div>
-			</a>
-		</td>
-		<td>
-			<a href="To_Do_Liste.php">
-				<div class="icon1">
-					<i class="fa fa-list-alt" style="font-size:80px"></i></div>
-				<div class="name1">Leitfaden</div>
-			</a>
-		</td>
-	</tr>
-	</tbody>
-</table> -->
-</div>
-
-
-<?php include '../includes/footer_proband.inc.php' ?>
-</body>
-
+<main>
+  <form action="passwortAendern.inc.php" method="POST">
+        <input type="hidden" name="uid" value="<?php echo $userID;?>">
+    <table>
+      <tr>
+        <td>Benutzername</td>
+        <td>
+          <input type="text" name="username" autocomplete="off" value="<?php echo htmlspecialchars($_SESSION['username']); ?>">
+        </td>
+      </tr>
+      <tr>
+        <td>Altes Passwort</td>
+        <td>
+          <input type="password" name="pwd-altes" placeholder="Altes Passwort">
+        </td>
+      </tr>
+      <tr>
+        <td>Neues Passwort</td>
+        <td>
+          <input type="password" name="pwd" placeholder="Neues Passwort">
+        </td>
+      </tr>
+      <tr>
+        <td>Neues Passwort wiederholen</td>
+        <td>
+          <input type="password" name="pwd-repeat" placeholder="Neues Passwort wiederholen">
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button type="submit" name="passwortAendern">Passwort ändern</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</main>
 </html>

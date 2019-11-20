@@ -75,10 +75,10 @@ button{
 
 .form-check{
     display: flex;
-    justify-content: center
+    justify-content: center;
 }
 
 input[type="checkbox"]
 {
-    margin-left: 40px;
+    margin-left: 80px;
 }
