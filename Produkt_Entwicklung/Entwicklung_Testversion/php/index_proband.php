@@ -21,10 +21,6 @@ if(isset($_POST['but_logout'])){
 <html lang="de" dir="ltr">
 <head>
 
-<<<<<<< HEAD
-
-    <!--- Pfad zur style.css--------------------------->
-=======
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -37,24 +33,13 @@ if(isset($_POST['but_logout'])){
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 	<!--- Pfad zur style.css--------------------------->
->>>>>>> ee78213a0fb7306ae04dddec7454678f83a6edd7
     <link rel="stylesheet" href="../CSS/index_proband.css">
     <!--Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700&display=swap"  rel="stylesheet">
     <!-- Stylesheet für Icons-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<<<<<<< HEAD
-	<!-- Header-->
-	<script src="../javascript/header_pro.js"></script>
-	<?php include '../includes/header_pro.inc.php';
-	?>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../CSS/header_pro.css" >
- 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-=======
     <title>Startseite</title>
->>>>>>> ee78213a0fb7306ae04dddec7454678f83a6edd7
 
 </head>
 		<header>
@@ -105,28 +90,6 @@ if(isset($_POST['but_logout'])){
     </div>
     <div class="w-100"><!--spacer--></div>
 
-<<<<<<< HEAD
-    <ul class="menu">
-
-		<div class="hallobox">Hallo <?php echo $_SESSION["username"]; ?></div>
-
-		 <li>
-			<a href ="#suchen"><img src="../CSS/image/search.svg">Suchen</a>
-		 </li>
-
-         <li>
-			<a href ="#mein_bereich"><img src="../CSS/image/user-circle.svg">Mein Bereich</a>
-		 </li>
-
-		 <li>
-			<form method='post' action="">
-                <input type="submit" value="Logout" class="button_logout" name="but_logout">
-            </form>
-         </li>
-
-    </ul>
-=======
->>>>>>> ee78213a0fb7306ae04dddec7454678f83a6edd7
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -155,13 +118,13 @@ if(isset($_POST['but_logout'])){
 					<i class="fa fa-calendar" style="font-size:80px"></i></div>
 				<div class="name1">Termine</div>
 			</a>
-	</div>		
+	</div>
 
-      
-    
+
+
   </div>
   <div class="row">
- 
+
     <div class="col-sm-6">
       <a href="Informationen.php">
 				<div class="icon">
@@ -180,7 +143,7 @@ if(isset($_POST['but_logout'])){
 
 	 <div class="row">
 
-	
+
 	<div class="col-sm-6">
       			<a href="Notfall.php">
 				<div class="icon">
@@ -195,19 +158,19 @@ if(isset($_POST['but_logout'])){
 				<div class="name1">Leitfaden</div>
 			</a>
 
-      
+
     </div>
-	
-	
+
+
   </div> -->
- 
+
   <div class="rahmen">
-   
+
    <table class="table">
    <tbody>
 	<tr>
 		<td>
-			<a href="MeineNachrichten.php#textfeld ">
+			<a href="MeineNachrichten.php">
 				<div class="icon">
 					<i class="fa fa-envelope" style="font-size:80px"></i></div>
 				<div class="name">Nachrichten</div>
@@ -254,7 +217,7 @@ if(isset($_POST['but_logout'])){
 		</td>
 	</tr>
 	</tbody>
-</table> 
+</table>
 </div>
 
 

@@ -72,18 +72,9 @@ CREATE TABLE nachricht(
 	BID int(30) NOT NULL,
 	PID int(30) NOT NULL,
 	BSender tinyint(1) NOT NULL,
+	image mediumblob NOT NULL,
+	dateiname varchar(50) NOT NULL,
+	dateityp char(4) NOT NULL,
 	FOREIGN KEY(BID) REFERENCES Betreuer(BID),
 	FOREIGN KEY(PID) REFERENCES Proband(PID)
-);
-
-CREATE TABLE fileupload(
-FID int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-zeit datetime NOT NULL,
-image mediumblob NOT NULL,
-Status varchar(20) NOT NULL,
-BID int(30) NOT NULL,
-PID int(30) NOT NULL,
-BSender tinyint(1) NOT NULL,
-dateiname varchar(50) NOT NULL,
-dateityp char(4) NOT NULL
 );
