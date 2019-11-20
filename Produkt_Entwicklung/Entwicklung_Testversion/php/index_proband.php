@@ -100,7 +100,7 @@ if(isset($_POST['but_logout'])){
 <hr>
 </header>
 
-
+<!--
 <div class="container">
 
 	<div class="row">
@@ -162,10 +162,11 @@ if(isset($_POST['but_logout'])){
     </div>
 	
 	
-  </div>
+  </div> -->
  
-  
-  <!-- <table class="table">
+  <div class="rahmen">
+   
+   <table class="table">
    <tbody>
 	<tr>
 		<td>
@@ -216,7 +217,7 @@ if(isset($_POST['but_logout'])){
 		</td>
 	</tr>
 	</tbody>
-</table> -->
+</table> 
 </div>
 
 
