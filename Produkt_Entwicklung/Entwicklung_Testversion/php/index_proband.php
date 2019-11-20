@@ -21,7 +21,7 @@ if(isset($_POST['but_logout'])){
 <html lang="de" dir="ltr">
 <head>
 
-		
+
     <!--- Pfad zur style.css--------------------------->
     <link rel="stylesheet" href="../CSS/index_proband.css">
     <!--Schriftart aus google fonts------------------>
@@ -30,12 +30,12 @@ if(isset($_POST['but_logout'])){
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Start</title>
 
-	<!-- Header--> 
+	<!-- Header-->
 	<script src="../javascript/header_pro.js"></script>
 	<?php include '../includes/header_pro.inc.php';
 	?>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../CSS/header_pro.css" > 
+	<link rel="stylesheet" href="../CSS/header_pro.css" >
  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 </head>
@@ -49,9 +49,9 @@ if(isset($_POST['but_logout'])){
     </div>
 
     <ul class="menu">
-	
-		<div class="hallobox">Hallo <?php echo $_SESSION["username"]; ?></div> 
-	
+
+		<div class="hallobox">Hallo <?php echo $_SESSION["username"]; ?></div>
+
 		 <li>
 			<a href ="#suchen"><img src="../CSS/image/search.svg">Suchen</a>
 		 </li>
@@ -59,8 +59,8 @@ if(isset($_POST['but_logout'])){
          <li>
 			<a href ="#mein_bereich"><img src="../CSS/image/user-circle.svg">Mein Bereich</a>
 		 </li>
-		 
-		 <li>    
+
+		 <li>
 			<form method='post' action="">
                 <input type="submit" value="Logout" class="button_logout" name="but_logout">
             </form>
@@ -76,7 +76,7 @@ if(isset($_POST['but_logout'])){
    <table>
 	<tr>
 		<td>
-			<a href="MeineNachrichten.php">
+			<a href="MeineNachrichten.php#textfeld ">
 				<div class="icon">
 					<i class="fa fa-envelope" style="font-size:80px"></i></div>
 				<div class="name">Nachrichten</div>
@@ -130,5 +130,3 @@ if(isset($_POST['but_logout'])){
 </body>
 
 </html>
-	
-	

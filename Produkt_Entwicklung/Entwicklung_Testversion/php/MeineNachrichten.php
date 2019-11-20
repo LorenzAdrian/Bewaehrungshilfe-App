@@ -27,14 +27,14 @@ else {
 }
 
 $event_sql =
-"SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, B.Vorname AS vorname_betreuer, B.Nachname AS nachname_betreuer FROM nachricht AS N INNER JOIN betreuer AS B ON N.BID = B.BID WHERE N.PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
+"SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, N.image, N.dateiname, B.Vorname AS vorname_betreuer, B.Nachname AS nachname_betreuer FROM nachricht AS N INNER JOIN betreuer AS B ON N.BID = B.BID WHERE N.PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
 
-$event_imgsql = "SELECT dateiname FROM fileupload WHERE PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
+//$event_imgsql = "SELECT dateiname FROM fileupload WHERE PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
 
 //Mit mysqli_query wird die SQL-Abfrage ausgeführt. Die Methode liefert ein Objekt der Klasse mysqli_result zurück. $result enthält die Referenz auf dieses Objekt.
 $result = mysqli_query($conn, $event_sql);
 
-$result1 = mysqli_query($conn, $event_imgsql);
+//$result1 = mysqli_query($conn, $event_imgsql);
 
 $sql = "UPDATE nachricht SET Status='gelesen'
 WHERE PID = ".$_SESSION['userId']." AND BSender=1";
@@ -105,42 +105,71 @@ if ($conn->query($sql) != TRUE) {
                 //Erzeugt aus der Zeichenkette des Zeitstempels ein DateTime-Objekt
                 setlocale(LC_ALL, "");
                 $datum = date_create($dsatz['Zeitstempel'])->getTimestamp();
+
+                //Wenn die Nachricht ein String ist
+                if(!$dsatz['dateiname']){
                 //Wenn der Betreuer der Sender der Nachricht und die Nachricht neu ist.
-                if($dsatz['BSender'] == 1 && $dsatz['Status'] == 'neu')
-                  {
-                  echo '<table class="betreuer nachricht neu"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
-                      .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
-                      .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
-                  }
-                //Wenn der Betreuer der Sender der schon gelesenen Nachricht ist.
-                elseif($dsatz['BSender'] == 1)
-                  {
-                    echo '<table class="betreuer nachricht"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
-                        .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
+                  if($dsatz['BSender'] == 1 && $dsatz['Status'] == 'neu')
+                    {
+                      echo '<table class="betreuer nachricht neu"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
+                          .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
+                          .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
+                      }
+                    //Wenn der Betreuer der Sender der schon gelesenen Nachricht ist.
+                    elseif($dsatz['BSender'] == 1)
+                      {
+                        echo '<table class="betreuer nachricht"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
+                            .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
+                            .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
+                      }
+                    //Wenn die Nachricht vom Probanden stammt.
+                    else
+                      {
+                        echo '<table class="proband nachricht"><tr class="nachricht"><td>'.$dsatz['Text'].'</td></tr><tr class="datumuhrzeit proband"><td>'
                         .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
+                      }
                   }
-                //Wenn die Nachricht vom Probanden stammt.
-                else
-                  {
-                    echo '<table class="proband nachricht"><tr class="nachricht"><td>'.$dsatz['Text'].'</td></tr><tr class="datumuhrzeit proband"><td>'
-                    .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
-                  }
-              };
+                  //Wenn die Nachricht eine Datei ist
+                  else{
+                  //Wenn der Betreuer der Sender der Nachricht und die Nachricht neu ist.
+                  //$filename = $dsatz['dateiname'];
+                  //file_put_contents($filename,$dsatz['image']);
+                    if($dsatz['BSender'] == 1 && $dsatz['Status'] == 'neu')
+                      {
+                        echo '<table class="betreuer nachricht neu">
+                        <tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr>
+                        <tr class="nachricht"><td><a href="">'.$dsatz['dateiname'].'</a></td></tr>
+                        <tr class="datumuhrzeit betreuer"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
+                        }
+                      //Wenn der Betreuer der Sender der schon gelesenen Nachricht ist.
+                      elseif($dsatz['BSender'] == 1)
+                        {
+                          echo '<table class="betreuer nachricht">
+                          <tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr>
+                          <tr class="nachricht"><td><a href="">'.$dsatz['dateiname'].'</a></td></tr>
+                          <tr class="datumuhrzeit betreuer"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr>
+                          </table>';
+                        }
+                      //Wenn die Nachricht vom Probanden stammt.
+                      else
+                        {
+                          echo '<table class="proband nachricht">
+                          <tr class="nachricht"><td><a href="">'.$dsatz['dateiname'].'</a></td></tr>
+                          <tr class="datumuhrzeit proband"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr>
+                          </table>';
+
+                        }
+                    }
+              }
+              /*while ($dsatz = mysqli_fetch_assoc($result)){
+                if($dsatz['dateiname']) {
+                $filename = 'uploads/'.$dsatz['dateiname'];
+                unlink($filename);
+                }
+              }*/
               ?>
              </td>
 					</tr>
-          <!--
-          <tr>
-            <td>
-              <?php
-              while ($img = mysqli_fetch_assoc($result1))
-              {
-                echo '<table class="proband nachricht"><tr class="nachricht"><td>'.$img['dateiname'].'</td></tr></table>';
-              }
-              ?>
-            </td>
-          </tr>
-          -->
           <tr>
             <td>
               <table class="" id="textfeld">
@@ -161,13 +190,12 @@ if ($conn->query($sql) != TRUE) {
               <tr>
                 <table class="">
                   <tr>
-        						<form class="w3-container" action="upload.php" method="POST" name="DAFORM" enctype="multipart/form-data" target="_self">
-                    <input id="upload" name="upload" class="w3-input" type="file" >
+        						<form class="" action="upload.php" method="POST" name="DAFORM" enctype="multipart/form-data" target="_self">
+                    <input id="upload" name="upload" class="" type="file" >
 
-                    <!-- CAPTCHA -->
         						<p class="textend"></p>
-        						<button type="submit" class="w3-btn w3-blue-grey">Absenden</button>
-        						<button type="reset" class="w3-btn w3-red">Zurücksetzen</button>
+        						<button type="submit" class="">Absenden</button>
+        						<button type="reset" class="">Zurücksetzen</button>
         					  </form>
                   </tr>
   				    </table>

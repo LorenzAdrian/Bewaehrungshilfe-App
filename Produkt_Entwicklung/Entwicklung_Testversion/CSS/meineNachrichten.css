@@ -1,3 +1,11 @@
+.betreuer.nachricht a {
+  color: ivory;
+}
+
+.proband.nachricht a {
+  color: black;
+}
+
 .meinenachrichten {
   font-family: 'Assistant', sans-serif;
 }

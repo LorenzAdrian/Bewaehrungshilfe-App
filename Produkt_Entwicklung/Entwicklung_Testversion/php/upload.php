@@ -40,7 +40,7 @@ if (!empty($_FILES['upload']['name']))
     /*
     $sql = "INSERT INTO fileupload (image, BID, PID, BSender, dateiname, dateityp) VALUES (0x" .  bin2hex($content) . ", ".$bid.", ".$pid.", ".$bsender.", ".$dateiname.", ".$dateityp.")";
     */
-    $sql = "INSERT INTO fileupload (zeit, image, Status, BID, PID, BSender, dateiname) values ('$datum', 0x".bin2hex($content).", '$status', $bid, $pid, $bsender, '$dateiname')";
+    $sql = "INSERT INTO nachricht (Zeitstempel, Status, BID, PID, BSender, image, dateiname) values ('$datum', '$status', $bid, $pid, $bsender, 0x".bin2hex($content).", '$dateiname')";
 
     //Einfügen in Datenbank
     if ($conn->query($sql) == TRUE)
@@ -52,6 +52,7 @@ if (!empty($_FILES['upload']['name']))
       die();
     }
 
+  #Die Funktion unlink() löscht die angegebene Datei (hier die hochgeladene Datei)
 	unlink($localFileName);
     $conn->close();
   }
@@ -59,5 +60,5 @@ if (!empty($_FILES['upload']['name']))
 {
   echo '<b>kein Upload!</b>';
 }
-header("Location: MeineNachrichten.php");
+header("Location: MeineNachrichten.php#textfeld");
 ?>

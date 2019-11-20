@@ -69,8 +69,8 @@ CREATE TABLE nachricht(
 	Zeitstempel datetime NOT NULL,
 	Text text NOT NULL,
   Status varchar(20) NOT NULL,
-	BID int(30) NULL,
-	PID int(30) NULL,
+	BID int(30) NOT NULL,
+	PID int(30) NOT NULL,
 	BSender tinyint(1) NOT NULL,
 	FOREIGN KEY(BID) REFERENCES Betreuer(BID),
 	FOREIGN KEY(PID) REFERENCES Proband(PID)
