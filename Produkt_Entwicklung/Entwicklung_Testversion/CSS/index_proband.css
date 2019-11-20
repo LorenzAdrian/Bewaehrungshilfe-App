@@ -44,7 +44,7 @@ body{
 
 
 .rahmen a:hover{
-    padding-left: 20px;
+    padding-left: 2px;
     text-decoration: underline;
     color: darkred ;
     background: white;
@@ -52,12 +52,14 @@ body{
 
 .icon {
 	box-sizing: content-box;
-	padding: 10px;
+	padding: 8px;
 	
 	background: white;
 	opacity: 0.7;
+
+	
 	margin-right: 3px;
-	margin-left: 40px;
+	margin-left: 60px;
 	display: flex;
 	justify-content: center;
 	
@@ -71,19 +73,19 @@ body{
 	background: white;
 	opacity: 0.7;
 	margin-right: 3px;
-	margin-left: 40px;
+	margin-left: 60px;
 	
 	text-align:center;
 }
 
 .icon1 {
 	box-sizing: content-box;
-	padding: 10px;
+	padding: 8px;
 	
 	background: white;
 	opacity: 0.7;
-	margin-right: 3px;
-	margin-left: 40px;
+	margin-right: 60px;
+	margin-left: 3px;
 	display: flex;
 	justify-content: center;
 	
@@ -94,12 +96,12 @@ body{
 	box-sizing: content-box;
 	padding: 20px;
 	padding-right:40px;
-	text-align:center;
+	
 	background: white;
 	opacity: 0.7;
-	margin-right: 3px;
-	margin-left: 40px;
-	
+	margin-right: 60px;
+	margin-left: 3px;
+	text-align:center;
 	
 	
 }

@@ -1,32 +1,29 @@
 <?php
-include '../database/dbh.inc.php';
-session_start();
+#Seite um ein Passwort zu ändern
+
+require '../database/dbh.inc.php';
+
+if(!isset($_SESSION))
+{
+      session_start();
+}
 
 // Check user login or not
 if(!isset($_SESSION['userId'])){
-  $_SESSION['probID'] = $_SESSION['userId'];
     header('Location: login.php');
 }
-
-// logout
-
-if(isset($_POST['but_logout'])){
-    session_destroy();
-    header('Location: login.php');
-}
+//userID wird für den Formular unten deklariert
+$userID = $_SESSION['userId'];
 ?>
 
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
 <head>
-    <meta charset="utf-8">
-	<!--- Pfad zur style.css--------------------------->
-    <link rel="stylesheet" href="../CSS/termine_proband.css">
-    <!--Schriftart aus google fonts------------------>
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
 
-     <!-- Bootstrap CSS -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	 <!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -34,23 +31,17 @@ if(isset($_POST['but_logout'])){
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-
-    <title>Termine</title>
-
-<!-- Header--> 
-	<!--<script src="../javascript/header_pro.js"></script>
-	<?php include '../includes/header_pro.inc.php';
-	?>
+	<!--- Pfad zur style.css--------------------------->
+    <link rel="stylesheet" href="../CSS/index_proband.css">
+    <!--Schriftart aus google fonts------------------>
+    <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700&display=swap"  rel="stylesheet">
+    <!-- Stylesheet für Icons-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../CSS/header_pro.css" > 
- 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	-->
-	
+
+    <title>Passwort ändern</title>
+
 </head>
-
-
-<body>
-<header>
+		<header>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
 
@@ -90,7 +81,7 @@ if(isset($_POST['but_logout'])){
         <a class="nav-link" href="login.php">Abmelden</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="passwortAendern.php">Passwort&nbsp;ändern</a>
+        <a class="nav-link" href="passwortAendern.php">Passwort ändern</a>
       </li>
 
 
@@ -103,14 +94,44 @@ if(isset($_POST['but_logout'])){
     <span class="navbar-toggler-icon"></span>
   </button>
   </nav>
-
-
 <hr>
 </header>
-hier ist Platz für Informationen
 
-<?php include '../includes/footer_proband.inc.php' ?>
-</body>
-
+<main>
+  <form action="passwortAendern.inc.php" method="POST">
+        <input type="hidden" name="uid" value="<?php echo $userID;?>">
+    <table>
+      <tr>
+        <td>Benutzername</td>
+        <td>
+          <input type="text" name="username" autocomplete="off" value="<?php echo htmlspecialchars($_SESSION['username']); ?>" readonly>
+        </td>
+      </tr>
+      <tr>
+        <td>Altes Passwort</td>
+        <td>
+          <input type="password" name="pwd-altes" placeholder="Altes Passwort">
+        </td>
+      </tr>
+      <tr>
+        <td>Neues Passwort</td>
+        <td>
+          <input type="password" name="pwd" placeholder="Neues Passwort">
+        </td>
+      </tr>
+      <tr>
+        <td>Neues Passwort wiederholen</td>
+        <td>
+          <input type="password" name="pwd-repeat" placeholder="Neues Passwort wiederholen">
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button type="submit" name="passwortAendern">Passwort ändern</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</main>
 </html>
-

@@ -29,14 +29,12 @@ margin: 0px;
 	margin: 1px auto;
 	width: 46%;
 }
-/*
-.verschieben{
-	margin-top: 10px;
 
-} 
-.verschieben.responsive {
-	
-	margin-top: 400px;
-}*/
-
-
+  hr{
+    background-color: darkred ;
+    border: none;
+    height: 15pt;
+    width: 100%;
+	/*padding-top: 1px;*/
+  }
+ 
