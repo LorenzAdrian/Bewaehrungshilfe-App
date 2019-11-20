@@ -38,7 +38,7 @@ VALUES
 -- o steht für offen (nicht bestätigter Termin)
 -- b steht für bestätigter Termin
 
-INSERT INTO Nachricht(Zeitstempel, Text, BezugID, Status, BID, PID, BSender)
+INSERT INTO Nachricht(Zeitstempel, Text, Status, BID, PID, BSender)
 VALUES
 ('2019-01-17 09:37:12','Hallo, ich habe Probleme bei der Arbeitsplatzsuche',NULL,'neu',1,1,0),
 ('2019-01-17 10:54:23','Ich werde mit Ihrer Vermittlerin bei der Arbeitsagentur sprechen',1,'neu',1,1,1),
