@@ -98,8 +98,71 @@ if(isset($_POST['but_logout'])){
 </header>
 
 
-<div class="rahmen">
-   <table class="table">
+<div class="container">
+
+	<div class="row">
+
+    <div class="col-sm-6">
+     			<a href="MeineNachrichten.php">
+				<div class="icon">
+					<i class="fa fa-envelope" style="font-size:80px"></i></div>
+				<div class="name">Nachrichten</div>
+			</a>
+    </div>
+    <div class="col-sm-6">
+				<a href="termine_proband.php">
+				<div class="icon1">
+					<i class="fa fa-calendar" style="font-size:80px"></i></div>
+				<div class="name1">Termine</div>
+			</a>
+	</div>		
+
+      
+    
+  </div>
+  <div class="row">
+ 
+    <div class="col-sm-6">
+      <a href="Informationen.php">
+				<div class="icon">
+					<i class="fa fa-info-circle" style="font-size:80px"></i></div>
+				<div class="name">Informationen</div>
+			</a>
+    </div>
+    <div class="col-sm-6">
+      <a href="Dokumente.php">
+				<div class="icon1">
+					<i class="fa fa-file" style="font-size:80px"></i></div>
+				<div class="name1">Dokumente</div>
+			</a>
+    </div>
+	</div>
+
+	 <div class="row">
+
+	
+	<div class="col-sm-6">
+      			<a href="Notfall.php">
+				<div class="icon">
+					<i class="fa fa-ambulance" style="font-size:80px"></i></div>
+				<div class="name">Notfall</div>
+				</a>
+    </div>
+	 <div class="col-sm-6">
+	 			<a href="To_Do_Liste.php">
+				<div class="icon1">
+					<i class="fa fa-list-alt" style="font-size:80px"></i></div>
+				<div class="name1">Leitfaden</div>
+			</a>
+
+      
+    </div>
+	
+	
+  </div>
+ 
+  
+  <!-- <table class="table">
    <tbody>
 	<tr>
 		<td>
@@ -150,7 +213,7 @@ if(isset($_POST['but_logout'])){
 		</td>
 	</tr>
 	</tbody>
-</table>
+</table> -->
 </div>
 
 
