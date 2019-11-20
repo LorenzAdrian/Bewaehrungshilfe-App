@@ -80,7 +80,7 @@ if ($conn->query($sql) != TRUE) {
 
 	<script src="../javascript/jquery-3.4.1.js"></script>
     <script src="../javascript/message.js"></script>
-	
+
  <!--Bootstrap Layout -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!--	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
@@ -92,23 +92,23 @@ if ($conn->query($sql) != TRUE) {
 	</head>
 
 	<body>
-	
+
 	<header>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
-   
+
    <a class="navbar-brand w-100" href="#">
           		  <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;Sodi 4u
 			</a>
-   
+
      <div class="navbar-collapse collapse w-100" id="navbar5">
         <ul class="navbar-nav mx-auto">
       <li class="nav-item">
         <a class="nav-link" href="../php/index_proband.php">Startseite</a>
       </li>
-      <li class="nav-item"> 
+      <li class="nav-item">
         <a class="nav-link" href="../php/termine_proband.php">Termine </a>
-      </li>	  
+      </li>
 	  <!-- Aktuelle Seite -->
       <li class="nav-item active">
         <a class="nav-link" href="../php/MeineNachrichten.php">Nachrichten<span class="sr-only">(current)</span></a>
@@ -116,7 +116,7 @@ if ($conn->query($sql) != TRUE) {
        <li class="nav-item">
         <a class="nav-link" href="../php/Dokumente.php">Dokumente</a>
       </li>
-	  
+
 	    <li class="nav-item">
         <a class="nav-link" href="Informationen.php">Informationen</a>
       </li>
@@ -131,13 +131,13 @@ if ($conn->query($sql) != TRUE) {
 	    <li class="nav-item">
         <a class="nav-link" href="login.php">Abmelden</a>
       </li>
-     
-		   
+
+
         </ul>
     </div>
     <div class="w-100"><!--spacer--></div>
-		
-		
+
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -147,77 +147,17 @@ if ($conn->query($sql) != TRUE) {
 </header>
 
 
-			   <h4>Meine Nachrichten</h4>      	   
+			   <h4>Meine Nachrichten</h4>
 
-			   
+
 		<main class="meinenachrichten">
       <div>
 				<table class="nachrichten">
 					<tr>
             <td id="probNachrichtenFenster">
               <?php
+              include 'meineNachrichtenAnzeigen.php';
 
-              while ($dsatz = mysqli_fetch_assoc($result))
-              {
-                //Erzeugt aus der Zeichenkette des Zeitstempels ein DateTime-Objekt
-                setlocale(LC_ALL, "");
-                $datum = date_create($dsatz['Zeitstempel'])->getTimestamp();
-
-                //Wenn die Nachricht ein String ist
-                if(!$dsatz['dateiname']){
-                //Wenn der Betreuer der Sender der Nachricht und die Nachricht neu ist.
-                  if($dsatz['BSender'] == 1 && $dsatz['Status'] == 'neu')
-                    {
-                      echo '<table class="betreuer nachricht neu"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
-                          .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
-                          .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
-                      }
-                    //Wenn der Betreuer der Sender der schon gelesenen Nachricht ist.
-                    elseif($dsatz['BSender'] == 1)
-                      {
-                        echo '<table class="betreuer nachricht"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
-                            .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
-                            .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
-                      }
-                    //Wenn die Nachricht vom Probanden stammt.
-                    else
-                      {
-                        echo '<table class="proband nachricht"><tr class="nachricht"><td>'.$dsatz['Text'].'</td></tr><tr class="datumuhrzeit proband"><td>'
-                        .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
-                      }
-                  }
-                  //Wenn die Nachricht eine Datei ist
-                  else{
-                  //Wenn der Betreuer der Sender der Nachricht und die Nachricht neu ist.
-                  //$filename = $dsatz['dateiname'];
-                  //file_put_contents($filename,$dsatz['image']);
-                    if($dsatz['BSender'] == 1 && $dsatz['Status'] == 'neu')
-                      {
-                        echo '<table class="betreuer nachricht neu">
-                        <tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr>
-                        <tr class="nachricht"><td><a href="">'.$dsatz['dateiname'].'</a></td></tr>
-                        <tr class="datumuhrzeit betreuer"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
-                        }
-                      //Wenn der Betreuer der Sender der schon gelesenen Nachricht ist.
-                      elseif($dsatz['BSender'] == 1)
-                        {
-                          echo '<table class="betreuer nachricht">
-                          <tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr>
-                          <tr class="nachricht"><td><a href="">'.$dsatz['dateiname'].'</a></td></tr>
-                          <tr class="datumuhrzeit betreuer"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr>
-                          </table>';
-                        }
-                      //Wenn die Nachricht vom Probanden stammt.
-                      else
-                        {
-                          echo '<table class="proband nachricht">
-                          <tr class="nachricht"><td><a href="">'.$dsatz['dateiname'].'</a></td></tr>
-                          <tr class="datumuhrzeit proband"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr>
-                          </table>';
-
-                        }
-                    }
-              }
               /*while ($dsatz = mysqli_fetch_assoc($result)){
                 if($dsatz['dateiname']) {
                 $filename = 'uploads/'.$dsatz['dateiname'];
@@ -268,7 +208,7 @@ if ($conn->query($sql) != TRUE) {
     <br>
     <br>
     <br>
-			   
+
 
     <?php include '../includes/footer_proband.inc.php' ?>
     <?php mysqli_close($conn); ?>
