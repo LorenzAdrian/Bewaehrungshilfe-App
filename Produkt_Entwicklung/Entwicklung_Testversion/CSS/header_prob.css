@@ -9,7 +9,7 @@
  
  /*Header Farbanpassungen*/
 .navbar-sodi .navbar-brand {
-  color: rgba(128, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .navbar-sodi .navbar-brand:hover, .navbar-sodi .navbar-brand:focus {
