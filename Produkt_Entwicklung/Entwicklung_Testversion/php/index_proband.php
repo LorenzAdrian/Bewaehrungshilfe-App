@@ -34,6 +34,7 @@ if(isset($_POST['but_logout'])){
 
 	<!--- Pfad zur style.css--------------------------->
     <link rel="stylesheet" href="../CSS/index_proband.css">
+	<link rel="stylesheet" href="../CSS/header_prob.css">
     <!--Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700&display=swap"  rel="stylesheet">
     <!-- Stylesheet für Icons-->
@@ -42,22 +43,24 @@ if(isset($_POST['but_logout'])){
     <title>Startseite</title>
 
 </head>
-		<header>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
 
+
+<nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
+   
    <a class="navbar-brand w-100" href="#">
-          		  <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;Sodi 4u
+          		  <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi 4u
 			</a>
-
+   
      <div class="navbar-collapse collapse w-100" id="navbar5">
         <ul class="navbar-nav mx-auto">
-		<!-- Aktuelle Seite -->
+
+<!-- Aktuelle Seite -->
       <li class="nav-item active">
         <a class="nav-link" href="../php/index_proband.php">Startseite<span class="sr-only">(current)</span></a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item "> 
         <a class="nav-link" href="../php/termine_proband.php">Termine</a>
       </li>
       <li class="nav-item">
@@ -66,7 +69,7 @@ if(isset($_POST['but_logout'])){
        <li class="nav-item">
         <a class="nav-link" href="../php/Dokumente.php">Dokumente</a>
       </li>
-
+	  
 	    <li class="nav-item">
         <a class="nav-link" href="Informationen.php">Informationen</a>
       </li>
@@ -78,27 +81,28 @@ if(isset($_POST['but_logout'])){
 	    <li class="nav-item">
         <a class="nav-link" href="Notfall.php">Notfall</a>
       </li>
-	    <li class="nav-item">
-        <a class="nav-link" href="login.php">Abmelden</a>
+	  
+	   <li class="nav-item">
+        <a class="nav-link" href="passwortAendern.php">Passwort&nbsp;ändern</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="passwortAendern.php">Passwort ändern</a>
-      </li>
-
-
-        </ul>
+			   
+        </ul>	
+		<form class="form-inline my-2 my-lg-0">
+            <button class="button-sodi btn-outline-sodi my-1 my-sm-0" type="submit">Abmelden</button>
+		</form>
     </div>
-    <div class="w-100"><!--spacer--></div>
+    <div class="w-100">
 
-
+	</div>
+				
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   </nav>
 
+  <hr class="hr-sodi"> <!-- Gehört zum Header -->
 
-<hr>
-</header>
 
 <!--
 <div class="container">
