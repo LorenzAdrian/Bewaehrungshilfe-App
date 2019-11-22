@@ -1,76 +1,38 @@
-*{
-  font-family: 'Roboto', sans-serif;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-}
-.toggle{
+.toggle {
   max-width: 15%;
 }
 
-.kalender{
-  width: 80%;
-  margin: 0 auto;
-}
-.pkalender, .bkalender{
-  margin: 2%;
-  width: 46%;
-}
-
-.bkalender{
-  float: left;
-}
-
-.pkalender{
-  float: left;
-}
-
-.zuruck{
-  float: right;
-
-}
-
-
-summary{
-
-  font-size: 15pt;
-}
-
 input {
-    font-size: 12pt;
-    background-color: white;
+  font-size: 12pt;
+  background-color: white;
 }
 
-
-input:hover[type="submit"]
-		{
-			background: darkred ;
-      color: white;
-		}
-
-  p.ueberschrift{
-    margin: 2rem;
-    font-size: 20pt;
-    font-style: italic;
-    margin-bottom: -35px;
-  }
-
-.termin{
-  width: 30%;
-  text-align: left;
-  font-size: 16pt;
+input:hover[type="submit"] {
+  background: darkred;
+  color: white;
 }
 
-details{
+.col-back {
   display: flex;
-  width: 80%;
-  float: right;
-
+  justify-content: flex-end;
 }
 
-summary:hover{
-  text-decoration: underline;
-  color: darkred;
+.first-container {
+  padding-top: 30px;
+}
+
+.container-calender {
+  padding-top: 20px;
+}
+
+.container-calender h1 {
+  font-weight: 300;
+  margin-bottom: -10px;
+  padding-top: 20px;
 }

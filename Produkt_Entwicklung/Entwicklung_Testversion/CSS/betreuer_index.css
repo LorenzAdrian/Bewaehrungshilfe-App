@@ -4,7 +4,15 @@
     box-sizing: border-box;
 }
 
+.hallo-col h2 {
+    padding-top: 50px;
+}
 
-.uberschrift1 {
-    text-transform: uppercase;
+.hallo-col h1,
+h2 {
+    font-weight: 200;
+}
+
+.table-container {
+    padding-top: 30px;
 }

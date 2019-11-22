@@ -84,55 +84,30 @@ if(isset($_POST['but_logout'])){
     <span class="navbar-toggler-icon"></span>
   </button>
   </nav>
-
-
-<hr>
 </header>
-
-<div class="logo"></div>
-<!---
-<div class="hallobox">Hallo <?php echo $_SESSION["username"]; ?></div>
-
-<div class="menu">
-
-            <li><form method='post' action="">
-					<img src="../CSS/image/logout.svg">
-					<input type="submit" value="Logout" name="but_logout">
-				</form>
-			</li>
-            <li><a href ="#"><img src="../CSS/image/user-circle.svg"></a>
-            </li>
-			<li><a href ="https://cssgridgarden.com/#de"><img src="../CSS/image/search.svg"></a>
-            </li>
-</div>
--->
-
-<div class="container">
-  <div class="row">
-    <div class="col-6">
-      <h1 class="uberschrift1">Probanden</h1>
-    <?php include 'dataTbl.php';?>
-  </div>
-    <div class="col-6">
-      <div class="calendar">
-    <?php include 'FullCalendar.php';?>
-<!--
-	<a target="popup" onclick="window.open('', 'popup', 'width=580,height=360,scrollbars=no, toolbar=no,status=no, resizable=yes,menubar=no,location=no,directories=no,top=10,left=10')
-	"href="termineinsert.php"><button type="submit"
-	name="button">Termin anlegen</button></a>
-<br>
-
-   <a target="popup" onclick="window.open('', 'popup', 'width=580,height=360,scrollbars=no, toolbar=no,status=no, resizable=yes,menubar=no,location=no,directories=no,top=10,left=10')
-	"href="terminedelete.php"><button type="submit"
-	name="button">Termin loeschen</button></a>
--->
-</div>
+  <!--Begrüßungscontainer -->
+  <div class="container hallo-container">
+    <div class="row hallo-row">
+      <div class="col-lg-12 hallo-col">
+        <h2>Guten Tag ! </h2>
+        <h1><?php echo $_SESSION["username"]; ?></h1>
+      </div>
     </div>
-    
   </div>
-</div>
 
-<?php include '../includes/footer_betreuer.inc.php' ?>
+  <!--Table und Fullcalender -->
+  <div class="container table-container">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 text-col">
+        <p>Zum Verwalten klicken Sie bitte auf den gewünschten Probanden</p>
+        <?php include 'dataTbl.php';?>
+      </div>
+      <div class="col-lg-6 col-md-12">
+          <?php include 'FullCalendar.php';?>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
 

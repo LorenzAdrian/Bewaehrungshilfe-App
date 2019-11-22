@@ -69,8 +69,8 @@ if (mysqli_num_rows($result) > 0) {
 <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
 
    <a class="navbar-brand w-100" href="#">
-          		  <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;Sodi 4u
-			</a>
+      <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;Sodi 4u
+		</a>
 
      <div class="navbar-collapse collapse w-100" id="navbar5">
         <ul class="navbar-nav mx-auto">
@@ -100,81 +100,94 @@ if (mysqli_num_rows($result) > 0) {
   </button>
   </nav>
 
-
-<hr>
 </header>
     <!-- Hier wird der Inhalt der Nachrichten-Sidebar erstellt -->
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div id='msgdiv'></div>
-      <form  id="msgform" method="POST">
-				<span>Nachrichten</span>
-				<br>
-				<textarea name="textarea1" rows="5" cols="50" value=""></textarea>
-				<input name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
-				<br>
-				<button type="submit" name="signup-submit">Abschicken</button>
-				<br><br><br><br><br><br>
-		    </form>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div id='msgdiv'></div>
+          <form  id="msgform" method="POST">
+				  <span>Nachrichten</span>
+				  <br>
+				  <textarea name="textarea1" rows="5" cols="50" value=""></textarea>
+				  <input name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
+				  <br>
+				  <button type="submit" name="signup-submit">Abschicken</button>
+				  <br><br><br><br><br><br>
+		      </form>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Zurück-Button -->
-    <div id="main">
-      <div class="zuruck">
-        <form action="index_betreuer.php" method="post">
-            <input type="submit"  value="Zurück">
-        </form>
+    
+
+     <!-- Element zum Einblenden der Nachrichten-Sidebar -->
+    <div class="container message-container">
+      <div class="row">
+        <div class="col">
+          <div class="toggle"  id="msgbar">
+            &#9776; Nachrichten
+          </div>
+        </div>
       </div>
-      <div>
+    </div> 
+    
         <!-- <details> ist ein HTML5-Element, das das Ausklappen ermöglicht. Kein Button notwendig. <summary> legt den Text fest, der vor dem Ausklappen sichtbar ist. -->
-        <details>
-  			<summary class="termin"> Termin anlegen </summary>
-  			<form action = "terminetest_insert.php" method = "post">
-  			  <p>
-          Titel: <input name = "terTitel" type = "text" size = "50" placeholder = "Titel">&nbsp;&nbsp;&nbsp;
-          <br>
-          <br>
-          Beschreibung: <input name="terBeschreibung" type="text" size="50" placeholder="Beschreibung"
-          </p>
-  			  <p> Datum: <input name = "terDatum" type = "date">&nbsp;&nbsp;&nbsp;
-            Beginn: <input name = "terStart" type = "time">&nbsp;&nbsp;&nbsp;
-            Ende: <input name = "terEnde" type = "time"></p>
-          <p> </P>
-  			  <p><!-- Status: --><input name = "terStatus" type = "hidden" value="2">  </p>
-  			  <p><!-- PID: --><input name = "terPID" type = "hidden" value="<?php echo $probID ?>"></p>
-  			  <p><!-- BID: --><input name = "terBID" type = "hidden" value="<?php echo $betrID ?>"> </p>
-  			  <p>
-  			  <input type = "submit" value = "Termin speichern"></p>
-  			</form>
-  		</details>
-      </div>
-      <!-- Element zum Einblenden der Nachrichten-Sidebar -->
-      <div class="toggle"  id="msgbar">
-        &#9776; Nachrichten
-      </div>
+         <div class="container first-container">
+           <div class="row">
+             <div class="col-lg-9 col-md-9 col-sm-6">
+                <details>
+                  <summary class="btn btn btn-info" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> Termin anlegen </summary>
+                  <form class="form" action = "terminetest_insert.php" method = "post">
+                    <br>
+                    <p>
+                    Titel: <input name = "terTitel" type = "text" size = "50" placeholder = "Titel">&nbsp;&nbsp;&nbsp;
+                    <br>
+                    <br>
+                    Beschreibung: <input name="terBeschreibung" type="text" size="50" placeholder="Beschreibung"
+                    </p>
+                    <p> Datum: <input name = "terDatum" type = "date">&nbsp;&nbsp;&nbsp;
+                    Beginn: <input name = "terStart" type = "time">&nbsp;&nbsp;&nbsp;
+                    Ende: <input name = "terEnde" type = "time"></p>
+                    <p> </P>
+                    <p><!-- Status: --><input name = "terStatus" type = "hidden" value="2">  </p>
+                    <p><!-- PID: --><input name = "terPID" type = "hidden" value="<?php echo $probID ?>"></p>
+                    <p><!-- BID: --><input name = "terBID" type = "hidden" value="<?php echo $betrID ?>"> </p>
+                    <p>
+                    <input type = "submit" value = "Termin speichern"></p>
+                    </form>
+                  </details>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-back">
+                  <form action="index_betreuer.php" method="post">
+                    <button class="btn btn btn-info" type="submit" value="Zurück">Zurück</button>
+                  </form>
+                </div>
+            </div>
+          </div> 
 
       <!-- Kalender -->
-      <div class="kalender">
-        <div class="pkalender">
-        <p class="ueberschrift">
-        <?php
-        // Info des ausgewählten Probandes
-        foreach ($probInfo as $info) {
-          echo "Proband: ".$info['Vorname']." ".$info['Nachname'];
-          }
-          ?>
-        </p>
-        <?php include 'FullCalendarProband.php';
-        ?>
-        </div>
-        <div class="bkalender">
-          <p class="ueberschrift">
-            Mein Kalender
-            </p>
-        <?php include 'FullCalendar.php';
-        ?>
+      <div class="container container-calender">
+        <div class="row">
+          <div class="col-lg-6 col-md-8">
+            <h1>
+            <?php
+            // Info des ausgewählten Probandes
+            foreach ($probInfo as $info) {
+            echo "Proband: ".$info['Vorname']." ".$info['Nachname'];
+            }
+            ?>
+            </h1>
+            <?php include 'FullCalendarProband.php';?>
+          </div>
+          <div class="col-lg-6 col-md-8">
+            <h1>Mein Kalender</h1>
+            <?php include 'FullCalendar.php';?>
+          </div>
         </div>
       </div>
     </div>
-    <?php include '../includes/footer_betreuer.inc.php' ?>
   </body>
 </html>
