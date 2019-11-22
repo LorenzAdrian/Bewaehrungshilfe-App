@@ -26,24 +26,23 @@ require "problisteDT.inc.php";
 
   </head>
   <style>
-    #example{
-      position: absolute;
+    html{
+      background: black;
+      height:10vh;
     }
   </style>
+
   <body>
-    <table id="example" class="display" style="width:100%">
-            <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>PID</th>
-                  <th>Ungelesene Nachrichten</th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                <th></th>
-                </tr>
-            </tfoot>
-        </table>
+  <table id="example" class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">PID</th>
+      <th scope="col">Ungelesene Nachrichten</th>
+    </tr>
+  </thead>
+</table>
+
   </body>
 </html>
+

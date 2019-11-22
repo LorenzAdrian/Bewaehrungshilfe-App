@@ -109,24 +109,11 @@ if(isset($_POST['but_logout'])){
 
 <div class="container">
   <div class="row">
-    <div class="col">
-      
-<!---<div class="uberschrift2">Mein Kalender</div>--->
-
-<div class="uberschrift1">Probanden</div>
-    </div>
     <div class="col-6">
-     
-    </div>
-    
-  </div>
-  <div class="row">
-    <div class="col-3">
-      <div class="rahmen">
+      <h1 class="uberschrift1">Probanden</h1>
     <?php include 'dataTbl.php';?>
-</div>
-    </div>
-    <div class="col-9">
+  </div>
+    <div class="col-6">
       <div class="calendar">
     <?php include 'FullCalendar.php';?>
 <!--
