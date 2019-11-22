@@ -39,7 +39,7 @@ if(isset($_POST['but_logout'])){
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
   <!--- Pfad zur style.css--------------------------->
-  <link rel="stylesheet" href="../CSS/Betreuer_index.css">
+  <link rel="stylesheet" href="../CSS/betreuer_index.css">
   <!--Schriftart aus google fonts------------------>
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
@@ -107,6 +107,27 @@ if(isset($_POST['but_logout'])){
       </div>
     </div>
   </div>
+
+  <!--Footer-->
+  <div class="container footer-container">
+    <div class="row">
+      <div class="col-lg-12 footer">
+        <div class="footer">
+          <ul>
+            <li>
+              <a href="#">Impressum</a>
+            </li>
+            <li>
+                <a href="#">Datenschutz</a>
+            </li>
+            <li>
+              <a href="#">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>  
+    </div
+  ></div>
 
 </body>
 </html>
