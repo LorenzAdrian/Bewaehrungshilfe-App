@@ -26,6 +26,12 @@ if(isset($_POST['passwortAendern'])) {
     exit();
   }
 
+  //Prüft, ob "Neues Passwort" tatsächlich neu ist
+  if ($passwort == $passwortAltes){
+    header ("Location: passwortAendern.php?error=keinNeuesPwd");
+    exit();
+  }
+
   //Überprüfung des alten Passwort
   $sql = "SELECT * FROM proband WHERE PID = $userID";
   $result = mysqli_query($conn, $sql);
