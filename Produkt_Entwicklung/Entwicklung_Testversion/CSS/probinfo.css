@@ -36,3 +36,18 @@ input:hover[type="submit"] {
   margin-bottom: -10px;
   padding-top: 20px;
 }
+
+.footer-container {
+  padding-top: 15px;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  list-style: none;
+}
+
+.footer ul li a {
+  color: black;
+}
