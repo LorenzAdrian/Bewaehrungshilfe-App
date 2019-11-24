@@ -223,8 +223,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </td>
       </tr>
     </table>
+    <div class="success"> <?php echo $pwdErfolg;?></div>
+    <div class="error"><?php echo $pwdTatErr;?></div>
   </form>
-    <p><span class="success"><?php echo $pwdErfolg;?></span></p>
-    <p><span class="error"><?php echo $pwdTatErr;?></span></p>
 </main>
 </html>
