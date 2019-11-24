@@ -1,6 +1,10 @@
 <?php
 #Seite um ein Passwort zu ändern
 
+// -- REFERENZEN --
+//https://tryphp.w3schools.com/showphp.php?filename=demo_form_validation_required
+//https://steemit.com/utopian-io/@atan26/how-to-make-simple-sign-up-form-with-validation-php-mysqli
+
 include 'dbh.inc.php';
 
 if(!isset($_SESSION))
@@ -39,9 +43,10 @@ if(!isset($_SESSION['userId'])){
 
   <title>Passwort ändern</title>
 
-  <!-- Fehlermeldungen rot markieren -->
+  <!-- Meldungen rot bzw. grün markieren -->
   <style>
   .error {color: #FF0000;}
+  .success {color: #00CC00;}
   </style>
 
 </head>
@@ -151,7 +156,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $pwdAltErr = "Falsches Passwort";
   }
 
-
   //Gab es Fehlermeldungen?
   if ($pwdAltLeer!="" OR $pwdNeuLeer!="" OR $pwdRptLeer!="" OR $pwdTatErr!="" OR $pwdAltErr!=""){
   }
@@ -220,7 +224,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </tr>
     </table>
   </form>
-    <p><span class="error"><?php echo $pwdErfolg;?></span></p>
+    <p><span class="success"><?php echo $pwdErfolg;?></span></p>
     <p><span class="error"><?php echo $pwdTatErr;?></span></p>
 </main>
 </html>
