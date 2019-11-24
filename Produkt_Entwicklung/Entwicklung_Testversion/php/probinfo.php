@@ -38,9 +38,6 @@ if (mysqli_num_rows($result) > 0) {
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <!-- GOOGLE FONTS-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -188,6 +185,27 @@ if (mysqli_num_rows($result) > 0) {
           </div>
         </div>
       </div>
+      
+          <!--Footer-->
+  <div class="container footer-container">
+    <div class="row">
+      <div class="col-lg-12 footer">
+        <div class="footer">
+          <ul>
+            <li>
+              <a href="#">Impressum</a>
+            </li>
+            <li>
+                <a href="#">Datenschutz</a>
+            </li>
+            <li>
+              <a href="#">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>  
     </div>
+  </div>
+
   </body>
 </html>
