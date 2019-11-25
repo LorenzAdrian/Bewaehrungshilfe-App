@@ -96,7 +96,7 @@ if (mysqli_num_rows($result) > 0) {
     <div class="container">
       <div class="row">
         <div class="col">
-          <div id="mySidenav" class="sidenav bg-light" style="width:25%; z-index:100;">
+          <div id="mySidenav" class="sidenav bg-light" style="z-index:1000000">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <div id='msgdiv'></div>
           <form  id="msgform" method="POST">
