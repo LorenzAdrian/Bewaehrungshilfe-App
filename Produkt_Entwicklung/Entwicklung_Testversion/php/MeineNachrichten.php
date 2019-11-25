@@ -133,10 +133,10 @@ if ($conn->query($sql) != TRUE) {
       </li>
 			   
         </ul>	
-		<form class="form-inline my-2 my-lg-0">
-            <button class="button-sodi btn-outline-sodi my-1 my-sm-0" type="submit">Abmelden</button>
+		<form class="form-inline my-2 my-lg-0" method='post' action="">
+            <button class="button-sodi btn-outline-sodi my-1 my-sm-0" name="but_logout" type="submit">Abmelden</button>
 		</form>
-    </div>
+	</div>
     <div class="w-100">
 
 	</div>
