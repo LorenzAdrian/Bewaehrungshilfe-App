@@ -75,12 +75,6 @@ if (mysqli_num_rows($result) > 0) {
       <li class="nav-item active">
         <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Termine</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Nachrichten</a>
-      </li>
 	    <li class="nav-item">
         <a class="nav-link" href="#">Leitfaden</a>
       </li>
@@ -118,7 +112,7 @@ if (mysqli_num_rows($result) > 0) {
         </div>
       </div>
     </div>
-    
+
 
      <!-- Element zum Einblenden der Nachrichten-Sidebar -->
     <div class="container message-container">
@@ -129,8 +123,8 @@ if (mysqli_num_rows($result) > 0) {
           </div>
         </div>
       </div>
-    </div> 
-    
+    </div>
+
         <!-- <details> ist ein HTML5-Element, das das Ausklappen ermöglicht. Kein Button notwendig. <summary> legt den Text fest, der vor dem Ausklappen sichtbar ist. -->
          <div class="container first-container">
            <div class="row">
@@ -163,7 +157,7 @@ if (mysqli_num_rows($result) > 0) {
                   </form>
                 </div>
             </div>
-          </div> 
+          </div>
 
       <!-- Kalender -->
       <div class="container container-calender">
@@ -185,7 +179,7 @@ if (mysqli_num_rows($result) > 0) {
           </div>
         </div>
       </div>
-      
+
           <!--Footer-->
   <div class="container footer-container">
     <div class="row">
@@ -203,7 +197,7 @@ if (mysqli_num_rows($result) > 0) {
             </li>
           </ul>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
 
