@@ -44,7 +44,7 @@ $(document).ready(function(){
     });
 
   //Funktion für Eingabetaste auf Login.php - click auf login_btn wird ausgeführt, wenn Eingabetaste (Taste 13) gedrückt wird und wiederhochkommt
-    $("#passwort").keyup(function(e){
+    $(document).keyup(function(e){
       if(e.which == 13){
         $("#login_btn").click();
       }
