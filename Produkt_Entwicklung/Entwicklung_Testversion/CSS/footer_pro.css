@@ -1,0 +1,26 @@
+
+.hr-sodi2{
+	margin-bottom: 0px;
+	background-color: maroon ;
+    border: none;
+    height: 2pt;
+    width: 100%;
+	margin-top: 40px;
+}
+
+.footer-container {
+	padding-top: 15px;
+	background-color: #f8f9fa;
+
+}
+
+.footer ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+}
+
+.footer ul li a {
+    color: maroon;
+}
