@@ -3,6 +3,7 @@ $(document).ready(function () {
     bInfo: false,
     scrollY: '28vh',
     scrollCollapse: false,
+    select : true,
     language: {
       search: "Suchen:"
     },
@@ -54,6 +55,12 @@ $(document).ready(function () {
       betreuer: bid,
       proband: pid
     });
+
+
+
+
+
+  
 
     // Console-Ausgabe für Debugging
     console.log(probliste, vorname, nachname, pid, bid);

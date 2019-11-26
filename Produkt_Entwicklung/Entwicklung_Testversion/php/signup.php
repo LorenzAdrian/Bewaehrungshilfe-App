@@ -1,17 +1,17 @@
  <?php
  //Check, ob die vorherige Seite bearbeitet wurde.
-if(isset($_POST['signupcheck-submit'])) {
-	$rolle = $_POST['rolle'];
-	
+/*if(isset($_POST['signupcheck-submit'])) {
+	$rolle = $_POST['rolle'];*/
+
 	//Angezeigte Felder sind abhängig von der Rolle.
-	
-	if ($rolle == 'betreuer') {
+
+/*	if ($rolle == 'betreuer') {
 		echo '<main>
 		<h1>Registrierung</h1>
 		<br>
 		<h3>Betreuer</h3>
 		<form  action="signup.inc.php" method="POST">
-		
+
 			<input type="hidden" name="rolle" value="betreuer">
 			<br>
 
@@ -44,8 +44,9 @@ if(isset($_POST['signupcheck-submit'])) {
 		</main>';
 	}
 
-	elseif ($rolle == 'proband') {
-		echo '<main>
+	//elseif ($rolle == 'proband') {
+else if ($rolle != 'betreuer'){*/
+    echo '<main>
 		<h1>Registrierung</h1>
 		<br>
 		<h3>Proband</h3>
@@ -79,14 +80,13 @@ if(isset($_POST['signupcheck-submit'])) {
 			<button type="submit" name="signup-submit">Registrieren</button>
 		</form>
 		</main>';
-	}
+//	}
 
 	//Bei fehlender Auswahl (Betreuer/Proband) wird Auswahlseite (signupcheck.php) neu geladen.
 	//Es gibt eine Fehlermeldung (noch: JavaScript)
-	else {
+/*	else {
 		echo '<script>alert("Wählen Sie bitte eine der Optionen");</script>
 		<meta http-equiv="refresh" content="0;URL=signupcheck.php" />';
-	}
-}
+	}*/
+//}
 ?>
-

@@ -29,6 +29,7 @@ input:hover[type="submit"] {
 
 .container-calender {
   padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 .container-calender h1 {
@@ -37,17 +38,11 @@ input:hover[type="submit"] {
   padding-top: 20px;
 }
 
+#sticky-footer {
+  flex-shrink: none;
+}
+
 .footer-container {
-  padding-top: 15px;
-}
-
-.footer ul {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  list-style: none;
-}
-
-.footer ul li a {
-  color: black;
+  justify-content: space-around;
 }
