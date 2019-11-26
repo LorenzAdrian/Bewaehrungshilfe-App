@@ -180,26 +180,14 @@ if (mysqli_num_rows($result) > 0) {
         </div>
       </div>
 
-          <!--Footer-->
-  <div class="container footer-container">
-    <div class="row">
-      <div class="col-lg-12 footer">
-        <div class="footer">
-          <ul>
-            <li>
-              <a href="#">Impressum</a>
-            </li>
-            <li>
-                <a href="#">Datenschutz</a>
-            </li>
-            <li>
-              <a href="#">Kontakt</a>
-            </li>
-          </ul>
+      <!--Footer-->
+      <footer id="sticky-footer" class="py-2 bg-dark text-white-50">
+        <div class="container footer-container">
+          <small>Datenschutz</small>
+          <small>Impressum</small>
+          <small>Kontakt</small>
         </div>
-      </div>
-    </div>
-  </div>
+      </footer>
 
   </body>
 </html>
