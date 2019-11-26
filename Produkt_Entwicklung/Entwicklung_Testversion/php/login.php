@@ -40,6 +40,17 @@
       </div>
 	</header>
 
+  <script>
+  function pwdShow() {
+  var x = document.getElementById("passwort");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+  }
+  </script>
+
 	<!-- LOGIN CONTAINER -->
 	<div class="login-container d-flex justify-content-center align-items-center">
         <form class="login-form text-center">
@@ -52,11 +63,21 @@
 				<input type="text" class="form-control rounded-pill form-control-lg" name="mailuid" id="mailuid"
 				placeholder="Geben Sie bitte Ihren Benutzernamen ein. (Beispiel: MaxMueller)">
           	</div>
-          	<div class="form-group">
-			  <input type="password" class="form-control rounded-pill form-control-lg"  name="passwort" id="passwort"
-			  placeholder="Geben Sie bitte Ihr Passwort ein.">
-          	</div>
-          	<button type="button" class="btn-btn-primary btn-block rounded-pill button-lg" name="login" id="login_btn" value="Login">Login</button>
+            <div class="form-group">
+              <table>
+                <tr>
+                  <td>
+                    <input type="password" class="form-control rounded-pill form-control-lg"  name="passwort" id="passwort"
+                    placeholder="Geben Sie bitte Ihr Passwort ein." size="45">
+                  </td>
+                  <td>
+                    <input type="checkbox" onclick="pwdShow()" id="checkPwd" hidden>
+                    <label for="checkPwd">&#128065;</label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <button type="button" class="btn-btn-primary btn-block rounded-pill button-lg" name="login" id="login_btn" value="Login">Login</button>
             <div class = "message" id = "message"></div>
         </form>
 	</div>
