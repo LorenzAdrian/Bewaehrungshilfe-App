@@ -30,17 +30,19 @@ else {
 }
 
 $event_sql =
-"SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, N.image, N.dateiname, B.Vorname AS vorname_betreuer, B.Nachname AS nachname_betreuer FROM nachricht AS N INNER JOIN betreuer AS B ON N.BID = B.BID WHERE N.PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
+"SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, N.dateiname, B.Vorname AS vorname_betreuer, B.Nachname AS nachname_betreuer FROM nachricht AS N INNER JOIN betreuer AS B ON N.BID = B.BID WHERE N.PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
 
 //Mit mysqli_query wird die SQL-Abfrage ausgeführt. Die Methode liefert ein Objekt der Klasse mysqli_result zurück. $result enthält die Referenz auf dieses Objekt.
 $result = mysqli_query($conn, $event_sql);
 
+/*Durch die Ajax-Funktion soll eine Nachricht nicht auf gelesen gesetzt werden können
 $sql = "UPDATE nachricht SET Status='gelesen'
 WHERE PID = ".$_SESSION['userId']." AND BSender=1";
 
 if ($conn->query($sql) != TRUE) {
     echo "Es ist ein Fehler aufgetreten: ".$conn->error;
 }
+*/
 
 include 'meineNachrichtenAnzeigen.php';
 

@@ -37,7 +37,7 @@ while ($dsatz = mysqli_fetch_assoc($result))
         {
           echo '<table class="betreuer nachricht neu">
           <tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr>
-          <tr class="nachricht"><td><a href="">'.$dsatz['dateiname'].'</a></td></tr>
+          <tr class="nachricht"><td><a href="datei_download.php?nid='.$dsatz['NID'].'" download="'.$dsatz['dateiname'].'">'.$dsatz['dateiname'].'</a></td></tr>
           <tr class="datumuhrzeit betreuer"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
           }
         //Wenn der Betreuer der Sender der schon gelesenen Nachricht ist.
@@ -45,7 +45,7 @@ while ($dsatz = mysqli_fetch_assoc($result))
           {
             echo '<table class="betreuer nachricht">
             <tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr>
-            <tr class="nachricht"><td><a href="">'.$dsatz['dateiname'].'</a></td></tr>
+            <tr class="nachricht"><td><a href="datei_download.php?nid='.$dsatz['NID'].'" download="'.$dsatz['dateiname'].'">'.$dsatz['dateiname'].'</a></td></tr>
             <tr class="datumuhrzeit betreuer"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr>
             </table>';
           }
@@ -53,7 +53,7 @@ while ($dsatz = mysqli_fetch_assoc($result))
         else
           {
             echo '<table class="proband nachricht">
-            <tr class="nachricht"><td><a href="">'.$dsatz['dateiname'].'</a></td></tr>
+            <tr class="nachricht"><td><a href="datei_download.php?nid='.$dsatz['NID'].'" download="'.$dsatz['dateiname'].'">'.$dsatz['dateiname'].'</a></td></tr>
             <tr class="datumuhrzeit proband"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr>
             </table>';
 

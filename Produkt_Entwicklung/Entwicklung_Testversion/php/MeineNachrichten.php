@@ -27,40 +27,20 @@ else {
 }
 
 $event_sql =
-"SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, N.image, N.dateiname, B.Vorname AS vorname_betreuer, B.Nachname AS nachname_betreuer FROM nachricht AS N INNER JOIN betreuer AS B ON N.BID = B.BID WHERE N.PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
+"SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, N.dateiname, B.Vorname AS vorname_betreuer, B.Nachname AS nachname_betreuer FROM nachricht AS N INNER JOIN betreuer AS B ON N.BID = B.BID WHERE N.PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
 
 //$event_imgsql = "SELECT dateiname FROM fileupload WHERE PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
 
 //Mit mysqli_query wird die SQL-Abfrage ausgeführt. Die Methode liefert ein Objekt der Klasse mysqli_result zurück. $result enthält die Referenz auf dieses Objekt.
-$result = mysqli_query($conn, $event_sql);
-
-//$result1 = mysqli_query($conn, $event_imgsql);
+/*$result = mysqli_query($conn, $event_sql);
 
 $sql = "UPDATE nachricht SET Status='gelesen'
 WHERE PID = ".$_SESSION['userId']." AND BSender=1";
 
 if ($conn->query($sql) != TRUE) {
     echo "Es ist ein Fehler aufgetreten: ".$conn->error;
-}
-
-/*
-#Alle Nachrichten des Gesprächspartners auf "gelesen" setzen.
-if ($_SESSION['rolle'] == 'proband'){
-	$sql = "UPDATE nachricht SET Status='gelesen'
-	WHERE ".$personenID."=".$_SESSION['userId']."
-	AND BSender= 1";
-}
-else if($_SESSION['rolle'] == 'betreuer'){
-	$sql = "UPDATE nachricht SET Status='gelesen'
-	WHERE ".$personenID."=".$_SESSION['userId']."
-	AND BSender= 0";
-}
-if ($conn->query($sql) != TRUE) {
-    echo "Es ist ein Fehler aufgetreten: ".$conn->error;
-}
-*/
-
- ?>
+}*/
+?>
 
 <!DOCTYPE html>
 <html lang="de">
@@ -88,24 +68,38 @@ if ($conn->query($sql) != TRUE) {
  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-	   <title>Meine Nachrichten</title>
+	<title>Meine Nachrichten</title>
+  <script>
+  var elem = document.getElementsByClassName('nav-link');
+  elem.addEventListener('click', setzeNachrichtAufGelesen);
+  function setzeNachrichtAufGelesen() {
+    <?php
+    $sql = "UPDATE nachricht SET Status='gelesen'
+    WHERE PID = ".$_SESSION['userId']." AND BSender=1";
+
+    if ($conn->query($sql) != TRUE) {
+        echo "Es ist ein Fehler aufgetreten: ".$conn->error;
+    }
+    ?>
+  }
+  </script>
 
 	</head>
 
 	<body>
-	
+
 <nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
-   
+
    <a class="navbar-brand w-100" href="#">
           		  <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi 4u
 			</a>
-   
+
      <div class="navbar-collapse collapse w-100" id="navbar5">
         <ul class="navbar-nav mx-auto">
       <li class="nav-item">
         <a class="nav-link" href="../php/index_proband.php">Startseite</a>
-      </li>	 
-      <li class="nav-item"> 
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="../php/termine_proband.php">Termine </a>
       </li>
 	  <!-- Aktuelle Seite -->
@@ -115,7 +109,7 @@ if ($conn->query($sql) != TRUE) {
        <li class="nav-item">
         <a class="nav-link" href="../php/Dokumente.php">Dokumente</a>
       </li>
-	  
+
 	    <li class="nav-item">
         <a class="nav-link" href="Informationen.php">Informationen</a>
       </li>
@@ -127,12 +121,12 @@ if ($conn->query($sql) != TRUE) {
 	    <li class="nav-item">
         <a class="nav-link" href="Notfall.php">Notfall</a>
       </li>
-	  
+
 	   <li class="nav-item">
         <a class="nav-link" href="passwortAendern.php">Passwort&nbsp;ändern</a>
       </li>
-			   
-        </ul>	
+
+        </ul>
 		<form class="form-inline my-2 my-lg-0" method='post' action="">
             <button class="button-sodi btn-outline-sodi my-1 my-sm-0" name="but_logout" type="submit">Abmelden</button>
 		</form>
@@ -140,7 +134,7 @@ if ($conn->query($sql) != TRUE) {
     <div class="w-100">
 
 	</div>
-				
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
