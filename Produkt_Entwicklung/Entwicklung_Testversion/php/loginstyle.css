@@ -1,88 +1,76 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     background: url(../CSS/image/aerial-view-alexanderplatz-architecture-1128408.jpg) no-repeat;
     background-size: cover;
     object-fit: cover;
-    color:rgb(18, 6, 59);
+    color: rgb(18, 6, 59);
 }
 
-header{
+header {
     height: 10vh;
-    background:white;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: space-around;
     text-align: center;
 }
 
-.icon{
+.icon {
     height: 10vh;
 }
 
-.icon img{
+.icon img {
     height: 10vh;
 }
 
-.icon-text{
+.icon-text {
     padding-top: 40px;
-    color:rgb(18, 6, 59);
+    color: rgb(18, 6, 59);
 }
 
-.login-container{
+.login-container {
     height: 87vh;
     width: 100%;
 }
 
-.login-form{
+.login-form {
     max-width: 100%;
     width: 370px;
     padding: 5px;
     margin: auto;
 }
 
-.form-control{
+.form-control {
     font-size: 15px;
     min-height: 48px;
     font-weight: 500;
 }
 
-button{
+button {
     background: rgb(18, 6, 59);
     height: 40px;
-    color:white;
+    color: white;
 }
 
-.footer{
-    background-color: white;
-    height: 4vh;
-    width: 100%;
-}
-
-.footer ul{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
-
-.footer ul li a{
-    color:rgb(18, 6, 59);
-    text-decoration: none;
-}
-
-.form-check{
+.form-check {
     display: flex;
     justify-content: center;
 }
 
-input[type="checkbox"]
-{
+input[type="checkbox"] {
     margin-left: 80px;
 }
 
 .message {
-  color: #FF0000;
+    color: #FF0000;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
 }
