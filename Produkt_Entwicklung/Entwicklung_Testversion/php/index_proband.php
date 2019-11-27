@@ -213,7 +213,7 @@ if(isset($_POST['but_logout'])){
 -->
 
  <!--Footer-->
-   <hr class="hr-sodi2">
+   
        <footer id="sticky-footer" class="py-4 bg-light text-white-50">
       <div class="container text-center">
 
