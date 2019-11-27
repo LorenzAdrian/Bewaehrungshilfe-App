@@ -35,6 +35,8 @@ if(isset($_POST['but_logout'])){
 	<!--- Pfad zur style.css--------------------------->
     <link rel="stylesheet" href="../CSS/index_proband.css">
 	<link rel="stylesheet" href="../CSS/header_prob.css">
+<!--	<link rel="stylesheet" href="../CSS/footer_pro.css"> -->
+	<link rel="stylesheet" href="../CSS/footer.css">
     <!--Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700&display=swap"  rel="stylesheet">
     <!-- Stylesheet für Icons-->
@@ -59,7 +61,7 @@ if(isset($_POST['but_logout'])){
       <li class="nav-item active">
         <a class="nav-link" href="../php/index_proband.php">Startseite<span class="sr-only">(current)</span></a>
       </li>
-
+<!-- Weiterführung zu allen anderen Seiten -->
       <li class="nav-item "> 
         <a class="nav-link" href="../php/termine_proband.php">Termine</a>
       </li>
@@ -104,128 +106,131 @@ if(isset($_POST['but_logout'])){
   <hr class="hr-sodi"> <!-- Gehört zum Header -->
 
 
-<!--
-<div class="container">
+<!-- Überschrift der Seite -->
+<div class="container-fluid">
 
 	<div class="row">
-
-    <div class="col-sm-6">
-     			<a href="MeineNachrichten.php">
+		<div class="col-12 text-center">
+			   <h4>Startseite</h4>      	   
+		</div>
+	</div>
+<!--Links zu den anderen Seiten-->	
+	<div class="row">
+	
+		<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3">
+		</div>
+		
+		<div class="col-xs-6 col-sm-5 col-md-3 col-lg-3">
+     		<a href="MeineNachrichten.php">
 				<div class="icon">
 					<i class="fa fa-envelope" style="font-size:80px"></i></div>
 				<div class="name">Nachrichten</div>
 			</a>
-    </div>
-    <div class="col-sm-6">
-				<a href="termine_proband.php">
-				<div class="icon1">
-					<i class="fa fa-calendar" style="font-size:80px"></i></div>
-				<div class="name1">Termine</div>
-			</a>
-	</div>
-
-
-
-  </div>
-  <div class="row">
-
-    <div class="col-sm-6">
-      <a href="Informationen.php">
-				<div class="icon">
-					<i class="fa fa-info-circle" style="font-size:80px"></i></div>
-				<div class="name">Informationen</div>
-			</a>
-    </div>
-    <div class="col-sm-6">
-      <a href="Dokumente.php">
-				<div class="icon1">
-					<i class="fa fa-file" style="font-size:80px"></i></div>
-				<div class="name1">Dokumente</div>
-			</a>
-    </div>
-	</div>
-
-	 <div class="row">
-
-
-	<div class="col-sm-6">
-      			<a href="Notfall.php">
-				<div class="icon">
-					<i class="fa fa-ambulance" style="font-size:80px"></i></div>
-				<div class="name">Notfall</div>
-				</a>
-    </div>
-	 <div class="col-sm-6">
-	 			<a href="To_Do_Liste.php">
-				<div class="icon1">
-					<i class="fa fa-list-alt" style="font-size:80px"></i></div>
-				<div class="name1">Leitfaden</div>
-			</a>
-
-
-    </div>
-
-
-  </div> -->
-
-  <div class="rahmen">
-
-   <table class="table">
-   <tbody>
-	<tr>
-		<td>
-			<a href="MeineNachrichten.php">
-				<div class="icon">
-					<i class="fa fa-envelope" style="font-size:80px"></i></div>
-				<div class="name">Nachrichten</div>
-			</a>
-		</td>
-		<td>
+		</div>
+		
+		<div class="col-xs-6 col-sm-5 col-md-3 col-lg-3">
 			<a href="termine_proband.php">
-				<div class="icon1">
+				<div class="icon">
 					<i class="fa fa-calendar" style="font-size:80px"></i></div>
-				<div class="name1">Termine</div>
+				<div class="name">Termine</div>
 			</a>
-		</td>
-	</tr>
-	<tr>
-		<td>
+		</div>
+	
+		<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3">
+		</div>
+	
+	</div>
+	
+	<div class="row">
+	
+		<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3">
+		</div>
+
+		<div class="col-xs-6  col-sm-5 col-md-3 col-lg-3">
 			<a href="Informationen.php">
 				<div class="icon">
 					<i class="fa fa-info-circle" style="font-size:80px"></i></div>
 				<div class="name">Informationen</div>
 			</a>
-		</td>
-		<td>
+		</div>
+   
+		<div class="col-xs-6  col-sm-5 col-md-3 col-lg-3">
 			<a href="Dokumente.php">
-				<div class="icon1">
+				<div class="icon">
 					<i class="fa fa-file" style="font-size:80px"></i></div>
-				<div class="name1">Dokumente</div>
+				<div class="name">Dokumente</div>
 			</a>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<a href="Notfall.php">
+		</div>
+	
+		<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3">
+		</div>
+	
+	</div>
+
+	<div class="row">
+
+		<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3">
+		</div>
+
+		<div class="col-xs-6  col-sm-5 col-md-3 col-lg-3">
+      		<a href="Notfall.php">
 				<div class="icon">
 					<i class="fa fa-ambulance" style="font-size:80px"></i></div>
 				<div class="name">Notfall</div>
 			</a>
-		</td>
-		<td>
-			<a href="To_Do_Liste.php">
-				<div class="icon1">
+		</div>
+		
+		<div class="col-xs-6 col-sm-5 col-md-3 col-lg-3">
+	 		<a href="To_Do_Liste.php">
+				<div class="icon">
 					<i class="fa fa-list-alt" style="font-size:80px"></i></div>
-				<div class="name1">Leitfaden</div>
+				<div class="name">Leitfaden</div>
 			</a>
-		</td>
-	</tr>
-	</tbody>
-</table>
-</div>
+		</div>
+		
+		<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3">
+		</div>
 
+  </div> 
+  
+  <footer>
+<ul class="footer-nav">
+<li>
+    <a href="Datenschutz_Proband.php" class="footer-datenschutz">Datenschutz</a>
+</li>
 
-<?php include '../includes/footer_proband.inc.php' ?>
+<li>
+        <a href="Impressum_Proband.php" class="footer-impressum">Impressum</a>
+</li>
+
+<li>
+        <a href="Kontakt_Proband.php" class="footer-kontakt">Kontakt</a>
+</li>
+
+</ul>
+</footer>
+
+ <!--Footer-->
+ <!--   <hr class="hr-sodi2">
+  <div class="container-fluid footer-container">
+    <div class="row">
+      <div class="col-lg-12 footer">
+        <div class="footer">
+          <ul>
+            <li>
+              <a href="Impressum_Proband.php">Impressum</a>
+            </li>
+            <li>
+                <a href="Datenschutz_Proband.php">Datenschutz</a>
+            </li>
+            <li>
+              <a href="Kontakt_Proband.php">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	</div>-->
 </body>
 
 </html>

@@ -34,7 +34,7 @@ require "problisteDT.inc.php";
   </head>
 
   <body>
-  <table id="example" class="table table-striped">
+  <table id="example" class="table">
   <thead>
     <tr>
       <th scope="col">Name</th>

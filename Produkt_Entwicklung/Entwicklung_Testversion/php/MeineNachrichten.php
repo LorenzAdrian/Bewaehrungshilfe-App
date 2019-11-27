@@ -52,6 +52,7 @@ if ($conn->query($sql) != TRUE) {
 		<!--- Pfad zu den CSS Dateien--------------------------->
 		<link rel="stylesheet" href="../CSS/style.css">
 		<link rel="stylesheet" href="../CSS/header_prob.css">
+			<link rel="stylesheet" href="../CSS/footer_pro.css">
 		<!--Schriftart aus google fonts------------------>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap">
 		<!-- Stylesheet für Icons-->
@@ -206,8 +207,33 @@ if ($conn->query($sql) != TRUE) {
     <br>
     <br>
 
+  <!--Footer-->
+    <hr class="hr-sodi2">
+<footer id="sticky-footer" class="py-4 bg-light text-white-50">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-12 footer">
+        <div class="footer">
+          <ul>
+            <li>
+              <a href="Impressum_Proband.php">Impressum</a>
+            </li>
+            <li>
+                <a href="Datenschutz_Proband.php">Datenschutz</a>
+            </li>
+            <li>
+              <a href="Kontakt_Proband.php">Kontakt</a>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div >
+    </div>
+  </div>
+</footer>
 
-    <?php include '../includes/footer_proband.inc.php' ?>
+
+
     <?php mysqli_close($conn); ?>
 	</body>
 </html>
