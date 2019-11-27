@@ -41,7 +41,6 @@ while ($row = mysqli_fetch_array($result))
 	 $event_data[] = array(
     'Zeit'     => $row['Zeitstempel'],
     'Text'       => $row['Text'],
-    'Bezug'     => $row['BezugID'],
     'Status'     => $row['Status'],
     'PID'       =>  $row['PID'],
     'BID'       =>  $row['BID'],
