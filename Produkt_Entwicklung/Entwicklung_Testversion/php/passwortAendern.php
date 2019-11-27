@@ -205,7 +205,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </td>
         <td>
           <input type="checkbox" onclick="pwdShowAlt()" id="checkPwdAlt" hidden>
-          <label for="checkPwdAlt">&#128065;</label>
+          <h2><label for="checkPwdAlt">&#128065;</label></h2>
           <span class="error"><?php echo $pwdAltErr;?></span>
         </td>
       </tr>
@@ -216,7 +216,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </td>
         <td>
           <input type="checkbox" onclick="pwdShowNeu()" id="checkPwdNeu" hidden>
-          <label for="checkPwdNeu">&#128065;</label>
+          <h2><label for="checkPwdNeu">&#128065;</label></h2>
           <span class="error"><?php echo $pwdNeuLeer;?></span>
           <span class="error"><?php echo $pwdRptErr;?></span>
         </td>
@@ -228,7 +228,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </td>
         <td>
           <input type="checkbox" onclick="pwdShowRpt()" id="checkPwdRpt" hidden>
-          <label for="checkPwdRpt">&#128065;</label>
+          <h2><label for="checkPwdRpt">&#128065;</label></h2>
           <span class="error"><?php echo $pwdRptLeer;?></span>
           <span class="error"><?php echo $pwdRptErr;?></span>
         </td>

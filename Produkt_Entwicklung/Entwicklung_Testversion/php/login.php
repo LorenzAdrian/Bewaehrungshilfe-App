@@ -61,7 +61,7 @@
                   </td>
                   <td>
                     <input type="checkbox" onclick="pwdShow()" id="checkPwd" hidden>
-                    <label for="checkPwd">&#128065;</label>
+                    <h1><label for="checkPwd">&#128065;</label></h1>
                   </td>
                 </tr>
               </table>
