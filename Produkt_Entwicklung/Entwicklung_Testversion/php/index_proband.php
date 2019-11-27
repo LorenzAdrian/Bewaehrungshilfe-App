@@ -34,9 +34,9 @@ if(isset($_POST['but_logout'])){
 
 	<!--- Pfad zur style.css--------------------------->
     <link rel="stylesheet" href="../CSS/index_proband.css">
-	<link rel="stylesheet" href="../CSS/header_prob.css">
-<!--	<link rel="stylesheet" href="../CSS/footer_pro.css"> -->
-	<link rel="stylesheet" href="../CSS/footer.css">
+<link rel="stylesheet" href="../CSS/header_prob.css"> 
+		<link rel="stylesheet" href="../CSS/footer_pro.css">
+<!--	<link rel="stylesheet" href="../CSS/footer.css">-->
     <!--Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700&display=swap"  rel="stylesheet">
     <!-- Stylesheet für Icons-->
@@ -192,7 +192,8 @@ if(isset($_POST['but_logout'])){
 		</div>
 
   </div> 
-  
+  </div>
+   <!--
   <footer>
 <ul class="footer-nav">
 <li>
@@ -209,28 +210,28 @@ if(isset($_POST['but_logout'])){
 
 </ul>
 </footer>
+-->
 
  <!--Footer-->
- <!--   <hr class="hr-sodi2">
-  <div class="container-fluid footer-container">
-    <div class="row">
-      <div class="col-lg-12 footer">
-        <div class="footer">
-          <ul>
-            <li>
-              <a href="Impressum_Proband.php">Impressum</a>
-            </li>
-            <li>
-                <a href="Datenschutz_Proband.php">Datenschutz</a>
-            </li>
-            <li>
-              <a href="Kontakt_Proband.php">Kontakt</a>
-            </li>
-          </ul>
-        </div>
+   <hr class="hr-sodi2">
+       <footer id="sticky-footer" class="py-4 bg-light text-white-50">
+      <div class="container text-center">
+
+              <ul>
+                <li>
+                  <a href="Impressum_Proband.php">Impressum</a>
+                </li>
+                <li>
+                    <a href="Datenschutz_Proband.php">Datenschutz</a>
+                </li>
+                <li>
+                  <a href="Kontakt_Proband.php">Kontakt</a>
+                </li>
+              </ul>
+
       </div>
-    </div>
-	</div>-->
+    </footer>
+  
 </body>
 
 </html>
