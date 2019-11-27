@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $('#example').DataTable({
     bInfo: false,
-    scrollY: '40vh',
+    scrollY: '49vh',
     scrollCollapse: false,
     select : true,
     language: {

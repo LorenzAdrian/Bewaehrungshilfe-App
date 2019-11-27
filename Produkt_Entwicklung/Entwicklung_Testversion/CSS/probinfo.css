@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+header{
+  border-bottom: 2px solid maroon;
+}
+
 .toggle {
   max-width: 15%;
 }
@@ -13,9 +17,8 @@ input {
   background-color: white;
 }
 
-input:hover[type="submit"] {
-  background: darkred;
-  color: white;
+.btn{
+  padding-top: 150px;
 }
 
 .col-back {
@@ -38,20 +41,8 @@ input:hover[type="submit"] {
   padding-top: 20px;
 }
 
-#sticky-footer {
-  flex-shrink: none;
-}
 
 .footer-container {
   display: flex;
   justify-content: space-around;
-}
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-header{
-  border-bottom: 2px solid maroon;
 }

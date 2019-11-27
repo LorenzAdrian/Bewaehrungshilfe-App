@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+body{
+  height: 90vh;
+}
+header{
+  border-bottom: 2px solid maroon;
+}
+
 .hallo-col h2 {
     padding-top: 30px;
 }
@@ -17,39 +24,20 @@ h2 {
     padding-top: 30px;
 }
 
-
-.footer-container {
-    padding-top: 15px;
+.btn-container{
+  height: 7vh;
+  
 }
 
-.footer ul {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    list-style: none;
+.buttonform{
+  display: flex;
+  align-items: flex-end;
+  float: right;
 }
 
-.footer ul li a {
-    color: black;
-}
-	color:#fff;
-background-color:#138496;
-border-color:#117a8b;
-}
 
-#sticky-footer {
-    flex-shrink: none;
-}
 
 .footer-container {
     display: flex;
     justify-content: space-around;
-}
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-header{
-  border-bottom: 2px solid maroon;
 }

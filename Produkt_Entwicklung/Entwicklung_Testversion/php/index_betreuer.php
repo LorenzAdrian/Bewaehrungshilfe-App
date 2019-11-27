@@ -95,17 +95,22 @@ if(isset($_POST['but_logout'])){
       <div class="col-lg-6 col-md-12 text-col">
         <p>Zum Verwalten klicken Sie bitte auf den gewünschten Probanden</p>
         <?php include 'dataTbl.php';?>
-          <form class="buttonform" action="Signup.php" method="post">
-          <input class="btn btn-outline-danger" type="submit" name="signupcheck-submit" value="Proband anlegen">
-          <input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" >
-          </form>
-
       </div>
-      <div class="col-lg-6 col-md-12">
+    <div class="col-lg-6 col-md-12">
           <?php include 'FullCalendar.php';?>
       </div>
     </div>
   </div>
+  <div class="container btn-container">
+    <div class="row btn-row">
+      <div class="col-lg-6">
+      <form class="buttonform" action="Signup.php" method="post">
+      <input class="btn btn-outline-danger" type="submit" name="signupcheck-submit" value="Proband anlegen">
+      <!--<input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" > -->
+      </form>
+    </div>
+  </div>
+</div>
 
    <!--Footer-->
       <footer id="sticky-footer" class="py-2 bg-dark text-white-50">
