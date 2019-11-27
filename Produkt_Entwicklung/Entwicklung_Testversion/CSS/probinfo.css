@@ -46,3 +46,12 @@ input:hover[type="submit"] {
   display: flex;
   justify-content: space-around;
 }
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+header{
+  border-bottom: 2px solid maroon;
+}

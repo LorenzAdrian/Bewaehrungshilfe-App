@@ -6,7 +6,7 @@
 	
 }
 body{
-	background: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)  no-repeat center center fixed;
+	background: white;
 -moz-background-size: cover;
 background-size: cover;
 }
