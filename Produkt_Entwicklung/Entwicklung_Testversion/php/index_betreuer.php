@@ -96,9 +96,9 @@ if(isset($_POST['but_logout'])){
         <p>Zum Verwalten klicken Sie bitte auf den gewünschten Probanden</p>
         <?php include 'dataTbl.php';?>
           <form class="" action="Signup.php" method="post">
-            <input type="submit" name="signupcheck-submit" value="Proband anlegen">
+          <input type="submit" name="signupcheck-submit" value="Proband anlegen" id="anlegen_but">
           </form>
-          <input type="button" name="" value="delete_prob" id="delete_but">
+          <input type="button" name="" value="Proband löschen" id="delete_but">
       </div>
       <div class="col-lg-6 col-md-12">
           <?php include 'FullCalendar.php';?>
