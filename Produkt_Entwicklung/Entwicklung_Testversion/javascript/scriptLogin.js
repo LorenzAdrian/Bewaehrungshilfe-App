@@ -49,4 +49,15 @@ $(document).ready(function(){
         $("#login_btn").click();
       }
     });
+
 });
+
+//Function, um Passwort anzuzeigen
+function pwdShow() {
+var x = document.getElementById("passwort");
+if (x.type === "password") {
+  x.type = "text";
+} else {
+  x.type = "password";
+}
+}
