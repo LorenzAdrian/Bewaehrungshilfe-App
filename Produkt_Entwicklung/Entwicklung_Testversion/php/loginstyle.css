@@ -47,16 +47,6 @@ header {
     font-weight: 500;
 }
 
-button {
-    background: rgb(18, 6, 59);
-    height: 40px;
-    color: white;
-}
-
-.form-check {
-    display: flex;
-    justify-content: center;
-}
 
 input[type="checkbox"] {
     margin-left: 80px;

@@ -27,6 +27,9 @@
 	<!-- Style CSS -->
 	<link rel="stylesheet" href="loginstyle.css">
 
+  <!-- LINK TEST -->
+  <script src="../javascript/test.js"></script>
+
 	</head>
 
 	<body>
@@ -57,16 +60,15 @@
                 <tr>
                   <td>
                     <input type="password" class="form-control rounded-pill form-control-lg"  name="passwort" id="passwort"
-                    placeholder="Geben Sie bitte Ihr Passwort ein." size="45">
-                  </td>
-                  <td>
-                    <input type="checkbox" onclick="pwdShow()" id="checkPwd" hidden>
-                    <h1><label for="checkPwd">&#128065;</label></h1>
+                    placeholder="Geben Sie bitte Ihr Passwort ein." size="90">
                   </td>
                 </tr>
               </table>
             </div>
-            <button type="button" class="btn-btn-primary btn-block rounded-pill button-lg" name="login" id="login_btn" value="Login">Login</button>
+            <div class="form-check">
+              <button type="button" class="btn btn-info rounded-pill btn-block" name="showpassword" id="showpassword" value="Passwort anzeigen">Passwort anzeigen</button> 
+              <button type="button" class="btn btn-info rounded-pill btn-block" name="login" id="login_btn" value="Login">Einloggen</button>
+            </div>
             <div class = "message" id = "message"></div>
         </form>
 	</div>
