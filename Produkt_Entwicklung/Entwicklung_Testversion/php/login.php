@@ -40,17 +40,6 @@
       </div>
 	</header>
 
-  <script>
-  function pwdShow() {
-  var x = document.getElementById("passwort");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-  }
-  </script>
-
 	<!-- LOGIN CONTAINER -->
 	<div class="login-container d-flex justify-content-center align-items-center">
         <form class="login-form text-center">
@@ -72,7 +61,7 @@
                   </td>
                   <td>
                     <input type="checkbox" onclick="pwdShow()" id="checkPwd" hidden>
-                    <label for="checkPwd">&#128065;</label>
+                    <h1><label for="checkPwd">&#128065;</label></h1>
                   </td>
                 </tr>
               </table>

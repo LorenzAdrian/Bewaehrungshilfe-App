@@ -33,6 +33,11 @@ if(!isset($_SESSION['userId'])){
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+  <!-- Funktion, um Passwort anzuzeigen -->
+  <script src="../javascript/passwortAendern.js"></script>
+
+
+
 	<!--- Pfad zur style.css--------------------------->
   <link rel="stylesheet" href="../CSS/index_proband.css">
 	<link rel="stylesheet" href="../CSS/header_prob.css">
@@ -195,15 +200,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <tr>
         <td>Altes Passwort: </td>
         <td>
-          <input type="password" name="pwd-alt" placeholder="Altes Passwort">
+          <input type="password" name="pwd-alt" id="pwd-alt" placeholder="Altes Passwort">
           <!--<span class="error">* <?php //echo $pwdAltLeer;?></span>-->
+        </td>
+        <td>
+          <input type="checkbox" onclick="pwdShowAlt()" id="checkPwdAlt" hidden>
+          <h2><label for="checkPwdAlt">&#128065;</label></h2>
           <span class="error"><?php echo $pwdAltErr;?></span>
         </td>
       </tr>
       <tr>
         <td>Neues Passwort: </td>
         <td>
-          <input type="password" name="pwd-neu" placeholder="Neues Passwort">
+          <input type="password" name="pwd-neu" id="pwd-neu" placeholder="Neues Passwort">
+        </td>
+        <td>
+          <input type="checkbox" onclick="pwdShowNeu()" id="checkPwdNeu" hidden>
+          <h2><label for="checkPwdNeu">&#128065;</label></h2>
           <span class="error"><?php echo $pwdNeuLeer;?></span>
           <span class="error"><?php echo $pwdRptErr;?></span>
         </td>
@@ -211,7 +224,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <tr>
         <td>Neues Passwort wiederholen</td>
         <td>
-          <input type="password" name="pwd-repeat" placeholder="Neues Passwort wiederholen">
+          <input type="password" name="pwd-repeat" id="pwd-repeat" placeholder="Neues Passwort wiederholen">
+        </td>
+        <td>
+          <input type="checkbox" onclick="pwdShowRpt()" id="checkPwdRpt" hidden>
+          <h2><label for="checkPwdRpt">&#128065;</label></h2>
           <span class="error"><?php echo $pwdRptLeer;?></span>
           <span class="error"><?php echo $pwdRptErr;?></span>
         </td>
@@ -219,7 +236,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <tr>
         <td></td>
         <td>
-          <button type="submit" name="passwortAendern">Passwort ändern</button>
+          <button type="submit" name="passwortAendern" id="passwortAendern" >Passwort ändern</button>
         </td>
       </tr>
     </table>

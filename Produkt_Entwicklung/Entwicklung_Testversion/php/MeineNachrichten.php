@@ -195,32 +195,28 @@ if ($conn->query($sql) != TRUE) {
           </td>
 			</div>
 		</main>
-    <br>
-    <br>
-    <br>
-    <br>
+
 
   <!--Footer-->
-    <hr class="hr-sodi2">
-  <div class="container-fluid footer-container">
-    <div class="row">
-      <div class="col-lg-12 footer">
-        <div class="footer">
-          <ul>
-            <li>
-              <a href="Impressum_Proband.php">Impressum</a>
-            </li>
-            <li>
-                <a href="Datenschutz_Proband.php">Datenschutz</a>
-            </li>
-            <li>
-              <a href="Kontakt_Proband.php">Kontakt</a>
-            </li>
-          </ul>
-        </div>
+
+    <footer id="sticky-footer" class="py-4 bg-light text-white-50">
+        <div class="container text-center">
+      <!--  <hr class="hr-sodi2"> -->
+
+              <ul>
+                <li>
+                  <a href="Impressum_Proband.php">Impressum</a>
+                </li>
+                <li>
+                    <a href="Datenschutz_Proband.php">Datenschutz</a>
+                </li>
+                <li>
+                  <a href="Kontakt_Proband.php">Kontakt</a>
+                </li>
+              </ul>
+
       </div>
-    </div
-  ></div>
+    </footer>
 
 
 

@@ -1,26 +1,34 @@
-
+/*
 .hr-sodi2{
-	margin-bottom: 0px;
+
 	background-color: maroon ;
-    border: none;
-    height: 2pt;
-    width: 100%;
-	margin-top: 40px;
-}
-
-.footer-container {
-	padding-top: 15px;
-	background-color: #f8f9fa;
+  border: none;
+  height: 2pt;
+  width: 100%;
 
 }
-
-.footer ul {
+*/
+ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     list-style: none;
 }
 
-.footer ul li a {
+ul li a {
     color: maroon;
+}
+#sticky-footer {
+	border-top: 2px maroon solid;
+  flex-shrink: none;
+	height: 5vh;
+	align-items: center;
+	display: flex;
+}
+
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
 }

@@ -130,14 +130,12 @@ if (mysqli_num_rows($result) > 0) {
            <div class="row">
              <div class="col-lg-9 col-md-9 col-sm-6">
                 <details>
-                  <summary class="btn btn btn-info" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> Termin anlegen </summary>
+                  <summary class="btn btn-outline-danger" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> Termin anlegen </summary>
                   <form class="form" action = "terminetest_insert.php" method = "post">
                     <br>
                     <p>
-                    Titel: <input name = "terTitel" type = "text" size = "50" placeholder = "Titel">&nbsp;&nbsp;&nbsp;
-                    <br>
-                    <br>
-                    Beschreibung: <input name="terBeschreibung" type="text" size="50" placeholder="Beschreibung"
+                    Titel: <input name = "terTitel" type = "text" size = "20" placeholder = "Titel">&nbsp;&nbsp;&nbsp;
+                    Beschreibung: <input name="terBeschreibung" type="text" size="30" placeholder="Beschreibung"
                     </p>
                     <p> Datum: <input name = "terDatum" type = "date">&nbsp;&nbsp;&nbsp;
                     Beginn: <input name = "terStart" type = "time">&nbsp;&nbsp;&nbsp;
@@ -147,13 +145,13 @@ if (mysqli_num_rows($result) > 0) {
                     <p><!-- PID: --><input name = "terPID" type = "hidden" value="<?php echo $probID ?>"></p>
                     <p><!-- BID: --><input name = "terBID" type = "hidden" value="<?php echo $betrID ?>"> </p>
                     <p>
-                    <input type = "submit" value = "Termin speichern"></p>
+                    <input class="btn btn-outline-danger" type = "submit" value = "Termin speichern"></p>
                     </form>
                   </details>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-back">
                   <form action="index_betreuer.php" method="post">
-                    <button class="btn btn btn-info" type="submit" value="Zurück">Zurück</button>
+                    <button class="btn btn-outline-danger" type="submit" value="Zurück">Zurück</button>
                   </form>
                 </div>
             </div>
