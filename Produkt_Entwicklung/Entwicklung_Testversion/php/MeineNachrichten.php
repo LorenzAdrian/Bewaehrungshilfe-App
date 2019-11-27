@@ -70,20 +70,13 @@ if ($conn->query($sql) != TRUE) {
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 	<title>Meine Nachrichten</title>
-  <script>
+  <!--<script>
   var elem = document.getElementsByClassName('nav-link');
   elem.addEventListener('click', setzeNachrichtAufGelesen);
   function setzeNachrichtAufGelesen() {
-    <?php
-    $sql = "UPDATE nachricht SET Status='gelesen'
-    WHERE PID = ".$_SESSION['userId']." AND BSender=1";
-
-    if ($conn->query($sql) != TRUE) {
-        echo "Es ist ein Fehler aufgetreten: ".$conn->error;
-    }
-    ?>
+    load('nachrichten_auf_gelesen_setzen.php');
   }
-  </script>
+</script>-->
 
 	</head>
 
