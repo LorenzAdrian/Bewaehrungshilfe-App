@@ -209,28 +209,23 @@ if ($conn->query($sql) != TRUE) {
 
   <!--Footer-->
     <hr class="hr-sodi2">
-<footer id="sticky-footer" class="py-4 bg-light text-white-50">
-  <div class="container text-center">
-    <div class="row">
-      <div class="col-lg-12 footer">
-        <div class="footer">
-          <ul>
-            <li>
-              <a href="Impressum_Proband.php">Impressum</a>
-            </li>
-            <li>
-                <a href="Datenschutz_Proband.php">Datenschutz</a>
-            </li>
-            <li>
-              <a href="Kontakt_Proband.php">Kontakt</a>
-            </li>
-          </ul>
-          </div>
-        </div>
-      </div >
-    </div>
-  </div>
-</footer>
+    <footer id="sticky-footer" class="py-4 bg-light text-white-50">
+      <div class="container text-center">
+
+              <ul>
+                <li>
+                  <a href="Impressum_Proband.php">Impressum</a>
+                </li>
+                <li>
+                    <a href="Datenschutz_Proband.php">Datenschutz</a>
+                </li>
+                <li>
+                  <a href="Kontakt_Proband.php">Kontakt</a>
+                </li>
+              </ul>
+
+      </div>
+    </footer>
 
 
 

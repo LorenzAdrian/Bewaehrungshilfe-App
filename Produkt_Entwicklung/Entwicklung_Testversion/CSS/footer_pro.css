@@ -5,25 +5,23 @@
   border: none;
   height: 2pt;
   width: 100%;
-	margin-top: 170px;
-}
-
-.footer-container {
-	padding-top: 15px;
-	background-color: #f8f9fa;
 
 }
 
-.footer ul {
+
+ul {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     list-style: none;
 }
 
-.footer ul li a {
+ul li a {
     color: maroon;
 }
 #sticky-footer {
   flex-shrink: none;
+	height: 5vh;
+	align-items: center;
+	display: flex;
 }
