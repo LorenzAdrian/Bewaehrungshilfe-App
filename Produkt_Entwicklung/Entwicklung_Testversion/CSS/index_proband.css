@@ -3,13 +3,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Assistant', sans-serif;	
+	
 }
 
 
 body{
-	background: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)  no-repeat center center fixed;
+	background:white /*linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)*/  no-repeat center center fixed;
 	-moz-background-size: cover;
 	background-size: cover;
+	height: 300vh;
 }
 
 
@@ -25,13 +27,13 @@ a:hover{
     padding-left: 2px;
     text-decoration: underline;
     color: darkred ;
-    background: white;
+    background: grey;
 }
 
 .icon {
 	box-sizing: content-box;
 	padding: 8px;
-	background: white;
+	background: #C0C0C0 ;
 	opacity: 0.7;
 	display: flex;
 	justify-content: center;
@@ -42,7 +44,7 @@ a:hover{
 	font-weight:bold;
 	box-sizing: content-box;
 	padding: 10px;
-	background: white;
+	background: #C0C0C0 ;
 	opacity: 0.7;
 	text-align:center;
 }
