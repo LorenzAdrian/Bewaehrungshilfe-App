@@ -202,15 +202,13 @@ if ($conn->query($sql) != TRUE) {
           </td>
 			</div>
 		</main>
-    <br>
-    <br>
-    <br>
-    <br>
+
 
   <!--Footer-->
-    <hr class="hr-sodi2">
+
     <footer id="sticky-footer" class="py-4 bg-light text-white-50">
-      <div class="container text-center">
+        <div class="container text-center">
+      <!--  <hr class="hr-sodi2"> -->
 
               <ul>
                 <li>

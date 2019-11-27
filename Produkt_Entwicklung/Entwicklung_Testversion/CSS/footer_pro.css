@@ -1,14 +1,13 @@
-
+/*
 .hr-sodi2{
-	margin-bottom: 0px;
+
 	background-color: maroon ;
   border: none;
   height: 2pt;
   width: 100%;
 
 }
-
-
+*/
 ul {
     display: flex;
     justify-content: space-around;
@@ -20,8 +19,16 @@ ul li a {
     color: maroon;
 }
 #sticky-footer {
+	border-top: 2px maroon solid;
   flex-shrink: none;
 	height: 5vh;
 	align-items: center;
 	display: flex;
+}
+
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
 }
