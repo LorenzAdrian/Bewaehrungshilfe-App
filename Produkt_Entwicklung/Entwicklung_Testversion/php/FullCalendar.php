@@ -21,8 +21,8 @@
 /* Hier wird dann das div vom Kalendar angepasst*/
     #mycalendar {
 	  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-      font-size: 14px;	
-      margin-top: 50px;
+      font-size: 14px;
+      margin-top: 35px;
       float: right;
       box-sizing: border-box;
       height: auto;
@@ -35,10 +35,10 @@
       border: 2px solid black;
       border-radius: 30px;
     }
-	
+
 	@media screen and (max-width: 600px) {
- 
-    #calendar {   
+
+    #calendar {
 	  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
       font-size: 8px;
       float: right;
@@ -49,7 +49,7 @@
       border-radius: 30px;
 	}
 
-  } 
+  }
 
 
   </style>

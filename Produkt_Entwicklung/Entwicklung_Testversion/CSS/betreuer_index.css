@@ -17,6 +17,7 @@ h2 {
     padding-top: 30px;
 }
 
+
 .footer-container {
     padding-top: 15px;
 }
@@ -35,31 +36,7 @@ h2 {
 background-color:#138496;
 border-color:#117a8b;
 }
-#anlegen_but{
-	border: 1px solid transparent;
-	color: #fff;
-	background-color:#17a2b8;
-	border-color:#17a2b8;
-	padding: .375rem .75rem;
-	font-size: 1rem;
-	line-height: 1.5;
-	border-radius: .25rem;
-}
-#delete_but:hover{
-	color:#fff;
-background-color:#138496;
-border-color:#117a8b;
-}
-#delete_but{
-	border: 1px solid transparent;
-	color: #fff;
-	background-color:#17a2b8;
-	border-color:#17a2b8;
-	padding: .375rem .75rem;
-	font-size: 1rem;
-	line-height: 1.5;
-	border-radius: .25rem;
-}
+
 #sticky-footer {
     flex-shrink: none;
 }

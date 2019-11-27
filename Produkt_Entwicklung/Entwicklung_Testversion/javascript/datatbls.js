@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $('#example').DataTable({
     bInfo: false,
-    scrollY: '28vh',
+    scrollY: '40vh',
     scrollCollapse: false,
     select : true,
     language: {
@@ -60,7 +60,7 @@ $(document).ready(function () {
 
 
 
-  
+
 
     // Console-Ausgabe für Debugging
     console.log(probliste, vorname, nachname, pid, bid);
