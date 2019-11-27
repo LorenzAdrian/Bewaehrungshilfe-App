@@ -2,10 +2,10 @@
 .hr-sodi2{
 	margin-bottom: 0px;
 	background-color: maroon ;
-    border: none;
-    height: 2pt;
-    width: 100%;
-	margin-top: 40px;
+  border: none;
+  height: 2pt;
+  width: 100%;
+	margin-top: 170px;
 }
 
 .footer-container {
@@ -16,11 +16,14 @@
 
 .footer ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     list-style: none;
 }
 
 .footer ul li a {
     color: maroon;
+}
+#sticky-footer {
+  flex-shrink: none;
 }

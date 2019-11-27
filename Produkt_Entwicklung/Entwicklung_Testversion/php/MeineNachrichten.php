@@ -209,7 +209,8 @@ if ($conn->query($sql) != TRUE) {
 
   <!--Footer-->
     <hr class="hr-sodi2">
-  <div class="container-fluid footer-container">
+<footer id="sticky-footer" class="py-4 bg-light text-white-50">
+  <div class="container text-center">
     <div class="row">
       <div class="col-lg-12 footer">
         <div class="footer">
@@ -224,10 +225,12 @@ if ($conn->query($sql) != TRUE) {
               <a href="Kontakt_Proband.php">Kontakt</a>
             </li>
           </ul>
+          </div>
         </div>
-      </div>
-    </div
-  ></div>
+      </div >
+    </div>
+  </div>
+</footer>
 
 
 
