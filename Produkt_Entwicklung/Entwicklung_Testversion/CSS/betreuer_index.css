@@ -31,3 +31,11 @@ h2 {
 .footer ul li a {
     color: black;
 }
+#sticky-footer {
+    flex-shrink: none;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
