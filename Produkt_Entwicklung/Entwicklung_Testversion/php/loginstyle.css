@@ -1,37 +1,34 @@
-header {
-    height: 10vh;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
+body{
+    background: url(../CSS/image/aerial-view-alexanderplatz-architecture-1128408.jpg);
+    background-size: cover;
+    object-fit: cover;
 }
 
-.icon {
-    height: 10vh;
-}
-
-.icon img {
-    height: 10vh;
-}
-
-.icon-text {
-    padding-top: 40px;
-    color: rgb(18, 6, 59);
+header{
+    border-bottom: 2px maroon solid;
 }
 
 .login-container {
-    height: 87vh;
+    height: 90vh;
     width: 100%;
+}
+
+.navbar h4{
+    font-weight: 300;
 }
 
 .login-form {
     max-width: 100%;
-    width: 370px;
-    padding: 5px;
-    margin: auto;
+    width: 320px;
+    text-align: center;
+}
+
+.form-group{
     display: flex;
     text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-control {
@@ -41,8 +38,7 @@ header {
 }
 
 .form-button {
-    display: flex;
-    text-align: center;
+    padding-top: 10px;
 }
 
 

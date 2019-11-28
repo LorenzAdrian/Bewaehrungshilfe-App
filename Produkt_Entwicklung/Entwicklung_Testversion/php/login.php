@@ -28,59 +28,55 @@
 	<link rel="stylesheet" href="loginstyle.css">
 
   <!-- LINK TEST -->
-  <script src="../javascript/test.js"></script>
+  <script src="../javascript/button.js"></script>
 
 	</head>
 
-	<body>
-	<!-- HEADER -->
-	<header>
-      <div class="icon">
-          <img src="../CSS/image/Baericon.jpeg" alt="">
-      </div>
-      <div class="icon-text">
-          <h4 class="mb-5 font-weight-light text-uppercase">Herzlich Willkommen bei SoDi</h4>
-      </div>
-	</header>
+<body>
+<!-- Header -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+    <a class="navbar-brand" href="#">
+      <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;Sodi 4u
+    </a>
+    <h4>Herzlich Willkommen</h4>
+  </nav>
+</header>
 
 	<!-- LOGIN CONTAINER -->
-	<div class="login-container d-flex justify-content-center align-items-center">
-        <form class="login-form text-center">
-          <h5 class="mb-4 font-weight-light text-uppercase">Anmeldung</h5>
-          <div class="form-group">
-          	<div class="form-check">
-              <input type="checkbox" class="form-check-input checkbox" id="betreuer">
-              <label for="remember">Betreuer?</label> 
-          	</div>
-				<input type="text" class="form-control rounded-pill form-control-lg" name="mailuid" id="mailuid"
-				placeholder="Geben Sie bitte Ihren Benutzernamen ein. (Beispiel: MaxMueller)">
-          	</div>
-            <div class="form-group">
-              <table>
-                <tr>
-                  <td>
-                    <input type="password" class="form-control rounded-pill form-control-lg"  name="passwort" id="passwort"
-                    placeholder="Geben Sie bitte Ihr Passwort ein." size="90">
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="form-button">
-              <button type="button" class="btn btn-info rounded-pill btn-block" name="showpassword" id="showpassword" value="Passwort anzeigen">Passwort anzeigen</button> 
-              <button type="button" class="btn btn-danger rounded-pill btn-block" name="login" id="login_btn" value="Login">Einloggen</button>
-            </div>
-            <div class = "message" id = "message"></div>
-        </form>
+	<div class="container-fluid login-container d-flex justify-content-center align-items-center">
+    <div class="row">
+      <div class="col-lg-12 col-md-6">
+    <form class="login-form d-flex text-center">
+      <div class="form-group">
+        <div class="form-check">
+          <h2>Anmeldung</h2>
+          <input type="checkbox" class="form-check-input checkbox" id="betreuer">
+          <label for="remember">Betreuer?</label> 
+          <input type="text" class="form-control rounded-pill form-control-lg" name="mailuid" id="mailuid"
+          placeholder="Geben Sie bitte Ihren Benutzernamen ein.">
+          <input type="password" class="form-control rounded-pill form-control-lg"  name="passwort" id="passwort"
+          placeholder="Geben Sie bitte Ihr Passwort ein." size="90">
+        </div>
+        <div class="form-button">
+          <button type="button" class="btn btn-info rounded-pill btn-block" name="showpassword" id="showpassword" value="Passwort anzeigen">Passwort anzeigen</button> 
+          <button type="button" class="btn btn-danger rounded-pill btn-block" name="login" id="login_btn" value="Login">Einloggen</button>
+        </div>
+        <div class = "message" id = "message"></div>
+      </div>
+    </form>
+    </div>
+    </div>
 	</div>
 
 	<!-- FOOTER -->
  	<footer id="sticky-footer" class="py-2 bg-dark text-white-50">
-        <div class="container footer-container">
-          <small>Datenschutz</small>
-          <small>Impressum</small>
-          <small>Kontakt</small>
-        </div>
-    </footer>
+    <div class="container footer-container">
+      <small>Datenschutz</small>
+      <small>Impressum</small>
+      <small>Kontakt</small>
+    </div>
+  </footer>
 
 </body>
 </html>
