@@ -1,8 +1,8 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
 
 
   // Show password Button
-  $("#showpassword").on('click', function() {
+  $("#showpassword").on('click', function () {
 
     var pass = $("#passwort");
     var fieldtype = pass.attr('type');

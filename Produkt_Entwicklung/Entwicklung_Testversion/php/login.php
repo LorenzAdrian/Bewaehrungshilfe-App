@@ -46,11 +46,11 @@
 	<!-- LOGIN CONTAINER -->
 	<div class="login-container d-flex justify-content-center align-items-center">
         <form class="login-form text-center">
-          <h5 class="mb-5 font-weight-light text-uppercase">Anmeldung</h5>
+          <h5 class="mb-4 font-weight-light text-uppercase">Anmeldung</h5>
           <div class="form-group">
           	<div class="form-check">
-              <label for="remember">Betreuer?</label>
               <input type="checkbox" class="form-check-input checkbox" id="betreuer">
+              <label for="remember">Betreuer?</label> 
           	</div>
 				<input type="text" class="form-control rounded-pill form-control-lg" name="mailuid" id="mailuid"
 				placeholder="Geben Sie bitte Ihren Benutzernamen ein. (Beispiel: MaxMueller)">
@@ -65,9 +65,9 @@
                 </tr>
               </table>
             </div>
-            <div class="form-check">
+            <div class="form-button">
               <button type="button" class="btn btn-info rounded-pill btn-block" name="showpassword" id="showpassword" value="Passwort anzeigen">Passwort anzeigen</button> 
-              <button type="button" class="btn btn-info rounded-pill btn-block" name="login" id="login_btn" value="Login">Einloggen</button>
+              <button type="button" class="btn btn-danger rounded-pill btn-block" name="login" id="login_btn" value="Login">Einloggen</button>
             </div>
             <div class = "message" id = "message"></div>
         </form>

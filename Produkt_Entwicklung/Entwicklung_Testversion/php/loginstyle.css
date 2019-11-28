@@ -39,6 +39,8 @@ header {
     width: 370px;
     padding: 5px;
     margin: auto;
+    display: flex;
+    text-align: center;
 }
 
 .form-control {
@@ -47,6 +49,10 @@ header {
     font-weight: 500;
 }
 
+.form-button {
+    display: flex;
+    text-align: center;
+}
 
 input[type="checkbox"] {
     margin-left: 80px;
