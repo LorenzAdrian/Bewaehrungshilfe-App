@@ -19,9 +19,11 @@ header{
 
 .login-form {
     max-width: 100%;
-    width: 320px;
+    width: 350px;
     text-align: center;
+    justify-content: center;
 }
+
 
 .form-group{
     display: flex;
@@ -29,6 +31,11 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.form-check h2{
+    color: white;
+    font-weight: 300;
 }
 
 .form-control {
@@ -54,3 +61,4 @@ header{
     display: flex;
     justify-content: space-around;
 }
+

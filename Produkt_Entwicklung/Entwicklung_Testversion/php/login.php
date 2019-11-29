@@ -46,17 +46,17 @@
 	<!-- LOGIN CONTAINER -->
 	<div class="container-fluid login-container d-flex justify-content-center align-items-center">
     <div class="row">
-      <div class="col-lg-12 col-md-6">
+      <div class="col-lg-12 col-md-12">
     <form class="login-form d-flex text-center">
       <div class="form-group">
         <div class="form-check">
           <h2>Anmeldung</h2>
           <input type="checkbox" class="form-check-input checkbox" id="betreuer">
           <label for="remember">Betreuer?</label> 
-          <input type="text" class="form-control rounded-pill form-control-lg" name="mailuid" id="mailuid"
+          <input type="text" class="form-control rounded-pill form-control-md" name="mailuid" id="mailuid"
           placeholder="Geben Sie bitte Ihren Benutzernamen ein.">
-          <input type="password" class="form-control rounded-pill form-control-lg"  name="passwort" id="passwort"
-          placeholder="Geben Sie bitte Ihr Passwort ein." size="90">
+          <input type="password" class="form-control rounded-pill form-control-md"  name="passwort" id="passwort"
+          placeholder="Geben Sie bitte Ihr Passwort ein." size="100">
         </div>
         <div class="form-button">
           <button type="button" class="btn btn-info rounded-pill btn-block" name="showpassword" id="showpassword" value="Passwort anzeigen">Passwort anzeigen</button> 
@@ -68,6 +68,7 @@
     </div>
     </div>
 	</div>
+  
 
 	<!-- FOOTER -->
  	<footer id="sticky-footer" class="py-2 bg-dark text-white-50">
