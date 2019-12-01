@@ -1,13 +1,3 @@
-/*
-.hr-sodi2{
-
-	background-color: maroon ;
-  border: none;
-  height: 2pt;
-  width: 100%;
-
-}
-*/
 ul {
     display: flex;
     justify-content: space-around;
@@ -18,9 +8,15 @@ ul {
 ul li a {
     color: maroon;
 }
+
+ul li a:hover {
+    color: rgba(128, 100, 0, 1);
+	text-decoration: underline;  
+ }
+
 #sticky-footer {
 	border-top: 2px maroon solid;
-  flex-shrink: none;
+	flex-shrink: none;
 	height: 5vh;
 	align-items: center;
 	display: flex;
