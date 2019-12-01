@@ -34,8 +34,8 @@ if(isset($_POST['but_logout'])){
 
 	<!--- Pfad zur style.css--------------------------->
     <link rel="stylesheet" href="../CSS/index_proband.css">
-<link rel="stylesheet" href="../CSS/header_prob.css"> 
-		<link rel="stylesheet" href="../CSS/footer_pro.css">
+	<link rel="stylesheet" href="../CSS/header_prob.css"> 
+	<link rel="stylesheet" href="../CSS/footer_pro.css">
 <!--	<link rel="stylesheet" href="../CSS/footer.css">-->
     <!--Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700&display=swap"  rel="stylesheet">
@@ -46,7 +46,9 @@ if(isset($_POST['but_logout'])){
 
 </head>
 
-
+<body>
+<div class="wrapper"> 
+	<div class="content">
 
 <nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
    
@@ -116,104 +118,88 @@ if(isset($_POST['but_logout'])){
 	</div>
 <!--Links zu den anderen Seiten-->	
 	<div class="row">
-	
-		<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3">
+
+		<div class="col-0 col-sm-1 col-md-3 col-lg-3">
 		</div>
-		
-		<div class="col-xs-6 col-sm-5 col-md-3 col-lg-3">
+	
+		<div class="col-6 col-sm-5 col-md-3 col-lg-3">
      		<a href="MeineNachrichten.php">
 				<div class="icon">
-					<i class="fa fa-envelope" style="font-size:80px"></i></div>
+					<i class="fa fa-envelope " ></i></div>
+					
 				<div class="name">Nachrichten</div>
 			</a>
 		</div>
 		
-		<div class="col-xs-6 col-sm-5 col-md-3 col-lg-3">
+		<div class="col-6 col-sm-5 col-md-3 col-lg-3">
 			<a href="termine_proband.php">
 				<div class="icon">
-					<i class="fa fa-calendar" style="font-size:80px"></i></div>
+					<i class="fa fa-calendar"></i></div>
 				<div class="name">Termine</div>
 			</a>
 		</div>
 	
-		<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3">
+		<div class="col-0 col-sm-1 col-md-3 col-lg-3">
 		</div>
 	
 	</div>
 	
 	<div class="row">
 	
-		<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3">
+		<div class="col-0 col-sm-1 col-md-3 col-lg-3">
 		</div>
-
-		<div class="col-xs-6  col-sm-5 col-md-3 col-lg-3">
+	
+		<div class="col-6 col-sm-5 col-md-3 col-lg-3">
 			<a href="Informationen.php">
 				<div class="icon">
-					<i class="fa fa-info-circle" style="font-size:80px"></i></div>
+					<i class="fa fa-info-circle"></i></div>
 				<div class="name">Informationen</div>
 			</a>
 		</div>
    
-		<div class="col-xs-6  col-sm-5 col-md-3 col-lg-3">
+		<div class="col-6 col-sm-5 col-md-3 col-lg-3">
 			<a href="Dokumente.php">
 				<div class="icon">
-					<i class="fa fa-file" style="font-size:80px"></i></div>
+					<i class="fa fa-file"></i></div>
 				<div class="name">Dokumente</div>
 			</a>
 		</div>
-	
-		<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3">
+
+		<div class="col-0 col-sm-1 col-md-3 col-lg-3">
 		</div>
-	
+
 	</div>
 
 	<div class="row">
-
-		<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3">
+	
+		<div class="col-0 col-sm-1 col-md-3 col-lg-3">
 		</div>
 
-		<div class="col-xs-6  col-sm-5 col-md-3 col-lg-3">
+		<div class="col-6 col-sm-5 col-md-3 col-lg-3">
       		<a href="Notfall.php">
 				<div class="icon">
-					<i class="fa fa-ambulance" style="font-size:80px"></i></div>
+					<i class="fa fa-ambulance " ></i></div>
 				<div class="name">Notfall</div>
 			</a>
 		</div>
 		
-		<div class="col-xs-6 col-sm-5 col-md-3 col-lg-3">
+		<div class="col-6 col-sm-5 col-md-3 col-lg-3">
 	 		<a href="To_Do_Liste.php">
 				<div class="icon">
-					<i class="fa fa-list-alt" style="font-size:80px"></i></div>
+					<i class="fa fa-list-alt " ></i></div>
 				<div class="name">Leitfaden</div>
 			</a>
 		</div>
-		
-		<div class="col-xs-0 col-sm-1 col-md-3 col-lg-3">
+	
+		<div class="col-0 col-sm-1 col-md-3 col-lg-3">
 		</div>
-
+	
   </div> 
   </div>
-   <!--
-  <footer>
-<ul class="footer-nav">
-<li>
-    <a href="Datenschutz_Proband.php" class="footer-datenschutz">Datenschutz</a>
-</li>
-
-<li>
-        <a href="Impressum_Proband.php" class="footer-impressum">Impressum</a>
-</li>
-
-<li>
-        <a href="Kontakt_Proband.php" class="footer-kontakt">Kontakt</a>
-</li>
-
-</ul>
-</footer>
--->
-
- <!--Footer-->
-   
+   </div>
+ 
+<div class="footer"> 
+ 
        <footer id="sticky-footer" class="py-4 bg-light text-white-50">
       <div class="container text-center">
 
@@ -230,7 +216,9 @@ if(isset($_POST['but_logout'])){
               </ul>
 
       </div>
-    </footer>
+    </footer></div>
+	
+</div>
   
 </body>
 
