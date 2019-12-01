@@ -33,6 +33,14 @@ if(isset($_POST['signup-submit'])) {
 			exit();
 		}
 	}
+	else if ($rolle=="admin") {
+		if (empty($username) || empty($email) || empty($passwort) || empty($passwortRepeat) 
+					|| empty($vorname) || empty($nachname) || empty($telnr) || empty($zimmernr) || empty($sz) 
+					|| empty($ag)){
+			header("Location: signup.php?error=emptyfields");
+			exit();
+		}
+	}
 	elseif ($rolle=='proband'){
 		if (empty($username) || empty($email) || empty($passwort) || empty($passwortRepeat) 
 					|| empty($vorname) || empty($nachname) || empty($telnr) || empty($az) || empty($ende) 
@@ -92,6 +100,38 @@ if(isset($_POST['signup-submit'])) {
 				//Vetrtretung ist NULL Feld, deshalb extra Check.
 				if(!empty($vertretung)){ 
 					$sql = "INSERT INTO betreuer(vorname, nachname, email, username, passwort, telnr, 
+					zimmernr, stellenzeichen, vertretung, agid) VALUES (?,?,?,?,?,?,?,?,?,?)";
+				}
+				$stmt = mysqli_stmt_init($conn);
+				if (!mysqli_stmt_prepare($stmt, $sql)) {
+					//trigger_error(mysqli_error($conn), E_USER_ERROR);
+					header("Location: signup.php?error=sqlerror");
+					exit();
+				}
+				else {
+					//Paswort wird gehasht (! Hash != Verschlüsselung).
+					$hashedPwd = password_hash($passwort, PASSWORD_DEFAULT);
+					mysqli_stmt_bind_param($stmt, "sssssissi", $vorname, $nachname, $email, $username, $hashedPwd, 
+					$telnr, $zimmernr, $sz, $ag);
+					
+					//Vetrtretung ist NULL Feld, deshalb extra Check.
+					if (!empty($vertretung)){ 
+						mysqli_stmt_bind_param($stmt, "sssssissii", $vorname, $nachname, $email, $username, $hashedPwd, 
+								$telnr, $zimmernr, $sz, $vertretung, $ag);
+					}
+					mysqli_stmt_execute($stmt);
+					header("Location: login.php?signup=success".$username);
+					exit();
+				}
+			}
+			//Eintragen in die Datenbank: Admin
+			elseif ($rolle=="admin"){
+				$sql = "INSERT INTO admin(vorname, nachname, email, username, passwort, telnr, 
+					zimmernr, stellenzeichen, agid) VALUES (?,?,?,?,?,?,?,?,?)";
+					
+				//Vetrtretung ist NULL Feld, deshalb extra Check.
+				if(!empty($vertretung)){ 
+					$sql = "INSERT INTO admin(vorname, nachname, email, username, passwort, telnr, 
 					zimmernr, stellenzeichen, vertretung, agid) VALUES (?,?,?,?,?,?,?,?,?,?)";
 				}
 				$stmt = mysqli_stmt_init($conn);

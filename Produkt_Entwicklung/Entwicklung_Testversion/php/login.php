@@ -52,7 +52,9 @@
         <div class="form-check">
           <h2>Anmeldung</h2>
           <input type="checkbox" class="form-check-input checkbox" id="betreuer">
-          <label for="remember">Betreuer?</label> 
+          <label for="remember">Betreuer?</label> <br>
+		  <input type="checkbox" class="form-check-input checkbox" id="admin">
+          <label for="remember">Admin?</label> 
           <input type="text" class="form-control rounded-pill form-control-md" name="mailuid" id="mailuid"
           placeholder="Geben Sie bitte Ihren Benutzernamen ein.">
           <input type="password" class="form-control rounded-pill form-control-md"  name="passwort" id="passwort"
