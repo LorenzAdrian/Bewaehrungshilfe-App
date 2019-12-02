@@ -24,13 +24,17 @@ if(isset($_POST['but_logout'])){
 
 if($_SESSION['rolle'] == 'proband') {
 	$personenID = 'PID';
+  $sender = 'betreuer';
+  $bsender = 1;
 }
 else {
 	$personenID = 'BID';
+  $sender ='empfaenger';
+  $bsender = 0;
 }
 
 $event_sql =
-"SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, N.dateiname, B.Vorname AS vorname_betreuer, B.Nachname AS nachname_betreuer FROM nachricht AS N INNER JOIN betreuer AS B ON N.BID = B.BID WHERE N.PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
+"SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, N.dateiname, S.Vorname AS vorname_sender, S.Nachname AS nachname_sender FROM nachricht AS N INNER JOIN ".$sender." AS S ON N.BID = S.BID WHERE N.".$personenID." = ".$_SESSION['userId']." ORDER BY Zeitstempel";
 
 //Mit mysqli_query wird die SQL-Abfrage ausgeführt. Die Methode liefert ein Objekt der Klasse mysqli_result zurück. $result enthält die Referenz auf dieses Objekt.
 $result = mysqli_query($conn, $event_sql);

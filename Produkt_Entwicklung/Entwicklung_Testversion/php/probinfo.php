@@ -44,6 +44,7 @@ if (mysqli_num_rows($result) > 0) {
     <title>Proband: Nachrichten und Termine</title>
     <!-- STYLESHEET CSS -->
     <link rel="stylesheet" href="../CSS/probinfo.css" >
+    <link rel="stylesheet" href="../CSS/meineNachrichten.css">
     <!-- STYLESHEET SIDEBAR -->
     <link rel="stylesheet" href="../CSS/sidebar.css">
     <!-- SCRIPT SIDEBAR -->

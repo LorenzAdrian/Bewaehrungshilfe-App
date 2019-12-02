@@ -10,21 +10,21 @@ while ($dsatz = mysqli_fetch_assoc($result))
   //Wenn der Betreuer der Sender der Nachricht und die Nachricht neu ist.
     if($dsatz['BSender'] == 1 && $dsatz['Status'] == 'neu')
       {
-        echo '<table class="betreuer nachricht neu"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
-            .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
+        echo '<table class="sender nachricht neu"><tr class="sendername"><td>'.$dsatz['vorname_sender'].' '.$dsatz['nachname_sender'].'</td></tr><tr class="nachricht"><td>'
+            .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit sender"><td>'
             .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
         }
       //Wenn der Betreuer der Sender der schon gelesenen Nachricht ist.
       elseif($dsatz['BSender'] == 1)
         {
-          echo '<table class="betreuer nachricht"><tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr><tr class="nachricht"><td>'
-              .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit betreuer"><td>'
+          echo '<table class="sender nachricht"><tr class="sendername"><td>'.$dsatz['vorname_sender'].' '.$dsatz['nachname_sender'].'</td></tr><tr class="nachricht"><td>'
+              .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit sender"><td>'
               .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
         }
       //Wenn die Nachricht vom Probanden stammt.
       else
         {
-          echo '<table class="proband nachricht"><tr class="nachricht"><td>'.$dsatz['Text'].'</td></tr><tr class="datumuhrzeit proband"><td>'
+          echo '<table class="empfaenger nachricht"><tr class="nachricht"><td>'.$dsatz['Text'].'</td></tr><tr class="datumuhrzeit empfaenger"><td>'
           .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
         }
     }
@@ -35,26 +35,26 @@ while ($dsatz = mysqli_fetch_assoc($result))
     //file_put_contents($filename,$dsatz['image']);
       if($dsatz['BSender'] == 1 && $dsatz['Status'] == 'neu')
         {
-          echo '<table class="betreuer nachricht neu">
-          <tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr>
+          echo '<table class="sender nachricht neu">
+          <tr class="sendername"><td>'.$dsatz['vorname_sender'].' '.$dsatz['nachname_sender'].'</td></tr>
           <tr class="nachricht"><td><a href="datei_download.php?nid='.$dsatz['NID'].'" download="'.$dsatz['dateiname'].'">'.$dsatz['dateiname'].'</a></td></tr>
-          <tr class="datumuhrzeit betreuer"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
+          <tr class="datumuhrzeit sender"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
           }
         //Wenn der Betreuer der Sender der schon gelesenen Nachricht ist.
         elseif($dsatz['BSender'] == 1)
           {
-            echo '<table class="betreuer nachricht">
-            <tr class="betreuername"><td>'.$dsatz['vorname_betreuer'].' '.$dsatz['nachname_betreuer'].'</td></tr>
+            echo '<table class="sender nachricht">
+            <tr class="sendername"><td>'.$dsatz['vorname_sender'].' '.$dsatz['nachname_sender'].'</td></tr>
             <tr class="nachricht"><td><a href="datei_download.php?nid='.$dsatz['NID'].'" download="'.$dsatz['dateiname'].'">'.$dsatz['dateiname'].'</a></td></tr>
-            <tr class="datumuhrzeit betreuer"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr>
+            <tr class="datumuhrzeit sender"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr>
             </table>';
           }
         //Wenn die Nachricht vom Probanden stammt.
         else
           {
-            echo '<table class="proband nachricht">
+            echo '<table class="empfaenger nachricht">
             <tr class="nachricht"><td><a href="datei_download.php?nid='.$dsatz['NID'].'" download="'.$dsatz['dateiname'].'">'.$dsatz['dateiname'].'</a></td></tr>
-            <tr class="datumuhrzeit proband"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr>
+            <tr class="datumuhrzeit empfaenger"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr>
             </table>';
 
           }

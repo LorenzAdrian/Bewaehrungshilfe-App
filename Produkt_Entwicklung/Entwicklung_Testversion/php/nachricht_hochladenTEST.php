@@ -1,4 +1,5 @@
 <?php
+//Diese Datei kann gelöscht werden.
 /*Diese Datei dient dem Test des Eintrags von Nachrichten in die Datenbank. Sie arbeitet mit statischen Daten.
 */
 

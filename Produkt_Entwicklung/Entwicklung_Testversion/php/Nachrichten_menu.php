@@ -1,7 +1,7 @@
 ﻿<?php
 
 // Die Nachrichten werden ausgelesen
-include '../database/dbh.inc.php';
+require '../database/dbh.inc.php';
 if(!isset($_SESSION))
 {
       session_start();
