@@ -1,35 +1,35 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
+body {
   height: 90vh;
 }
-header{
+
+header {
   border-bottom: 2px solid maroon;
 }
 
 .hallo-col h2 {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 .hallo-col h1,
 h2 {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .table-container {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
-.btn-container{
+.btn-container {
   height: 7vh;
-
 }
 
-.buttonform{
+.buttonform {
   display: flex;
   align-items: flex-end;
   float: right;
@@ -38,7 +38,7 @@ h2 {
 
 
 .footer-container {
-    display: flex;
-    justify-content: space-around;
-    height:auto
+  display: flex;
+  justify-content: space-around;
+  height: auto
 }
