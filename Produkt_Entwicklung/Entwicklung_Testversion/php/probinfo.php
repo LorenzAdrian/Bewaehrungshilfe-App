@@ -92,6 +92,7 @@ if (mysqli_num_rows($result) > 0) {
   </nav>
 
 </header>
+
     <!-- Hier wird der Inhalt der Nachrichten-Sidebar erstellt -->
     <div class="container">
       <div class="row">
@@ -102,7 +103,7 @@ if (mysqli_num_rows($result) > 0) {
           <form  id="msgform" method="POST">
 				  <span>Nachrichten</span>
 				  <br>
-				  <textarea name="textarea1" rows="5" cols="50" value=""></textarea>
+				  <textarea name="textarea1" rows="5" cols="40" value=""></textarea>
 				  <input name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
 				  <br>
 				  <button type="submit" name="signup-submit">Abschicken</button>
