@@ -29,17 +29,15 @@ else {
 $event_sql =
 "SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, N.dateiname, B.Vorname AS vorname_betreuer, B.Nachname AS nachname_betreuer FROM nachricht AS N INNER JOIN betreuer AS B ON N.BID = B.BID WHERE N.PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
 
-//$event_imgsql = "SELECT dateiname FROM fileupload WHERE PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
-
 //Mit mysqli_query wird die SQL-Abfrage ausgeführt. Die Methode liefert ein Objekt der Klasse mysqli_result zurück. $result enthält die Referenz auf dieses Objekt.
-/*$result = mysqli_query($conn, $event_sql);
+$result = mysqli_query($conn, $event_sql);
 
+//Jetzt wird der Status der Nachrichten auf 'gelesen' gesetzt
 $sql = "UPDATE nachricht SET Status='gelesen'
 WHERE PID = ".$_SESSION['userId']." AND BSender=1";
-
 if ($conn->query($sql) != TRUE) {
     echo "Es ist ein Fehler aufgetreten: ".$conn->error;
-}*/
+}
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +58,7 @@ if ($conn->query($sql) != TRUE) {
     <!-- Stylesheet für Darstellung der Nachrichten -->
     <link rel="stylesheet" href="../CSS/meineNachrichten.css">
 
-	<script src="../javascript/jquery-3.4.1.js"></script>
+  	<script src="../javascript/jquery-3.4.1.js"></script>
     <script src="../javascript/message.js"></script>
 
  <!--Bootstrap Layout -->
@@ -70,13 +68,6 @@ if ($conn->query($sql) != TRUE) {
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 	<title>Meine Nachrichten</title>
-  <!--<script>
-  var elem = document.getElementsByClassName('nav-link');
-  elem.addEventListener('click', setzeNachrichtAufGelesen);
-  function setzeNachrichtAufGelesen() {
-    load('nachrichten_auf_gelesen_setzen.php');
-  }
-</script>-->
 
 	</head>
 
