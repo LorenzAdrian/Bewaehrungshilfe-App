@@ -30,6 +30,8 @@
   <!-- LINK TEST -->
   <script src="../javascript/button.js"></script>
 
+  <title>Startseite</title>
+
 	</head>
 
 <body>
