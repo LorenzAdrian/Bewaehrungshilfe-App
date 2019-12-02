@@ -6,6 +6,9 @@ $(document).ready(function(){
 		if ($("#betreuer").prop("checked")) {
 			rolle = "betreuer";
 		}
+		else if ($("#admin").prop("checked")) {
+			rolle = "admin";
+		}
 		else {
 			rolle = "proband";
 		}
@@ -23,6 +26,9 @@ $(document).ready(function(){
               if(response == 1){
 				         if (rolle == 'betreuer'){
 					         window.location = "../php/index_betreuer.php"; //Link zur Startseite muss hier rein!
+				          }
+						   else if (rolle == 'admin'){
+					         window.location = "../php/index_admin.php"; //Link zur Startseite muss hier rein!
 				          }
 				          else if (rolle == 'proband'){
 					          window.location = "../php/index_proband.php"; //Link zur Startseite muss hier rein!

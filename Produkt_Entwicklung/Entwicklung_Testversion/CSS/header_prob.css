@@ -22,6 +22,8 @@
 
 .navbar-sodi .navbar-nav .nav-link:hover, .navbar-sodi .navbar-nav .nav-link:focus {
   color: rgba(128, 100, 0, 1);
+ text-decoration: underline;  
+ /*  font-weight: bold;*/
 }
 
 .navbar-sodi .navbar-nav .nav-link.disabled {
@@ -33,6 +35,7 @@
 .navbar-sodi .navbar-nav .nav-link.show,
 .navbar-sodi .navbar-nav .nav-link.active {
   color: rgba(128, 100, 0, 1);
+  font-weight: bold;
 }
 
 .navbar-sodi .navbar-toggler {

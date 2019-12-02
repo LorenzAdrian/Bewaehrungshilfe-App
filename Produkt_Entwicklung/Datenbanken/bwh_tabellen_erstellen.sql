@@ -78,3 +78,18 @@ CREATE TABLE nachricht(
 	FOREIGN KEY(BID) REFERENCES Betreuer(BID),
 	FOREIGN KEY(PID) REFERENCES Proband(PID)
 );
+CREATE TABLE admin(
+	ADID int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	Vorname varchar(30) NOT NULL,
+	Nachname varchar(30) NOT NULL,
+	Username varchar(30) NOT NULL UNIQUE,
+	Passwort varchar(100) NOT NULL,
+	Email varchar(30) NOT NULL UNIQUE,
+	TelNr varchar(20) NOT NULL UNIQUE,
+	Stellenzeichen varchar(30),
+	Zimmernr varchar(10) NOT NULL,
+	Vertretung int(30) NULL,
+  AGID int(30) NOT NULL,
+	FOREIGN KEY(Vertretung) REFERENCES Betreuer(ADID),
+  FOREIGN KEY(AGID) REFERENCES Arbeitsgruppe(AGID)
+);

@@ -8,7 +8,10 @@ $rolle;
 if($_POST['rolle']=='betreuer') {
 	$rolle = 'betreuer';
 }
-elseif($_POST['rolle']=='proband') {
+else if($_POST['rolle']=='admin') {
+	$rolle = 'admin';
+}
+else if($_POST['rolle']=='proband') {
 	$rolle = 'proband';
 }
 $mailuid = mysqli_real_escape_string($conn,$_POST['mailuid']);
@@ -42,7 +45,10 @@ else {
 			if ($rolle == 'betreuer'){
 				$_SESSION['userId'] = $row['BID'];
 			}
-			elseif ($rolle == 'proband') {
+			else if ($rolle == 'admin'){
+				$_SESSION['userId'] = $row['ADID'];
+			}
+			else if ($rolle == 'proband') {
 				$_SESSION['userId'] = $row['PID'];
 			}
 			$_SESSION['username'] = $row['Username'];

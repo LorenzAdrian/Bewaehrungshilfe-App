@@ -40,7 +40,8 @@ if(isset($_POST['but_logout'])){
 
 
 <body>
-
+<div class="wrapper"> 
+	<div class="content">
 
 <nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
    
@@ -97,7 +98,7 @@ if(isset($_POST['but_logout'])){
 
   <hr class="hr-sodi"> <!-- Gehört zum Header -->
 
-<div class="container-fluid"> 
+<div class="container-fluid mb-xl-5 pb-lg-5"> 
 
 	<div class="row">
 			<div class="col-12 text-center">
@@ -119,11 +120,14 @@ if(isset($_POST['but_logout'])){
 	</div>
 	
 </div>
+</div>
+<!--
+<div class="container platzhanlter"> <p class="platzhalter">hallo </p> <br><br><br><br> <br><br> <br><br><p class="platzhalter">hallo </p></div>
 
-  <!--Footer-->
-    
- <footer id="sticky-footer" class="py-4 bg-light text-white-50">
-      <div class="container text-center">
+  Footer-->
+<div class="push">
+ <footer id="sticky-footer" class="footer mt-footer2 py-4 bg-light text-white-50">
+      <div class="pt-2 container text-center">
 
               <ul>
                 <li>
@@ -138,7 +142,9 @@ if(isset($_POST['but_logout'])){
               </ul>
 
       </div>
-    </footer>
+    </footer> </div>
+	
+</div>
 	</body>
 
 </html>

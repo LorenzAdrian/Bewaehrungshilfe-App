@@ -1,11 +1,11 @@
  <?php
  //Check, ob die vorherige Seite bearbeitet wurde.
-/*if(isset($_POST['signupcheck-submit'])) {
-	$rolle = $_POST['rolle'];*/
+if(isset($_POST['signupcheck-submit'])) {
+	$rolle = $_POST['rolle'];
 
 	//Angezeigte Felder sind abhängig von der Rolle.
 
-/*	if ($rolle == 'betreuer') {
+	if ($rolle == 'betreuer') {
 		echo '<main>
 		<h1>Registrierung</h1>
 		<br>
@@ -43,9 +43,47 @@
 		</form>
 		</main>';
 	}
+	else if ($rolle == 'admin') {
+		echo '<main>
+		<h1>Registrierung</h1>
+		<br>
+		<h3>Admin</h3>
+		<form  action="signup.inc.php" method="POST">
+
+			<input type="hidden" name="rolle" value="admin">
+			<br>
+
+			<input type="text" name="uid" placeholder="Username">
+			<br>
+			<input type="text" name="mail" placeholder="E-mail">
+			<br>
+			<input type="password" name="pwd" placeholder="Passwort">
+			<br>
+			<input type="password" name="pwd-repeat" placeholder="Passwort bestätigen">
+			<br>
+			<br>
+			<input type="text" name="vorname" placeholder="Vorname">
+			<br>
+			<input type="text" name="nachname" placeholder="Nachname">
+			<br>
+			<input type="number" name="telnr" placeholder="Telefonnummer">
+			<br>
+			<input type="text" name="zimmernr" placeholder="Zimmernummer">
+			<br>
+			<input type="text" name="sz" placeholder="Stellenzeichen">
+			<br>
+			<input type="number" name="vertretung" placeholder="Vertretungs-ID">
+			<br>
+			<input type="number" name="ag" placeholder="Arbeitsgruppen-ID">
+			<br>
+			<br>
+			<button type="submit" name="signup-submit">Registrieren</button>
+		</form>
+		</main>';
+	}
 
 	//elseif ($rolle == 'proband') {
-else if ($rolle != 'betreuer'){*/
+else if ($rolle == 'proband'){
     echo '<main>
 		<h1>Registrierung</h1>
 		<br>
@@ -80,13 +118,13 @@ else if ($rolle != 'betreuer'){*/
 			<button type="submit" name="signup-submit">Registrieren</button>
 		</form>
 		</main>';
-//	}
+	}
 
 	//Bei fehlender Auswahl (Betreuer/Proband) wird Auswahlseite (signupcheck.php) neu geladen.
 	//Es gibt eine Fehlermeldung (noch: JavaScript)
-/*	else {
+	else {
 		echo '<script>alert("Wählen Sie bitte eine der Optionen");</script>
 		<meta http-equiv="refresh" content="0;URL=signupcheck.php" />';
-	}*/
-//}
+	}
+}
 ?>

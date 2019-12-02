@@ -48,15 +48,16 @@ if ($conn->query($sql) != TRUE) {
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!--- Pfad zu den CSS Dateien--------------------------->
-		<link rel="stylesheet" href="../CSS/style.css">
 		<link rel="stylesheet" href="../CSS/header_prob.css">
-			<link rel="stylesheet" href="../CSS/footer_pro.css">
+		<link rel="stylesheet" href="../CSS/footer_pro.css">
+		<link rel="stylesheet" href="../CSS/meineNachrichtenPage.css">	
+		<!-- Stylesheet für Darstellung der Nachrichten -->
+		<link rel="stylesheet" href="../CSS/meineNachrichten.css">
 		<!--Schriftart aus google fonts------------------>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap">
 		<!-- Stylesheet für Icons-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Stylesheet für Darstellung der Nachrichten -->
-    <link rel="stylesheet" href="../CSS/meineNachrichten.css">
+
 
   	<script src="../javascript/jquery-3.4.1.js"></script>
     <script src="../javascript/message.js"></script>
@@ -72,6 +73,7 @@ if ($conn->query($sql) != TRUE) {
 	</head>
 
 	<body>
+<div id="seite">
 
 <nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
 
@@ -128,7 +130,7 @@ if ($conn->query($sql) != TRUE) {
 
   <hr class="hr-sodi"> <!-- Gehört zum Header -->
 
-
+	<div id="inhalt">
 			   <h4>Meine Nachrichten</h4>
 
 
@@ -187,12 +189,11 @@ if ($conn->query($sql) != TRUE) {
 			</div>
 		</main>
 
-
+    <?php mysqli_close($conn); ?> </div>
+	
   <!--Footer-->
-
-    <footer id="sticky-footer" class="py-4 bg-light text-white-50">
-        <div class="container text-center">
-      <!--  <hr class="hr-sodi2"> -->
+ <footer id="sticky-footer" class="mb-0 mt-footer py-4 bg-light text-white-50">
+      <div class="pt-2 container text-center">
 
               <ul>
                 <li>
@@ -208,9 +209,8 @@ if ($conn->query($sql) != TRUE) {
 
       </div>
     </footer>
-
-
-
-    <?php mysqli_close($conn); ?>
+	
+	</div>
+	
 	</body>
 </html>

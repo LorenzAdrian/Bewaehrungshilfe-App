@@ -84,36 +84,12 @@ if(isset($_POST['but_logout'])){
     <div class="row hallo-row">
       <div class="col-lg-12 hallo-col">
         <h2>Guten Tag <?php echo $_SESSION["username"]; ?> </h2>
-        <p>Zum Verwalten klicken Sie bitte auf den gewünschten Probanden</p>
+
       </div>
     </div>
   </div>
 
-  <!--Table und Fullcalender -->
-  <div class="container table-container">
-    <div class="row">
-      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-col">
-        <?php include 'dataTbl.php';?>
-        <br>
-        <form class="buttonform" action="Signup.php" method="post">
-          <input class="btn btn-outline-danger" type="submit" name="signupcheck-submit" value="Proband anlegen">
-          <!--<input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" > -->
-        </form>
-      </div>
-      
-    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-          <?php include 'FullCalendar.php';?>
-      </div>
-    </div>
-  </div>
-  <div class="container btn-container">
-    <div class="row btn-row">
-      <div class="col-lg-6">
-      
-    </div>
-  </div>
-</div>
-
+ 
    <!--Footer-->
       <footer id="sticky-footer" class="py-2 bg-dark text-white-50">
         <div class="container footer-container">

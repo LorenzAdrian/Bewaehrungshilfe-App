@@ -1,9 +1,9 @@
 $(document).ready(function () {
   $('#example').DataTable({
     bInfo: false,
-    scrollY: '40vh',
+    scrollY: '50vh',
     scrollCollapse: false,
-    select : true,
+    select: true,
     language: {
       search: "Suchen:"
     },
