@@ -4,9 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 90vh;
-}
+body {}
 
 header {
   border-bottom: 2px solid maroon;
@@ -35,10 +33,15 @@ h2 {
   float: right;
 }
 
-
+#sticky-footer {
+  position: fixed;
+  bottom: 0;
+}
 
 .footer-container {
   display: flex;
   justify-content: space-around;
-  height: auto
+  height: auto;
+  position: fixed;
+  bottom: 0;
 }

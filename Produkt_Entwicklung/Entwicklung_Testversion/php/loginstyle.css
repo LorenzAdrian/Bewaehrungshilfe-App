@@ -1,10 +1,10 @@
-body{
-    background: url(../CSS/image/aerial-view-alexanderplatz-architecture-1128408.jpg);
+body {
+    background: url(../CSS/image/aerial-view-alexanderplatz-architecture-1128408.jpg) no-repeat;
     background-size: cover;
     object-fit: cover;
 }
 
-header{
+header {
     border-bottom: 2px maroon solid;
 }
 
@@ -13,7 +13,7 @@ header{
     width: 100%;
 }
 
-.navbar h4{
+.navbar h4 {
     font-weight: 300;
 }
 
@@ -25,7 +25,7 @@ header{
 }
 
 
-.form-group{
+.form-group {
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -33,7 +33,7 @@ header{
     align-items: center;
 }
 
-.form-check h2{
+.form-check h2 {
     font-weight: 300;
 }
 
@@ -60,4 +60,3 @@ header{
     display: flex;
     justify-content: space-around;
 }
-

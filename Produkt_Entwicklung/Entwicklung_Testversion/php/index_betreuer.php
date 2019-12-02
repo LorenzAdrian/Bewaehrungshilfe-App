@@ -92,7 +92,7 @@ if(isset($_POST['but_logout'])){
   <!--Table und Fullcalender -->
   <div class="container table-container">
     <div class="row">
-      <div class="col-lg-6 col-md-12 text-col">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-col">
         <?php include 'dataTbl.php';?>
         <br>
         <form class="buttonform" action="Signup.php" method="post">
@@ -101,7 +101,7 @@ if(isset($_POST['but_logout'])){
         </form>
       </div>
       
-    <div class="col-lg-6 col-md-12">
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
           <?php include 'FullCalendar.php';?>
       </div>
     </div>
