@@ -104,10 +104,10 @@ if (mysqli_num_rows($result) > 0) {
           <form  id="msgform" method="POST">
 				  <span>Nachrichten</span>
 				  <br>
-				  <textarea name="textarea1" rows="5" cols="40" value=""></textarea>
+				  <textarea name="textarea1" rows="5" cols="40" value=" " id="text1"></textarea>
 				  <input name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
 				  <br>
-				  <button type="submit" name="signup-submit">Abschicken</button>
+				  <input class="btn btn-outline-danger" type = "submit" value = "Abschicken"></p>
 				  <br><br><br><br><br><br>
 		      </form>
           </div>
