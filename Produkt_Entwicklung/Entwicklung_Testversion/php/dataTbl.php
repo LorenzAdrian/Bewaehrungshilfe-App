@@ -31,7 +31,9 @@ require "problisteDT.inc.php";
     <!-- Javascript, um Daten wie bei einer Post-Methode weiterzugeben -->
     <script type="text/javascript" src="../javascript/jquery.redirect.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
+
 
   <body>
   <table id="example" class="table">
@@ -39,7 +41,7 @@ require "problisteDT.inc.php";
     <tr>
       <th scope="col">Name</th>
       <th scope="col">PID</th>
-      <th scope="col">Ungelesene Nachrichten</th>
+      <th scope="col"><i class="fa fa-envelope " ></i></th>
     </tr>
   </thead>
 </table>
