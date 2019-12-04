@@ -69,15 +69,16 @@ if (mysqli_num_rows($result) > 0) {
    <a class="navbar-brand w-100" href="#">
       <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;Sodi 4u
 		</a>
-
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
      <div class="navbar-collapse collapse w-100" id="navbar5">
         <ul class="navbar-nav mx-auto">
 		<!-- Aktuelle Seite -->
       <li class="nav-item active">
         <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span></a>
-      </li>
-	    <li class="nav-item">
-        <a class="nav-link" href="#">Leitfaden</a>
       </li>
 	    <li class="nav-item">
         <a class="nav-link" href="login.php">Abmelden</a>
