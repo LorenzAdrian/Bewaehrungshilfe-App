@@ -40,6 +40,8 @@ if(isset($_POST['but_logout'])){
 
   <!--- Pfad zur style.css--------------------------->
   <link rel="stylesheet" href="../CSS/betreuer_index.css">
+  <!--Schriftart aus google fonts------------------>
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
   <title>Start</title>
 

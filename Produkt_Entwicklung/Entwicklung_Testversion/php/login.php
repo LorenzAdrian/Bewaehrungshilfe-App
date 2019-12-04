@@ -53,11 +53,11 @@
       <div class="form-group">
         <div class="form-check">
           <h2>Anmeldung</h2>
-          <input type="checkbox" class="form-check-input checkbox"  id="betreuer" >
+          <input type="radio" class="form-check-input" name="auswahl" id="betreuer" value="">
           <label for="betreuer">Betreuer?</label> 
 		  </div>
 		  <div class="form-check">
-		  <input type="checkbox" class="form-check-input checkbox"  id="admin" >
+		  <input type="radio" class="form-check-input" name= "auswahl" id="admin" value="">
           <label for="admin">Admin?</label> 
 		  </div>
 		  <div class="form-check">
