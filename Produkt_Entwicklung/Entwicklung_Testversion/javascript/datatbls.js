@@ -1,7 +1,7 @@
-$(document).ready(function () {
+$(document).ready(function() {
   $('#example').DataTable({
     bInfo: false,
-    scrollY: '50vh',
+    scrollY: '52vh',
     scrollCollapse: false,
     select: true,
     language: {
@@ -23,12 +23,12 @@ $(document).ready(function () {
       "targets": "_all"
     }],
     columns: [{
-        data: null,
-        render: function (data, type, row) {
-          // Vorname und Nachname zusammen unter der Spalte "Name" in der Tabelle darstellen
-          return data.Vorname + ' ' + data.Nachname;
-        }
-      },
+      data: null,
+      render: function(data, type, row) {
+        // Vorname und Nachname zusammen unter der Spalte "Name" in der Tabelle darstellen
+        return data.Vorname + ' ' + data.Nachname;
+      }
+    },
       {
         data: 'PID'
       },
@@ -41,7 +41,7 @@ $(document).ready(function () {
   var table = $('#example').DataTable();
   /* Click bzw. Double Click: https://datatables.net/examples/advanced_init/events_live.html */
   /* Jquery on Method: https://www.w3schools.com/jquery/event_on.asp */
-  $('#example tbody').on('dblclick', 'tr', function () {
+  $('#example tbody').on('dblclick', 'tr', function() {
     var data = table.row(this).data();
     var vorname = data['Vorname'];
     var nachname = data['Nachname'];
