@@ -183,9 +183,15 @@ if (mysqli_num_rows($result) > 0) {
       <!--Footer-->
       <footer id="sticky-footer" class="py-2 bg-dark text-white-50">
         <div class="container footer-container">
-          <small>Datenschutz</small>
-          <small>Impressum</small>
-          <small>Kontakt</small>
+          <li>
+            <a href="datenschutz.html">Datenschutz</a>
+          </li>
+          <li>
+            <a href="impressum.html">Impressum</a>
+          </li>
+          <li>
+            <a href="kontakt.html">Kontakt</a>
+          </li>
         </div>
       </footer>
 

@@ -41,6 +41,14 @@ input {
   padding-top: 20px;
 }
 
+.footer-container li{
+  list-style: none;
+  }
+
+.footer-container li a{
+    text-decoration: none;
+    color: white;
+  }
 
 .footer-container {
   display: flex;
@@ -58,4 +66,4 @@ input {
 
 #text1:hover {
     width: 100%;
-}  
+}
