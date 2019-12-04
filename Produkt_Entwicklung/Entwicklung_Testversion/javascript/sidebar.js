@@ -2,11 +2,11 @@ $(document).ready(function(){
 
 	//Funktionen für  die Nachrichten Sidebar des Betreuers
     $("#msgbar").click(function(){
-		//var probID= $('#terPID').val();
+		var probID= $('#terPID').val();
 		$.ajax({
-		url:'meineNachrichtenAnzeigen.php',
-		//type:'post',
-		//data:{probID:probID},
+		url:'Nachrichten_menu.php',
+		type:'post',
+		data:{probID:probID},
 		success:function(response){
 			$("#msgdiv").html(response);
 		}
@@ -17,10 +17,10 @@ $(document).ready(function(){
 
   //Nachrichten werden alle 10 Sekunden von der DB abgerufen
   var $container =$("#msgdiv");
-  $container.load('meineNachrichtenAnzeigen.php');
+  $container.load('Nachrichten_menu.php');
   var refreshID = setInterval (function ()
   {
-    $container.load('meineNachrichtenAnzeigen.php');
+    $container.load('Nachrichten_menu.php');
   }, 10000);
 
 });

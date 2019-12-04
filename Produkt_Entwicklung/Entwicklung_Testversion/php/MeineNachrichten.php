@@ -1,8 +1,7 @@
 <?php
-
 #Seite für die Nachrichten des Probanden
 
-/*require '../database/dbh.inc.php';*/
+require '../database/dbh.inc.php';
 
 if(!isset($_SESSION))
 {
@@ -20,7 +19,7 @@ if(isset($_POST['but_logout'])){
     header('Location: Login.php');
 }
 
-/*if($_SESSION['rolle'] == 'proband') {
+if($_SESSION['rolle'] == 'proband') {
 	$personenID = 'PID';
   $sender = 'betreuer';
   $bsender = 1;
@@ -42,7 +41,7 @@ $sql = "UPDATE nachricht SET Status='gelesen'
 WHERE ".$personenID." = ".$_SESSION['userId']." AND BSender=".$bsender;
 if ($conn->query($sql) != TRUE) {
     echo "Es ist ein Fehler aufgetreten: ".$conn->error;
-}*/
+}
 ?>
 
 <!DOCTYPE html>
@@ -67,13 +66,13 @@ if ($conn->query($sql) != TRUE) {
   	<script src="../javascript/jquery-3.4.1.js"></script>
     <script src="../javascript/message.js"></script>
 
-    <!--Bootstrap Layout -->
-  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
-   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <!--Bootstrap Layout -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  	<title>Meine Nachrichten</title>
+	<title>Meine Nachrichten</title>
 
 	</head>
 
@@ -146,13 +145,18 @@ if ($conn->query($sql) != TRUE) {
             <td id="probNachrichtenFenster">
               <?php
               include 'meineNachrichtenAnzeigen.php';
+
+              /*while ($dsatz = mysqli_fetch_assoc($result)){
+                if($dsatz['dateiname']) {
+                $filename = 'uploads/'.$dsatz['dateiname'];
+                unlink($filename);
+                }
+              }*/
               ?>
              </td>
 					</tr>
           <tr>
             <td>
-              <?php include 'meineNachrichtenAbschicken.php'; ?>
-            <!--
               <table class="" id="textfeld">
                 <tr>
                   <form  id="msgform" method="POST">
@@ -165,13 +169,10 @@ if ($conn->query($sql) != TRUE) {
                   </form>
                 </tr>
               </table>
-            -->
             </td>
           </tr>
             <td>
               <tr>
-                <?php include 'meineNachrichtenBild.php'; ?>
-              <!--
                 <table class="">
                   <tr>
         						<form class="" action="upload.php" method="POST" name="DAFORM" enctype="multipart/form-data" target="_self">
@@ -183,7 +184,6 @@ if ($conn->query($sql) != TRUE) {
         					  </form>
                   </tr>
   				    </table>
-            -->
 					<br>
 					<br>
 					<br>
@@ -192,7 +192,8 @@ if ($conn->query($sql) != TRUE) {
           </td>
 			</div>
 		</main>
-  </div>
+
+    <?php mysqli_close($conn); ?> </div>
 
   <!--Footer-->
  <footer id="sticky-footer" class="mb-0 mt-footer py-4 bg-light text-white-50">

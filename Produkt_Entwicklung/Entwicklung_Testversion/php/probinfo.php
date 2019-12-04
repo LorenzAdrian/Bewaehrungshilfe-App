@@ -102,22 +102,14 @@ if (mysqli_num_rows($result) > 0) {
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <div id='msgdiv'></div>
           <form  id="msgform" method="POST">
-            <?php 
-            include 'meineNachrichtenAbschicken.php';
-             ?>
-          <!--
-          <span>Nachrichten</span>
-
+				  <span>Nachrichten</span>
 				  <br>
 				  <textarea name="textarea1" rows="5" cols="40" value=""></textarea>
 				  <input name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
 				  <br>
 				  <button type="submit" name="signup-submit">Abschicken</button>
-				  <br><br><br><br><br><br>-->
+				  <br><br><br><br><br><br>
 		      </form>
-          <?php
-          include 'meineNachrichtenBild.php';
-          ?>
           </div>
         </div>
       </div>
