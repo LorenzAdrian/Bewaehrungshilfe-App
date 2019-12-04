@@ -22,7 +22,7 @@ if (!empty($_FILES['upload']['name']))
     #Prüfen, welche Rolle angemeldet ist.
     if($_SESSION['rolle'] == 'betreuer') {
     	$bid = $_SESSION['userId'];
-    	$pid = $_POST['hiddenProbID'];
+      $pid = $_POST['hiddenProbID'];
     	$bsender = 1; #Weil Betreuer.
     }
     else {
