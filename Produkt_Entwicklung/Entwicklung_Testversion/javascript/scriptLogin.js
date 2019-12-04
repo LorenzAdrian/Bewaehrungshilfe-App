@@ -35,7 +35,7 @@ $(document).ready(function(){
 				          }
               }
 			        else {
-                msg = "Die Kombination aus Username/Email und Passwort ist ungültig!" + "<br>" + "Wenn Sie ihres Passwort vergessen haben, wenden Sie sich bitte an Ihren Betreuer!";
+                msg = "Die Kombination aus Username/Email und Passwort ist ungültig!" + "<br>" + "Wenn Sie Ihr Passwort vergessen haben, wenden Sie sich bitte an Ihren Betreuer!";
 				        $("#passwort").val("");
                 }
                 $("#message").html(msg);
