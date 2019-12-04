@@ -22,7 +22,8 @@ if(isset($_POST['but_logout'])){
     header('Location: Login.php');
 }
 
-if($_SESSION['rolle'] == 'proband') {
+//Dieser Teil wurde in meineNachrichtenAnzeigen.php verlagert
+/*if($_SESSION['rolle'] == 'proband') {
 	$personenID = 'PID';
   $sender = 'betreuer';
   $bsender = 1;
@@ -37,7 +38,7 @@ $event_sql =
 "SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, N.dateiname, S.Vorname AS vorname_sender, S.Nachname AS nachname_sender FROM nachricht AS N INNER JOIN ".$sender." AS S ON N.BID = S.BID WHERE N.".$personenID." = ".$_SESSION['userId']." ORDER BY Zeitstempel";
 
 //Mit mysqli_query wird die SQL-Abfrage ausgeführt. Die Methode liefert ein Objekt der Klasse mysqli_result zurück. $result enthält die Referenz auf dieses Objekt.
-$result = mysqli_query($conn, $event_sql);
+$result = mysqli_query($conn, $event_sql);*/
 
 /*Durch die Ajax-Funktion soll eine Nachricht nicht auf gelesen gesetzt werden können
 $sql = "UPDATE nachricht SET Status='gelesen'

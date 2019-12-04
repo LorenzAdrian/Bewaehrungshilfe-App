@@ -11,7 +11,6 @@
 	<!--- Pfad zu den CSS Dateien--------------------------->
     <link rel="stylesheet" href="../CSS/termine_proband.css">
 		<link rel="stylesheet" href="../CSS/header_prob.css">
-		<link rel="stylesheet" href="../CSS/footer_pro.css">
     <!--Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
@@ -87,24 +86,7 @@
 	<h1>Impressum PROB</h1>
 	<main>
 	</main>
-	  <!--Footer-->
- <footer id="sticky-footer" class="mb-0 mt-footer py-4 bg-light text-white-50">
-      <div class="pt-2 container text-center">
-
-              <ul>
-                <li>
-                  <a href="Impressum_Proband.php">Impressum</a>
-                </li>
-                <li>
-                    <a href="Datenschutz_Proband.php">Datenschutz</a>
-                </li>
-                <li>
-                  <a href="Kontakt_Proband.php">Kontakt</a>
-                </li>
-              </ul>
-
-      </div>
-    </footer>
+	<?php include '../includes/footer_proband.inc.php' ?>
 	</body>
 	
 </html>
