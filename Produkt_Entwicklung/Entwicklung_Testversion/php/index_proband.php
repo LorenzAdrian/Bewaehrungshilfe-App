@@ -107,15 +107,20 @@ if(isset($_POST['but_logout'])){
 
   <hr class="hr-sodi"> <!-- Gehört zum Header -->
 
-<div id="inhalt">
-<!-- Überschrift der Seite -->
-<div class="container-fluid">
+ <div id="inhalt"> 
+	<!-- Überschrift der Seite -->
+    <!--Begrüßungscontainer -->
+  <div class="container hallo-container">
+    <div class="row hallo-row">
+      <div class="col-lg-12 hallo-col text-center">
+        <h2>Guten Tag <?php echo $_SESSION["username"]; ?> </h2>
+      </div>
+    </div>
+  </div>
+ 
 
-	<div class="row">
-		<div class="col-12 text-center">
-			   <h4>Startseite</h4>      	   
-		</div>
-	</div>
+
+<div class="container-fluid">
 <!--Links zu den anderen Seiten-->	
 	<div class="row">
 

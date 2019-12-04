@@ -44,3 +44,8 @@ VALUES
 ('2019-01-17 10:54:23','Ich werde mit Ihrer Vermittlerin bei der Arbeitsagentur sprechen',1,'neu',1,1,1),
 ('2019-02-23 15:05:53','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',NULL,'gelesen',1,2,1),
 ('2019-02-23 16:44:02','Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica',3,'neu',1,2,0);
+
+
+INSERT INTO Admin(Vorname, Nachname, UserName, Passwort, Email, Telnr, Stellenzeichen, Zimmernr, Vertretung, AGID)
+VALUES
+('Moritz','Miller','moritzmiller','passwort1','moritz.miller@berlin.de',129456789,'STZ 121','ZNR 1',NULL,1),
