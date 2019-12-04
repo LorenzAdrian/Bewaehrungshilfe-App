@@ -54,6 +54,7 @@ if(isset($_POST['but_logout'])){
 	<!--- Pfad zur style.css--------------------------->
 	<link rel="stylesheet" href="../CSS/index_proband.css">
 	<link rel="stylesheet" href="../CSS/header_prob.css">
+		<link rel="stylesheet" href="../CSS/passwortAendern.css">
 	<!--Schriftart aus google fonts------------------>
 	<link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700&display=swap"  rel="stylesheet">
 	<!-- Stylesheet für Icons-->
@@ -204,7 +205,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <!--<p><span class="error">* erforderliche Eingabe</span></p>-->
   <form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
         <input type="hidden" name="uid" value="<?php echo $userID;?>">
-    <table>
+<div class="tabellemitte">   
+   <table >
       <tr>
         <td>Benutzername</td>
         <td>
@@ -256,6 +258,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </table>
     <div class="success"> <?php echo $pwdErfolg;?></div>
     <div class="error"><?php echo $pwdTatErr;?></div>
+	</div>
   </form>
 </main>
 
