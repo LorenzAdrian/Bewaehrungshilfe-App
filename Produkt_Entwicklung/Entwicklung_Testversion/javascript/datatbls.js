@@ -30,9 +30,6 @@ $(document).ready(function() {
       }
     },
       {
-        data: 'PID'
-      },
-      {
         data: 'ungeleseneNachrichten'
       },
     ]
