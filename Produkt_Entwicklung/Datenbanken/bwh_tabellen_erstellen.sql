@@ -89,7 +89,7 @@ CREATE TABLE admin(
 	Stellenzeichen varchar(30),
 	Zimmernr varchar(10) NOT NULL,
 	Vertretung int(30) NULL,
-  AGID int(30) NOT NULL,
-	FOREIGN KEY(Vertretung) REFERENCES Betreuer(ADID),
-  FOREIGN KEY(AGID) REFERENCES Arbeitsgruppe(AGID)
+  	AGID int(30) NOT NULL,
+	FOREIGN KEY(Vertretung) REFERENCES Betreuer(AGID),
+  	FOREIGN KEY(AGID) REFERENCES Arbeitsgruppe(AGID)
 );
