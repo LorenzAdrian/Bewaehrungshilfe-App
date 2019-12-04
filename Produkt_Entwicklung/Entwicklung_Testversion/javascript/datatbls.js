@@ -20,7 +20,7 @@ $(document).ready(function() {
        Nur die DataTable javascript Zeile sind hier relevant, Editor spielt keine Rolle*/
     columnDefs: [{
       "className": "dt-center",
-      "targets": "_all"
+      "targets": [1]
     }],
     columns: [{
       data: null,
@@ -29,9 +29,6 @@ $(document).ready(function() {
         return data.Vorname + ' ' + data.Nachname;
       }
     },
-      {
-        data: 'PID'
-      },
       {
         data: 'ungeleseneNachrichten'
       },

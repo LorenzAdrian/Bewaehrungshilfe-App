@@ -137,19 +137,19 @@ $pwdErfolg = "";
 //Leere Felder und formliche Korrekheit prüfen
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST['pwd-alt'])) {
-    $pwdAltLeer = "Bitte ausfüllen!";
+    //$pwdAltLeer = "Bitte ausfüllen!";
   } else {
     $passwortAlt = test_input($_POST['pwd-alt']);
   }
 
   if (empty($_POST['pwd-neu'])) {
-    $pwdNeuLeer = "Bitte ausfüllen!";
+    //$pwdNeuLeer = "Bitte ausfüllen!";
   } else {
     $passwortNeu = test_input($_POST['pwd-neu']);
   }
 
   if (empty($_POST['pwd-repeat'])) {
-    $pwdRptLeer = "Bitte ausfüllen!";
+    //$pwdRptLeer = "Bitte ausfüllen!";
   } else {
     $passwortRepeat = test_input($_POST['pwd-repeat']);
   }
@@ -216,35 +216,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <tr>
         <td>Altes Passwort: </td>
         <td>
-          <input type="password" name="pwd-alt" id="pwd-alt" placeholder="Altes Passwort">
+          <input type="password" name="pwd-alt" id="pwd-alt" placeholder="Altes Passwort" required>
           <!--<span class="error">* <?php //echo $pwdAltLeer;?></span>-->
         </td>
         <td>
           <input type="checkbox" onclick="pwdShowAlt()" id="checkPwdAlt" hidden>
-          <h2><label for="checkPwdAlt">&#128065;</label></h2>
+          <label for="checkPwdAlt">&#128065;</label>
           <span class="error"><?php echo $pwdAltErr;?></span>
         </td>
       </tr>
       <tr>
         <td>Neues Passwort: </td>
         <td>
-          <input type="password" name="pwd-neu" id="pwd-neu" placeholder="Neues Passwort">
+          <input type="password" name="pwd-neu" id="pwd-neu" placeholder="Neues Passwort" required>
         </td>
         <td>
           <input type="checkbox" onclick="pwdShowNeu()" id="checkPwdNeu" hidden>
-          <h2><label for="checkPwdNeu">&#128065;</label></h2>
+          <label for="checkPwdNeu">&#128065;</label>
           <span class="error"><?php echo $pwdNeuLeer;?></span>
           <span class="error"><?php echo $pwdRptErr;?></span>
         </td>
       </tr>
       <tr>
-        <td>Neues Passwort wiederholen</td>
+        <td>Passwort wiederholen</td>
         <td>
-          <input type="password" name="pwd-repeat" id="pwd-repeat" placeholder="Neues Passwort wiederholen">
+          <input type="password" name="pwd-repeat" id="pwd-repeat" placeholder="Passwort wiederholen" required>
         </td>
         <td>
           <input type="checkbox" onclick="pwdShowRpt()" id="checkPwdRpt" hidden>
-          <h2><label for="checkPwdRpt">&#128065;</label></h2>
+          <label for="checkPwdRpt">&#128065;</label>
           <span class="error"><?php echo $pwdRptLeer;?></span>
           <span class="error"><?php echo $pwdRptErr;?></span>
         </td>
