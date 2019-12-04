@@ -64,6 +64,8 @@
     <script src='../fullcalendar/packages/daygrid/main.js'></script>
     <script src='../fullcalendar/packages/timegrid/main.js'></script>
     <script src='../fullcalendar/packages/list/main.js'></script>
+    <script src='../fullcalendar/packages/core/locales/de.js'></script>
+
 
     <script>
 
@@ -72,6 +74,7 @@
 
 var mycalendar = new FullCalendar.Calendar(calendarEl, {
       plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
+      locale:'de',
       defaultView: 'dayGridMonth',
 	  <!--height: 'auto',-->
 	  selectable: true,
