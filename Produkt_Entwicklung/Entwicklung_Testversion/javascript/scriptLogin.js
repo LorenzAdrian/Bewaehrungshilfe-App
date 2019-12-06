@@ -6,9 +6,6 @@ $(document).ready(function(){
 		if ($("#betreuer").prop("checked")) {
 			rolle = "betreuer";
 		}
-		/*else if ($("#admin").prop("checked")) {
-			rolle = "admin";
-		}*/
 		else {
 			rolle = "proband";
 		}
