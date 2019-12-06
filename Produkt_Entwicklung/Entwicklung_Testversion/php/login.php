@@ -57,10 +57,6 @@
           <label for="betreuer">Betreuer?</label>
 		  </div>
 		  <div class="form-check">
-		  <input type="checkbox" class="form-check-input checkbox"  id="admin" >
-          <label for="admin">Admin?</label>
-		  </div>
-		  <div class="form-check">
           <input type="text" class="form-control rounded-pill form-control-md" name="mailuid" id="mailuid"
           placeholder="Geben Sie bitte Ihren Benutzernamen ein.">
           <input type="password" class="form-control rounded-pill form-control-md"  name="passwort" id="passwort"
