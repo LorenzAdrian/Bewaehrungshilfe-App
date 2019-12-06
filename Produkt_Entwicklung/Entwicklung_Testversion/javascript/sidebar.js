@@ -19,6 +19,7 @@ $(document).ready(function(){
 
   //Nachrichten werden alle 10 Sekunden von der DB abgerufen
   var $container =$("#msgdiv");
+  var probID= $('#terPID').val();
   $container.load('meineNachrichtenAnzeigen.php', {probID:probID});
   var refreshID = setInterval (function ()
   {
