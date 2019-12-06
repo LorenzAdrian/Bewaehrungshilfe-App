@@ -17,19 +17,25 @@ if(isset($_POST['but_logout'])){
     header('Location: Login.php');
 }
 
+//Weist den Variablen Werte zu in Abhängigkeit der Rolle des Benutzers (Proband/Betreuer)
 if($_SESSION['rolle'] == 'proband') {
+  $event_sql =
+  "SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, N.dateiname, S.Vorname AS vorname_sender, S.Nachname AS nachname_sender FROM nachricht AS N INNER JOIN betreuer AS S ON N.BID = S.BID WHERE N.PID = ".$_SESSION['userId']." ORDER BY Zeitstempel";
+
 	$personenID = 'PID';
-  $sender = 'betreuer';
   $bsender = 1;
 }
 else {
-	$personenID = 'BID';
-  $sender ='proband';
+  $event_sql =
+  "SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, N.dateiname, S.Vorname AS vorname_sender, S.Nachname AS nachname_sender FROM nachricht AS N INNER JOIN proband AS S ON N.PID = S.PID WHERE N.BID = ".$_SESSION['userId']." AND N.PID = ".$_POST['probID']." ORDER BY Zeitstempel";
+
+  $personenID = 'BID';
   $bsender = 0;
 }
-
+/*
 $event_sql =
-"SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, N.dateiname, S.Vorname AS vorname_sender, S.Nachname AS nachname_sender FROM nachricht AS N INNER JOIN ".$sender." AS S ON N.BID = S.BID WHERE N.".$personenID." = ".$_SESSION['userId']." ORDER BY Zeitstempel";
+"SELECT N.NID, N.Zeitstempel, N.Text, N.Status, N.BSender, N.dateiname, S.Vorname AS vorname_sender, S.Nachname AS nachname_sender FROM nachricht AS N INNER JOIN ".$sender." AS S ON N.".$personenIDopp." = S.".$personenIDopp." WHERE N.".$personenID." = ".$_SESSION['userId']." AND N.".$personenIDopp." = ".$senderID." ORDER BY Zeitstempel";
+*/
 
 //echo $event_sql;
 
