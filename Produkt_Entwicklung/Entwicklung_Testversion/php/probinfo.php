@@ -12,7 +12,6 @@ if(!isset($_SESSION['userId'])){
 
 require "../database/dbh.inc.php";
 
-
 $betrID = $_POST['betreuer'];
 $probID = $_POST['proband'];
 
@@ -102,12 +101,12 @@ if (mysqli_num_rows($result) > 0) {
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <div id='msgdiv'></div>
           <form  id="msgform" method="POST">
-				  <span>Nachrichten</span>
+				  <!--<span>Nachrichten</span>-->
 				  <br>
-				  <textarea name="textarea1" rows="5" cols="40" value=""></textarea>
-				  <input name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
+				  <textarea class="nachrichtenfeld" name="textarea1" value=""></textarea>
+				  <input id="terPID" name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
 				  <br>
-				  <button type="submit" name="signup-submit">Abschicken</button>
+				  <button type="submit" name="signup-submit">&#11162;</button>
 				  <br><br><br><br><br><br>
 		      </form>
           </div>
