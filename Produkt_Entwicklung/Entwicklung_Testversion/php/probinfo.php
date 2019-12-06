@@ -101,15 +101,19 @@ if (mysqli_num_rows($result) > 0) {
           <div id="mySidenav" class="sidenav bg-light" style="z-index:1000000">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <div id='msgdiv'></div>
-          <form  id="msgform" method="POST">
-				  <!--<span>Nachrichten</span>-->
-				  <br>
-				  <textarea class="nachrichtenfeld" id="textfeld" name="textarea1" value=""></textarea>
-				  <input id="terPID" name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
-				  <br>
-				  <button type="submit" name="signup-submit">&#11162;</button>
-				  <br><br><br><br><br><br>
-		      </form>
+          <table class="">
+            <tr>
+              <form  id="msgform" method="POST">
+                <td>
+                  <textarea class="nachrichtenfeld" id="textfeld" name="textarea1" value="" placeholder="Meine Nachricht"></textarea>
+                  <input id="terPID" name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
+                </td>
+                <td>
+				              <button type="submit" name="signup-submit">&#11162;</button>
+                </td>
+				 		   </form>
+             </tr>
+           </table> 
           </div>
         </div>
       </div>
