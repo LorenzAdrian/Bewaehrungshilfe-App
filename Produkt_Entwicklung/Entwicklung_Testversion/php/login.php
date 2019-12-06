@@ -54,7 +54,7 @@
         <div class="form-check">
           <h2>Anmeldung</h2>
           <input type="checkbox" class="form-check-input checkbox"  id="betreuer" >
-          <label for="betreuer">Betreuer?</label>
+          <label for="betreuer">Betreuer</label>
 		  </div>
 		  <div class="form-check">
           <input type="text" class="form-control rounded-pill form-control-md" name="mailuid" id="mailuid"
