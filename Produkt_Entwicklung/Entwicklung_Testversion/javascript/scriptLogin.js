@@ -6,9 +6,9 @@ $(document).ready(function(){
 		if ($("#betreuer").prop("checked")) {
 			rolle = "betreuer";
 		}
-		else if ($("#admin").prop("checked")) {
+		/*else if ($("#admin").prop("checked")) {
 			rolle = "admin";
-		}
+		}*/
 		else {
 			rolle = "proband";
 		}
@@ -23,20 +23,18 @@ $(document).ready(function(){
             data:{mailuid:mailuid,passwort:passwort,rolle:rolle},
             success:function(response){
               var msg = "";
-              if(response == 1){
-				         if (rolle == 'betreuer'){
-					         window.location = "../php/index_betreuer.php"; //Link zur Startseite muss hier rein!
-				          }
-						   else if (rolle == 'admin'){
-					         window.location = "../php/index_admin.php"; //Link zur Startseite muss hier rein!
-				          }
-				          else if (rolle == 'proband'){
-					          window.location = "../php/index_proband.php"; //Link zur Startseite muss hier rein!
-				          }
-              }
+  		         if (response == '1'){
+  			         window.location = "../php/index_betreuer.php"; //Link zur Startseite muss hier rein!
+  		          }
+  				      else if (response == '2'){
+  			         window.location = "../php/index_admin.php"; //Link zur Startseite muss hier rein!
+               }
+  		          else if (response == '3'){
+  			          window.location = "../php/index_proband.php"; //Link zur Startseite muss hier rein!
+  		          }
 			        else {
                 msg = "Die Kombination aus Username/Email und Passwort ist ungültig!" + "<br>" + "Wenn Sie Ihr Passwort vergessen haben, wenden Sie sich bitte an Ihren Betreuer!";
-				        $("#passwort").val("");
+				        $("#passwort").val(""); //reset password
                 }
                 $("#message").html(msg);
             }

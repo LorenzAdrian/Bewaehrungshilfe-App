@@ -54,11 +54,11 @@
         <div class="form-check">
           <h2>Anmeldung</h2>
           <input type="checkbox" class="form-check-input checkbox"  id="betreuer" >
-          <label for="betreuer">Betreuer?</label> 
+          <label for="betreuer">Betreuer?</label>
 		  </div>
 		  <div class="form-check">
 		  <input type="checkbox" class="form-check-input checkbox"  id="admin" >
-          <label for="admin">Admin?</label> 
+          <label for="admin">Admin?</label>
 		  </div>
 		  <div class="form-check">
           <input type="text" class="form-control rounded-pill form-control-md" name="mailuid" id="mailuid"
@@ -67,7 +67,7 @@
           placeholder="Geben Sie bitte Ihr Passwort ein." size="100">
         </div>
         <div class="form-button">
-          <button type="button" class="btn btn-info rounded-pill btn-block" name="showpassword" id="showpassword" value="Passwort anzeigen">Passwort anzeigen</button> 
+          <button type="button" class="btn btn-info rounded-pill btn-block" name="showpassword" id="showpassword" value="Passwort anzeigen">Passwort anzeigen</button>
           <button type="button" class="btn btn-danger rounded-pill btn-block" name="login" id="login_btn" value="Login">Einloggen</button>
         </div>
         <div class = "message" id = "message"></div>
@@ -76,14 +76,20 @@
     </div>
     </div>
 	</div>
-  
+
 
 	<!-- FOOTER -->
  	<footer id="sticky-footer" class="py-2 bg-dark text-white-50">
     <div class="container footer-container">
-      <small>Datenschutz</small>
-      <small>Impressum</small>
-      <small>Kontakt</small>
+      <li>
+        <a href="datenschutz.html">Datenschutz</a>
+      </li>
+      <li>
+        <a href="impressum.html">Impressum</a>
+      </li>
+      <li>
+        <a href="kontakt.html">Kontakt</a>
+      </li>
     </div>
   </footer>
 
