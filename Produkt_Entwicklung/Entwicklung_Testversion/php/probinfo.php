@@ -49,7 +49,7 @@ if (mysqli_num_rows($result) > 0) {
     <!-- SCRIPT SIDEBAR -->
     <script src="../javascript/jquery-3.4.1.js"></script>
     <script src="../javascript/sidebar.js"></script>
-	  <script src="../javascript/message.js"></script>
+	  <script src="../javascript/message_bet.js"></script>
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -104,7 +104,7 @@ if (mysqli_num_rows($result) > 0) {
           <form  id="msgform" method="POST">
 				  <!--<span>Nachrichten</span>-->
 				  <br>
-				  <textarea class="nachrichtenfeld" name="textarea1" value=""></textarea>
+				  <textarea class="nachrichtenfeld" id="textfeld" name="textarea1" value=""></textarea>
 				  <input id="terPID" name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
 				  <br>
 				  <button type="submit" name="signup-submit">&#11162;</button>
