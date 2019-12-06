@@ -21,10 +21,10 @@ $(document).ready(function(){
 
 //Nachrichten werden vom Server alle 10 Sekunden abgerufen
 	var $container =$("#probNachrichtenFenster");
-	$container.load('MeineNachrichtenAbrufen.php');
+	$container.load('meineNachrichtenAnzeigen.php');
 	var refreshID = setInterval (function ()
 	{
-		$container.load('MeineNachrichtenAbrufen.php');
+		$container.load('meineNachrichtenAnzeigen.php');
 	}, 10000);
 
 });
