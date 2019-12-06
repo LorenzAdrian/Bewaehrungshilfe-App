@@ -71,7 +71,7 @@
 
 var calendar = new FullCalendar.Calendar(calendarEl, {
       plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
-      locales: 'de',
+      locale: 'de',
       defaultView: 'dayGridMonth',
 	  <!--height: 'auto',-->
 	  selectable: true,
