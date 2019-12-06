@@ -54,15 +54,16 @@ if(isset($_POST['but_logout'])){
     <a class="navbar-brand w-100" href="#">
       <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;Sodi 4u
 	  </a>
-
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
      <div class="navbar-collapse collapse w-100" id="navbar5">
         <ul class="navbar-nav mx-auto">
 		<!-- Aktuelle Seite -->
       <li class="nav-item active">
         <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span></a>
-      </li>
-	    <li class="nav-item">
-        <a class="nav-link" href="To_Do_Liste.php">Leitfaden</a>
       </li>
 	    <li class="nav-item">
         <a class="nav-link" href="login.php">Abmelden</a>
@@ -98,7 +99,7 @@ if(isset($_POST['but_logout'])){
           <!--<input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" > -->
         </form>
       </div>
-      
+
     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
           <?php include 'FullCalendar.php';?>
       </div>
@@ -107,7 +108,7 @@ if(isset($_POST['but_logout'])){
   <div class="container btn-container">
     <div class="row btn-row">
       <div class="col-lg-6">
-      
+
     </div>
   </div>
 </div>

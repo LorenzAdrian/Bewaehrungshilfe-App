@@ -60,3 +60,12 @@ header {
     display: flex;
     justify-content: space-around;
 }
+
+.footer-container li {
+    list-style: none;
+}
+
+.footer-container li a {
+    text-decoration: none;
+    color: white;
+}
