@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	//Funktion für das Abschicken einer neuen Nachricht.
+	//Funktion für das abschicken einer neuen Nachricht.
 	$("#msgform").submit(function(){
 		var textarea1 = $("textarea[name=textarea1]").val();
 		if($("input[name=hiddenProbID]").lenght){

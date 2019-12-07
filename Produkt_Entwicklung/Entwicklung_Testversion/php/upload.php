@@ -60,6 +60,5 @@ if (!empty($_FILES['upload']['name']))
 {
   echo '<b>kein Upload!</b>';
 }
-
 header("Location: MeineNachrichten.php#textfeld");
 ?>

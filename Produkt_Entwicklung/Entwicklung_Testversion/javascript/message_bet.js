@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	//Funktion für das Abschicken einer neuen Nachricht.
+	//Funktion für das abschicken einer neuen Nachricht.
 	$("#msgform").submit(function(){
 		var textarea1 = $("textarea[name=textarea1]").val();
 		if($("input[name=hiddenProbID]").lenght){
@@ -21,29 +21,6 @@ $(document).ready(function(){
 
 		});
 		$('#textfeld').val('');
-		return false;
-	});
-
-	//Funktion für das Hochladen einer Datei.
-	$("#fileform").submit(function(){
-		var file = $("input[name=upload]").val();
-		if($("input[name=hiddenProbID]").lenght){
-		}
-		else{
-			var hiddenProbID  =  $("input[name=hiddenProbID]").val();
-		}
-		$.ajax({
-		url:'upload_bet.php',
-		type:'post',
-		data:{upload:file, hiddenProbID:hiddenProbID},
-		success:function(){
-			var $container =$("#msgdiv");
-		  var probID= $('#terPID').val();
-		  $container.load('meineNachrichtenAnzeigen.php', {probID:probID});
-			//location.reload();
-		}
-		});
-		$('#textfeld').val(file);
 		return false;
 	});
 

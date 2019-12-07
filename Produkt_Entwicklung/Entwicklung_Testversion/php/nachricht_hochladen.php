@@ -1,5 +1,5 @@
 <?php
-#Die eingegebene Nachricht wird verschickt, also in die Datenbank eingetragen.
+#Die in MeineNachrichten.php eingegebene Nachricht wird verschickt, also in die Datenbank eingetragen.
 
 require '../database/dbh.inc.php';
 if(!isset($_SESSION))
