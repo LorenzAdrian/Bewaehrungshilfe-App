@@ -113,7 +113,41 @@ if (mysqli_num_rows($result) > 0) {
                 </td>
 				 		   </form>
              </tr>
-           </table> 
+           </table>
+           <!--
+           <table class="">
+             <form id="fileform" method="POST" enctype="multipart/form-data">
+               <tr>
+                 <td>
+                   <input id="upload" name="upload" type="file" >
+                    <input id="terPID" name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
+                 </td>
+               </tr>
+               <tr>
+                 <td>
+                   <button type="submit" class="">Absenden</button>
+                 </td>
+               </tr>
+             </form>
+           </table>
+           -->
+
+           <table class="">
+             <form class="" action="upload_bet.php" method="POST" name="DAFORM" enctype="multipart/form-data" target="_self">
+               <tr>
+                 <td>
+                   <input id="upload" name="upload" class="" type="file" >
+                    <input id="terPID" name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
+                 </td>
+               </tr>
+               <tr>
+                 <td>
+                   <button type="submit" class="">Absenden</button>
+                 </td>
+               </tr>
+             </form>
+           </table>
+
           </div>
         </div>
       </div>
