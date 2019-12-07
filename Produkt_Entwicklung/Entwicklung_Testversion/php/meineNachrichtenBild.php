@@ -3,6 +3,7 @@
     <tr>
       <td>
         <input id="upload" name="upload" class="" type="file" >
+         <input id="terPID" name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
       </td>
     </tr>
     <tr>
