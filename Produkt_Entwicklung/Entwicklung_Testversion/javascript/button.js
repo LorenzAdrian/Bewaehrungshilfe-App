@@ -1,24 +1,10 @@
-jQuery(document).ready(function () {
-
-
-  // Show password Button
-  $("#showpassword").on('click', function () {
-
-    var pass = $("#passwort");
-    var fieldtype = pass.attr('type');
-    if (fieldtype == 'password') {
-      pass.attr('type', 'text');
-      $(this).text("Passwort verbergen");
-    } else {
-      pass.attr('type', 'password');
-      $(this).text("Passwort anzeigen");
-    }
-
-
-  });
-
-
-
-
-
-});
+function showHidePwd() {
+  var input = document.getElementById("passwort");
+  if (input.type === "password") {
+    input.type = "text";
+    document.getElementById("eye").className = "far fa-eye";
+  } else {
+    input.type = "password";
+    document.getElementById("eye").className = "far fa-eye-slash";
+  }
+}

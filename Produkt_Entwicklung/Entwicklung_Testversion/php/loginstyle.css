@@ -17,34 +17,13 @@ header {
     font-weight: 300;
 }
 
-.login-form {
-    max-width: 100%;
-    width: 350px;
-    text-align: center;
-    justify-content: center;
+.form-label-group>input {
+    height: 3.125rem;
+    padding: .75rem;
 }
 
-
-.form-group {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.form-check h2 {
-    font-weight: 300;
-}
-
-.form-control {
-    font-size: 15px;
-    min-height: 48px;
-    font-weight: 500;
-}
-
-.form-button {
-    padding-top: 10px;
+i:hover {
+    cursor: pointer;
 }
 
 
