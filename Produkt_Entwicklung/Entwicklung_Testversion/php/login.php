@@ -16,8 +16,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Style CSS -->
   <link rel="stylesheet" href="loginstyle.css">
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <!-- Fontawesome icon library -->
    <script src="https://kit.fontawesome.com/5d0d55aa82.js"></script>
   <!-- LINK TEST -->
@@ -39,18 +39,16 @@
 </header>
 
 	<!-- LOGIN CONTAINER -->
-	<div class="container-fluid login-container d-flex justify-content-center align-items-center">
+	<div class="container login-container ">
     <div class="row">
-      <div class="col-lg-12 col-md-12">
-    <form class="login-form d-flex text-center">
-      <div class="form-group">
-        <div class="form-check">
-          <h2>Anmeldung</h2>
-          <input type="checkbox" class="form-check-input checkbox"  id="betreuer" >
-          <label for="betreuer">Betreuer</label>
-      </div>
-    </form>
-
+      <div class="co-lg-12">
+        <form class="login-form">
+            <div class="form-check">
+              <h2>Anmeldung</h2>
+              <input type="checkbox" class="form-check-input checkbox"  id="betreuer" >
+              <label for="betreuer">Betreuer</label>
+            </div>
+        </form>
         <form class="form-signin">
           <div class="form-label-group">
               <input type="text" id="mailuid" class="form-control" placeholder="Bitte Geben Sie Ihren Benutzernamen ein"
@@ -66,15 +64,12 @@
               </div>
           </div>
           <button class="btn btn-lg btn-danger btn-block" type="button" name="login" id="login_btn" value="Login">LOGIN</button>
-      </form>
-      
+        </form>
         <div class = "message" id = "message"></div>
       </div>
-    
     </div>
-    </div>
-	</div>
-
+  </div>
+</div>
 
 	<!-- FOOTER -->
  	<footer id="sticky-footer" class="py-2 bg-dark text-white-50">

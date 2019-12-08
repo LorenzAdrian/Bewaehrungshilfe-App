@@ -8,24 +8,18 @@ header {
     border-bottom: 2px maroon solid;
 }
 
-.login-container {
-    height: 90vh;
-    width: 100%;
-}
-
 .navbar h4 {
     font-weight: 300;
 }
 
 .form-label-group>input {
-    height: 3.125rem;
-    padding: .75rem;
+    height: 4.125rem;
+    padding: .95rem;
 }
 
 i:hover {
     cursor: pointer;
 }
-
 
 .message {
     color: #FF0000;
