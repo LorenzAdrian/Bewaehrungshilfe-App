@@ -39,9 +39,9 @@
 </header>
 
 	<!-- LOGIN CONTAINER -->
-	<div class="container login-container ">
+	<div class="container login-container text-align-center d-flex justify-content-center">
     <div class="row">
-      <div class="co-lg-12">
+      <div class="col-lg-12">
         <form class="login-form">
             <div class="form-check">
               <h2>Anmeldung</h2>
@@ -54,6 +54,7 @@
               <input type="text" id="mailuid" class="form-control" placeholder="Bitte Geben Sie Ihren Benutzernamen ein"
                   name="mailuid" required autofocus>
           </div>
+          <br>
           <div class="form-label-group input-group">
               <input type="password" id="passwort" class="form-control" placeholder="Bitte geben Sie Ihr Passwort ein"
                   name="password" required>
@@ -63,6 +64,7 @@
                 </span>
               </div>
           </div>
+          <br>
           <button class="btn btn-lg btn-danger btn-block" type="button" name="login" id="login_btn" value="Login">LOGIN</button>
         </form>
         <div class = "message" id = "message"></div>

@@ -2,6 +2,7 @@ body {
     background: url(../CSS/image/aerial-view-alexanderplatz-architecture-1128408.jpg) no-repeat;
     background-size: cover;
     object-fit: cover;
+    width: 100%;
 }
 
 header {
@@ -10,6 +11,10 @@ header {
 
 .navbar h4 {
     font-weight: 300;
+}
+
+.login-container {
+    padding-top: 40px;
 }
 
 .form-label-group>input {
