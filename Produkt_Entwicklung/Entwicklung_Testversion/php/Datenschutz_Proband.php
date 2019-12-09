@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
 
-    <title>SoDi4U - Datenschutz</title>
+    <title>Datenschutz</title>
 
      <!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -84,9 +84,61 @@
 
   <hr class="hr-sodi"> <!-- Gehört zum Header -->
 	
-	<h1>Datenschutz PROB</h1>
-	<main>
-	</main>
+	 <div id="inhalt"> 
+		
+	<div class="container-fluid">
+	<div class="row">
+			
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 bg-color">        	   
+			</div>
+			
+			<div class="col-xs-10 col-sm-10 col-md-8 col-lg-8 bg-color2">
+			   <h4>Datenschutzerklärung</h4> <br>      	   
+			</div>
+			
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 bg-color">
+			</div>			
+	</div>
+  
+  <div class="row">
+  
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 bg-color">
+			</div>
+			
+			<div class="col-xs-10 col-sm-10 col-md-8 col-lg-8 bg-color2">
+<h5>Warum sammeln wir keine „persönlichen Daten“? </h5>
+<p>Es ist der beste Weg, um Ihre Privatsphäre zu schützen
+Wenn Informationen gar nicht erst gesammelt werden, können sie nicht gestohlen, verlangt, geleakt oder missbraucht werden.</p>
+
+<h5>Wie definieren wir „persönliche Daten“? </h5>
+<p>Für maximale Privatsphäre legen wir diesen Begriff sehr weit aus. 
+Unsere Definition von personenbezogenen Daten basiert auf den Datenschutzgesetzen und -bestimmungen der EU inclusive der Datenschutzgrundverordnung (DSGVO). Sie gehören zu den strengsten der Welt. Wir berücksichtigen alle Informationen über Sie oder Ihr Verhalten, die auf Sie persönlich zurückgeführt werden können. 
+Diese Informationen sammeln wir NICHT. </p>
+
+<h5>Wir verwenden KEINE Tracking- oder Identifizierungscookies </h5>
+<p>Cookies sind kleine Daten, die von besuchten Webseiten auf deine Festplatte übertragen werden. Solche Cookies verwenden wir nicht. 
+Wir geben Ihre Kontaktinformationen NICHT preis und verkaufen sie nicht
+Wir werden diese Informationen nicht verkaufen und mit niemandem teilen.</p>
+
+<h5>In der EU haben wir das „Recht auf Vergessen“</h5>
+<p>EU-Bürger haben das Recht zu verlangen, dass Suchergebnisse gelöscht werden, die personenbezogene Daten offenlegen, wenn diese Daten ungenau oder nicht mehr relevant sind.
+Warum sammeln wir keine „persönlichen Daten“? 
+Es ist der beste Weg, um Ihre Privatsphäre zu schützen
+Wenn Informationen gar nicht erst gesammelt werden, können sie nicht gestohlen, verlangt, geleakt oder missbraucht werden.
+</p>
+
+			</div>
+
+
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 bg-color">
+			</div>
+	</div>
+	
+</div>
+
+</div>
+
+
 	  <!--Footer-->
  <footer id="sticky-footer" class="mb-0 mt-footer py-4 bg-light text-white-50">
       <div class="pt-2 container text-center">
