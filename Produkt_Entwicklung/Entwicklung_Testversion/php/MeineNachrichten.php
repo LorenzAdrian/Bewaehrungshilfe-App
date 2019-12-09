@@ -57,7 +57,7 @@ if ($conn->query($sql) != TRUE) {
 		<link rel="stylesheet" href="../CSS/footer_pro.css">
 		<link rel="stylesheet" href="../CSS/meineNachrichtenPage.css">
 		<!-- Stylesheet für Darstellung der Nachrichten -->
-		<link rel="stylesheet" href="../CSS/meineNachrichten.css">
+		<link rel="stylesheet" href="../CSS/meineNachrichten_pro.css">
 		<!--Schriftart aus google fonts------------------>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap">
 		<!-- Stylesheet für Icons-->
@@ -73,7 +73,31 @@ if ($conn->query($sql) != TRUE) {
    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+	<script src="../javascript/feather.js"></script>
+
   	<title>Meine Nachrichten</title>
+
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
+
+<script>
+
+    $(document).ready(function(){
+
+        $('input[type="file"]').change(function(e){
+
+            var fileName = e.target.files[0].name;
+
+           /* alert('The file "' + fileName +  '" has been selected.');*/
+			
+			var neu = fileName;
+		document.getElementById('file-anzeige')
+			.innerHTML = neu;
+
+        });
+
+    });
+
+</script>
 
 	</head>
 
@@ -134,10 +158,27 @@ if ($conn->query($sql) != TRUE) {
   </nav>
 
   <hr class="hr-sodi"> <!-- Gehört zum Header -->
-
-	<div id="inhalt">
-			   <h4>Meine Nachrichten</h4>
-
+<div class="container-fluid">
+	<div class="row">
+				<div class="col-xs-1 col-sm-1 col-md-2 col-lg-4 bg-color">
+			        	   
+			</div>
+			<div class="col-xs-10 col-sm-10 col-md-8 col-lg-4 text-center bg-color2">
+			   <h4>Meine Nachrichten</h4>      	   
+			</div>
+			
+<div class="col-xs-1 col-sm-1 col-md-2 col-lg-4 bg-color">
+			     	   
+			</div>
+			
+	</div>
+  
+  <div class="row">
+  
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-4 bg-color">
+			        	   
+			</div>
+			<div class="col-xs-10 col-sm-10 col-md-8 col-lg-4 bg-color2">
 
 		<main class="meinenachrichten">
       <div>
@@ -194,6 +235,14 @@ if ($conn->query($sql) != TRUE) {
 		</main>
   </div>
 
+<div class="col-xs-1 col-sm-1 col-md-2 col-lg-4 bg-color">
+			     	   
+			</div>
+	</div>
+	
+</div>
+
+
   <!--Footer-->
  <footer id="sticky-footer" class="mb-0 mt-footer py-4 bg-light text-white-50">
       <div class="pt-2 container text-center">
@@ -214,6 +263,7 @@ if ($conn->query($sql) != TRUE) {
     </footer>
 
 	</div>
+
 
 	</body>
 </html>
