@@ -8,7 +8,7 @@
 	<head>
 
 	</head>
-    <title>Nachrichten</title>
+    <title>SoDi4U - Nachrichten</title>
 
 	<body>
 		<main>

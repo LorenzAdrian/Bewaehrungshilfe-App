@@ -75,7 +75,7 @@ if ($conn->query($sql) != TRUE) {
 
 	<script src="../javascript/feather.js"></script>
 
-  	<title>Meine Nachrichten</title>
+  	<title>SoDi4U - Nachrichten</title>
 
 <!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
 

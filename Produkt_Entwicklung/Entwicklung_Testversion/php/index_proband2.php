@@ -42,7 +42,7 @@ if(isset($_POST['but_logout'])){
     <!-- Stylesheet für Icons-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Startseite</title>
+    <title>SoDi4U - Startseite</title>
 
 </head>
 
