@@ -117,8 +117,10 @@ Diese Informationen sammeln wir NICHT. </p>
 
 <h5>Wir verwenden KEINE Tracking- oder Identifizierungscookies </h5>
 <p>Cookies sind kleine Daten, die von besuchten Webseiten auf deine Festplatte übertragen werden. Solche Cookies verwenden wir nicht. 
-Wir geben Ihre Kontaktinformationen NICHT preis und verkaufen sie nicht
-Wir werden diese Informationen nicht verkaufen und mit niemandem teilen.</p>
+</p> 
+
+<h5>Wir geben Ihre Kontaktinformationen NICHT preis und verkaufen sie nicht </h5>
+<p>Wir werden diese Informationen nicht verkaufen und mit niemandem teilen.</p>
 
 <h5>In der EU haben wir das „Recht auf Vergessen“</h5>
 <p>EU-Bürger haben das Recht zu verlangen, dass Suchergebnisse gelöscht werden, die personenbezogene Daten offenlegen, wenn diese Daten ungenau oder nicht mehr relevant sind.
