@@ -31,8 +31,25 @@ footer {
 
 h5, h4{
 	color: maroon;
+	margin: 30px;
 }
 
+p{
+	margin: 30px;
+}
+
+@media screen and (max-width: 600px) {
+
+h5, h4{
+	color: maroon;
+	margin: 5px;
+}
+
+p{
+	margin: 5px;
+}
+
+  }
 
 .bg-color{ 
 	background: #f2f2f2;
