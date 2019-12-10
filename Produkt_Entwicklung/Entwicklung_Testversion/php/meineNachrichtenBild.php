@@ -16,7 +16,7 @@
     </tr>
     <tr>
       <td>
-        <button type="submit" class="btn btn-outline-secondary btn-sm">Datei absenden</button>
+        <button id="bild-absenden" type="submit" class="btn btn-outline-secondary btn-sm">Datei absenden</button>
       </td>
     </tr>
 	

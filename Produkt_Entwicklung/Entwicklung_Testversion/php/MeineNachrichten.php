@@ -80,19 +80,20 @@ if ($conn->query($sql) != TRUE) {
 <!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
 
 <script>
-
+	/* Style von Detei upload*/
+	
     $(document).ready(function(){
 
         $('input[type="file"]').change(function(e){
 
             var fileName = e.target.files[0].name;
-
-           /* alert('The file "' + fileName +  '" has been selected.');*/
 			
 			var neu = fileName;
-		document.getElementById('file-anzeige')
+			document.getElementById('file-anzeige')
 			.innerHTML = neu;
-
+			
+			document.getElementById("bild-absenden").classList.remove("btn-outline-secondary");
+			document.getElementById("bild-absenden").classList.add("btn-outline-success");
         });
 
     });
