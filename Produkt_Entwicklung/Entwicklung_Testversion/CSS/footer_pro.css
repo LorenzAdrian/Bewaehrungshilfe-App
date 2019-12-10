@@ -29,24 +29,47 @@ footer {
     width: 100%;
 }
 
-h5, h4{
+h6{
 	color: maroon;
 	margin: 30px;
+	margin-top: 40px;
+	font-size: 0.875em;
+}
+
+h4{
+
+	margin: 30px;
+	margin-top: 40px;
+	font-size: 0.875em;
 }
 
 p{
 	margin: 30px;
+	font-size: 0.875em;
+}
+
+#ds {
+	color: maroon;
 }
 
 @media screen and (max-width: 600px) {
 
-h5, h4{
+h6 {
 	color: maroon;
 	margin: 5px;
+	margin-top: 10px;
+	font-size: 0.875em;
+}
+
+h4{
+	margin: 5px;
+	margin-top: 10px;
+	font-size: 0.875em;
 }
 
 p{
 	margin: 5px;
+	font-size: 0.875em;
 }
 
   }

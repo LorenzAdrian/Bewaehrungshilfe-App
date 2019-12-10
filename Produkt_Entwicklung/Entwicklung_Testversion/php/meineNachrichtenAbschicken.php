@@ -7,8 +7,8 @@
     <td>
   <!--<button class="abschicken" type="submit" name="signup-submit">&#11162;</button>-->
 	 
-	<button class="button-sodi btn-outline-sodi ml-3" type="submit" name="signup-submit"><i data-feather="send"></i> </button>
-
+	<button class="abschicken button-sodi btn-outline-sodi margin rounded-pill" type="submit" name="signup-submit"><i data-feather="send"></i> </button>
+    
     </td>
     </form>
   </tr>

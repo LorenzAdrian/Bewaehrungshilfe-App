@@ -67,7 +67,7 @@ font {
   border-color: grey;
   border-radius: 1rem;
   padding: 0.5rem;
-  width: 100%;
+  width: 170%;
   height: 3rem;
   font-family: 'Assistant', sans-serif;
 }
@@ -76,8 +76,11 @@ font {
 }
 
 .abschicken{
-  margin-left: 1rem;
-  font-size: 2rem;
+  margin-left: 7rem;
+}
+
+.btn-unsichtbar{
+	visibility: hidden;
 }
 
 .feather {

@@ -82,6 +82,8 @@ if ($conn->query($sql) != TRUE) {
 <script>
 	/* Style von Detei upload*/
 	
+	 $("#bild-absenden").hide();
+	
     $(document).ready(function(){
 
         $('input[type="file"]').change(function(e){
@@ -92,7 +94,7 @@ if ($conn->query($sql) != TRUE) {
 			document.getElementById('file-anzeige')
 			.innerHTML = neu;
 			
-			document.getElementById("bild-absenden").classList.remove("btn-outline-secondary");
+			document.getElementById("bild-absenden").classList.remove("btn-unsichtbar");
 			document.getElementById("bild-absenden").classList.add("btn-outline-success");
         });
 
