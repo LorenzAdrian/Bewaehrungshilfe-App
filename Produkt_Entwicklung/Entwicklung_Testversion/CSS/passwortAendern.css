@@ -1,54 +1,75 @@
-/**{
-	margin: 0;
-    padding: 0;
-	box-sizing: border-box;
-    font-family: 'Assistant', sans-serif;	
-	
-}
-   body {
-         height: 100vh;
-         padding: 0rem;
-         margin: 0rem;
-         display: flex;
-         flex-direction: column;
-		 background: white;
-      }
-      body>*:not(.scrollen) {
-         flex-shrink: 0;
-      }
-      .scrollen {
-         overflow-y: scroll;
-         flex-grow: 1;
-         flex-shrink: 1;
-         flex-basis: auto;
-	  }*/
-	  
-  * {
-    margin: 0;
-    padding: 0;
-}
- 
-html, body {
-    height: 100%;
-	
-}
- 
-#seite {
-    position: relative;
-    min-height: 100%;
-    margin: 0 auto;
-}
- 
-#inhalt {
-    padding-bottom: 4em;
-}
-.tabellemitte {
-	width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align:left;
+body {
+    
+    background-size: cover;
+    object-fit: cover;
 }
 
-.footer {
-    margin-top: 30px;
+header {
+    border-bottom: 2px maroon solid;
+}
+
+.passwortAendern-container {
+    padding-top: 40px;
+  height: 88vh;
+}
+.form-label-group > input {
+  height: 4.125rem;
+  padding: 0.95rem;
+  width: 350px;
+}
+.navbar h4 {
+    font-weight: 300;
+}
+
+.login-form {
+    max-width: 100%;
+    width: 350px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.form-group {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-check h2 {
+    font-weight: 300;
+}
+
+.form-control {
+    font-size: 15px;
+    min-height: 48px;
+    font-weight: 500;
+}
+
+.form-button {
+    padding-top: 10px;
+}
+
+
+.message {
+    color: #FF0000;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-container li {
+    list-style: none;
+}
+
+.footer-container li a {
+    text-decoration: none;
+    color: white;
 }
