@@ -35,7 +35,7 @@ if(isset($_POST['but_logout'])){
     <link rel="stylesheet" href="../CSS/termine_proband.css">
 		<link rel="stylesheet" href="../CSS/header_prob.css">
 		<link rel="stylesheet" href="../CSS/footer_pro.css">
-		<link rel="stylesheet" href="../CSS/passwortAendern2.css">
+		<link rel="stylesheet" href="../CSS/passwortAendern.css">
     <!--Schriftart aus google fonts------------------------->
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
