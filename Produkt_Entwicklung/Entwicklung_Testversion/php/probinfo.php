@@ -66,7 +66,7 @@ if (mysqli_num_rows($result) > 0) {
   <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
 
    <a class="navbar-brand w-100" href="#">
-      <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;Sodi 4u
+      <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
 		</a>
     <div class="w-100"><!--spacer--></div>
     <div class="w-100"><!--spacer--></div>

@@ -53,7 +53,7 @@ if(isset($_POST['signupcheck-submit'])) {
 			<header>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
 				<a class="navbar-brand" href="#">
-				<img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;Sodi 4u
+				<img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
 				</a>
 				<h4>Registrierung</h4>
 			</nav>
@@ -100,7 +100,7 @@ if(isset($_POST['signupcheck-submit'])) {
 			<header>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
 				<a class="navbar-brand" href="#">
-				<img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;Sodi 4u
+				<img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
 				</a>
 				<h4>Registrierung</h4>
 			</nav>
@@ -151,7 +151,7 @@ else if ($rolle == 'proband'){
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
 			<a class="navbar-brand" href="#">
-			<img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;Sodi 4u
+			<img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
 			</a>
 			<h4>Registrierung</h4>
 		</nav>
