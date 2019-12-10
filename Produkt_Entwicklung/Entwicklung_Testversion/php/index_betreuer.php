@@ -114,13 +114,19 @@ if(isset($_POST['but_logout'])){
 </div>
 
    <!--Footer-->
-      <footer id="sticky-footer" class="py-2 bg-dark text-white-50">
-        <div class="container footer-container">
-          <small>Datenschutz</small>
-          <small>Impressum</small>
-          <small>Kontakt</small>
-        </div>
-      </footer>
+   <footer id="sticky-footer" class="py-2 bg-dark text-white-50">
+    <div class="container footer-container">
+      <li>
+        <a href="datenschutz.html">Datenschutz</a>
+      </li>
+      <li>
+        <a href="impressum.html">Impressum</a>
+      </li>
+      <li>
+        <a href="kontakt.html">Kontakt</a>
+      </li>
+    </div>
+  </footer>
 
 </body>
 </html>

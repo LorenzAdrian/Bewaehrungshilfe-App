@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 
-body {}
-
 header {
   border-bottom: 2px solid maroon;
 }
@@ -34,14 +32,19 @@ h2 {
 }
 
 #sticky-footer {
-  position: fixed;
-  bottom: 0;
+  flex-shrink: none;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-around;
-  height: auto;
-  position: fixed;
-  bottom: 0;
+}
+
+.footer-container li {
+  list-style: none;
+}
+
+.footer-container li a {
+  text-decoration: none;
+  color: white;
 }
