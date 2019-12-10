@@ -13,13 +13,24 @@ header {
     font-weight: 300;
 }
 
+.form-check {
+    display: flex;
+    text-align: center;
+}
+
+.form-check h2 {
+    font-weight: 300;
+}
+
 .login-container {
     padding-top: 40px;
+    height: 88vh;
 }
 
 .form-label-group>input {
     height: 4.125rem;
     padding: .95rem;
+    width: 400px;
 }
 
 i:hover {
