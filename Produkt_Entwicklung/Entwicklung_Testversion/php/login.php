@@ -67,11 +67,10 @@
           <br>
           <button class="btn btn-lg btn-danger btn-block" type="button" name="login" id="login_btn" value="Login">LOGIN</button>
         </form>
-        <div class = "message" id = "message"></div>
       </div>
     </div>
   </div>
-</div>
+        <div class = "message" id = "message" style= "text-align: center"></div>
 
 	<!-- FOOTER -->
  	<footer id="sticky-footer" class="py-2 bg-dark text-white-50">
