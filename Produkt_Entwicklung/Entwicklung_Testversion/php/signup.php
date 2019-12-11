@@ -60,14 +60,25 @@ if(isset($_POST['signupcheck-submit'])) {
 	if ($rolle == 'betreuer') {
 		echo '
 		<body>
-			<header>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
-				<a class="navbar-brand" href="#">
-				<img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
-				</a>
-				<h4>Registrierung</h4>
-			</nav>
-			</header>
+		<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+		<a class="navbar-brand w-100" href="#">
+		  <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
+		  </a>
+		<div class="w-100"><!--spacer--></div>
+		<div class="w-100"><!--spacer--></div>
+		<div class="w-100"><!--spacer--></div>
+		<div class="w-100"><!--spacer--></div>
+		 <div class="navbar-collapse collapse w-100" id="navbar5">
+			<ul class="navbar-nav mx-auto">
+			<!-- Aktuelle Seite -->
+		  <li class="nav-item active">
+			<a class="nav-link" href="../php/index_betreuer.php">Zurück zur Startseite<span class="sr-only">(current)</span></a>
+		  </li>
+		</ul>
+		</div>
+		<div class="w-100"><!--spacer--></div>
+		</header>
 
 			<main>
 				<h1>Betreuer</h1>
@@ -109,11 +120,23 @@ if(isset($_POST['signupcheck-submit'])) {
 			<body>
 			<header>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
-				<a class="navbar-brand" href="#">
-				<img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
-				</a>
-				<h4>Registrierung</h4>
-			</nav>
+		
+			<a class="navbar-brand w-100" href="#">
+			  <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
+			  </a>
+			<div class="w-100"><!--spacer--></div>
+			<div class="w-100"><!--spacer--></div>
+			<div class="w-100"><!--spacer--></div>
+			<div class="w-100"><!--spacer--></div>
+			 <div class="navbar-collapse collapse w-100" id="navbar5">
+				<ul class="navbar-nav mx-auto">
+				<!-- Aktuelle Seite -->
+			  <li class="nav-item active">
+				<a class="nav-link" href="../php/index_betreuer.php">Zurück zur Startseite<span class="sr-only">(current)</span></a>
+			  </li>
+			</ul>
+			</div>
+			<div class="w-100"><!--spacer--></div>
 			</header>
 
 			<main>
