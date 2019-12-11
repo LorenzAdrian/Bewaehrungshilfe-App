@@ -87,6 +87,7 @@
       </div>
     </div>
   </div>
+  <br>
         <div class = "message" id = "message" style= "text-align: center"></div>
 
 	<!-- FOOTER -->
