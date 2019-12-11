@@ -202,7 +202,7 @@ else if ($rolle == 'proband'){
     <div class="w-100"><!--spacer--></div>
 	</header>
 	<main>
-		<h1>Proband</h1>
+		<h1>Neuen Proband anlegen</h1>
 		<p>Bitte füllen Sie alle Felder aus.</p>
 		<form  action="signup.inc.php" method="POST">
 
