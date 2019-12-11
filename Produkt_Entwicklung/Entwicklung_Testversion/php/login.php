@@ -24,7 +24,8 @@
   <script src="../javascript/button.js"></script>
 
   <title>Startseite</title>
-
+  <link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
+		
 	</head>
 
 <body>
@@ -32,7 +33,7 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
     <a class="navbar-brand" href="#">
-      <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
+      <img src="../CSS/image/logoohneschatten.png"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
     </a>
     <h4>Herzlich Willkommen</h4>
   </nav>
