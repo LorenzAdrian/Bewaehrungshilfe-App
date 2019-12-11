@@ -21,7 +21,7 @@
 
 main{
 	align-items: center;
-	padding-top: 50px;
+	padding-top: 20px;
 	text-align: center;
 }
 
@@ -155,12 +155,24 @@ else if ($rolle == 'proband'){
 	echo '
 	<body>
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
-			<a class="navbar-brand" href="#">
-			<img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
-			</a>
-			<h4>Registrierung</h4>
-		</nav>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+
+    <a class="navbar-brand w-100" href="#">
+      <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
+	  </a>
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
+     <div class="navbar-collapse collapse w-100" id="navbar5">
+        <ul class="navbar-nav mx-auto">
+		<!-- Aktuelle Seite -->
+      <li class="nav-item active">
+        <a class="nav-link" href="../php/index_betreuer.php">Zurück zur Startseite<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    </div>
+    <div class="w-100"><!--spacer--></div>
 	</header>
 	<main>
 		<h1>Proband</h1>
@@ -171,43 +183,61 @@ else if ($rolle == 'proband'){
 			<br>
 
 			<div class="form-group row">
-				<label for="username" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Username:</label>
+				<label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Username:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 					<input type="text" class="form-control" id="username" name="uid" placeholder="Username">
 				</div>
-				<label for="email" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">E-Mail:</label>
+			</div>
+			<div class="form-group row">
+				<label for="email" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">E-Mail:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<input type="text" class="form-control" id="email" name="mail" placeholder="E-mail">
+					<input type="email" class="form-control" id="email" name="mail" placeholder="E-mail">
 				</div>
-				<label for="password" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort:</label>
+			</div>
+			<div class="form-group row">
+				<label for="password" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 					<input type="password" class="form-control" id="password" name="pwd" placeholder="Passwort">
 				</div>
-				<label for="password-repeat" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort bestätigen:</label>
+			</div>
+			<div class="form-group row">
+				<label for="password-repeat" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort bestätigen:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 					<input type="password" class="form-control" id="password-repeat" name="pwd-repeat" placeholder="Passwort bestätigen">
 				</div>
-				<label for="vorname" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Vorname:</label>
+			</div>
+			<div class="form-group row">
+				<label for="vorname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Vorname:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 					<input type="text" class="form-control" id="vorname" name="vorname" placeholder="Vorname">
 				</div>
-				<label for="nachname" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Nachname:</label>
+			</div>
+			<div class="form-group row">
+				<label for="nachname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Nachname:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<input type="text" class="form-control" id="nachname" name="nachname" placeholder="Vorname">
+					<input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname">
 				</div>
-				<label for="telnr" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Telefonnummer:</label>
+			</div>
+			<div class="form-group row">
+				<label for="telnr" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Telefonnummer:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 					<input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer">
 				</div>
-				<label for="az" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Aktenzeichen:</label>
+			</div>
+			<div class="form-group row">
+				<label for="az" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Aktenzeichen:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 					<input type="text" class="form-control" id="az" name="az" placeholder="Aktenzeichen">
 				</div>
-				<label for="ende" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuungsende:</label>
+			</div>
+			<div class="form-group row">
+				<label for="ende" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuungsende:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<input type="text" class="form-control" id="ende" name="ende" placeholder="Betreuungsende">
+					<input type="date" class="form-control" id="ende" name="ende" placeholder="Betreuungsende">
 				</div>
-				<label for="betreuer" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuer-ID:</label>
+			</div>
+			<div class="form-group row">
+				<label for="betreuer" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuer-ID:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 					<input type="number" class="form-control" id="betreuer" name="betreuer" placeholder="Betreuer-ID">
 				</div>

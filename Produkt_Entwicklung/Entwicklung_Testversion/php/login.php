@@ -31,12 +31,28 @@
 <body>
 <!-- Header -->
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
-    <a class="navbar-brand" href="#">
-      <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
-    </a>
-    <h4>Herzlich Willkommen</h4>
-  </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+
+<a class="navbar-brand w-100" href="#">
+  <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
+</a>
+<div class="w-100"><!--spacer--></div>
+<div class="w-100"><!--spacer--></div>
+<div class="w-100"><!--spacer--></div>
+<div class="w-100"><!--spacer--></div>
+<div class="w-100"><!--spacer--></div>
+ <div class="navbar-collapse collapse w-100" id="navbar5">
+    <ul class="navbar-nav mx-auto">
+<!-- Aktuelle Seite -->
+  <li class="nav-item active">
+    <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="login.php">Abmelden</a>
+  </li>
+</ul>
+</div>
+<div class="w-100"><!--spacer--></div>
 </header>
 
 	<!-- LOGIN CONTAINER -->
