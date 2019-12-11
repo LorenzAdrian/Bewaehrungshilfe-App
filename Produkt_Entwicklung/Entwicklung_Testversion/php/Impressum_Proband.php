@@ -32,7 +32,7 @@
 	<nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
    
    <a class="navbar-brand w-100" href="#">
-          		  <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi 4u
+          		  <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
 			</a>
    
      <div class="navbar-collapse collapse w-100" id="navbar5">
@@ -83,10 +83,102 @@
   </nav>
 
 <hr class="hr-sodi"> <!-- Gehört zum Header -->
+
+<main>
+
+<!--Inhalt der Seite-->
+	 <div id="inhalt"> 
+		
+	<div class="container-fluid">
+	<div class="row">
+			
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 bg-color">        	   
+			</div>
+			
+			<div class="col-xs-10 col-sm-10 col-md-8 col-lg-8 bg-color2">
+			 <br> <b> <h4 id="ds">Impressum</h4> </b> <br>     	   
+			</div>
+			
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 bg-color">
+			</div>			
+	</div>
+  
+  <div class="row">
+  
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 bg-color">
+			</div>
+			
+			<div class="col-xs-10 col-sm-10 col-md-8 col-lg-8 bg-color2">
+<h6>Anbieter:</h6>
+<p>Soziale Dienste der Justiz Berlin <br>
+          Zentrale in Berlin-Schöneberg <br>
+          Salzburger Str. 21-25 <br>
+          10825 Berlin</p>
+		  
+		  <h6>Bei redaktionellen Inhalten:</h6>
+		  <p>Verantwortlich nach § 55 Abs.2 RStV <br>
+          Max Mustermann <br>
+          Musterstraße 2 <br>
+          12345 Berlin <br></p>
+		  
+		  
+		  <h6>Allgemeine Hinweise</h6>
+		  <p> Das Informationsangebot der Berliner Justiz/Verbraucherschutz/Antidiskriminierung ist Teil des
+          Stadtinformationssystems von Berlin. Inhalte und Layout des Web-Auftritts werden von der in der jeweiligen
+          Seitenüberschrift genannten Justizeinrichtung oder der Senatsverwaltung für Justiz, Verbraucherschutz und
+          Antidiskriminierung eigenverantwortlich betreut.
+          Das Copyright für Bilder und Texte liegt, soweit nicht anders vermerkt, bei der Berliner
+          Justiz/Verbraucherschutz/Antidiskriminierung. Vor einer öffentlichen oder gewerblichen Nutzung wenden Sie
+          sich bitte an die Senatsverwaltung für Justiz, Verbraucherschutz und Antidiskriminierung</p>
+		  
+		  <h6>Erfordernis der Schriftform</h6>
+		  <p>Rechtsverbindliche Erklärungen, die eine schriftliche Form oder eine elektronische Signatur erfordern,
+          können gegenüber der Senatsverwaltung für Justiz, Verbraucherschutz und Antidiskriminierung, den Gerichten,
+          Staats- und Amtsanwaltschaften, Justizvollzugsanstalten sowie sonstigen Justizeinrichtungen nicht per E-Mail
+          abgegeben werden. Benutzen Sie daher bitte für solche Erklärungen ausnahmslos die Briefpost, das Telefax
+          oder das EGVP. Die Senatsverwaltung für Justiz, Verbraucherschutz und Antidiskriminierung ist keine zentrale
+          Postverteilungsstelle der Berliner Justiz. Wir bitten um Verständnis, dass an andere Justizeinrichtungen
+          adressierte E-Mails nicht weitergeleitet werden können.</p>
+		  
+		  <h6>Haftungshinweis</h6>
+        <p>Die Berliner Justiz/Verbraucherschutz/Antidiskriminierung übernimmt keine Verantwortung für die Inhalte
+          fremder Internetseiten, auf die per Link verwiesen wird. Eine kontinuierliche Prüfung der von anderen
+          veröffentlichten Internetseiten ist weder beabsichtigt noch möglich. Die Berliner
+          Justiz/Verbraucherschutz/Antidiskriminierung distanziert sich ausdrücklich von allen Inhalten, die straf-
+          oder haftungsrechtlich relevant sind oder gegen die guten Sitten verstoßen.
+         
+          Trotz sorgfältiger Auswahl der auf unseren Seiten angebotenen Informationen kann keine Gewähr für deren
+          Richtigkeit übernommen werden. Rechtliche Hinweise, Empfehlungen und Auskünfte sind daher unverbindlich.
+          Eine Rechtsberatung findet nicht statt. Eine Haftung für Schäden, die sich aus der Verwendung der
+          abgerufenen Informationen und Dienste ergeben, durch das Land Berlin oder die jeweiligen Justizeinrichtungen
+          ist – soweit gesetzlich zulässig – ausgeschlossen.</p>
+        
+        <h6>Urheberrecht</h6>
+        <p>Das Layout der Seiten der Senatsverwaltung für Justiz, Verbraucherschutz und Antidiskriminierung, die
+          verwendeten Grafiken sowie die Sammlung der Beiträge sind urheberrechtlich geschützt. Die Seiten dürfen
+          ausschließlich zu privatem Gebrauch vervielfältigt werden. Textliche und grafische Änderungen sowie die
+          öffentliche Verbreitung sind nicht erlaubt.</p>
+		  
+		 
 	
-	<h1>Impressum PROB</h1>
-	<main>
-	</main>
+	
+	
+
+	
+	
+	
+	</div>
+
+
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 bg-color">
+			</div>
+	</div>
+	
+</div>
+
+</div>
+</main>
+	
 	  <!--Footer-->
  <footer id="sticky-footer" class="mb-0 mt-footer py-4 bg-light text-white-50">
       <div class="pt-2 container text-center">

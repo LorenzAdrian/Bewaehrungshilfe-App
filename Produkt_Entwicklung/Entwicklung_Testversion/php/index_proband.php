@@ -189,7 +189,7 @@ if(isset($_POST['but_logout'])){
 		</div>
 		
 		<div class="col-6 col-sm-5 col-md-3 col-lg-3">
-	 		<a href="To_Do_Liste.php">
+	 		<a href="Leitfaden_Proband.pdf">
 				<div class="icon">
 					<i class="fa fa-list-alt " ></i></div>
 				<div class="name">Leitfaden</div>

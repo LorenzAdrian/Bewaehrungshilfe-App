@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
 
-    <title>Datenschutz</title>
+    <title>SoDi4U - Datenschutz</title>
 
      <!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -32,7 +32,7 @@
 	<nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
    
    <a class="navbar-brand w-100" href="#">
-          		  <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi 4u
+          		  <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
 			</a>
    
      <div class="navbar-collapse collapse w-100" id="navbar5">

@@ -32,7 +32,7 @@
 	<nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
    
    <a class="navbar-brand w-100" href="#">
-          		  <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi 4u
+          		  <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
 			</a>
    
      <div class="navbar-collapse collapse w-100" id="navbar5">
@@ -84,9 +84,59 @@
   
     <hr class="hr-sodi"> <!-- Gehört zum Header -->
 	
-	<h1>Kontakt PROB</h1>
 	<main>
-	</main>
+	
+<!--Inhalt der Seiten-->
+
+	 <div id="inhalt"> 
+		
+	<div class="container-fluid">
+	<div class="row">
+			
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 bg-color">        	   
+			</div>
+			
+			<div class="col-xs-10 col-sm-10 col-md-8 col-lg-8 bg-color2">
+			   <br> <b> <h4 id="ds">Impressum</h4> </b> <br>    	   
+			</div>
+			
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 bg-color">
+			</div>			
+	</div>
+  
+  <div class="row">
+  
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 bg-color">
+			</div>
+			
+			<div class="col-xs-10 col-sm-10 col-md-8 col-lg-8 bg-color2">
+			<h6>Kontaktinformationen</h6>
+<p>Telefon: (030) 9013-2800<br>
+          Telefax: (030) 9013-2810<br>
+          E-Mail: poststelle@sozdj.berlin.de<br>
+          Website: https://www.berlin.de/sen/justiz/soziale-dienste-der-justiz<br>
+		  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </p>
+		
+			</div>
+
+
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 bg-color">
+			</div>
+	</div>
+	
+</div>
+
+</div>
+</main>
+
+
+
+
+
+
+
+
 	  <!--Footer-->
  <footer id="sticky-footer" class="mb-0 mt-footer py-4 bg-light text-white-50">
       <div class="pt-2 container text-center">
