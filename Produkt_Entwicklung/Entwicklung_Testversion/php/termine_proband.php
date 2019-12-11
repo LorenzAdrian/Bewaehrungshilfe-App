@@ -29,6 +29,7 @@ if(isset($_POST['but_logout'])){
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
 
     <title>SoDi4U - Termine</title>
+	<link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
 	
  <!-- Bootstrap Layout --> 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">

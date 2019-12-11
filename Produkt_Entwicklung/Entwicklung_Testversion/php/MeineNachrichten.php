@@ -76,6 +76,7 @@ if ($conn->query($sql) != TRUE) {
 	<script src="../javascript/feather.js"></script>
 
   	<title>SoDi4U - Nachrichten</title>
+	<link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
 
 <!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
 

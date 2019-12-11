@@ -38,6 +38,7 @@ if(isset($_POST['but_logout'])){
 
 
     <title>SoDi4U - Informationen</title>
+	<link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
 	
 </head>
 

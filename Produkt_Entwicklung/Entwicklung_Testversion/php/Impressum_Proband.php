@@ -17,6 +17,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
 
     <title>SoDi4U - Impressum</title>
+	<link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
 
      <!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
