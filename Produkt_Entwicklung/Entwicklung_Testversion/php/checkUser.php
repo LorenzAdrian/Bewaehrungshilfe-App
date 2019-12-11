@@ -72,6 +72,8 @@ else {
 			}
 			$_SESSION['username'] = $row['Username'];
 			$_SESSION['rolle'] = $rolle;
+			$_SESSION['vorname'] = $row['Vorname'];
+			$_SESSION['nachname'] = $row['Nachname'];
 			//header("Location: login.php?login=success");
 		}
 		else {
