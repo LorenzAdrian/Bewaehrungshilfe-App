@@ -214,124 +214,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="container passwortAendern-container text-align-center d-flex justify-content-center">
 <div class="row"> 
 <div class="col-lg-12 ">
-	<form class= "passwortAendern">
-	<div class= "form-label-group input-group" action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
-        <input type="hidden" name="uid" value="<?php echo $userID;?>">
+		
 		<div class="form-group">
         <div class="form-check">
           <h2>Passwort ändern</h2>
 		  <br>
         </div>
-		
-	</form>
-	<form class="form-eingabe">
 		<div class="form-label-group input-group">
           <input type="text" class="form-control" name="username" autocomplete="off" value="<?php echo htmlspecialchars($_SESSION['username']); ?>" readonly>
 		  </div>
 		 <br>
-		 <div class="form-label-group input-group"> 
+		<div class="form-label-group input-group"> 
           <input type="password" class="form-control"  name="pwd-alt" id="pwd-alt"
           placeholder="Geben Sie bitte Ihr altes Passwort ein." size="50" required autofocus>
 		  <!--<span class="error">* <?php //echo $pwdAltLeer;?></span>-->
-		  <div class="input-group-append">
+		<div class="input-group-append">
                 <span class="input-group-text">
                   <i id="eye1" class="far fa-eye-slash" onclick="showHidePwd1();"></i>
                 </span>
 				<span class="error"><?php echo $pwdAltErr;?></span>
-           </div>
+        </div>
 		</div>
 		<br>
-		  <div class="form-label-group input-group">
+		<div class="form-label-group input-group">
 		  <input type="password" class="form-control"  name="pwd-neu" id="pwd-neu"
           placeholder="Geben Sie bitte Ihr neues Passwort ein." size="50" required>
-		   <div class="input-group-append">
+		<div class="input-group-append">
                 <span class="input-group-text">
                   <i id="eye2" class="far fa-eye-slash" onclick="showHidePwd2();"></i>
                 </span>
 				<span class="error"><?php echo $pwdNeuLeer;?></span>
 				<span class="error"><?php echo $pwdRptErr;?></span>
-              </div>
-			</div>
+        </div>
+		</div>
 		<br>
 		<div class="form-label-group input-group">
 		  <input type="password" class="form-control"  name="pwd-repeat" id="pwd-repeat"
           placeholder="Wiederholen Sie bitte Ihr neues Passwort." size="50" required>
-		  <div class="input-group-append">
+		<div class="input-group-append">
                 <span class="input-group-text">
                   <i id="eye3" class="far fa-eye-slash" onclick="showHidePwd3();"></i>
                 </span>
 				<span class="error"><?php echo $pwdRptErr;?></span>
-              </div>
-			</div>
+        </div>
+		</div>
 		  <br>
 			<button class="btn btn-lg btn-danger btn-block" type="submit" name="passwortAendern" id="passwortAendern" >Passwort ändern</button>
 		<div class="success"> <?php echo $pwdErfolg;?></div>
 		<div class="error"><?php echo $pwdTatErr;?></div>
 		</div>
-		</form>
-		</form>
-		</main>
-		
-<!-- <div class="tabellemitte">   
-   <table >
-      <tr>
-        <td>Benutzername</td>
-        <td>
-          <input type="text" name="username" autocomplete="off" value="  <?php //echo htmlspecialchars($_SESSION['username']); ?>" readonly>
-        </td>
-      </tr>
-      <tr>
-        <td>Altes Passwort: </td>
-        <td>
-          <input type="password" name="pwd-alt" id="pwd-alt" placeholder="Altes Passwort" required>
-          <!--<span class="error">* <?php //echo $pwdAltLeer;?></span>-->
-       <!--
-	   </td>
-        <td>
-          <input type="checkbox" onclick="pwdShowAlt()" id="checkPwdAlt" hidden>
-          <label for="checkPwdAlt">&#128065;</label>
-          <span class="error"><?php //echo $pwdAltErr;?></span>
-        </td>
-      </tr>
-      <tr>
-        <td>Neues Passwort: </td>
-        <td>
-          <input type="password" name="pwd-neu" id="pwd-neu" placeholder="Neues Passwort" required>
-        </td>
-        <td>
-          <input type="checkbox" onclick="pwdShowNeu()" id="checkPwdNeu" hidden>
-          <label for="checkPwdNeu">&#128065;</label>
-          <span class="error"><?php //echo $pwdNeuLeer;?></span>
-          <span class="error"><?php// echo $pwdRptErr;?></span>
-        </td>
-      </tr>
-      <tr>
-        <td>Passwort wiederholen</td>
-        <td>
-          <input type="password" name="pwd-repeat" id="pwd-repeat" placeholder="Passwort wiederholen" required>
-        </td>
-        <td>
-          <input type="checkbox" onclick="pwdShowRpt()" id="checkPwdRpt" hidden>
-          <label for="checkPwdRpt">&#128065;</label>
-          <span class="error"><?php //echo $pwdRptLeer;?></span>
-          <span class="error"><?php //echo $pwdRptErr;?></span>
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          <button type="submit" name="passwortAendern" id="passwortAendern">Passwort ändern</button>
-        </td>
-      </tr>
-    </table>
-    <div class="success"> <?php //echo $pwdErfolg;?></div>
-    <div class="error"><?php //echo $pwdTatErr;?></div>
-	</div>
-  </form>
-  
+</form>
 </main>
-
-
+		
 	<!--Footer-->
 	<footer id="sticky-footer" class="mb-0 mt-footer py-4 bg-light text-white-50">
       <div class="pt-2 container text-center">
@@ -350,6 +284,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       </div>
     </footer>
-	
 </html>
 
