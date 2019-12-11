@@ -41,6 +41,7 @@ if (mysqli_num_rows($result) > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Proband: Nachrichten und Termine</title>
+    <link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
     <!-- STYLESHEET CSS -->
     <link rel="stylesheet" href="../CSS/probinfo.css" >
     <link rel="stylesheet" href="../CSS/meineNachrichten.css">
@@ -66,7 +67,7 @@ if (mysqli_num_rows($result) > 0) {
   <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
 
    <a class="navbar-brand w-100" href="#">
-      <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
+      <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
 		</a>
     <div class="w-100"><!--spacer--></div>
     <div class="w-100"><!--spacer--></div>

@@ -42,6 +42,7 @@ if(isset($_POST['but_logout'])){
   <link rel="stylesheet" href="../CSS/betreuer_index.css">
 
   <title>Start</title>
+  <link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
 
 </head>
 
@@ -52,7 +53,7 @@ if(isset($_POST['but_logout'])){
 <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
 
     <a class="navbar-brand w-100" href="#">
-      <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
+      <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
 	  </a>
     <div class="w-100"><!--spacer--></div>
     <div class="w-100"><!--spacer--></div>
@@ -113,8 +114,9 @@ if(isset($_POST['but_logout'])){
   </div>
 </div>
 
-   <!--Footer-->
-   <footer id="sticky-footer" class="py-2 bg-dark text-white-50">
+   <!--Footer
+
+     <footer id="sticky-footer" class="py-2 bg-dark text-white-50">
     <div class="container footer-container">
       <li>
         <a href="datenschutz.html">Datenschutz</a>
@@ -126,7 +128,8 @@ if(isset($_POST['but_logout'])){
         <a href="kontakt.html">Kontakt</a>
       </li>
     </div>
-  </footer>
+  </footer> 
+  -->
 
 </body>
 </html>
