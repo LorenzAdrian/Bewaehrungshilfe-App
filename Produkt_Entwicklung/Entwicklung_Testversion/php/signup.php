@@ -25,6 +25,10 @@ main{
 	text-align: center;
 }
 
+header {
+  border-bottom: 2px maroon solid;
+}
+
 .form-group{
 	display: flex;
 	align-items: center;

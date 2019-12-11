@@ -36,23 +36,10 @@
 <a class="navbar-brand w-100" href="#">
   <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
 </a>
-<div class="w-100"><!--spacer--></div>
-<div class="w-100"><!--spacer--></div>
-<div class="w-100"><!--spacer--></div>
-<div class="w-100"><!--spacer--></div>
-<div class="w-100"><!--spacer--></div>
- <div class="navbar-collapse collapse w-100" id="navbar5">
-    <ul class="navbar-nav mx-auto">
-<!-- Aktuelle Seite -->
-  <li class="nav-item active">
-    <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="login.php">Abmelden</a>
-  </li>
-</ul>
+<div class="text">
+<h3>Herzlich Willkommen</h3>
 </div>
-<div class="w-100"><!--spacer--></div>
+
 </header>
 
 	<!-- LOGIN CONTAINER -->
