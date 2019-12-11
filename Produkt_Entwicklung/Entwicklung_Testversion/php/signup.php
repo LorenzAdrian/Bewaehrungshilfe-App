@@ -25,8 +25,10 @@ main{
 	text-align: center;
 }
 
-form{
-	text-align: center;
+.form-group{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 h1{
@@ -35,6 +37,10 @@ h1{
 
 h4{
 	font-weight: 300;
+}
+
+label{
+	text-align: left;
 }
 
 </style>
@@ -164,28 +170,51 @@ else if ($rolle == 'proband'){
 			<input type="hidden" name="rolle" value="proband">
 			<br>
 
-			<input type="text" name="uid" placeholder="Username">
+			<div class="form-group row">
+				<label for="username" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Username:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="username" name="uid" placeholder="Username">
+				</div>
+				<label for="email" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">E-Mail:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="email" name="mail" placeholder="E-mail">
+				</div>
+				<label for="password" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="password" class="form-control" id="password" name="pwd" placeholder="Passwort">
+				</div>
+				<label for="password-repeat" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort bestätigen:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="password" class="form-control" id="password-repeat" name="pwd-repeat" placeholder="Passwort bestätigen">
+				</div>
+				<label for="vorname" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Vorname:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="vorname" name="vorname" placeholder="Vorname">
+				</div>
+				<label for="nachname" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Nachname:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="nachname" name="nachname" placeholder="Vorname">
+				</div>
+				<label for="telnr" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Telefonnummer:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer">
+				</div>
+				<label for="az" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Aktenzeichen:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="az" name="az" placeholder="Aktenzeichen">
+				</div>
+				<label for="ende" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuungsende:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="ende" name="ende" placeholder="Betreuungsende">
+				</div>
+				<label for="betreuer" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuer-ID:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="number" class="form-control" id="betreuer" name="betreuer" placeholder="Betreuer-ID">
+				</div>
+			</div>
+
 			<br>
-			<input type="text" name="mail" placeholder="E-mail">
-			<br>
-			<input type="password" name="pwd" placeholder="Passwort">
-			<br>
-			<input type="password" name="pwd-repeat" placeholder="Passwort bestätigen">
-			<br>
-			<br>
-			<input type="text" name="vorname" placeholder="Vorname">
-			<br>
-			<input type="text" name="nachname" placeholder="Nachname">
-			<br>
-			<input type="number" name="telnr" placeholder="Telefonnummer">
-			<br>
-			<input type="text" name="az" placeholder="Aktenzeichen">
-			<br>
-			<input type="text" name="ende" placeholder="Betreuungsende">
-			<br>
-			<input type="number" name="betreuer" placeholder="Betreuer-ID">
-			<br>
-			<br>
+
 			<button type="submit" class="btn btn-outline-danger" name="signup-submit">Registrieren</button>
 		</form>
 		</main>';
