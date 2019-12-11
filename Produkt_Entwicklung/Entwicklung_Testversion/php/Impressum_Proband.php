@@ -32,7 +32,7 @@
 	<nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
    
    <a class="navbar-brand w-100" href="#">
-          		  <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
+          		  <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
 			</a>
    
      <div class="navbar-collapse collapse w-100" id="navbar5">
