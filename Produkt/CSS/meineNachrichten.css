@@ -1,0 +1,72 @@
+.sender.nachricht a {
+  color: ivory;
+}
+
+.empfaenger.nachricht a {
+  color: black;
+}
+
+.meinenachrichten {
+  font-family: 'Assistant', sans-serif;
+
+}
+.nachrichten {
+  min-width: 300px;
+  max-width: 40%;
+}
+.nachricht {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 80%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.empfaenger {
+  margin-left: 3rem;
+}
+.sender {
+  margin-right: 3rem;
+}
+.sender.nachricht.neu {
+  background-color: darkred;
+  color: ivory;
+}
+.sender.nachricht {
+  background-color: darkblue;
+  color: ivory;
+}
+.empfaenger.nachricht{
+  background-color: darkgrey;
+}
+.sendername {
+  font-weight: bold;
+}
+.datumuhrzeit {
+  font-size: 0.8rem;
+  text-align: right;
+}
+.datumuhrzeit.sender {
+  color: silver;
+}
+.datumuhrzeit.empfaenger {
+  color: dimgray;
+}
+.nachrichtenfeld {
+  border-width: thin;
+  border-style: solid;
+  border-color: darkgrey;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  height: 3rem;
+  font-family: 'Assistant', sans-serif;
+}
+
+.feldnachricht {
+  min-width: 80%;
+}
+
+.abschicken{
+  margin-left: 1rem;
+  font-size: 2rem;
+}

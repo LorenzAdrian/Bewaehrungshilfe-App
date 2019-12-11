@@ -1,7 +1,7 @@
 ﻿<?php
 
 // Die Nachrichten werden ausgelesen
-include '../database/dbh.inc.php';
+require '../database/dbh.inc.php';
 if(!isset($_SESSION))
 {
       session_start();
@@ -41,7 +41,6 @@ while ($row = mysqli_fetch_array($result))
 	 $event_data[] = array(
     'Zeit'     => $row['Zeitstempel'],
     'Text'       => $row['Text'],
-    'Bezug'     => $row['BezugID'],
     'Status'     => $row['Status'],
     'PID'       =>  $row['PID'],
     'BID'       =>  $row['BID'],

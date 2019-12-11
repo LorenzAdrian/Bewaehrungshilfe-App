@@ -1,3 +1,15 @@
+<?php 
+if (!isset($_SESSION['userId'])) {
+	header('Location:login.php');
+}
+
+if (isset($_POST['but_logout'])) {
+	session_destroy();
+	header('Location:login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +33,7 @@
 
         <li>
             <form method='post' action="">
-                <input type="submit" value="Logout" class="button_logout" name="but_logout">
+                <input type="submit" value="Abmelden" class="button_logout" name="but_logout">
             </form>
         </li>
 		

@@ -8,11 +8,30 @@ $rolle;
 if($_POST['rolle']=='betreuer') {
 	$rolle = 'betreuer';
 }
-elseif($_POST['rolle']=='proband') {
+else if($_POST['rolle']=='proband') {
 	$rolle = 'proband';
 }
 $mailuid = mysqli_real_escape_string($conn,$_POST['mailuid']);
 $passwort = mysqli_real_escape_string($conn,$_POST['passwort']);
+
+#Betreuer oder Admin?
+if ($rolle == 'betreuer') {
+$sqlbet = "SELECT * FROM betreuer WHERE Username = ? OR Email = ?;";
+$stmtbet = mysqli_stmt_init($conn);
+	if (!mysqli_stmt_prepare($stmtbet, $sqlbet)) {
+		//echo '<script>alert("SQL Fehler BET")</script>';
+		echo 0;
+	}
+	else {
+		mysqli_stmt_bind_param($stmtbet, "ss", $mailuid, $mailuid);
+		mysqli_stmt_execute($stmtbet);
+		$result = mysqli_stmt_store_result($stmtbet);
+		$resultcheck = mysqli_stmt_num_rows($stmtbet);
+		if ($resultcheck < 1) {
+			$rolle = 'admin';
+		}
+	}
+}
 
 #Query für die Überprüfung
 $sql = "SELECT * FROM " .$rolle. " WHERE Username = ? OR Email = ?;";
@@ -41,14 +60,21 @@ else {
 			//$_SESSION['userId'] = '';
 			if ($rolle == 'betreuer'){
 				$_SESSION['userId'] = $row['BID'];
+				echo 1;
 			}
-			elseif ($rolle == 'proband') {
+			else if ($rolle == 'admin'){
+				$_SESSION['userId'] = $row['ADID'];
+				echo 2;
+			}
+			else if ($rolle == 'proband') {
 				$_SESSION['userId'] = $row['PID'];
+				echo 3;
 			}
 			$_SESSION['username'] = $row['Username'];
 			$_SESSION['rolle'] = $rolle;
+			$_SESSION['vorname'] = $row['Vorname'];
+			$_SESSION['nachname'] = $row['Nachname'];
 			//header("Location: login.php?login=success");
-			echo 1;
 		}
 		else {
 			//header("Location: login.php?wrongpswd");

@@ -56,7 +56,7 @@
 						<a href="../php/Informationen.php">Informationen</a>
 						<a href="../php/">Leitfaden</a>
 						<a href="../php/Notfall.php">Notfall</a>
-						<a href="../php/Login.php">Logout</a> </div>
+						<a href="../php/Login.php">Abmelden</a> </div>
 						
 					  </div>
 					</div>

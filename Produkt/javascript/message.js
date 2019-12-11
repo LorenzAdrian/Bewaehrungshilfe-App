@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	//Funktion für das abschicken einer neuen Nachricht.
+	//Funktion für das Abschicken einer neuen Nachricht.
 	$("#msgform").submit(function(){
 		var textarea1 = $("textarea[name=textarea1]").val();
 		if($("input[name=hiddenProbID]").lenght){
@@ -18,4 +18,13 @@ $(document).ready(function(){
 		});
 		return false;
 	});
+
+//Nachrichten werden vom Server alle 10 Sekunden abgerufen
+	var $container =$("#probNachrichtenFenster");
+	$container.load('meineNachrichtenAnzeigen.php');
+	var refreshID = setInterval (function ()
+	{
+		$container.load('meineNachrichtenAnzeigen.php');
+	}, 10000);
+
 });

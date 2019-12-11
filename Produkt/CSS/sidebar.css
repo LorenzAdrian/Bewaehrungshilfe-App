@@ -1,13 +1,14 @@
 body {
   font-family: 'Roboto', sans-serif;
+  background: white;
 }
 
 .toggle {
-  font-size:16pt;
-  cursor:pointer;
+  font-size: 16pt;
+  cursor: pointer;
 }
 
-.toggle:hover{
+.toggle:hover {
   text-decoration: underline;
   color: darkred;
 }
@@ -19,7 +20,6 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: whitesmoke;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -52,6 +52,11 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
 }

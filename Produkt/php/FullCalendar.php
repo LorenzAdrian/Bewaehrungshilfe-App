@@ -9,20 +9,20 @@
   <head>
     <script src='https://unpkg.com/popper.js/dist/umd/popper.min.js'></script>
     <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script>
- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
- <link rel="stylesheet" type="text/css" href="../CSS/style_tooltip.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../CSS/style_tooltip.css">
     <style>
     html, body {
       display: grid;
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-      font-size: 14px;
     }
 
 /* Hier wird dann das div vom Kalendar angepasst*/
     #mycalendar {
-      margin-top: 50px;
+	  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 14px;
+      margin-top: 35px;
       float: right;
       box-sizing: border-box;
       height: auto;
@@ -30,11 +30,26 @@
       padding-right: 20px;
       padding-left: 20px;
       padding-top: 10px;
+	    padding-bottom: 10px;
       background: white;
       border: 2px solid black;
       border-radius: 30px;
-      box-shadow: -9px 0px 23px 5px rgba(123,164,235,0.4);
     }
+
+	@media screen and (max-width: 600px) {
+
+    #calendar {
+	  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 8px;
+      float: right;
+      box-sizing: border-box;
+      height: auto;
+      background: white;
+      border: 2px solid black;
+      border-radius: 30px;
+	}
+
+  }
 
 
   </style>
@@ -49,6 +64,8 @@
     <script src='../fullcalendar/packages/daygrid/main.js'></script>
     <script src='../fullcalendar/packages/timegrid/main.js'></script>
     <script src='../fullcalendar/packages/list/main.js'></script>
+    <script src='../fullcalendar/packages/core/locales/de.js'></script>
+
 
     <script>
 
@@ -57,6 +74,7 @@
 
 var mycalendar = new FullCalendar.Calendar(calendarEl, {
       plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
+      locale:'de',
       defaultView: 'dayGridMonth',
 	  <!--height: 'auto',-->
 	  selectable: true,

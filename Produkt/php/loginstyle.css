@@ -1,0 +1,61 @@
+body {
+  background: url(../CSS/image/aerial-view-alexanderplatz-architecture-1128408.jpg)
+    no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  width: 100%;
+}
+
+header {
+  border-bottom: 2px maroon solid;
+}
+
+.navbar h4 {
+  font-weight: 300;
+}
+
+.form-check {
+  display: flex;
+  text-align: center;
+}
+
+.form-check h2 {
+  font-weight: 300;
+}
+
+.login-container {
+  padding-top: 40px;
+  height: 88vh;
+}
+
+.form-label-group > input {
+  height: 4.125rem;
+  padding: 0.95rem;
+  width: 350px;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+.message {
+  color: #ff0000;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-container li {
+  list-style: none;
+}
+
+.footer-container li a {
+  text-decoration: none;
+  color: white;
+}

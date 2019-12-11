@@ -1,0 +1,129 @@
+.sender.nachricht a {
+  color: ivory;
+}
+
+font {
+	margin-left: 8px;
+	margin-bottom: 0px;
+	margin-right: 8px;
+	margin-top: 2px;
+	padding:0px;
+}
+
+.empfaenger.nachricht a {
+  color: black;
+}
+
+.meinenachrichten {
+  font-family: 'Assistant', sans-serif;
+
+}
+
+.nachrichten {
+  min-width: 300px;
+  max-width: 40%;
+}
+.nachricht {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 85%;
+  padding: 1rem;
+ /* border: 2px solid darkred;  */
+  border-radius: 0.9rem;
+}
+.empfaenger {
+  margin-left: 3.5rem;
+}
+.sender {
+  margin-right: 3.5rem;
+}
+.sender.nachricht.neu {
+  background-color: darkred;
+  color: ivory;
+}
+.sender.nachricht {
+    background-color: rgba(139, 0, 0, 0.9);
+  color: #FFF6F6;
+}
+.empfaenger.nachricht{
+  background-color: rgba(171, 0, 0, 0.2);
+}
+.sendername {
+  font-weight: bold;
+}
+.datumuhrzeit {
+  font-size: 0.8rem;
+  text-align: right;
+}
+.datumuhrzeit.sender {
+  color: silver;
+}
+.datumuhrzeit.empfaenger {
+  color: dimgray;
+}
+.nachrichtenfeld {
+  border-width: thin;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: 170%;
+  height: 3rem;
+  font-family: 'Assistant', sans-serif;
+}
+.feldnachricht {
+  min-width: 80%;
+}
+
+.abschicken{
+  margin-left: 7rem;
+}
+
+.btn-unsichtbar{
+	visibility: hidden;
+}
+
+.feather {
+  width: 25px;
+  height: 25px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  
+ /* color: darkred; */
+  
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+
+  transform: rotate(45deg);
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+  /*  border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+	*/ 
+	display: inline-block;
+  font-weight: 400;
+  color: maroon;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
