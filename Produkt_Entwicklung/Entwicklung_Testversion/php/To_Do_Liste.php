@@ -70,7 +70,7 @@ if(isset($_POST['but_logout'])){
       </li>
 <!-- Aktuelle Seite -->
 	    <li class="nav-item active">
-        <a class="nav-link" href="To_Do_Liste.php">Leitfaden<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="Leitfaden_Proband.pdf">Leitfaden<span class="sr-only">(current)</span></a>
       </li>
 
 	    <li class="nav-item">

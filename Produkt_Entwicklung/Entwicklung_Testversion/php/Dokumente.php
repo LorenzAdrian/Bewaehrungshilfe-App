@@ -72,7 +72,7 @@ if(isset($_POST['but_logout'])){
       </li>
 
 	    <li class="nav-item">
-        <a class="nav-link" href="To_Do_Liste.php">Leitfaden</a>
+        <a class="nav-link" href="Leitfaden_Proband.pdf">Leitfaden</a>
       </li>
 
 	    <li class="nav-item">
