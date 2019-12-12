@@ -13,6 +13,7 @@
 #sidebar {
     min-width: 250px;
     max-width: 250px;
+	z-index: 2;
 }
 
 #sidebar.active {
@@ -22,7 +23,7 @@
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
-}
+}/*
 @media (max-width: 768px) {
     #sidebar {
         margin-left: -250px;
@@ -30,7 +31,7 @@
     #sidebar.active {
         margin-left: 0;
     }
-}
+}*/
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -77,7 +78,7 @@ a[data-toggle="collapse"] {
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px solid maroon;
 }
 
 #sidebar ul p {
@@ -91,7 +92,7 @@ a[data-toggle="collapse"] {
     display: block;
 }
 #sidebar ul li a:hover {
-    color: blue;
+    color: darkred;
     background: #fff;
 }
 
@@ -102,5 +103,8 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: green;
+    background: maroon;
+	margin-left: 0;
+	padding: 0;
+
 }
