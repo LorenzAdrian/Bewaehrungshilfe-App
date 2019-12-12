@@ -45,6 +45,18 @@ if(isset($_POST['but_logout'])){
 
   <title>Start</title>
 
+<script>
+
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+
+</script>
+
 </head>
 
 <body>
@@ -79,7 +91,65 @@ if(isset($_POST['but_logout'])){
   </button>
   </nav>
 </header>
-  <!--Begrüßungscontainer -->
+
+<div class="wrapper">
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menü SoDi4U</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+                <p>Dummy Heading</p>
+            <li class="active">
+           <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Betreuer verwalten</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Betreuer anzeigen</a>
+                    </li>
+                    <li>
+                        <a href="#">Betreuer anlegen</a>
+                    </li>
+					<li>
+                        <a href="#">Betreuer löschen</a>
+                    </li>
+                    
+                </ul>
+            </li>
+			
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Admin verwalten</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                                        <li>
+                        <a href="#">Admin anzeigen</a>
+                    </li>
+                    <li>
+                        <a href="#">Admin anlegen</a>
+                    </li>
+                     <li>
+                        <a href="#">Admin löschen</a>
+                    </li>
+        </ul>
+
+</nav>
+
+    <!-- Page Content -->
+    <div id="content">
+        <!-- We'll fill this with dummy content -->
+		
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+   <!--             <i class="fas fa-align-left"></i>
+                <span>Toggle Sidebar</span> -->   <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </div>
+    </nav>
+	
+	  <!--Begrüßungscontainer -->
   <div class="container hallo-container">
     <div class="row hallo-row">
       <div class="col-lg-12 hallo-col">
@@ -88,6 +158,10 @@ if(isset($_POST['but_logout'])){
       </div>
     </div>
   </div>
+
+    </div>
+
+</div>       
 
 
    <!--Footer-->
