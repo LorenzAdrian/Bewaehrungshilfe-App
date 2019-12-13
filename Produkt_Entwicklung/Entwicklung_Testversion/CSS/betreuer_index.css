@@ -17,6 +17,26 @@ h2 {
   font-weight: 200;
 }
 
+.typing {
+  color: blue;
+}
+
+.typing {
+  font-size: 100px;
+  margin-top: -50px;
+  margin-left: 5px;
+  z-index: 1;
+}
+
+.typing::after {
+  content: "";
+  right: -14px;
+  width: 1px;
+  height: 9%;
+  border-right: 2px solid black;
+  animation: blink 0.9s infinite ease;
+}
+
 .table-container {
   padding-top: 30px;
 }

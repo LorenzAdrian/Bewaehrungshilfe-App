@@ -44,6 +44,8 @@ if(isset($_POST['but_logout'])){
   <title>Start</title>
   <link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
 
+  <script src="../javascript/app.js"></script>
+
 </head>
 
 <body>
@@ -83,7 +85,7 @@ if(isset($_POST['but_logout'])){
   <div class="container hallo-container">
     <div class="row hallo-row">
       <div class="col-lg-12 hallo-col">
-        <h2>Guten Tag <?php echo $_SESSION['vorname']; echo " "; echo $_SESSION['nachname'] ?> </h2>
+      <h1 class="typing">:</h1> <?php echo $_SESSION['vorname']; echo " "; echo $_SESSION['nachname'] ?> 
         <p>Zum Verwalten klicken Sie bitte auf den gewünschten Probanden</p>
       </div>
     </div>

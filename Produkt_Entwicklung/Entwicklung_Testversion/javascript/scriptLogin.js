@@ -1,7 +1,7 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
   //Funktion für Login Button auf login.php
-  $("#login_btn").click(function () {
+  $("#login_btn").click(function() {
     var rolle;
     if ($("#betreuer").prop("checked")) {
       rolle = "betreuer";
@@ -21,7 +21,7 @@ $(document).ready(function () {
           passwort: passwort,
           rolle: rolle
         },
-        success: function (response) {
+        success: function(response) {
           var msg = "";
           if (response == '1') {
             window.location = "../php/index_betreuer.php"; //Link zur Startseite muss hier rein!
@@ -44,7 +44,7 @@ $(document).ready(function () {
   });
 
   //Funktion für Eingabetaste auf Login.php - click auf login_btn wird ausgeführt, wenn Eingabetaste (Taste 13) gedrückt wird und wiederhochkommt
-  $(document).keyup(function (e) {
+  $(document).keyup(function(e) {
     if (e.which == 13) {
       $("#login_btn").click();
     }
