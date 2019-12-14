@@ -54,6 +54,9 @@ if (mysqli_num_rows($result) > 0) {
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--BOOTSRTRAP ANIMATION-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
     <!-- BOOTSTRAP SCRIPT-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -201,18 +204,18 @@ if (mysqli_num_rows($result) > 0) {
       <div class="container container-calender">
         <div class="row">
           <div class="col-lg-6 col-md-8">
-            <h1>
+          <h1 class="animated fadeInRight	 delay-1s">
             <?php
             // Info des ausgewählten Probandes
             foreach ($probInfo as $info) {
-            echo "Proband: ".$info['Vorname']." ".$info['Nachname'];
+            echo "Kalender von ".$info['Vorname']." ".$info['Nachname'];
             }
             ?>
             </h1>
             <?php include 'FullCalendarProband.php';?>
           </div>
           <div class="col-lg-6 col-md-8">
-            <h1>Mein Kalender</h1>
+          <h1 class="animated fadeInRight	 delay-0.5s">Mein Kalender</h1>
             <?php include 'FullCalendar.php';?>
           </div>
         </div>
