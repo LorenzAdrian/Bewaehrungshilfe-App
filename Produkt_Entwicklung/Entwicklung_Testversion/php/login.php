@@ -75,7 +75,7 @@
     </div>
   </div>
   <br>
-        <div class = "message" id = "message" style= "text-align: center"></div>
+        <div class="message" id ="message" style= "text-align: center"></div>
 
 	<!-- FOOTER -->
  	<footer id="sticky-footer" class="py-2 bg-dark text-white-50">
