@@ -1,4 +1,4 @@
-const text = ['Hallo', 'Guten Tag', 'Einen schönen Tag', 'Schön, dass du hier bist'];
+const text = ['Hallo', 'Guten Tag', 'Einen schönen Tag'];
 let count = 0;
 let index = 0;
 let currentText = '';
