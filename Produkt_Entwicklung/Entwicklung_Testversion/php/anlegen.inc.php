@@ -184,6 +184,6 @@ if(isset($_POST['signup-submit'])) {
 
 }
 else {
-	header("Location:signup.php");
+	header("Location:index_admin.php");
 	exit();
 }

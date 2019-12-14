@@ -97,8 +97,8 @@ if(isset($_POST['but_logout'])){
       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-col">
         <?php include 'dataTbl.php';?>
         <br>
-        <form class="buttonform" action="Signup.php" method="post">
-          <input class="btn btn-outline-danger" type="submit" name="signupcheck-submit" value="Proband anlegen">
+        <form class="buttonform" action="anlegen.php" method="post">
+          <input class="btn btn-outline-danger" type="submit" name="prob-anlegen" value="Proband anlegen">
           <!--<input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" > -->
         </form>
       </div>

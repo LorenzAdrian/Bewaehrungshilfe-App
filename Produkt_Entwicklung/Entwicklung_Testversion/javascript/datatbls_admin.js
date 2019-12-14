@@ -12,7 +12,7 @@ $(document).ready(function() {
     //  style: 'single'
     //},
     paging: false,
-    // JS Variable aus problisteDT.inc.php als Daten-Quelle
+    // JS Variable aus adminlisteDT.inc.php als Daten-Quelle
     data: adminliste,
     // KeyTables Erweiterung
     //keys: true,

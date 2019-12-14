@@ -12,7 +12,7 @@ $(document).ready(function() {
     //  style: 'single'
     //},
     paging: false,
-    // JS Variable aus problisteDT.inc.php als Daten-Quelle
+    // JS Variable aus betlisteDT.inc.php als Daten-Quelle
     data: betliste,
     // KeyTables Erweiterung
     //keys: true,
