@@ -80,7 +80,7 @@ if(isset($_POST['but_logout'])){
         <ul class="list-unstyled components">
                 <p></p>
             <li>
-              <a id="betlisteBtn" href="#">Betreuer verwalten</a>
+              <a id="betlisteBtn" style="text-decoration: none">Betreuer verwalten</a>
               <!--
            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Betreuer verwalten</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -97,7 +97,7 @@ if(isset($_POST['but_logout'])){
               -->
             </li>
             <li>
-              <a id="adminlisteBtn" href="#">Administratoren verwalten</a>
+              <a id="adminlisteBtn" style="text-decoration: none">Administratoren verwalten</a>
               <!--
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Admin verwalten</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
