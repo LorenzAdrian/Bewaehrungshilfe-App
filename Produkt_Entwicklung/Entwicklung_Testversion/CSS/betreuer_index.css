@@ -17,6 +17,11 @@ h2 {
   font-weight: 200;
 }
 
+.intro {
+  display: flex;
+  flex-direction: column;
+}
+
 .typing {
   color: blue;
 }
