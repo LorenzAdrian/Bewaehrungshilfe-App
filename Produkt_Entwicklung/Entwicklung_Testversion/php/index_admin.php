@@ -135,7 +135,7 @@ if(isset($_POST['but_logout'])){
     </div>
   </div>
   <!-- DataTable Betreuer-Liste -->
-  <div class="container table-container" id="betliste">
+  <div class="container table-container" id="betliste" style="display: none;">
     <div class="row">
       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-col">
         <?php include 'dataTbl_bet.php';?>
@@ -148,7 +148,7 @@ if(isset($_POST['but_logout'])){
     </div>
   </div>
   <!-- DataTable Admin-Liste -->
-  <div class="container table-container" id="adminliste">
+  <div class="container table-container" id="adminliste" style="display: none;">
     <div class="row">
       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-col">
         <?php include 'dataTbl_admin.php';?>
