@@ -255,4 +255,3 @@ if (isset ($_POST['admin-self-submit'])) {
   <br>
   <!--<div class = "success"><?php //echo $erfolg; ?></div>-->
 </main>
-</body>

@@ -255,4 +255,4 @@ if (isset ($_POST['bet-self-submit'])) {
       <br>
       <!--<div class = "success"><?php //echo $erfolg; ?></div>-->
 		</main>
-	</body>
+	
