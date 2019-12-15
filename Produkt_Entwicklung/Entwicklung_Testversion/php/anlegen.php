@@ -104,28 +104,28 @@ if(isset($_POST['bet-anlegen'])) {
 			<form action="anlegen.inc.php" method="POST">
 				<input type="hidden" name="rolle" value="betreuer">
 				<br>
-				<input type="text" name="uid" placeholder="Username">
+				<input type="text" name="uid" placeholder="Username" required>
 				<br>
-				<input type="text" name="mail" placeholder="E-mail">
+				<input type="text" name="mail" placeholder="E-mail" required>
 				<br>
-				<input type="password" name="pwd" placeholder="Passwort">
+				<input type="password" name="pwd" placeholder="Passwort" required>
 				<br>
-				<input type="password" name="pwd-repeat" placeholder="Passwort bestätigen">
+				<input type="password" name="pwd-repeat" placeholder="Passwort bestätigen" required>
 				<br>
 				<br>
-				<input type="text" name="vorname" placeholder="Vorname">
+				<input type="text" name="vorname" placeholder="Vorname" required>
 				<br>
-				<input type="text" name="nachname" placeholder="Nachname">
+				<input type="text" name="nachname" placeholder="Nachname" required>
 				<br>
-				<input type="number" name="telnr" placeholder="Telefonnummer">
+				<input type="number" name="telnr" placeholder="Telefonnummer" required>
 				<br>
-				<input type="text" name="zimmernr" placeholder="Zimmernummer">
+				<input type="text" name="zimmernr" placeholder="Zimmernummer" required>
 				<br>
-				<input type="text" name="sz" placeholder="Stellenzeichen">
+				<input type="text" name="sz" placeholder="Stellenzeichen" required>
 				<br>
 				<input type="number" name="vertretung" placeholder="Vertretungs-ID">
 				<br>
-				<input type="number" name="ag" placeholder="Arbeitsgruppen-ID">
+				<input type="number" name="ag" placeholder="Arbeitsgruppen-ID" required>
 				<br>
 				<br>
 				<button type="submit" class="btn btn-outline-danger" name="signup-submit">Betreuer Registrieren</button>
@@ -165,28 +165,28 @@ if(isset($_POST['bet-anlegen'])) {
 				<input type="hidden" name="rolle" value="admin">
 				<br>
 
-				<input type="text" name="uid" placeholder="Username">
+				<input type="text" name="uid" placeholder="Username" required>
 				<br>
-				<input type="text" name="mail" placeholder="E-mail">
+				<input type="text" name="mail" placeholder="E-mail" required>
 				<br>
-				<input type="password" name="pwd" placeholder="Passwort">
+				<input type="password" name="pwd" placeholder="Passwort" required>
 				<br>
-				<input type="password" name="pwd-repeat" placeholder="Passwort bestätigen">
+				<input type="password" name="pwd-repeat" placeholder="Passwort bestätigen" required>
 				<br>
 				<br>
-				<input type="text" name="vorname" placeholder="Vorname">
+				<input type="text" name="vorname" placeholder="Vorname" required>
 				<br>
-				<input type="text" name="nachname" placeholder="Nachname">
+				<input type="text" name="nachname" placeholder="Nachname" required>
 				<br>
-				<input type="number" name="telnr" placeholder="Telefonnummer">
+				<input type="number" name="telnr" placeholder="Telefonnummer" required>
 				<br>
-				<input type="text" name="zimmernr" placeholder="Zimmernummer">
+				<input type="text" name="zimmernr" placeholder="Zimmernummer" required>
 				<br>
-				<input type="text" name="sz" placeholder="Stellenzeichen">
+				<input type="text" name="sz" placeholder="Stellenzeichen" required>
 				<br>
 				<input type="number" name="vertretung" placeholder="Vertretungs-ID">
 				<br>
-				<input type="number" name="ag" placeholder="Arbeitsgruppen-ID">
+				<input type="number" name="ag" placeholder="Arbeitsgruppen-ID" required>
 				<br>
 				<br>
 				<button type="submit" class="btn btn-outline-danger" name="signup-submit">Admin Registrieren</button>
@@ -228,61 +228,61 @@ if(isset($_POST['bet-anlegen'])) {
   			<div class="form-group row">
   				<label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Username:</label>
   				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-  					<input type="text" class="form-control" id="username" name="uid" placeholder="Username">
+  					<input type="text" class="form-control" id="username" name="uid" placeholder="Username" required>
   				</div>
   			</div>
   			<div class="form-group row">
   				<label for="email" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">E-Mail:</label>
   				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-  					<input type="email" class="form-control" id="email" name="mail" placeholder="E-mail">
+  					<input type="email" class="form-control" id="email" name="mail" placeholder="E-mail" required>
   				</div>
   			</div>
   			<div class="form-group row">
   				<label for="password" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort:</label>
   				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-  					<input type="password" class="form-control" id="password" name="pwd" placeholder="Passwort">
+  					<input type="password" class="form-control" id="password" name="pwd" placeholder="Passwort" required>
   				</div>
   			</div>
   			<div class="form-group row">
   				<label for="password-repeat" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort bestätigen:</label>
   				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-  					<input type="password" class="form-control" id="password-repeat" name="pwd-repeat" placeholder="Passwort bestätigen">
+  					<input type="password" class="form-control" id="password-repeat" name="pwd-repeat" placeholder="Passwort bestätigen" required>
   				</div>
   			</div>
   			<div class="form-group row">
   				<label for="vorname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Vorname:</label>
   				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-  					<input type="text" class="form-control" id="vorname" name="vorname" placeholder="Vorname">
+  					<input type="text" class="form-control" id="vorname" name="vorname" placeholder="Vorname" required>
   				</div>
   			</div>
   			<div class="form-group row">
   				<label for="nachname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Nachname:</label>
   				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-  					<input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname">
+  					<input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname" required>
   				</div>
   			</div>
   			<div class="form-group row">
   				<label for="telnr" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Telefonnummer:</label>
   				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-  					<input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer">
+  					<input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer" required>
   				</div>
   			</div>
   			<div class="form-group row">
   				<label for="az" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Aktenzeichen:</label>
   				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-  					<input type="text" class="form-control" id="az" name="az" placeholder="Aktenzeichen">
+  					<input type="text" class="form-control" id="az" name="az" placeholder="Aktenzeichen" required>
   				</div>
   			</div>
   			<div class="form-group row">
   				<label for="ende" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuungsende:</label>
   				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-  					<input type="date" class="form-control" id="ende" name="ende" placeholder="Betreuungsende">
+  					<input type="date" class="form-control" id="ende" name="ende" placeholder="Betreuungsende" required>
   				</div>
   			</div>
   			<div class="form-group row">
   				<label for="betreuer" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuer-ID:</label>
   				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-  					<input type="number" class="form-control" id="betreuer" name="betreuer" placeholder="Betreuer-ID">
+  					<input type="number" class="form-control" id="betreuer" name="betreuer" placeholder="Betreuer-ID" required>
   				</div>
   			</div>
 
