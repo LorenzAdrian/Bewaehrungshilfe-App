@@ -148,6 +148,7 @@ if (isset ($_POST['admin-self-submit'])) {
     //exit();
     $pwdrpterr = "Eingaben müssen übereinstimmen!";
   }
+  //Check, ob Username schon vergeben.
   else{
     $sql = "SELECT username FROM " .$rolle. " WHERE username = ?";
     $stmt = mysqli_stmt_init($conn);
@@ -155,17 +156,13 @@ if (isset ($_POST['admin-self-submit'])) {
       header("Location: anlegen_admin.php?error=sqlerror");
       exit();
     }
-
-    //stmt wird ausgeführt
     else{
       mysqli_stmt_bind_param($stmt, "s", $username);
       mysqli_stmt_execute($stmt);
       mysqli_stmt_store_result($stmt);
       $resultCheck = mysqli_stmt_num_rows($stmt);
-
-      //Check, ob Username schon vergeben.
       if ($resultCheck > 0) {
-        header("Location: anlegen_admin.php?error=usertaken&mail=".$email);
+        //header("Location: anlegen_admin.php?error=usertaken&mail=".$email);
         //exit();
         $usernamevergeben = "Username schon vergeben!";
       }
@@ -189,14 +186,15 @@ if (isset ($_POST['admin-self-submit'])) {
         else {
           //Paswort wird gehasht (! Hash != Verschlüsselung).
           $hashedPwd = password_hash($passwort, PASSWORD_DEFAULT);
-          mysqli_stmt_bind_param($stmt, "sssssissi", $vorname, $nachname, $email, $username, $hashedPwd,
-          $telnr, $zimmernr, $sz, $ag);
-
           //Vetrtretung ist NULL Feld, deshalb extra Check.
           if (!empty($vertretung)){
             mysqli_stmt_bind_param($stmt, "sssssissii", $vorname, $nachname, $email, $username, $hashedPwd,
                 $telnr, $zimmernr, $sz, $vertretung, $ag);
           }
+            else {
+            mysqli_stmt_bind_param($stmt, "sssssissi", $vorname, $nachname, $email, $username, $hashedPwd,
+            $telnr, $zimmernr, $sz, $ag);
+            }
           mysqli_stmt_execute($stmt);
           //header("Location: anlegen_bet.php?signup=success".$username);
           //exit();

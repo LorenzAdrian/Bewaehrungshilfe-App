@@ -182,14 +182,15 @@ if (isset ($_POST['bet-self-submit'])) {
         else {
           //Paswort wird gehasht (! Hash != Verschlüsselung).
           $hashedPwd = password_hash($passwort, PASSWORD_DEFAULT);
-          mysqli_stmt_bind_param($stmt, "sssssissi", $vorname, $nachname, $email, $username, $hashedPwd,
-          $telnr, $zimmernr, $sz, $ag);
-
           //Vetrtretung ist NULL Feld, deshalb extra Check.
           if (!empty($vertretung)){
             mysqli_stmt_bind_param($stmt, "sssssissii", $vorname, $nachname, $email, $username, $hashedPwd,
                 $telnr, $zimmernr, $sz, $vertretung, $ag);
           }
+            else {
+            mysqli_stmt_bind_param($stmt, "sssssissi", $vorname, $nachname, $email, $username, $hashedPwd,
+            $telnr, $zimmernr, $sz, $ag);
+            }
           mysqli_stmt_execute($stmt);
           //header("Location: anlegen_bet.php?signup=success".$username);
           //exit();
