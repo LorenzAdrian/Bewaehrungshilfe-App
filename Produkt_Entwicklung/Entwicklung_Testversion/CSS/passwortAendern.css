@@ -27,7 +27,18 @@ header {
     text-align: center;
     justify-content: center;
 }
-
+.error {
+  color: #ff0000;
+}
+.error2 {
+  color: #ff0000;
+}
+.error3 {
+  color: #ff0000;
+}
+.error4 {
+  color: #ff0000;
+}
 
 .form-group {
     display: flex;

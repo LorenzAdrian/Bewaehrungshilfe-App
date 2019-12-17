@@ -43,6 +43,7 @@ if(isset($_POST['but_logout'])){
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>SoDi4U - Startseite</title>
+	<link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
 
 </head>
 
@@ -53,7 +54,7 @@ if(isset($_POST['but_logout'])){
 <nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
    
    <a class="navbar-brand w-100" href="#">
-          		  <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;SoDi4U
+          		  <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
 			</a>
    
      <div class="navbar-collapse collapse w-100" id="navbar5">

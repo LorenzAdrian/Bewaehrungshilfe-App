@@ -233,7 +233,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span class="input-group-text">
                   <i id="eye1" class="far fa-eye-slash" onclick="showHidePwd1();"></i>
                 </span>
-				<span class="error"><?php echo $pwdAltErr;?></span>
+				
         </div>
 		</div>
 		<br>
@@ -244,8 +244,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span class="input-group-text">
                   <i id="eye2" class="far fa-eye-slash" onclick="showHidePwd2();"></i>
                 </span>
-				<span class="error"><?php echo $pwdNeuLeer;?></span>
-				<span class="error"><?php echo $pwdRptErr;?></span>
+				
         </div>
 		</div>
 		<br>
@@ -256,13 +255,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span class="input-group-text">
                   <i id="eye3" class="far fa-eye-slash" onclick="showHidePwd3();"></i>
                 </span>
-				<span class="error"><?php echo $pwdRptErr;?></span>
+				
         </div>
 		</div>
 		  <br>
 			<button class="btn btn-lg btn-danger btn-block" type="submit" name="passwortAendern" id="passwortAendern" >Passwort ändern</button>
+		
 		<div class="success"> <?php echo $pwdErfolg;?></div>
 		<div class="error"><?php echo $pwdTatErr;?></div>
+		<div class="error2"><?php echo $pwdAltErr;?></div>
+		<div class="error3"><?php echo $pwdNeuLeer;?></div>
+		<div class="error4"><?php echo $pwdRptErr;?></div>
+		
 		</div>
 </form>
 </main>
