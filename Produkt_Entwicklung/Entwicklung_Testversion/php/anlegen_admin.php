@@ -110,31 +110,24 @@ $erfolg = "";
     return ($data);
   }
 
-  //Check, ob E-Mail/Username im richtigen Format eingegeben wurde.
-  /*
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-    header("Location: signup.php?error=invalidmailuid&uid");
-    exit();
-  }
-  */
 if (isset ($_POST['admin-self-submit'])) {
 
   include 'dbh.inc.php';
 
   $rolle = "admin";
-  $username = $_POST['uid'];
-  $email = $_POST['mail'];
-  $passwort= $_POST['pwd'];
-  $passwortRepeat = $_POST['pwd-repeat'];
-  $vorname = $_POST['vorname'];
-  $nachname= $_POST['nachname'];
-  $telnr = $_POST['telnr'];
+  $username = test_input($_POST['uid']);
+  $email = test_input($_POST['mail']);
+  $passwort= test_input($_POST['pwd']);
+  $passwortRepeat = test_input($_POST['pwd-repeat']);
+  $vorname = test_input($_POST['vorname']);
+  $nachname= test_input($_POST['nachname']);
+  $telnr = test_input($_POST['telnr']);
 
-  //nur Betreuer
-  $zimmernr = $_POST['zimmernr'];
-  $sz = $_POST['sz']; //Stellenzeichen
-  $vertretung = $_POST['vertretung'];
-  $ag = $_POST['ag'];
+  //nur Betreuer und Admin
+  $zimmernr = test_input($_POST['zimmernr']);
+  $sz = test_input($_POST['sz']); //Stellenzeichen
+  $vertretung = test_input($_POST['vertretung']);
+  $ag = test_input($_POST['ag']);
 
   if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
     //header("Location: signup.php?error=invalidmailuid&uid");

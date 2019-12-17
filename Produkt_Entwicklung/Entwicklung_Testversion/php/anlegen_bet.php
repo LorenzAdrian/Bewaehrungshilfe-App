@@ -110,51 +110,41 @@ $erfolg = "";
     return ($data);
   }
 
-  //Check, ob E-Mail/Username im richtigen Format eingegeben wurde.
-  /*
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-    header("Location: signup.php?error=invalidmailuid&uid");
-    exit();
-  }
-  */
 if (isset ($_POST['bet-self-submit'])) {
 
   include 'dbh.inc.php';
 
   $rolle = "betreuer";
-  $username = $_POST['uid'];
-  $email = $_POST['mail'];
-  $passwort= $_POST['pwd'];
-  $passwortRepeat = $_POST['pwd-repeat'];
-  $vorname = $_POST['vorname'];
-  $nachname= $_POST['nachname'];
-  $telnr = $_POST['telnr'];
+  $username = test_input($_POST['uid']);
+  $email = test_input($_POST['mail']);
+  $passwort= test_input($_POST['pwd']);
+  $passwortRepeat = test_input($_POST['pwd-repeat']);
+  $vorname = test_input($_POST['vorname']);
+  $nachname= test_input($_POST['nachname']);
+  $telnr = test_input($_POST['telnr']);
 
   //nur Betreuer
-  $zimmernr = $_POST['zimmernr'];
-  $sz = $_POST['sz']; //Stellenzeichen
-  $vertretung = $_POST['vertretung'];
-  $ag = $_POST['ag'];
+  $zimmernr = test_input($_POST['zimmernr']);
+  $sz = test_input($_POST['sz']); //Stellenzeichen
+  $vertretung = test_input($_POST['vertretung']);
+  $ag = test_input($_POST['ag']);
 
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-    //header("Location: signup.php?error=invalidmailuid&uid");
+  if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
+    //header("Location: anlegen_bet.php?error=invalidusername&mail".$email);
     //exit();
+    $usernameerr = "Ungültiger Username!";
   }
   elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     //header("Location: anlegen_bet.php?error=invalidmail&uid".$username);
     //exit();
     $emailerr = "Ungültige Email-Adresse!";
   }
-  elseif (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-    //header("Location: anlegen_bet.php?error=invalidusername&mail".$email);
-    //exit();
-    $usernameerr = "Ungültiger Username!";
-  }
   elseif ($passwort !== $passwortRepeat) {
     //header("Location: anlegen_bet.php?error=passwortcheck&uid=".$username."&mail=".$email);
     //exit();
     $pwdrpterr = "Eingaben müssen übereinstimmen!";
   }
+  //Check, ob Username schon vergeben
   else{
     $sql = "SELECT username FROM " .$rolle. " WHERE username = ?";
     $stmt = mysqli_stmt_init($conn);
@@ -162,17 +152,13 @@ if (isset ($_POST['bet-self-submit'])) {
       header("Location: anlegen_bet.php?error=sqlerror");
       exit();
     }
-
-    //stmt wird ausgeführt
     else{
       mysqli_stmt_bind_param($stmt, "s", $username);
       mysqli_stmt_execute($stmt);
       mysqli_stmt_store_result($stmt);
       $resultCheck = mysqli_stmt_num_rows($stmt);
-
-      //Check, ob Username schon vergeben.
       if ($resultCheck > 0) {
-        header("Location: anlegen_bet.php?error=usertaken&mail=".$email);
+        //header("Location: anlegen_bet.php?error=usertaken&mail=".$email);
         //exit();
         $usernamevergeben = "Username schon vergeben!";
       }
@@ -298,4 +284,3 @@ if (isset ($_POST['bet-self-submit'])) {
       <br>
       <!--<div class = "success"><?php //echo $erfolg; ?></div>-->
 		</main>
-	

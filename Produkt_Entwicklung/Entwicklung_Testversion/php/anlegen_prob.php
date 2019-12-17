@@ -102,37 +102,41 @@ $pwdrpterr = "";
 $usernamevergeben = "";
 $erfolg = "";
 
+//Funktion, um förmliche Korrekheit zu prüfen. Schutz auch gegen Angriffe
+  function test_input ($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlentities($data);
+    return ($data);
+  }
+
 if (isset ($_POST['prob-self-submit'])){
 
   include 'dbh.inc.php';
 
   $rolle = "proband";
-  $username = $_POST['uid'];
-  $email = $_POST['mail'];
-  $passwort= $_POST['pwd'];
-  $passwortRepeat = $_POST['pwd-repeat'];
-  $vorname = $_POST['vorname'];
-  $nachname= $_POST['nachname'];
-  $telnr = $_POST['telnr'];
+  $username = test_input($_POST['uid']);
+  $email = test_input($_POST['mail']);
+  $passwort= test_input($_POST['pwd']);
+  $passwortRepeat = test_input($_POST['pwd-repeat']);
+  $vorname = test_input($_POST['vorname']);
+  $nachname= test_input($_POST['nachname']);
+  $telnr = test_input($_POST['telnr']);
 
   //nur Proband
-  $az = $_POST['az']; //Aktenzeichen
-  $ende = $_POST['ende']; //Betreuungsende
-  $betreuer = $_POST['betreuer']; //BetreuerID
+  $az = test_input($_POST['az']); //Aktenzeichen
+  $ende = test_input($_POST['ende']); //Betreuungsende
+  $betreuer = test_input($_POST['betreuer']); //BetreuerID
 
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-    //header("Location: signup.php?error=invalidmailuid&uid");
+  if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
+    //header("Location: anlegen_bet.php?error=invalidusername&mail".$email);
     //exit();
+    $usernameerr = "Ungültiger Username!";
   }
   elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     //header("Location: anlegen_bet.php?error=invalidmail&uid".$username);
     //exit();
     $emailerr = "Ungültige Email-Adresse!";
-  }
-  elseif (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-    //header("Location: anlegen_bet.php?error=invalidusername&mail".$email);
-    //exit();
-    $usernameerr = "Ungültiger Username!";
   }
   elseif ($passwort !== $passwortRepeat) {
     //header("Location: anlegen_bet.php?error=passwortcheck&uid=".$username."&mail=".$email);
