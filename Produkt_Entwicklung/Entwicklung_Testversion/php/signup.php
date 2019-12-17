@@ -81,35 +81,81 @@ if(isset($_POST['signupcheck-submit'])) {
 		</header>
 
 			<main>
-				<h1>Betreuer</h1>
+				<h1>Neuen Betreuer anlegen</h1>
 				<p>Bitte füllen Sie alle Felder aus.</p>
 				<form action="signup.inc.php" method="POST">
 					<input type="hidden" name="rolle" value="betreuer">
 					<br>
-					<input type="text" name="uid" placeholder="Username">
-					<br>
-					<input type="text" name="mail" placeholder="E-mail">
-					<br>
-					<input type="password" name="pwd" placeholder="Passwort">
-					<br>
-					<input type="password" name="pwd-repeat" placeholder="Passwort bestätigen">
-					<br>
-					<br>
-					<input type="text" name="vorname" placeholder="Vorname">
-					<br>
-					<input type="text" name="nachname" placeholder="Nachname">
-					<br>
-					<input type="number" name="telnr" placeholder="Telefonnummer">
-					<br>
-					<input type="text" name="zimmernr" placeholder="Zimmernummer">
-					<br>
-					<input type="text" name="sz" placeholder="Stellenzeichen">
-					<br>
-					<input type="number" name="vertretung" placeholder="Vertretungs-ID">
-					<br>
-					<input type="number" name="ag" placeholder="Arbeitsgruppen-ID">
-					<br>
-					<br>
+					
+					<div class="form-group row">
+				<label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Username:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="username" name="uid" placeholder="Username">
+				</div>
+				</div>
+			<div class="form-group row">
+				<label for="email" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">E-Mail:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="email" class="form-control" id="email" name="mail" placeholder="E-mail">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="password" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="password" class="form-control" id="password" name="pwd" placeholder="Passwort">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="password-repeat" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort bestätigen:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="password" class="form-control" id="password-repeat" name="pwd-repeat" placeholder="Passwort bestätigen">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="vorname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Vorname:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="vorname" name="vorname" placeholder="Vorname">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="nachname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Nachname:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="telnr" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Telefonnummer:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="zimmernr" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Zimmernummer:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="zimmernr" name="zimmernr" placeholder="Zimmernummer">
+				</div>
+			</div>
+						<div class="form-group row">
+				<label for="sz" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Stellenzeichen:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="sz" name="sz" placeholder="Stellenzeichen">
+				</div>
+			</div>
+						<div class="form-group row">
+				<label for="vertretung" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Vertretungs-ID:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="number" class="form-control" id="vertretung" name="vertretung" placeholder="Vertretungs-ID">
+				</div>
+			</div>
+									<div class="form-group row">
+				<label for="ag" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Arbeitsgruppen-ID:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="number" class="form-control" id="ag" name="ag" placeholder="Arbeitsgruppen-ID">
+				</div>
+			</div>
+			
+			<br>
+			
 					<button type="submit" class="btn btn-outline-danger" name="signup-submit">Registrieren</button>
 				</form>
 			</main>
@@ -140,38 +186,84 @@ if(isset($_POST['signupcheck-submit'])) {
 			</header>
 
 			<main>
-			<h1>Admin</h1>
+			<h1>Neuen Admin anlegen</h1>
 			<p>Bitte füllen Sie alle Felder aus.</p>
 			<form  action="signup.inc.php" method="POST">
 
 				<input type="hidden" name="rolle" value="admin">
 				<br>
 
-				<input type="text" name="uid" placeholder="Username">
-				<br>
-				<input type="text" name="mail" placeholder="E-mail">
-				<br>
-				<input type="password" name="pwd" placeholder="Passwort">
-				<br>
-				<input type="password" name="pwd-repeat" placeholder="Passwort bestätigen">
-				<br>
-				<br>
-				<input type="text" name="vorname" placeholder="Vorname">
-				<br>
-				<input type="text" name="nachname" placeholder="Nachname">
-				<br>
-				<input type="number" name="telnr" placeholder="Telefonnummer">
-				<br>
-				<input type="text" name="zimmernr" placeholder="Zimmernummer">
-				<br>
-				<input type="text" name="sz" placeholder="Stellenzeichen">
-				<br>
-				<input type="number" name="vertretung" placeholder="Vertretungs-ID">
-				<br>
-				<input type="number" name="ag" placeholder="Arbeitsgruppen-ID">
-				<br>
-				<br>
-				<button type="submit" class="btn btn-outline-danger" name="signup-submit">Registrieren</button>
+				<div class="form-group row">
+				<label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Username:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="username" name="uid" placeholder="Username">
+				</div>
+				</div>
+			<div class="form-group row">
+				<label for="email" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">E-Mail:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="email" class="form-control" id="email" name="mail" placeholder="E-mail">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="password" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="password" class="form-control" id="password" name="pwd" placeholder="Passwort">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="password-repeat" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort bestätigen:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="password" class="form-control" id="password-repeat" name="pwd-repeat" placeholder="Passwort bestätigen">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="vorname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Vorname:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="vorname" name="vorname" placeholder="Vorname">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="nachname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Nachname:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="telnr" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Telefonnummer:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="zimmernr" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Zimmernummer:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="zimmernr" name="zimmernr" placeholder="Zimmernummer">
+				</div>
+			</div>
+						<div class="form-group row">
+				<label for="sz" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Stellenzeichen:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="sz" name="sz" placeholder="Stellenzeichen">
+				</div>
+			</div>
+						<div class="form-group row">
+				<label for="vertretung" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Vertretungs-ID:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="number" class="form-control" id="vertretung" name="vertretung" placeholder="Vertretungs-ID">
+				</div>
+			</div>
+									<div class="form-group row">
+				<label for="ag" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Arbeitsgruppen-ID:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="number" class="form-control" id="ag" name="ag" placeholder="Arbeitsgruppen-ID">
+				</div>
+			</div>
+			
+			<br>
+
+			<button type="submit" class="btn btn-outline-danger" name="signup-submit">Registrieren</button>
+
 			</form>
 			</main>
 		</body>';

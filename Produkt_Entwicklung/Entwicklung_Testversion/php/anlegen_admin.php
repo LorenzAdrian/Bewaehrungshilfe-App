@@ -34,7 +34,7 @@ if ($check !== "admin") {
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  <title>Registrierung</title>
+  <title>Registrierung Admin</title>
 
 </head>
 
@@ -216,40 +216,83 @@ if (isset ($_POST['admin-self-submit'])) {
 }
 ?>
 <main>
-  <h1>Admin</h1>
+  <h1>Neuen Admin anlegen</h1>
   <p>Bitte füllen Sie alle Felder aus.</p>
   <form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
     <input type="hidden" name="rolle" value="admin">
     <br>
-    <input type="text" name="uid" placeholder="Username" value="<?php if ( isset($username) ) {echo $username;} ?>" required>
-    <span class = "error"><?php echo $usernameerr; ?></span>
-    <span class = "error"><?php echo $usernamevergeben; ?></span>
-    <br>
-    <input type="text" name="mail" placeholder="E-mail" value="<?php if ( isset($email) ) {echo $email;} ?>" required>
-    <span class = "error"><?php echo $emailerr; ?></span>
-    <br>
-    <input type="password" name="pwd" placeholder="Passwort" required>
-    <span class = "error"><?php echo $pwdrpterr; ?></span>
-    <br>
-    <input type="password" name="pwd-repeat" placeholder="Passwort bestätigen" required>
-    <span class = "error"><?php echo $pwdrpterr; ?></span>
-    <br>
-    <br>
-    <input type="text" name="vorname" placeholder="Vorname" value="<?php if ( isset($vorname) ) {echo $vorname;} ?>" required>
-    <br>
-    <input type="text" name="nachname" placeholder="Nachname" value="<?php if ( isset($nachname) ) {echo $nachname;} ?>" required>
-    <br>
-    <input type="number" name="telnr" placeholder="Telefonnummer" value="<?php if ( isset($telnr) ) {echo $telnr;} ?>" required>
-    <br>
-    <input type="text" name="zimmernr" placeholder="Zimmernummer" value="<?php if ( isset($zimmernr) ) {echo $zimmernr;} ?>" required>
-    <br>
-    <input type="text" name="sz" placeholder="Stellenzeichen" value="<?php if ( isset($sz) ) {echo $sz;} ?>" required>
-    <br>
-    <input type="number" name="vertretung" placeholder="Vertretungs-ID" value="<?php if ( isset($vertretung) ) {echo $vertretung;} ?>">
-    <br>
-    <input type="number" name="ag" placeholder="Arbeitsgruppen-ID" value="<?php if ( isset($ag) ) {echo $ag;} ?>" required>
-    <br>
-    <br>
+		   	 <div class="form-group row">
+				<label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Username:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<input type="text" name="uid" placeholder="Username" value="<?php if ( isset($username) ) {echo $username;} ?>" required>
+				<span class = "error"><?php echo $usernameerr; ?></span>
+				<span class = "error"><?php echo $usernamevergeben; ?></span>
+				</div>
+			 </div>
+			 <div class="form-group row">
+				<label for="email" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">E-Mail:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<input type="email" name="mail" placeholder="E-mail" value="<?php if ( isset($email) ) {echo $email;} ?>" required>
+				<span class = "error"><?php echo $emailerr; ?></span>
+				</div>
+			 </div>
+			 <div class="form-group row">
+				<label for="password" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<input type="password" name="pwd" placeholder="Passwort" required>
+				<span class = "error"><?php echo $pwdrpterr; ?></span>
+				</div>
+			 </div>
+			 <div class="form-group row">
+				<label for="password-repeat" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort bestätigen:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<input type="password" name="pwd-repeat" placeholder="Passwort bestätigen" required>
+				<span class = "error"><?php echo $pwdrpterr; ?></span>
+				</div>
+			 </div>
+			 <div class="form-group row">
+				<label for="vorname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Vorname:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<input type="text" class="form-control" id="vorname" name="vorname" placeholder="Vorname" value="<?php if ( isset($vorname) ) {echo $vorname;} ?>" required>
+				</div>
+			 </div>
+			 <div class="form-group row">
+				<label for="nachname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Nachname:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname" value="<?php if ( isset($nachname) ) {echo $nachname;} ?>" required>
+				</div>
+			 </div>
+			 <div class="form-group row">
+				<label for="telnr" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Telefonnummer:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer" value="<?php if ( isset($telnr) ) {echo $telnr;} ?>" required>
+				</div>
+			 </div>
+			 <div class="form-group row">
+				<label for="zimmernr" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Zimmernummer:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="zimmernr" name="zimmernr" placeholder="Zimmernummer" value="<?php if ( isset($zimmernr) ) {echo $zimmernr;} ?>" required>
+				</div>
+			 </div>
+			 <div class="form-group row">
+				<label for="sz" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Stellenzeichen:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="text" class="form-control" id="sz" name="sz" placeholder="Stellenzeichen" value="<?php if ( isset($sz) ) {echo $sz;} ?>" required>
+				</div>
+			 </div>
+			 <div class="form-group row">
+				<label for="vertretung" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Vertretungs-ID:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="number" class="form-control" id="vertretung" name="vertretung" placeholder="Vertretungs-ID" value="<?php if ( isset($vertretung) ) {echo $vertretung;} ?>">
+				</div>
+			 </div>
+			 <div class="form-group row">
+				<label for="ag" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Arbeitsgruppen-ID:</label>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<input type="number" class="form-control" id="ag" name="ag" placeholder="Arbeitsgruppen-ID" value="<?php if ( isset($ag) ) {echo $ag;} ?>" required>
+				</div>
+			 </div>
+			 <br>
     <button type="submit" class="btn btn-outline-danger" name="admin-self-submit">Betreuer Registrieren</button>
   </form>
   <br>
