@@ -45,6 +45,8 @@ if (mysqli_num_rows($result) > 0) {
     <!-- STYLESHEET CSS -->
     <link rel="stylesheet" href="../CSS/probinfo.css" >
     <link rel="stylesheet" href="../CSS/meineNachrichten.css">
+    <!-- Stylesheet für Darstellung der Nachrichten -->
+    <link rel="stylesheet" href="../CSS/meineNachrichten_bet.css">
     <!-- STYLESHEET SIDEBAR -->
     <link rel="stylesheet" href="../CSS/sidebar.css">
     <!-- SCRIPT SIDEBAR -->
