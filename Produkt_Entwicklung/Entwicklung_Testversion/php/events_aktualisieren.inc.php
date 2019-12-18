@@ -20,14 +20,14 @@ if(!isset($_SESSION))
   while ($row = mysqli_fetch_array($result))
 {
   if ($row['Status'] == 'b' || $row['Status'] == '1'){ //'b' muss noch weg
-	  $row['Status'] = 'green';
+	  $row['Status'] = '#90EE90'; //hell grün
   }
   if ($row['Status'] == 'o' || $row['Status'] == '2'){ //'o' muss noch weg
-	  $row['Status'] = 'blue';
+	  $row['Status'] = '#d3d3d3'; //grau
   }
   if ($row['Status'] == '3'){
 
-	  $row['Status'] = 'grey';
+	  $row['Status'] = '#FFCCCB'; //hell rot
   }
   $event_data [] = array(
     'id'        => $row['TID'],
