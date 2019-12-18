@@ -17,8 +17,7 @@ $probID = $_POST['proband'];
 
 //include "Nachrichten_menu.php";
 
-if(!isset($_SESSION['probID'])){
-$_SESSION['probID'] = $probID;}
+$_SESSION['probID'] = $probID;
 /*
 else {
 	$probID = $_POST['terPID'];
