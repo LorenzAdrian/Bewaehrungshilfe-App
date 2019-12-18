@@ -23,7 +23,8 @@
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
-}/*
+}
+
 @media (max-width: 768px) {
     #sidebar {
         margin-left: -250px;
@@ -31,7 +32,7 @@
     #sidebar.active {
         margin-left: 0;
     }
-}*/
+}
 
 body {
     font-family: 'Poppins', sans-serif;

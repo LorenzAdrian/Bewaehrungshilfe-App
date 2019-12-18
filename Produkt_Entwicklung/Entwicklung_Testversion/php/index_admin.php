@@ -41,7 +41,6 @@ if(isset($_POST['but_logout'])){
   <!--- Pfad zur style.css--------------------------->
   <link rel="stylesheet" href="../CSS/admin_index.css">
   <link rel="stylesheet" href="../CSS/header_prob.css">
-  <link rel="stylesheet" href="../CSS/footer_admin.css">
   <!--  Schriftart aus google fonts------------------>
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
@@ -120,10 +119,10 @@ if(isset($_POST['but_logout'])){
         <!-- We'll fill this with dummy content -->
 		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-      <!--          <button type="button" id="sidebarCollapse" class="btn btn-info">
-            <i class="fas fa-align-left"></i>
-                <span>Toggle Sidebar</span> <span class="navbar-toggler-icon"></span>
-            </button> -->
+          <button type="button" id="sidebarCollapse" class="button-sodi btn-outline-sodi my-1 my-sm-0" style="display: none;">
+            <!--<i class="fas fa-align-left"></i>-->
+ <span class="navbar-toggler-icon"></span>               <span>Menü</span> 
+            </button> 
         </div>
       </nav>
 	  <!--Begrüßungscontainer -->
@@ -161,27 +160,8 @@ if(isset($_POST['but_logout'])){
   <!--  </div>
   </div> -->
 
-
-
-
     </div>
-<footer id="sticky-footer" class="py-4 bg-light text-white-50">
-      <div class="container text-center">
 
-              <ul>
-                <li>
-                  <a href="Impressum_Proband.php">Impressum</a>
-                </li>
-                <li>
-                    <a href="Datenschutz_Proband.php">Datenschutz</a>
-                </li>
-                <li>
-                  <a href="Kontakt_Proband.php">Kontakt</a>
-                </li>
-              </ul>
-
-      </div>
-    </footer>
 </div>
 
 </body>
