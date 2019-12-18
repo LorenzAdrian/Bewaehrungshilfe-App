@@ -208,35 +208,35 @@ if (isset ($_POST['bet-self-submit'])) {
 			<form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
 				<input type="hidden" name="rolle" value="betreuer">
 				<br>
-		   	 <div class="form-group row">
-				<label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Username:</label>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-				<input type="text" name="uid" placeholder="Username" value="<?php if ( isset($username) ) {echo $username;} ?>" required>
-				<span class = "error"><?php echo $usernameerr; ?></span>
-				<span class = "error"><?php echo $usernamevergeben; ?></span>
-				</div>
-			 </div>
-			 <div class="form-group row">
+				    <div class="form-group row">
+      <label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Username:</label>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <input type="text" class="form-control" id="username" name="uid" placeholder="Username" value="<?php if ( isset($username) ) {echo $username;} ?>" required>
+        <span class = "error"><?php echo $usernameerr; ?></span>
+        <span class = "error"><?php echo $usernamevergeben; ?></span>
+      </div>
+    </div>
+			     <div class="form-group row">
 				<label for="email" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">E-Mail:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-				<input type="email" name="mail" placeholder="E-mail" value="<?php if ( isset($email) ) {echo $email;} ?>" required>
+				<input type="email" class="form-control" id="email" name="mail" placeholder="E-mail" value="<?php if ( isset($email) ) {echo $email;} ?>" required>
 				<span class = "error"><?php echo $emailerr; ?></span>
 				</div>
-			 </div>
-			 <div class="form-group row">
-				<label for="password" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort:</label>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-				<input type="password" name="pwd" placeholder="Passwort" required>
-				<span class = "error"><?php echo $pwdrpterr; ?></span>
-				</div>
-			 </div>
-			 <div class="form-group row">
-				<label for="password-repeat" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort bestätigen:</label>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-				<input type="password" name="pwd-repeat" placeholder="Passwort bestätigen" required>
-				<span class = "error"><?php echo $pwdrpterr; ?></span>
-				</div>
-			 </div>
+			</div>
+   <div class="form-group row">
+      <label for="password" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort:</label>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <input type="password" class="form-control" id="password" name="pwd" placeholder="Passwort" required>
+        <span class = "error"><?php echo $pwdrpterr; ?></span>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="password-repeat" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort bestätigen:</label>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <input type="password" class="form-control" id="password-repeat" name="pwd-repeat" placeholder="Passwort bestätigen" required>
+        <span class = "error"><?php echo $pwdrpterr; ?></span>
+      </div>
+    </div>
 		<div class="form-group row">
 				<label for="vorname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Vorname:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">

@@ -60,7 +60,7 @@ $(document).ready(function () {
 
 
     // Console-Ausgabe für Debugging
-    console.log(probliste, vorname, nachname, pid, bid);
+    //console.log(probliste, vorname, nachname, pid, bid);
 
   });
 });
