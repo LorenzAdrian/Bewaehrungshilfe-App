@@ -136,8 +136,8 @@ if(isset($_POST['but_logout'])){
   </div>
   <!-- DataTable Betreuer-Liste -->
   <div class="container table-container" id="betliste" style="display: none;">
-    <div class="row">
-      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-col">
+ <!--Melinas vorläufige Änderungen   <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-col"> -->
         <?php include 'dataTbl_bet.php';?>
         <br>
         <form class="buttonform" action="anlegen_bet.php" method="post">
@@ -145,12 +145,12 @@ if(isset($_POST['but_logout'])){
         <!--<input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" > -->
         </form>
       </div>
-    </div>
-  </div>
+ <!--   </div>
+  </div> -->
   <!-- DataTable Admin-Liste -->
   <div class="container table-container" id="adminliste" style="display: none;">
-    <div class="row">
-      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-col">
+ <!--Melinas vorläufige Änderungen   <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-col"> -->
         <?php include 'dataTbl_admin.php';?>
         <br>
         <form class="buttonform" action="anlegen_admin.php" method="post">
@@ -158,8 +158,8 @@ if(isset($_POST['but_logout'])){
         <!--<input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" > -->
         </form>
       </div>
-    </div>
-  </div>
+  <!--  </div>
+  </div> -->
 
 
 
