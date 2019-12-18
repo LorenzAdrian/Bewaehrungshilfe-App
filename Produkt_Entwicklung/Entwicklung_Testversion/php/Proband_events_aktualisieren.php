@@ -29,13 +29,13 @@ $probID = $_SESSION['probID'];
   while ($row = mysqli_fetch_array($result2))
 {
   if ($row['Status'] == 'b' || $row['Status'] == '1'){ //'b' muss noch weg
-	  $row['Status'] = '#90EE90';
+	  $row['Status'] = '#90EE90'; //hell grün
   }
   if ($row['Status'] == 'o' || $row['Status'] == '2'){ //'o' muss noch weg
-	  $row['Status'] = '#d3d3d3';
+	  $row['Status'] = '#d3d3d3'; //grau
   }
   if ($row['Status'] == '3'){
-	  $row['Status'] = '#FFCCCB';
+	  $row['Status'] = '#FFCCCB'; //hell rot
   }
   $event_data [] = array(
 
