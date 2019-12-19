@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     //Betreuer-Liste anzeigen
     $( "#betlisteBtn" ).click(function() {
-        $( "#betliste" ).toggle();
+        $( "#betliste" ).show();
 		$( "#sidebarCollapse" ).toggle();
         $( "#adminliste").hide();
 		$('#sidebar').toggleClass('active');
@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     //Admin-Liste anzeigen
     $( "#adminlisteBtn" ).click(function() {
-        $( "#adminliste" ).toggle();
+        $( "#adminliste" ).show();
 		$( "#sidebarCollapse" ).toggle();
         $( "#betliste").hide();
 	    $('#sidebar').toggleClass('active');
