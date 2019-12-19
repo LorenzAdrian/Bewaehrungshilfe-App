@@ -75,13 +75,21 @@ $(document).ready(function() {
     // Alert-Ausgabe für Debugging
     //alert("bid = "+bid+ " und pid = "+pid);
 
-    /*
+
     // Javascript, die wie eine Post-Formular Funktioniert
-    $.redirect('probinfo.php', {
-      betreuer: bid,
-      proband: pid
+    $.redirect('betinfo.php', {
+      bid: bid,
+      uid: username,
+      mail: email,
+      vorname: vorname,
+      nachname: nachname,
+      telnr: telnr,
+      zimmernr: zimmernr,
+      sz: stellenzeichen,
+      vertretung: vertretung,
+      ag: agid
     });
-    */
+
 
 
 
