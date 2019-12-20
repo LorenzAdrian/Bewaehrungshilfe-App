@@ -94,13 +94,13 @@ if ($check !== "admin") {
 <?php
 
 $passwortNeu = "";
-//$passwortRepeat = "";
-$passwortAlt = "";
-$userID = $_POST['bid'];
-$username = $_POST['username'];
-$pwdAltLeer = $pwdNeuLeer = $pwdRptLeer = "";
-$pwdAltErr = $pwdRptErr = $pwdTatErr = "";
+$passwortRepeat = "";
+if (isset ($_POST['loginfo-aendern-bet-submit'])){
+  $bid = $_POST['bid'];
+  $username = $_POST['username'];
+}
 $pwdErfolg = "";
+$pwdRptErr = "";
 
 //Funktion, um förmliche Korrekheit zu prüfen. Schutz auch gegen Angriffe
   function test_input ($data) {
@@ -110,77 +110,42 @@ $pwdErfolg = "";
     return ($data);
   }
 
-//Leere Felder und formliche Korrekheit prüfen
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST['pwd-alt'])) {
-    //$pwdAltLeer = "Bitte ausfüllen!";
-  } else {
-    $passwortAlt = test_input($_POST['pwd-alt']);
-  }
-
-  if (empty($_POST['pwd-neu'])) {
-    //$pwdNeuLeer = "Bitte ausfüllen!";
-  } else {
-    $passwortNeu = test_input($_POST['pwd-neu']);
-  }
-
-  if (empty($_POST['pwd-repeat'])) {
-    //$pwdRptLeer = "Bitte ausfüllen!";
-  } else {
-    $passwortRepeat = test_input($_POST['pwd-repeat']);
-  }
+if (isset ($_POST['loginInfoAendern'])) {
+  $username = test_input($_POST['username']);
+  $bid = test_input($_POST['bid']);
+  $passwortNeu = test_input($_POST['pwd-neu']);
+  $passwortRepeat = test_input($_POST['pwd-repeat']);
 
   //"Neues Passwort" und "Neues Passwort wiederholen" stimmen überein?
   if ($passwortNeu !== $passwortRepeat){
     $pwdRptErr = "Eingaben müssen übereinstimmen!";
   }
-
-  //Prüft, ob "Neues Passwort" tatsächlich neu ist (eigentlich prüft nur, ob "passwortNeu" und "passwortAlt" identisch sind)
-  if ($passwortNeu == $passwortAlt){
-    $pwdTatErr = "Neues Passwort muss tatsächlich neu sein";
-  }
-
-  //Überprüfung des alten Passworts
-    $sql = "SELECT * FROM proband WHERE PID = $userID";
-    $result = mysqli_query($conn, $sql);
-    if (mysqli_num_rows($result) > 0) {
-       while($row = mysqli_fetch_assoc($result)) {
-         $pwdCheck = password_verify($passwortAlt, $row['Passwort']);
-       }
-    }
-    if ($pwdCheck == false){
-      $pwdAltErr = "Falsches Passwort";
-  }
-
-  //Gab es Fehlermeldungen?
-  if ($pwdAltLeer!="" OR $pwdNeuLeer!="" OR $pwdRptLeer!="" OR $pwdTatErr!="" OR $pwdAltErr!="" OR $pwdRptErr!=""){
-  }
-  //Wenn nicht, dann Passwort aktualisieren
   else {
-    $sql = "UPDATE proband SET Passwort = ? WHERE PID = ?";
+    $sql = "UPDATE betreuer SET passwort = ?, username = ? WHERE bid = ?";
     $stmt = mysqli_stmt_init($conn);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: passwortAendern.php?error=sqlerror");
+        header("Location: loginupdate.php?error=sqlerror");
         exit();
+        } else {
+          //Passwort wird gehasht (verschlüsselt)
+          $hashedPwd = password_hash($passwortNeu, PASSWORD_DEFAULT);
+          //Passwort wird aktualisiert
+          mysqli_stmt_bind_param($stmt, 'ssi', $hashedPwd, $username, $bid);
+          mysqli_stmt_execute($stmt);
+          $erfolg = "Information für Benutzer mit ID $bid wurde erfolgreich geändert!";
+          echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'index_admin.php'</script>";
+          //header("Location: index_proband.php?passwortAendern=success");
+          //exit();
         }
-      else{
-        //Passwort wird gehasht (verschlüsselt)
-        $hashedPwd = password_hash($passwortNeu, PASSWORD_DEFAULT);
-        //Passwort wird aktualisiert
-        mysqli_stmt_bind_param($stmt, 'si', $hashedPwd, $userID);
-        mysqli_stmt_execute($stmt);
-        $pwdErfolg = "Passwort erfolgreich geändert";
-        //header("Location: index_proband.php?passwortAendern=success");
-        //exit();
       }
-    }
-  }
+}
+
 ?>
 
 <main>
   <!--<p><span class="error">* erforderliche Eingabe</span></p>-->
 <form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
-	<input type="hidden" name="uid" value="<?php echo $userID;?>">
+	<!--<input type="hidden" name="uid" value="<?php echo $userID;?>">-->
 
 <div class="container passwortAendern-container text-align-center d-flex justify-content-center">
 <div class="row">
@@ -194,80 +159,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 		<div class="form-label-group input-group">
         <label>ID-Nummer:&nbsp</label>
-          <input type="text" class="form-control" name="username" autocomplete="off" value="<?php echo $userID; ?>" readonly>
+          <input type="text" class="form-control" name="bid" autocomplete="off" value="<?php if (isset($bid)) {echo $bid;} ?>" readonly>
 		 </div>
      <div class="form-label-group input-group">
           <label>Username:&nbsp</label>
-            <input type="text" class="form-control" name="username" autocomplete="off" value="<?php echo $username; ?>">
+            <input type="text" class="form-control" name="username" autocomplete="off" value="<?php if (isset($username)) {echo $username;} ?>" required>
       </div>
 		 <br>
-    <!--
-		<div class="form-label-group input-group">
-          <input type="password" class="form-control"  name="pwd-alt" id="pwd-alt"
-          placeholder="Geben Sie bitte Ihr altes Passwort ein." size="50" required autofocus>
-    -->
-		  <!--<span class="error">* <?php //echo $pwdAltLeer;?></span>-->
-    <!--
-		      <div class="input-group-append">
-                <span class="input-group-text">
-                  <i id="eye1" class="far fa-eye-slash" onclick="showHidePwd1();"></i>
-                </span>
-          </div>
-		</div>
-    -->
+
 		<br>
 		<div class="form-label-group input-group">
 		  <input type="password" class="form-control"  name="pwd-neu" id="pwd-neu"
           placeholder="Geben Sie das neue Passwort ein." size="50" required>
 		<div class="input-group-append">
-                <span class="input-group-text">
-                  <i id="eye2" class="far fa-eye-slash" onclick="showHidePwd2();"></i>
-                </span>
-
-        </div>
+        <span class="input-group-text">
+          <i id="eye2" class="far fa-eye-slash" onclick="showHidePwd2();"></i>
+        </span>
+    </div>
 		</div>
 		<br>
 		<div class="form-label-group input-group">
 		  <input type="password" class="form-control"  name="pwd-repeat" id="pwd-repeat"
           placeholder="Wiederholen Sie bitte das neue Passwort." size="50" required>
 		<div class="input-group-append">
-                <span class="input-group-text">
-                  <i id="eye3" class="far fa-eye-slash" onclick="showHidePwd3();"></i>
-                </span>
-
+        <span class="input-group-text">
+            <i id="eye3" class="far fa-eye-slash" onclick="showHidePwd3();"></i>
+        </span>
         </div>
 		</div>
 		  <br>
-			<button class="btn btn-lg btn-danger btn-block" type="submit" name="passwortAendern" id="passwortAendern" >Login-Info ändern</button>
+			<button class="btn btn-lg btn-danger btn-block" type="submit" name="loginInfoAendern" id="loginInfoAendern">Login-Info ändern</button>
 
-		<div class="success"> <?php echo $pwdErfolg;?></div>
-		<div class="error"><?php echo $pwdTatErr;?></div>
-		<div class="error2"><?php echo $pwdAltErr;?></div>
-		<div class="error3"><?php echo $pwdNeuLeer;?></div>
 		<div class="error4"><?php echo $pwdRptErr;?></div>
 
 		</div>
 </form>
 </main>
-
-	<!--Footer-->
-  <!--
-	<footer id="sticky-footer" class="mb-0 mt-footer py-4 bg-light text-white-50">
-      <div class="pt-2 container text-center">
-
-              <ul>
-                <li>
-                  <a href="Impressum_Proband.php">Impressum</a>
-                </li>
-                <li>
-                    <a href="Datenschutz_Proband.php">Datenschutz</a>
-                </li>
-                <li>
-                  <a href="Kontakt_Proband.php">Kontakt</a>
-                </li>
-              </ul>
-
-      </div>
-    </footer>
-  -->
-</html>
