@@ -129,7 +129,7 @@ $erfolg = "";
   $sz = test_input($_POST['sz']); //Stellenzeichen
   if (isset($_POST['vertretung'])) {
     $vertretung = test_input($_POST['vertretung']);
-  } 
+  }
   $ag = test_input($_POST['ag']);
 
   /*
@@ -196,7 +196,7 @@ $erfolg = "";
           }
 
           else {
-          mysqli_stmt_bind_param($stmt, "sssssii", $vorname, $nachname, $email, $telnr, $zimmernr, $sz, $ag, $bid);
+          mysqli_stmt_bind_param($stmt, "ssssssii", $vorname, $nachname, $email, $telnr, $zimmernr, $sz, $ag, $bid);
           }
           mysqli_stmt_execute($stmt);
           //header("Location: anlegen_bet.php?signup=success".$username);
@@ -208,6 +208,7 @@ $erfolg = "";
     //}
   //}
 //}
+
 ?>
 		<main>
 			<h1>Bearbeiten</h1>
@@ -225,9 +226,9 @@ $erfolg = "";
       </div>
     </div>
             <div class="form-group row">
-        <label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">ID:</label>
+        <label for="bid" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">ID:</label>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <input type="text" class="form-control" id="username" name="bid" placeholder="id" value="<?php if ( isset($bid) ) {echo $bid;} ?>" required readonly>
+        <input type="text" class="form-control" id="bid" name="bid" placeholder="id" value="<?php if ( isset($bid) ) {echo $bid;} ?>" required readonly>
         </div>
         </div>
 			     <div class="form-group row">
@@ -297,8 +298,15 @@ $erfolg = "";
 			</div>
 			<br>
 				<button type="submit" class="btn btn-outline-danger" name="bet-aendern-submit">Info ändern</button>
-        <button type="submit" class="btn btn-outline-danger" name="pwd-user-submit">Login-Info ändern</button>
+
 			</form>
+      <form action= "loginupdate.php" method = "POST">
+        <input type = "hidden" name = "bid" value = "<?php echo $bid; ?>">
+        <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
+        <button type="submit" class="btn btn-outline-danger" name="loginfo-aendern-bet-submit">Login-Info ändern</button>
+      </form>
+
+
       <br>
       <!--<div class = "success"><?php //echo $erfolg; ?></div>-->
 		</main>
