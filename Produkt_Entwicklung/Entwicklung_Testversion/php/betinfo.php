@@ -127,7 +127,9 @@ $erfolg = "";
   //nur Betreuer
   $zimmernr = test_input($_POST['zimmernr']);
   $sz = test_input($_POST['sz']); //Stellenzeichen
-  $vertretung = test_input($_POST['vertretung']);
+  if (isset($_POST['vertretung'])) {
+    $vertretung = test_input($_POST['vertretung']);
+  } 
   $ag = test_input($_POST['ag']);
 
   /*
