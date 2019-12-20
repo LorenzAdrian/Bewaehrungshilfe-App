@@ -130,6 +130,7 @@ $erfolg = "";
   $vertretung = test_input($_POST['vertretung']);
   $ag = test_input($_POST['ag']);
 
+  /*
   if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
     //header("Location: anlegen_bet.php?error=invalidusername&mail".$email);
     //exit();
@@ -146,7 +147,7 @@ $erfolg = "";
   //  $pwdrpterr = "Eingaben müssen übereinstimmen!";
   //}
   //Check, ob Username schon vergeben
-  else{
+  /*else{
     $sql = "SELECT username FROM " .$rolle. " WHERE username = ?";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -163,49 +164,52 @@ $erfolg = "";
         //exit();
         $usernamevergeben = "Username schon vergeben!";
       }
+      */
 
-      //Eintragung in Datenbank: Betreuer
-      elseif ($rolle=="betreuer"){
-        $sql = "INSERT INTO betreuer(vorname, nachname, email, username, passwort, telnr,
-          zimmernr, stellenzeichen, agid) VALUES (?,?,?,?,?,?,?,?,?)";
+      //Eintragung in Datenbank: Betreuer-Info ändern
+      if (isset ($_POST['bet-aendern-submit'])){
+        $sql = "UPDATE betreuer SET vorname = ?, nachname = ?, email = ?, telnr = ?,
+          zimmernr = ?, stellenzeichen = ?, agid = ? WHERE bid = ?";
 
         //Vetrtretung ist NULL Feld, deshalb extra Check.
         if(!empty($vertretung)){
-          $sql = "INSERT INTO betreuer(vorname, nachname, email, username, passwort, telnr,
-          zimmernr, stellenzeichen, vertretung, agid) VALUES (?,?,?,?,?,?,?,?,?,?)";
+          $sql = "UPDATE betreuer SET vorname = ?, nachname = ?, email = ?,telnr = ?,
+            zimmernr = ?, stellenzeichen = ?, vertretung = ?, agid = ? WHERE bid = ?";
         }
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
           //trigger_error(mysqli_error($conn), E_USER_ERROR);
-          header("Location: anlegen_bet.php?error=sqlerror");
+          header("Location: index_admin.php?error=sqlerror");
           exit();
         }
+        /*
         else {
           //Paswort wird gehasht (! Hash != Verschlüsselung).
           $hashedPwd = password_hash($passwort, PASSWORD_DEFAULT);
           //Vetrtretung ist NULL Feld, deshalb extra Check.
+        */
           if (!empty($vertretung)){
-            mysqli_stmt_bind_param($stmt, "sssssissii", $vorname, $nachname, $email, $username, $hashedPwd,
-                $telnr, $zimmernr, $sz, $vertretung, $ag);
+            mysqli_stmt_bind_param($stmt, "ssssssiii", $vorname, $nachname, $email,
+                $telnr, $zimmernr, $sz, $vertretung, $ag, $bid);
           }
-            else {
-            mysqli_stmt_bind_param($stmt, "sssssissi", $vorname, $nachname, $email, $username, $hashedPwd,
-            $telnr, $zimmernr, $sz, $ag);
-            }
+
+          else {
+          mysqli_stmt_bind_param($stmt, "sssssii", $vorname, $nachname, $email, $telnr, $zimmernr, $sz, $ag, $bid);
+          }
           mysqli_stmt_execute($stmt);
           //header("Location: anlegen_bet.php?signup=success".$username);
           //exit();
-          $erfolg = "$username erfolgreich angelegt!";
-          echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'anlegen_bet.php'</script>";
+          $erfolg = "Information für $username (ID = $bid) erfolgreich geändert!";
+          echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'index_admin.php'</script>";
         }
-      }
-    }
-  }
+      //}
+    //}
+  //}
 //}
 ?>
 		<main>
-			<h1>Neuen Betreuer anlegen</h1>
-			<p>Bitte füllen Sie alle Felder aus.</p>
+			<h1>Bearbeiten</h1>
+			<p>Betreuer-Info</p>
 			<form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
 				<input type="hidden" name="rolle" value="betreuer">
         <input type="hidden" name="bid" value="<?php echo $bid; ?>">
@@ -213,11 +217,17 @@ $erfolg = "";
 				    <div class="form-group row">
       <label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Username:</label>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <input type="text" class="form-control" id="username" name="uid" placeholder="Username" value="<?php if ( isset($username) ) {echo $username;} ?>" required>
-        <span class = "error"><?php echo $usernameerr; ?></span>
-        <span class = "error"><?php echo $usernamevergeben; ?></span>
+        <input type="text" class="form-control" id="username" name="uid" placeholder="Username" value="<?php if ( isset($username) ) {echo $username;} ?>" required readonly>
+        <!-- <span class = "error"><?php echo $usernameerr; ?></span>
+        <span class = "error"><?php echo $usernamevergeben; ?></span> -->
       </div>
     </div>
+            <div class="form-group row">
+        <label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">ID:</label>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <input type="text" class="form-control" id="username" name="bid" placeholder="id" value="<?php if ( isset($bid) ) {echo $bid;} ?>" required readonly>
+        </div>
+        </div>
 			     <div class="form-group row">
 				<label for="email" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">E-Mail:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -225,6 +235,7 @@ $erfolg = "";
 				<span class = "error"><?php echo $emailerr; ?></span>
 				</div>
 			</div>
+  <!--
    <div class="form-group row">
       <label for="password" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort:</label>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -239,6 +250,7 @@ $erfolg = "";
         <span class = "error"><?php echo $pwdrpterr; ?></span>
       </div>
     </div>
+  -->
 		<div class="form-group row">
 				<label for="vorname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Vorname:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -282,7 +294,8 @@ $erfolg = "";
 				</div>
 			</div>
 			<br>
-				<button type="submit" class="btn btn-outline-danger" name="bet-self-submit">Betreuer Registrieren</button>
+				<button type="submit" class="btn btn-outline-danger" name="bet-aendern-submit">Info ändern</button>
+        <button type="submit" class="btn btn-outline-danger" name="pwd-user-submit">Login-Info ändern</button>
 			</form>
       <br>
       <!--<div class = "success"><?php //echo $erfolg; ?></div>-->

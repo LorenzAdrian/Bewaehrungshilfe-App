@@ -67,7 +67,7 @@ $(document).ready(function() {
     var username = data['Username'];
     var email = data['Email'];
     var telnr = data['TelNr'];
-    var stellenzeichen = data['StellZeichen'];
+    var sz = data['StellenZeichen'];
     var zimmernr = data['Zimmernr'];
     var vertretung = data['Vertretung'];
     var agid = data['AGID'];
@@ -85,7 +85,7 @@ $(document).ready(function() {
       nachname: nachname,
       telnr: telnr,
       zimmernr: zimmernr,
-      sz: stellenzeichen,
+      sz: sz,
       vertretung: vertretung,
       ag: agid
     });
@@ -94,7 +94,7 @@ $(document).ready(function() {
 
 
     // Console-Ausgabe für Debugging
-    console.log(betliste, vorname, nachname, bid, username, email, telnr, stellenzeichen, zimmernr, vertretung, agid);
+    //console.log(betliste, vorname, nachname, bid, username, email, telnr, stellenzeichen, zimmernr, vertretung, agid);
 
   });
 });
