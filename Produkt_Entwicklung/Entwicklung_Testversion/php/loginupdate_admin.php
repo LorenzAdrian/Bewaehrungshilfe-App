@@ -95,8 +95,8 @@ if ($check !== "admin") {
 
 $passwortNeu = "";
 $passwortRepeat = "";
-if (isset ($_POST['loginfo-aendern-bet-submit'])){
-  $bid = $_POST['bid'];
+if (isset ($_POST['loginfo-aendern-admin-submit'])){
+  $adid = $_POST['adid'];
   $username = $_POST['username'];
 }
 $pwdErfolg = "";
@@ -112,7 +112,7 @@ $pwdRptErr = "";
 
 if (isset ($_POST['loginInfoAendern'])) {
   $username = test_input($_POST['username']);
-  $bid = test_input($_POST['bid']);
+  $adid = test_input($_POST['adid']);
   $passwortNeu = test_input($_POST['pwd-neu']);
   $passwortRepeat = test_input($_POST['pwd-repeat']);
 
@@ -121,7 +121,7 @@ if (isset ($_POST['loginInfoAendern'])) {
     $pwdRptErr = "Eingaben müssen übereinstimmen!";
   }
   else {
-    $sql = "UPDATE betreuer SET passwort = ?, username = ? WHERE bid = ?";
+    $sql = "UPDATE admin SET passwort = ?, username = ? WHERE adid = ?";
     $stmt = mysqli_stmt_init($conn);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location: loginupdate.php?error=sqlerror");
@@ -130,9 +130,9 @@ if (isset ($_POST['loginInfoAendern'])) {
           //Passwort wird gehasht (verschlüsselt)
           $hashedPwd = password_hash($passwortNeu, PASSWORD_DEFAULT);
           //Passwort wird aktualisiert
-          mysqli_stmt_bind_param($stmt, 'ssi', $hashedPwd, $username, $bid);
+          mysqli_stmt_bind_param($stmt, 'ssi', $hashedPwd, $username, $adid);
           mysqli_stmt_execute($stmt);
-          $erfolg = "Information für Benutzer mit ID $bid wurde erfolgreich geändert!";
+          $erfolg = "Information für Benutzer mit ID $adid wurde erfolgreich geändert!";
           echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'index_admin.php'</script>";
           //header("Location: index_proband.php?passwortAendern=success");
           //exit();
@@ -144,7 +144,7 @@ if (isset ($_POST['loginInfoAendern'])) {
 
 <main>
   <h1 style="text-align: center;">Bearbeiten</h1>
-  <p style="text-align: center;">Login-Info (BWH)</p>
+  <p style="text-align: center;">Login-Info (Admin)</p>
   <!--<p><span class="error">* erforderliche Eingabe</span></p>-->
 <form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
 	<!--<input type="hidden" name="uid" value="<?php echo $userID;?>">-->
@@ -161,7 +161,7 @@ if (isset ($_POST['loginInfoAendern'])) {
 
 		<div class="form-label-group input-group">
         <label>ID-Nummer:&nbsp</label>
-          <input type="text" class="form-control" name="bid" autocomplete="off" value="<?php if (isset($bid)) {echo $bid;} ?>" readonly>
+          <input type="text" class="form-control" name="adid" autocomplete="off" value="<?php if (isset($adid)) {echo $adid;} ?>" readonly>
 		 </div>
      <div class="form-label-group input-group">
           <label>Username:&nbsp</label>

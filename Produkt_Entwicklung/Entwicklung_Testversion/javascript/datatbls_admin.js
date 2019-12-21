@@ -61,13 +61,13 @@ $(document).ready(function() {
   /* Jquery on Method: https://www.w3schools.com/jquery/event_on.asp */
   $('#admintable tbody').on('dblclick', 'tr', function() {
     var data = table.row(this).data();
-    var bid = data['ADID'];
+    var adid = data['ADID'];
     var vorname = data['Vorname'];
     var nachname = data['Nachname'];
     var username = data['Username'];
     var email = data['Email'];
     var telnr = data['TelNr'];
-    var stellenzeichen = data['Stellzeichen'];
+    var sz = data['Stellenzeichen'];
     var zimmernr = data['Zimmernr'];
     var vertretung = data['Vertretung'];
     var agid = data['AGID'];
@@ -75,18 +75,26 @@ $(document).ready(function() {
     // Alert-Ausgabe für Debugging
     //alert("bid = "+bid+ " und pid = "+pid);
 
-    /*
+
     // Javascript, die wie eine Post-Formular Funktioniert
-    $.redirect('probinfo.php', {
-      betreuer: bid,
-      proband: pid
+    $.redirect('admininfo.php', {
+      adid: adid,
+      uid: username,
+      mail: email,
+      vorname: vorname,
+      nachname: nachname,
+      telnr: telnr,
+      zimmernr: zimmernr,
+      sz: sz,
+      vertretung: vertretung,
+      ag: agid
     });
-    */
+
 
 
 
     // Console-Ausgabe für Debugging
-    console.log(adminliste, vorname, nachname, adid, username, email, telnr, stellenzeichen, zimmernr, vertretung, agid);
+    //console.log(adminliste, vorname, nachname, adid, username, email, telnr, stellenzeichen, zimmernr, vertretung, agid);
 
   });
 });

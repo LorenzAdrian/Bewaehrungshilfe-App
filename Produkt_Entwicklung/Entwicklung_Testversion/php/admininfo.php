@@ -113,8 +113,9 @@ $erfolg = "";
 //if (isset ($_POST['bet-self-submit'])) {
 
   include 'dbh.inc.php';
-  $rolle = "betreuer";
-  $bid = ($_POST['bid']);
+  //$typ = ($_POST['typ']);
+  $rolle = "admin";
+  $adid = ($_POST['adid']);
   $username = test_input($_POST['uid']);
   $email = test_input($_POST['mail']);
   //$passwort= test_input($_POST['pwd']);
@@ -169,13 +170,13 @@ $erfolg = "";
 
       //Eintragung in Datenbank: Betreuer-Info ändern
       if (isset ($_POST['bet-aendern-submit'])){
-        $sql = "UPDATE betreuer SET vorname = ?, nachname = ?, email = ?, telnr = ?,
-          zimmernr = ?, stellenzeichen = ?, agid = ? WHERE bid = ?";
+        $sql = "UPDATE admin SET vorname = ?, nachname = ?, email = ?, telnr = ?,
+          zimmernr = ?, stellenzeichen = ?, agid = ? WHERE adid = ?";
 
         //Vetrtretung ist NULL Feld, deshalb extra Check.
         if(!empty($vertretung)){
-          $sql = "UPDATE betreuer SET vorname = ?, nachname = ?, email = ?,telnr = ?,
-            zimmernr = ?, stellenzeichen = ?, vertretung = ?, agid = ? WHERE bid = ?";
+          $sql = "UPDATE admin SET vorname = ?, nachname = ?, email = ?,telnr = ?,
+            zimmernr = ?, stellenzeichen = ?, vertretung = ?, agid = ? WHERE adid = ?";
         }
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -191,16 +192,16 @@ $erfolg = "";
         */
           if (!empty($vertretung)){
             mysqli_stmt_bind_param($stmt, "ssssssiii", $vorname, $nachname, $email,
-                $telnr, $zimmernr, $sz, $vertretung, $ag, $bid);
+                $telnr, $zimmernr, $sz, $vertretung, $ag, $adid);
           }
 
           else {
-          mysqli_stmt_bind_param($stmt, "ssssssii", $vorname, $nachname, $email, $telnr, $zimmernr, $sz, $ag, $bid);
+          mysqli_stmt_bind_param($stmt, "ssssssii", $vorname, $nachname, $email, $telnr, $zimmernr, $sz, $ag, $adid);
           }
           mysqli_stmt_execute($stmt);
           //header("Location: anlegen_bet.php?signup=success".$username);
           //exit();
-          $erfolg = "Information für $username (ID = $bid) erfolgreich geändert!";
+          $erfolg = "Information für $username (ID = $adid) erfolgreich geändert!";
           echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'index_admin.php'</script>";
         }
       //}
@@ -211,10 +212,10 @@ $erfolg = "";
 ?>
 		<main>
 			<h1>Bearbeiten</h1>
-			<p>BWH-Info</p>
+			<p>Admin-Info</p>
 			<form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
-				<input type="hidden" name="rolle" value="betreuer">
-        <input type="hidden" name="bid" value="<?php echo $bid; ?>">
+				<input type="hidden" name="rolle" value="admin">
+        <input type="hidden" name="adid" value="<?php echo $adid; ?>">
 				<br>
 				    <div class="form-group row">
       <label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Username:</label>
@@ -225,9 +226,9 @@ $erfolg = "";
       </div>
     </div>
             <div class="form-group row">
-        <label for="bid" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">ID:</label>
+        <label for="adid" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">ID:</label>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <input type="text" class="form-control" id="bid" name="bid" placeholder="id" value="<?php if ( isset($bid) ) {echo $bid;} ?>" required readonly>
+        <input type="text" class="form-control" id="adid" name="adid" placeholder="id" value="<?php if ( isset($adid) ) {echo $adid;} ?>" required readonly>
         </div>
         </div>
 			     <div class="form-group row">
@@ -299,10 +300,10 @@ $erfolg = "";
 				<button type="submit" class="btn btn-outline-danger" name="bet-aendern-submit">Info ändern</button>
 
 			</form>
-      <form action= "loginupdate.php" method = "POST">
-        <input type = "hidden" name = "bid" value = "<?php echo $bid; ?>">
+      <form action= "loginupdate_admin.php" method = "POST">
+        <input type = "hidden" name = "adid" value = "<?php echo $adid; ?>">
         <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
-        <button type="submit" class="btn btn-outline-danger" name="loginfo-aendern-bet-submit">Login-Info ändern</button>
+        <button type="submit" class="btn btn-outline-danger" name="loginfo-aendern-admin-submit">Login-Info ändern</button>
       </form>
 
 
