@@ -284,7 +284,7 @@ if (isset ($_POST['admin-self-submit'])) {
 				</div>
 			 </div>
 			 <br>
-    <button type="submit" class="btn btn-outline-danger" name="admin-self-submit">Betreuer Registrieren</button>
+    <button type="submit" class="btn btn-outline-danger" name="admin-self-submit">Admin Registrieren</button>
   </form>
   <br>
   <!--<div class = "success"><?php //echo $erfolg; ?></div>-->
