@@ -297,7 +297,7 @@ $erfolg = "";
 				</div>
 			</div>
 			<br>
-				<button type="submit" class="btn btn-outline-danger" name="bet-aendern-submit">Info ändern</button>
+				<button type="submit" class="btn btn-outline-danger" name="bet-aendern-submit">Änderungen speichern</button>
 
 			</form>
       <form action= "loginupdate_admin.php" method = "POST">
@@ -305,6 +305,8 @@ $erfolg = "";
         <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
         <button type="submit" class="btn btn-outline-danger" name="loginfo-aendern-admin-submit">Login-Info ändern</button>
       </form>
+
+      
 
 
       <br>

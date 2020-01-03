@@ -296,7 +296,7 @@ $erfolg = "";
 				</div>
 			</div>
 			<br>
-				<button type="submit" class="btn btn-outline-danger" name="bet-aendern-submit">Info ändern</button>
+				<button type="submit" class="btn btn-outline-danger" name="bet-aendern-submit">Änderungen speichern</button>
 
 			</form>
       <form action= "loginupdate.php" method = "POST">
