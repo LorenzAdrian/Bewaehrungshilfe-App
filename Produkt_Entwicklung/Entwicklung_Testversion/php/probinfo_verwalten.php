@@ -13,7 +13,7 @@ if(!isset($_SESSION['userId'])){
 
 // Check, ob User ein Admin
 $check = $_SESSION['rolle'];
-if ($check !== "admin") {
+if ($check !== "betreuer") {
   header('Location:login.php');
 }
 
@@ -86,7 +86,7 @@ label{
   <ul class="navbar-nav mx-auto">
   <!-- Aktuelle Seite -->
   <li class="nav-item active">
-  <a class="nav-link" href="../php/index_admin.php">Zurück zur Startseite<span class="sr-only">(current)</span></a>
+  <a class="nav-link" href="../php/index_betreuer.php">Zurück zur Startseite<span class="sr-only">(current)</span></a>
   </li>
 </ul>
 </div>
@@ -114,23 +114,22 @@ $erfolg = "";
 
   include 'dbh.inc.php';
   //$typ = ($_POST['typ']);
-  $rolle = "admin";
-  $adid = ($_POST['adid']);
-  $username = test_input($_POST['uid']);
-  $email = test_input($_POST['mail']);
-  //$passwort= test_input($_POST['pwd']);
-  //$passwortRepeat = test_input($_POST['pwd-repeat']);
+  $rolle = "bwh";
+  //folgenden POST-Info von probinfo.php
+  $pid = ($_POST['pid']);
   $vorname = test_input($_POST['vorname']);
   $nachname= test_input($_POST['nachname']);
+  $username = test_input($_POST['username']);
+  $email = test_input($_POST['email']);
   $telnr = test_input($_POST['telnr']);
+  $akte = test_input($_POST['akte']);
+  $betanfang = test_input($_POST['betanfang']);
+  $betende = test_input($_POST['betende']);
+  $bid = test_input($_POST['bid']);
+  //$passwort= test_input($_POST['pwd']);
+  //$passwortRepeat = test_input($_POST['pwd-repeat']);
 
-  //nur Betreuer
-  $zimmernr = test_input($_POST['zimmernr']);
-  $sz = test_input($_POST['sz']); //Stellenzeichen
-  if (isset($_POST['vertretung'])) {
-    $vertretung = test_input($_POST['vertretung']);
-  }
-  $ag = test_input($_POST['ag']);
+
 
   /*
   if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
@@ -168,41 +167,24 @@ $erfolg = "";
       }
       */
 
-      //Eintragung in Datenbank: Admin-Info ändern
-      if (isset ($_POST['admin-aendern-submit'])){
-        $sql = "UPDATE admin SET vorname = ?, nachname = ?, email = ?, telnr = ?,
-          zimmernr = ?, stellenzeichen = ?, agid = ? WHERE adid = ?";
-
-        //Vetrtretung ist NULL Feld, deshalb extra Check.
-        if(!empty($vertretung)){
-          $sql = "UPDATE admin SET vorname = ?, nachname = ?, email = ?,telnr = ?,
-            zimmernr = ?, stellenzeichen = ?, vertretung = ?, agid = ? WHERE adid = ?";
-        }
+      //Eintragung in Datenbank: Prob-Info ändern
+      if (isset ($_POST['prob-aendern-submit'])){
+        $sql = "UPDATE proband SET vorname = ?, nachname = ?, email = ?, telnr = ?,
+          aktenzeichen = ?, betreuungsanfang = ?, betreuungsende = ?, bid = ? WHERE pid = ?";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
           //trigger_error(mysqli_error($conn), E_USER_ERROR);
-          header("Location: index_admin.php?error=sqlerror");
+          header("Location: index_betreuer.php?error=sqlerror");
           exit();
         }
-        /*
         else {
-          //Paswort wird gehasht (! Hash != Verschlüsselung).
-          $hashedPwd = password_hash($passwort, PASSWORD_DEFAULT);
-          //Vetrtretung ist NULL Feld, deshalb extra Check.
-        */
-          if (!empty($vertretung)){
-            mysqli_stmt_bind_param($stmt, "ssssssiii", $vorname, $nachname, $email,
-                $telnr, $zimmernr, $sz, $vertretung, $ag, $adid);
-          }
-
-          else {
-          mysqli_stmt_bind_param($stmt, "ssssssii", $vorname, $nachname, $email, $telnr, $zimmernr, $sz, $ag, $adid);
+          mysqli_stmt_bind_param($stmt, "sssssssii", $vorname, $nachname, $email, $telnr, $akte, $betanfang, $betende, $bid, $pid);
           }
           mysqli_stmt_execute($stmt);
           //header("Location: anlegen_bet.php?signup=success".$username);
           //exit();
-          $erfolg = "Information für $username (ID = $adid) erfolgreich geändert!";
-          echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'index_admin.php'</script>";
+          $erfolg = "Information für $username (ID = $pid) erfolgreich geändert!";
+          echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'index_betreuer.php'</script>";
         }
       //}
     //}
@@ -214,27 +196,27 @@ $erfolg = "";
 			<h1>Bearbeiten</h1>
 			<p>Admin-Info</p>
 			<form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
-				<input type="hidden" name="rolle" value="admin">
-        <input type="hidden" name="adid" value="<?php echo $adid; ?>">
+				<input type="hidden" name="rolle" value="prob">
+        <input type="hidden" name="pid" value="<?php echo $pid; ?>">
 				<br>
 				    <div class="form-group row">
       <label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Username:</label>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <input type="text" class="form-control" id="username" name="uid" placeholder="Username" value="<?php if ( isset($username) ) {echo $username;} ?>" required readonly>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Username" value="<?php if ( isset($username) ) {echo $username;} ?>" required readonly>
         <!-- <span class = "error"><?php echo $usernameerr; ?></span>
         <span class = "error"><?php echo $usernamevergeben; ?></span> -->
       </div>
     </div>
             <div class="form-group row">
-        <label for="adid" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">ID:</label>
+        <label for="pid" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">ID:</label>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <input type="text" class="form-control" id="adid" name="adid" placeholder="id" value="<?php if ( isset($adid) ) {echo $adid;} ?>" required readonly>
+        <input type="text" class="form-control" id="pid" name="pid" placeholder="id" value="<?php if ( isset($pid) ) {echo $pid;} ?>" required readonly>
         </div>
         </div>
 			     <div class="form-group row">
 				<label for="email" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">E-Mail:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-				<input type="email" class="form-control" id="email" name="mail" placeholder="E-mail" value="<?php if ( isset($email) ) {echo $email;} ?>" required>
+				<input type="email" class="form-control" id="email" name="email" placeholder="E-mail" value="<?php if ( isset($email) ) {echo $email;} ?>" required>
 				<span class = "error"><?php echo $emailerr; ?></span>
 				</div>
 			</div>
@@ -273,31 +255,31 @@ $erfolg = "";
 				</div>
 			</div>
 			<div class="form-group row">
-				<label for="zimmernr" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Zimmernummer:</label>
+				<label for="akte" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Aktenzeichen:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<input type="text" class="form-control" id="zimmernr" name="zimmernr" placeholder="Zimmernummer" value="<?php if ( isset($zimmernr) ) {echo $zimmernr;} ?>" required>
+					<input type="text" class="form-control" id="akte" name="akte" placeholder="Aktenzeichen" value="<?php if ( isset($akte) ) {echo $akte;} ?>" required>
 				</div>
 			</div>
 			<div class="form-group row">
-				<label for="sz" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Stellenzeichen:</label>
+				<label for="betanfang" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuungsanfang:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<input type="text" class="form-control" id="sz" name="sz" placeholder="Stellenzeichen" value="<?php if ( isset($sz) ) {echo $sz;} ?>" required>
+					<input type="date" class="form-control" id="betanfang" name="betanfang" placeholder="Betreuungsanfang" value="<?php if ( isset($betanfang) ) {echo $betanfang;} ?>" required>
 				</div>
 			</div>
 			<div class="form-group row">
-				<label for="vertretung" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Vertretungs-ID:</label>
+				<label for="betende" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuungsende:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<input type="number" class="form-control" id="vertretung" name="vertretung" placeholder="Vertretungs-ID" value="<?php if ( isset($vertretung) ) {echo $vertretung;} ?>">
+					<input type="date" class="form-control" id="betende" name="betende" placeholder="Betreuungsende" value="<?php if ( isset($betende) ) {echo $betende;} ?>">
 				</div>
 			</div>
 			<div class="form-group row">
-				<label for="ag" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Arbeitsgruppen-ID:</label>
+				<label for="bid" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuer:</label>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<input type="number" class="form-control" id="ag" name="ag" placeholder="Arbeitsgruppen-ID" value="<?php if ( isset($ag) ) {echo $ag;} ?>" required>
+					<input type="number" class="form-control" id="bid" name="bid" placeholder="Betreuer-ID" value="<?php if ( isset($bid) ) {echo $bid;} ?>" required>
 				</div>
 			</div>
 			<br>
-				<button type="submit" class="btn btn-outline-danger" name="admin-aendern-submit">Änderungen speichern</button>
+				<button type="submit" class="btn btn-outline-danger" name="prob-aendern-submit">Änderungen speichern</button>
 			</form>
 
       <form action= "loginupdate_admin.php" method = "POST">

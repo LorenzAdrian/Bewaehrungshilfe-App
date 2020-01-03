@@ -29,6 +29,16 @@ $probInfo = array();
 if (mysqli_num_rows($result) > 0) {
   while ($row = mysqli_fetch_assoc($result)){
     $probInfo[] = $row;
+    $pid = $row['PID'];
+    $vorname = $row['Vorname'];
+    $nachname = $row['Nachname'];
+    $username = $row['Username'];
+    $email = $row['Email'];
+    $telnr = $row['TelNr'];
+    $akte = $row['Aktenzeichen'];
+    $betanfang = $row['Betreuungsanfang'];
+    $betende = $row['Betreuungsende'];
+    $bid = $row['BID'];
   }
 }
 ?>
@@ -65,19 +75,19 @@ if (mysqli_num_rows($result) > 0) {
 	  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
 	/* Style von Detei upload*/
-	
+
 	 $("#bild-absenden").hide();
-	
+
     $(document).ready(function(){
 
         $('input[type="file"]').change(function(e){
 
             var fileName = e.target.files[0].name;
-			
+
 			var neu = fileName;
 			document.getElementById('file-anzeige')
 			.innerHTML = neu;
-			
+
 			document.getElementById("bild-absenden").classList.remove("btn-unsichtbar");
 			document.getElementById("bild-absenden").classList.add("btn-outline-success");
         });
@@ -159,7 +169,7 @@ if (mysqli_num_rows($result) > 0) {
           </table>
           -->
           <?php include 'meineNachrichtenBild.php'; ?>
-        <!--  
+        <!--
           <table class="">
             <form class="" action="upload_bet.php" method="POST" name="DAFORM" enctype="multipart/form-data" target="_self">
               <tr>
@@ -219,6 +229,21 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="col-lg-3 col-md-3 col-sm-6 col-back">
                   <form action="index_betreuer.php" method="post">
                     <button class="btn btn-outline-danger" type="submit" value="Zurück">Zurück</button>
+                  </form>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-back">
+                  <form action="probinfo_verwalten.php" method="post">
+                    <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
+                    <input type = "hidden" name = "vorname" value = "<?php echo $vorname; ?>">
+                    <input type = "hidden" name = "nachname" value = "<?php echo $nachname; ?>">
+                    <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
+                    <input type = "hidden" name = "email" value = "<?php echo $email; ?>">
+                    <input type = "hidden" name = "telnr" value = "<?php echo $telnr; ?>">
+                    <input type = "hidden" name = "akte" value = "<?php echo $akte; ?>">
+                    <input type = "hidden" name = "betanfang" value = "<?php echo $betanfang; ?>">
+                    <input type = "hidden" name = "betende" value = "<?php echo $betende; ?>">
+                    <input type = "hidden" name = "bid" value = "<?php echo $bid; ?>">
+                    <button class="btn btn-outline-danger" type="submit" value="Zurück">Proband Info verwalten</button>
                   </form>
                 </div>
             </div>

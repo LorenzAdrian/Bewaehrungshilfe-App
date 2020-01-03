@@ -40,9 +40,15 @@ $(document).ready(function () {
   /* Jquery on Method: https://www.w3schools.com/jquery/event_on.asp */
   $('#example tbody').on('dblclick', 'tr', function () {
     var data = table.row(this).data();
+    var pid = data['PID'];
     var vorname = data['Vorname'];
     var nachname = data['Nachname'];
-    var pid = data['PID'];
+    var username = data['Username'];
+    var email = data['Email'];
+    var telnr = data['TelNr'];
+    var akte = data['Aktenzeichen'];
+    var betanfang = data['Betreuungsanfang'];
+    var betende = data['Betreuungsende'];
     var bid = data['BID'];
     // Alert-Ausgabe für Debugging
     //alert("bid = "+bid+ " und pid = "+pid);
@@ -50,7 +56,17 @@ $(document).ready(function () {
     // Javascript, die wie eine Post-Formular Funktioniert
     $.redirect('probinfo.php', {
       betreuer: bid,
-      proband: pid
+      proband: pid,
+      pid: pid,
+      vorname: vorname,
+      nachname: nachname,
+      username: username,
+      mail: email,
+      telnr: telnr,
+      akte: akte,
+      betanfang: betanfang,
+      betende: betende,
+      bid: bid
     });
 
 
