@@ -298,17 +298,26 @@ $erfolg = "";
 			</div>
 			<br>
 				<button type="submit" class="btn btn-outline-danger" name="bet-aendern-submit">Änderungen speichern</button>
-
 			</form>
+
       <form action= "loginupdate_admin.php" method = "POST">
         <input type = "hidden" name = "adid" value = "<?php echo $adid; ?>">
         <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
         <button type="submit" class="btn btn-outline-danger" name="loginfo-aendern-admin-submit">Login-Info ändern</button>
       </form>
 
-      
+      <?php
+      echo "<script type='text/javascript'>
+        function warnung(){
+          return confirm ('Wollen Sie Nutzer \"$username\" wirklich löschen?')} </script>";
+      ?>
 
-
+      <form action= "delete_nutzer.php" method = "POST" onsubmit = "return warnung(this);">
+        <input type = "hidden" name = "adid" value = "<?php echo $adid; ?>">
+        <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
+        <input type = "hidden" name = "gruppe" value = "admin">
+        <button type="submit" class="btn btn-outline-danger" name="delete-admin-submit">Admin löschen</button>
+      </form>
       <br>
       <!--<div class = "success"><?php //echo $erfolg; ?></div>-->
 		</main>
