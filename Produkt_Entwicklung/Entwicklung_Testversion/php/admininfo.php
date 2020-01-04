@@ -309,10 +309,10 @@ $erfolg = "";
       <?php
       echo "<script type='text/javascript'>
         function warnung(){
-          return confirm ('Wollen Sie Nutzer \"$username\" wirklich löschen?')} </script>";
+          return confirm ('Wollen Sie NutzerIn \"$username\" wirklich löschen?')} </script>";
       ?>
 
-      <form action= "delete_nutzer.php" method = "POST" onsubmit = "return warnung(this);">
+      <form action= "delete_admin.php" method = "POST" onsubmit = "return warnung(this);">
         <input type = "hidden" name = "adid" value = "<?php echo $adid; ?>">
         <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
         <input type = "hidden" name = "gruppe" value = "admin">

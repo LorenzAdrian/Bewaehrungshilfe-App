@@ -299,7 +299,7 @@ $erfolg = "";
 				<button type="submit" class="btn btn-outline-danger" name="bet-aendern-submit">Änderungen speichern</button>
 
 			</form>
-      <form action= "loginupdate.php" method = "POST">
+      <form action= "loginupdate_bwh.php" method = "POST">
         <input type = "hidden" name = "bid" value = "<?php echo $bid; ?>">
         <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
         <button type="submit" class="btn btn-outline-danger" name="loginfo-aendern-bet-submit">Login-Info ändern</button>
@@ -308,10 +308,10 @@ $erfolg = "";
       <?php
       echo "<script type='text/javascript'>
         function warnung(){
-          return confirm ('Wollen Sie Nutzer \"$username\" wirklich löschen?')} </script>";
+          return confirm ('Wollen Sie NutzerIn \"$username\" wirklich löschen?')} </script>";
       ?>
 
-      <form action= "delete_nutzer.php" method = "POST" onsubmit = "return warnung(this);">
+      <form action= "delete_bwh.php" method = "POST" onsubmit = "return warnung(this);">
         <input type = "hidden" name = "bid" value = "<?php echo $bid; ?>">
         <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
         <input type = "hidden" name = "gruppe" value = "bwh">
