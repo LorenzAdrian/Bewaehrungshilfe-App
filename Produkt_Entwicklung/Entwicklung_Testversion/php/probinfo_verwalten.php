@@ -34,7 +34,7 @@ if ($check !== "betreuer") {
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  <title>Registrierung Betreuer</title>
+  <title>ProbandIn-Info verwalten</title>
 
 </head>
 
@@ -194,7 +194,7 @@ $erfolg = "";
 ?>
 		<main>
 			<h1>Bearbeiten</h1>
-			<p>Admin-Info</p>
+			<p>ProbandIn-Info</p>
 			<form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
 				<input type="hidden" name="rolle" value="prob">
         <input type="hidden" name="pid" value="<?php echo $pid; ?>">
@@ -282,10 +282,10 @@ $erfolg = "";
 				<button type="submit" class="btn btn-outline-danger" name="prob-aendern-submit">Änderungen speichern</button>
 			</form>
 
-      <form action= "loginupdate_admin.php" method = "POST">
-        <input type = "hidden" name = "adid" value = "<?php echo $adid; ?>">
+      <form action= "loginupdate_proband.php" method = "POST">
+        <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
         <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
-        <button type="submit" class="btn btn-outline-danger" name="loginfo-aendern-admin-submit">Login-Info ändern</button>
+        <button type="submit" class="btn btn-outline-danger" name="loginfo-aendern-proband-submit">Login-Info ändern</button>
       </form>
 
       <?php
@@ -295,10 +295,10 @@ $erfolg = "";
       ?>
 
       <form action= "delete_nutzer.php" method = "POST" onsubmit = "return warnung(this);">
-        <input type = "hidden" name = "adid" value = "<?php echo $adid; ?>">
+        <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
         <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
-        <input type = "hidden" name = "gruppe" value = "admin">
-        <button type="submit" class="btn btn-outline-danger" name="delete-admin-submit">Admin löschen</button>
+        <input type = "hidden" name = "gruppe" value = "prob">
+        <button type="submit" class="btn btn-outline-danger" name="delete-prob-submit">ProbandIn löschen</button>
       </form>
       <br>
       <!--<div class = "success"><?php //echo $erfolg; ?></div>-->

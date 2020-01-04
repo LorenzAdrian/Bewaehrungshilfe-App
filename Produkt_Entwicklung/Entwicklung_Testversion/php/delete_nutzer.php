@@ -47,7 +47,7 @@ elseif ($gruppe == "bwh"){
       $erfolg = "BewährungshilferIn \"$username\" mit id \"$bid\" wurde erfolgreich gelöscht!";
       echo "<script type='text/javascript'>
         alert('$erfolg'); window.location = 'index_admin.php' </script>";
-    } 
+    }
   }
 }
 else {
@@ -62,6 +62,9 @@ else {
     if (mysqli_stmt_prepare($stmt, $sql)) {
       mysqli_stmt_bind_param($stmt, "s", $pid);
       mysqli_stmt_execute($stmt);
+      $erfolg = "ProbandIn \"$username\" mit id \"$pid\" wurde erfolgreich gelöscht!";
+      echo "<script type='text/javascript'>
+        alert('$erfolg'); window.location = 'index_betreuer.php' </script>";
     }
   }
 }
