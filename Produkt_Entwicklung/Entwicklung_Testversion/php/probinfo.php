@@ -146,10 +146,10 @@ if (mysqli_num_rows($result) > 0) {
                   <input id="terPID" name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
                 </td>
                 <td>
-		    <button class="abschicken button-sodi btn-outline-sodi margin rounded-pill" type="submit" name="signup-submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> </button>
-		</td>
-	      </form>
-             </tr>
+          		    <button class="abschicken button-sodi btn-outline-sodi margin rounded-pill" type="submit" name="signup-submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> </button>
+          		  </td>
+          	   </form>
+            </tr>
            </table>
           <!--
           <table class="">
@@ -185,6 +185,12 @@ if (mysqli_num_rows($result) > 0) {
               </tr>
             </form>
           </table>-->
+          <form id="saveMsgFeed" method='POST' action ="messageFeed.php">
+            <input type="submit" value='Nachrichtenfeed herunterladen'>
+            <input type='hidden' value='<?php echo $_SESSION['userId'] ?>' name='userID'>
+            <input type='hidden' value='<?php echo $_SESSION['probID'] ?>' name='probID'>
+            <input type='hidden' value='<?php echo $_SESSION['rolle'] ?>' name='rolle'>
+          </form>
           </div>
         </div>
       </div>

@@ -82,19 +82,19 @@ if ($conn->query($sql) != TRUE) {
 
 <script>
 	/* Style von Detei upload*/
-	
+
 	 $("#bild-absenden").hide();
-	
+
     $(document).ready(function(){
 
         $('input[type="file"]').change(function(e){
 
             var fileName = e.target.files[0].name;
-			
+
 			var neu = fileName;
 			document.getElementById('file-anzeige')
 			.innerHTML = neu;
-			
+
 			document.getElementById("bild-absenden").classList.remove("btn-unsichtbar");
 			document.getElementById("bild-absenden").classList.add("btn-outline-success");
         });
@@ -165,22 +165,22 @@ if ($conn->query($sql) != TRUE) {
 <div class="container-fluid">
 	<div class="row">
 				<div class="col-xs-1 col-sm-1 col-md-2 col-lg-4 bg-color">
-			        	   
+
 			</div>
 			<div class="col-xs-10 col-sm-10 col-md-8 col-lg-4 text-center bg-color2">
-			   <h4>Meine Nachrichten</h4>      	   
+			   <h4>Meine Nachrichten</h4>
 			</div>
-			
+
 <div class="col-xs-1 col-sm-1 col-md-2 col-lg-4 bg-color">
-			     	   
+
 			</div>
-			
+
 	</div>
-  
+
   <div class="row">
-  
+
 			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-4 bg-color">
-			        	   
+
 			</div>
 			<div class="col-xs-10 col-sm-10 col-md-8 col-lg-4 bg-color2">
 
@@ -235,15 +235,25 @@ if ($conn->query($sql) != TRUE) {
 					<br>
             </tr>
           </td>
+          <tr>
+            <td>
+              <form id="saveMsgFeed" method='POST' action ="messageFeed.php">
+                <input type="submit" value='Nachrichtenfeed herunterladen'>
+                <input type='hidden' value='<?php echo $_SESSION['userId'] ?>' name='userID'>
+                <input type='hidden' value='<?php echo $_SESSION['probID'] ?>' name='probID'>
+                <input type='hidden' value='<?php echo $_SESSION['rolle'] ?>' name='rolle'>
+              </form>
+            </td>
+          </tr>
 			</div>
 		</main>
   </div>
 
 <div class="col-xs-1 col-sm-1 col-md-2 col-lg-4 bg-color">
-			     	   
+
 			</div>
 	</div>
-	
+
 </div>
 
 
