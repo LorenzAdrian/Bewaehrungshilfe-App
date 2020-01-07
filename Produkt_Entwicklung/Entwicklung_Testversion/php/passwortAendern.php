@@ -122,6 +122,7 @@ if(isset($_POST['but_logout'])){
   </button>
 </nav>
   <hr class="hr-sodi"> <!-- Gehört zum Header -->
+</header>
 
 <?php
 $passwortNeu = "";
@@ -190,8 +191,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "UPDATE proband SET Passwort = ? WHERE PID = ?";
     $stmt = mysqli_stmt_init($conn);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: passwortAendern.php?error=sqlerror");
-        exit();
         }
       else{
         //Passwort wird gehasht (verschlüsselt)
@@ -200,8 +199,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_stmt_bind_param($stmt, 'si', $hashedPwd, $userID);
         mysqli_stmt_execute($stmt);
         $pwdErfolg = "Passwort erfolgreich geändert";
-        //header("Location: index_proband.php?passwortAendern=success");
-        //exit();
       }
     }
   }

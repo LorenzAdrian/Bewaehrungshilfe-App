@@ -1,5 +1,4 @@
 <?php
-//include '../includes/events_aktualisieren.inc.php';
 
 include 'dbh.inc.php';
 if(!isset($_SESSION))

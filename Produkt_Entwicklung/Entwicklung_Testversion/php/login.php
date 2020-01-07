@@ -1,7 +1,4 @@
 <?php
-//require "header_Betreuer.php";
-//include ("includes/login.inc.php");
-
 
 // Die Login Seite.
  ?>
