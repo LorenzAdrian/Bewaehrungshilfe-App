@@ -178,7 +178,7 @@ if (isset ($_POST['prob-self-submit'])){
 				else {
 					//Paswort wird gehasht.
 					$hashedPwd = password_hash($passwort, PASSWORD_DEFAULT);
-					mysqli_stmt_bind_param($stmt, "sssssissi", $vorname, $nachname, $email, $username, $hashedPwd,
+					mysqli_stmt_bind_param($stmt, "ssssssssi", $vorname, $nachname, $email, $username, $hashedPwd,
 					$telnr, $az, $ende, $betreuer);
 					mysqli_stmt_execute($stmt);
           $erfolg = "$username erfolgreich angelegt!";

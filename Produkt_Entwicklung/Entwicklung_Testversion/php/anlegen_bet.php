@@ -184,11 +184,11 @@ if (isset ($_POST['bet-self-submit'])) {
           $hashedPwd = password_hash($passwort, PASSWORD_DEFAULT);
           //Vetrtretung ist NULL Feld, deshalb extra Check.
           if (!empty($vertretung)){
-            mysqli_stmt_bind_param($stmt, "sssssissii", $vorname, $nachname, $email, $username, $hashedPwd,
+            mysqli_stmt_bind_param($stmt, "ssssssssii", $vorname, $nachname, $email, $username, $hashedPwd,
                 $telnr, $zimmernr, $sz, $vertretung, $ag);
           }
             else {
-            mysqli_stmt_bind_param($stmt, "sssssissi", $vorname, $nachname, $email, $username, $hashedPwd,
+            mysqli_stmt_bind_param($stmt, "ssssssssi", $vorname, $nachname, $email, $username, $hashedPwd,
             $telnr, $zimmernr, $sz, $ag);
             }
           mysqli_stmt_execute($stmt);
