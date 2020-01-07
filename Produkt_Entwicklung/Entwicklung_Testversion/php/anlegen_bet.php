@@ -195,7 +195,7 @@ if (isset ($_POST['bet-self-submit'])) {
             $erfolg = "$username erfolgreich angelegt!";
             echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'anlegen_bet.php'</script>";
           } else {
-            echo "<script type='text/javascript'>alert('ERROR'); window.location = 'anlegen_admin.php'</script>";
+            echo "<script type='text/javascript'>alert('ERROR'); window.location = 'anlegen_bet.php'</script>";
           }
           //header("Location: anlegen_bet.php?signup=success".$username);
           //exit();

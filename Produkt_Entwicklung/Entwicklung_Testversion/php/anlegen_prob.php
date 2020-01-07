@@ -182,9 +182,9 @@ if (isset ($_POST['prob-self-submit'])){
 					$telnr, $az, $ende, $betreuer);
           if (mysqli_stmt_execute($stmt) == TRUE){
             $erfolg = "$username erfolgreich angelegt!";
-            echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'anlegen_bet.php'</script>";
+            echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'anlegen_prob.php'</script>";
           } else {
-            echo "<script type='text/javascript'>alert('ERROR'); window.location = 'anlegen_admin.php'</script>";
+            echo "<script type='text/javascript'>alert('ERROR'); window.location = 'anlegen_prob.php'</script>";
           }
 					//header("Location: login.php?signup=success.$username");
 					//exit();
