@@ -19,6 +19,7 @@ if ($gruppe == "admin"){
   $check = $_SESSION['rolle'];
   if ($check !== "admin") {
     header('Location:login.php');
+    exit();
   } else {
     $adid = $_POST['adid'];
     $sql = "DELETE FROM admin WHERE adid = ?";
@@ -29,11 +30,15 @@ if ($gruppe == "admin"){
       $erfolg = "Admin-Nutzer \"$username\" mit id \"$adid\" wurde erfolgreich gelöscht!";
       echo "<script type='text/javascript'>
         alert('$erfolg'); window.location = 'index_admin.php' </script>";
+      mysqli_stmt_close($stmt);
+      mysqli_close($conn);
     } else {
       header ("Location: index_admin.php?error=sqlerror");
+      exit();
     }
   }
 } else {
   header ("Location: login.php");
+  exit();
 }
 ?>

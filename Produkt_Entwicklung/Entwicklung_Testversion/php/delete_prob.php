@@ -19,6 +19,7 @@ if ($gruppe == "prob"){
   // Check, ob User ein Betreuer (Bwh)
   if ($check !== "betreuer") {
     header('Location:login.php');
+    exit();
   } else {
     $pid = $_POST['pid'];
     $sql = "DELETE FROM proband WHERE pid = ?";
@@ -29,11 +30,15 @@ if ($gruppe == "prob"){
       $erfolg = "ProbandIn \"$username\" mit id \"$pid\" wurde erfolgreich gelöscht!";
       echo "<script type='text/javascript'>
         alert('$erfolg'); window.location = 'index_betreuer.php' </script>";
+      mysqli_stmt_close($stmt);
+      mysqli_close($conn);
     } else {
       header ("Location: index_betreuer.php?error=sqlerror");
+      exit();
     }
   }
 } else {
   header ("Location: login.php");
+  exit();
 }
 ?>

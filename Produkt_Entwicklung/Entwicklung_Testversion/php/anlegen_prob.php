@@ -185,6 +185,8 @@ if (isset ($_POST['prob-self-submit'])){
           echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'anlegen_prob.php'</script>";
 					//header("Location: login.php?signup=success.$username");
 					//exit();
+          mysqli_stmt_close($stmt);
+          mysqli_close($conn);
 				}
 			}
 		}
