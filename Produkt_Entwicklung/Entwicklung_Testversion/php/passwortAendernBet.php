@@ -77,10 +77,10 @@ if(isset($_POST['but_logout'])){
 </head>
 <header>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap 	   nav-h">
 
     <a class="navbar-brand w-100" href="#">
-      <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
+      <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
 	  </a>
     <div class="w-100"><!--spacer--></div>
     <div class="w-100"><!--spacer--></div>
@@ -158,7 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   //Überprüfung des alten Passworts
-    $sql = "SELECT * FROM proband WHERE PID = $userID";
+    $sql = "SELECT * FROM betreuer WHERE BID = $userID";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
        while($row = mysqli_fetch_assoc($result)) {
@@ -174,11 +174,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   //Wenn nicht, dann Passwort aktualisieren
   else {
-    $sql = "UPDATE proband SET Passwort = ? WHERE PID = ?";
+    $sql = "UPDATE betreuer SET Passwort = ? WHERE BID = ?";
     $stmt = mysqli_stmt_init($conn);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: passwortAendern.php?error=sqlerror");
-        exit();
         }
       else{
         //Passwort wird gehasht (verschlüsselt)
@@ -187,8 +185,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_stmt_bind_param($stmt, 'si', $hashedPwd, $userID);
         mysqli_stmt_execute($stmt);
         $pwdErfolg = "Passwort erfolgreich geändert";
-        //header("Location: index_proband.php?passwortAendern=success");
-        //exit();
       }
     }
   }
