@@ -296,7 +296,7 @@ if (isset ($_POST['admin-self-submit'])) {
     <div class = "error"><?php echo $usernamevergeben; ?></div>
 	<div class = "error"><?php echo $emailerr; ?></div>
 	<div class = "error"><?php echo $pwdrpterr; ?></div>
-	<div class = "error"><?php echo $pwdrpterr; ?></div>
+	
 	
   </form>
   <br>
