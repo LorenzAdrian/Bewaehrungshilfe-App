@@ -124,7 +124,7 @@ if (isset ($_POST['loginInfoAendern'])) {
     $sql = "UPDATE betreuer SET passwort = ?, username = ? WHERE bid = ?";
     $stmt = mysqli_stmt_init($conn);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: loginupdate.php?error=sqlerror");
+        header("Location: loginupdate_bwh.php?error=sqlerror");
         exit();
         } else {
           //Passwort wird gehasht (verschlüsselt)
