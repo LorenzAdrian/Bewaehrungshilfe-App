@@ -195,11 +195,15 @@ if (isset ($_POST['admin-self-submit'])) {
             mysqli_stmt_bind_param($stmt, "ssssssssi", $vorname, $nachname, $email, $username, $hashedPwd,
             $telnr, $zimmernr, $sz, $ag);
             }
-          mysqli_stmt_execute($stmt);
+          if (mysqli_stmt_execute($stmt) == TRUE){
+            $erfolg = "$username erfolgreich angelegt!";
+            echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'anlegen_admin.php'</script>";
+          } else {
+            //$error = mysqli_error($conn);
+            echo "<script type='text/javascript'>alert('ERROR'); window.location = 'anlegen_admin.php'</script>";
+          }
           //header("Location: anlegen_bet.php?signup=success".$username);
           //exit();
-          $erfolg = "$username erfolgreich angelegt!";
-          echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'anlegen_admin.php'</script>";
           mysqli_stmt_close($stmt);
           mysqli_close($conn);
         }

@@ -180,9 +180,12 @@ if (isset ($_POST['prob-self-submit'])){
 					$hashedPwd = password_hash($passwort, PASSWORD_DEFAULT);
 					mysqli_stmt_bind_param($stmt, "ssssssssi", $vorname, $nachname, $email, $username, $hashedPwd,
 					$telnr, $az, $ende, $betreuer);
-					mysqli_stmt_execute($stmt);
-          $erfolg = "$username erfolgreich angelegt!";
-          echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'anlegen_prob.php'</script>";
+          if (mysqli_stmt_execute($stmt) == TRUE){
+            $erfolg = "$username erfolgreich angelegt!";
+            echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'anlegen_bet.php'</script>";
+          } else {
+            echo "<script type='text/javascript'>alert('ERROR'); window.location = 'anlegen_admin.php'</script>";
+          }
 					//header("Location: login.php?signup=success.$username");
 					//exit();
           mysqli_stmt_close($stmt);
