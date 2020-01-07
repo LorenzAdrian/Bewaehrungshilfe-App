@@ -200,6 +200,8 @@ if (isset ($_POST['admin-self-submit'])) {
           //exit();
           $erfolg = "$username erfolgreich angelegt!";
           echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'anlegen_admin.php'</script>";
+          mysqli_stmt_close($stmt);
+          mysqli_close($conn);
         }
       }
     }

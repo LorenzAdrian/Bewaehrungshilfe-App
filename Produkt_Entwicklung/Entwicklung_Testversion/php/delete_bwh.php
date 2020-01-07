@@ -19,6 +19,7 @@ if ($gruppe == "bwh"){
   $check = $_SESSION['rolle'];
   if ($check !== "admin") {
     header('Location:login.php');
+    exit();
   } else {
     $bid = $_POST['bid'];
     $sql = "DELETE FROM betreuer WHERE bid = ?";
@@ -29,11 +30,15 @@ if ($gruppe == "bwh"){
       $erfolg = "BewährungshilferIn \"$username\" mit id \"$bid\" wurde erfolgreich gelöscht!";
       echo "<script type='text/javascript'>
         alert('$erfolg'); window.location = 'index_admin.php' </script>";
+      mysqli_stmt_close($stmt);
+      mysqli_close($conn);
     } else {
       header ("Location: index_admin.php?error=sqlerror");
+      exit();
     }
   }
 } else {
   header ("Location: login.php");
+  exit();
 }
 ?>
