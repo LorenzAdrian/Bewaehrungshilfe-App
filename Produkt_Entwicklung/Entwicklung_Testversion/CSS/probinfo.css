@@ -57,8 +57,8 @@ input {
 }
 
 
-#textfeld{
-	width: 150%;
+#textfeld {
+  width: 150%;
 }
 
 /*Button Anpassungen*/
@@ -93,29 +93,29 @@ input {
   border-color: maroon;
 }
 
-.btn-outline-sodi:focus, .btn-outline-sodi.focus {
+.btn-outline-sodi:focus,
+.btn-outline-sodi.focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }
 
-.btn-outline-sodi.disabled, .btn-outline-sodi:disabled {
+.btn-outline-sodi.disabled,
+.btn-outline-sodi:disabled {
   color: maroon;
   background-color: transparent;
 }
 
-.btn-outline-sodi:not(:disabled):not(.disabled):active, .btn-outline-sodi:not(:disabled):not(.disabled).active,
-.show > .btn-outline-sodi.dropdown-toggle {
+.btn-outline-sodi:not(:disabled):not(.disabled):active,
+.btn-outline-sodi:not(:disabled):not(.disabled).active,
+.show>.btn-outline-sodi.dropdown-toggle {
   color: #fff;
   background-color: maroon;
   border-color: maroon;
 }
 
-.btn-outline-sodi:not(:disabled):not(.disabled):active:focus, .btn-outline-sodi:not(:disabled):not(.disabled).active:focus,
-.show > .btn-outline-sodi.dropdown-toggle:focus {
+.btn-outline-sodi:not(:disabled):not(.disabled):active:focus,
+.btn-outline-sodi:not(:disabled):not(.disabled).active:focus,
+.show>.btn-outline-sodi.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-}
- {
-  color: maroon;
-  border-color: maroon;
 }
 
 .btn-outline-sodi:hover {
@@ -124,6 +124,7 @@ input {
   border-color: maroon;
 }
 
-.btn-outline-sodi:focus, .btn-outline-sodi.focus {
+.btn-outline-sodi:focus,
+.btn-outline-sodi.focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }

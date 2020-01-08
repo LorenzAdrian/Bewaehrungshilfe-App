@@ -246,7 +246,10 @@ if (mysqli_num_rows($result) > 0) {
                     <button class="btn btn-outline-danger" type="submit" value="Zurück">Zurück</button>
                   </form>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-back">
+            </div>
+          </div>
+          <br>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-back">
                   <form action="probinfo_verwalten.php" method="post">
                     <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
                     <input type = "hidden" name = "vorname" value = "<?php echo $vorname; ?>">
@@ -258,11 +261,9 @@ if (mysqli_num_rows($result) > 0) {
                     <input type = "hidden" name = "betanfang" value = "<?php echo $betanfang; ?>">
                     <input type = "hidden" name = "betende" value = "<?php echo $betende; ?>">
                     <input type = "hidden" name = "bid" value = "<?php echo $bid; ?>">
-                    <button class="btn btn-outline-danger" type="submit" value="Zurück">Proband Info verwalten</button>
+                    <button class="btn btn-outline-danger" type="submit">Proband Info verwalten</button>
                   </form>
                 </div>
-            </div>
-          </div>
 
       <!-- Kalender -->
       <div class="container container-calender">
