@@ -265,9 +265,9 @@ if (isset ($_POST['prob-self-submit'])){
       </div>
     </div>
     <div class="form-group row">
-      <label for="betreuer" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuer-ID:</label>
+      <label for="betreuer" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Bewährungshelfer-ID:</label>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <input type="number" class="form-control" id="betreuer" name="betreuer" placeholder="Betreuer-ID" value="<?php if ( isset($betreuer) ) {echo $betreuer;} ?>" required>
+        <input type="number" class="form-control" id="betreuer" name="betreuer" placeholder="Bewährungshelfer-ID" value="<?php if ( isset($betreuer) ) {echo $betreuer;} ?>" required>
       </div>
     </div>
     <br>
