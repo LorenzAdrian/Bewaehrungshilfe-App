@@ -22,13 +22,29 @@ if ($gruppe == "bwh"){
     exit();
   } else {
     $bid = $_POST['bid'];
+
+    $sql = "DELETE From nachricht where bid = ?";
+    $stmt = mysqli_stmt_init($conn);
+    if (mysqli_stmt_prepare($stmt, $sql)) {
+      mysqli_stmt_bind_param($stmt, "i", $bid);
+      mysqli_stmt_execute($stmt);
+      mysqli_stmt_close($stmt);
+    }
+    $sql = "DELETE From termin where bid = ?";
+    $stmt = mysqli_stmt_init($conn);
+    if (mysqli_stmt_prepare($stmt, $sql)) {
+      mysqli_stmt_bind_param($stmt, "i", $bid);
+      mysqli_stmt_execute($stmt);
+      mysqli_stmt_close($stmt);
+    //    header('Location: index_betreuer.php');
+    }
     $sql = "DELETE FROM betreuer WHERE bid = ?";
     $stmt = mysqli_stmt_init($conn);
     if (mysqli_stmt_prepare($stmt, $sql)) {
       mysqli_stmt_bind_param($stmt, "i", $bid);
       mysqli_stmt_execute($stmt);
       if (mysqli_stmt_execute ($stmt) == TRUE){
-        $erfolg = "Admin-Nutzer \"$username\" mit id \"$bid\" wurde erfolgreich gelöscht!";
+        $erfolg = "Bwh-Nutzer \"$username\" mit id \"$bid\" wurde erfolgreich gelöscht!";
         echo "<script type='text/javascript'>
           alert('$erfolg'); window.location = 'index_admin.php' </script>";
       } else {
