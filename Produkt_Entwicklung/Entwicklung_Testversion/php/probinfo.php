@@ -273,7 +273,7 @@ if (mysqli_num_rows($result) > 0) {
             <?php
             // Info des ausgewählten Probandes
             foreach ($probInfo as $info) {
-            echo "Kalender von ".$info['Vorname']." ".$info['Nachname'];
+            echo "".$info['Vorname']." ".$info['Nachname'];
             }
             ?>
             </h1>
