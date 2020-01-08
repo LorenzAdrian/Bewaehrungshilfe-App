@@ -195,7 +195,8 @@ if (isset ($_POST['bet-self-submit'])) {
             $erfolg = "$username erfolgreich angelegt!";
             echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'anlegen_bet.php'</script>";
           } else {
-            echo "<script type='text/javascript'>alert('ERROR'); window.location = 'anlegen_bet.php'</script>";
+            echo "ERROR: ";
+            echo mysqli_stmt_error($stmt);
           }
           //header("Location: anlegen_bet.php?signup=success".$username);
           //exit();
@@ -286,7 +287,7 @@ if (isset ($_POST['bet-self-submit'])) {
 			</div>
 			<br>
 				<button type="submit" class="btn btn-outline-danger" name="bet-self-submit">Betreuer Registrieren</button>
-			
+
 				<div class = "error"><?php echo $usernameerr; ?></div>
 				<div class = "error"><?php echo $usernamevergeben; ?></div>
 				<div class = "error"><?php echo $emailerr; ?></div>

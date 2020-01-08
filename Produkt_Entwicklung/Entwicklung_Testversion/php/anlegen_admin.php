@@ -199,8 +199,8 @@ if (isset ($_POST['admin-self-submit'])) {
             $erfolg = "$username erfolgreich angelegt!";
             echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'anlegen_admin.php'</script>";
           } else {
-            //$error = mysqli_error($conn);
-            echo "<script type='text/javascript'>alert('ERROR'); window.location = 'anlegen_admin.php'</script>";
+            echo "ERROR: ";
+            echo mysqli_stmt_error($stmt);
           }
           //header("Location: anlegen_bet.php?signup=success".$username);
           //exit();
@@ -291,13 +291,13 @@ if (isset ($_POST['admin-self-submit'])) {
 			 </div>
 			 <br>
     <button type="submit" class="btn btn-outline-danger" name="admin-self-submit">Admin Registrieren</button>
-	
+
 	<div class = "error"><?php echo $usernameerr; ?></div>
     <div class = "error"><?php echo $usernamevergeben; ?></div>
 	<div class = "error"><?php echo $emailerr; ?></div>
 	<div class = "error"><?php echo $pwdrpterr; ?></div>
-	
-	
+
+
   </form>
   <br>
   <!--<div class = "success"><?php //echo $erfolg; ?></div>-->
