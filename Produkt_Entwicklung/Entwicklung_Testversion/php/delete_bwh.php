@@ -27,9 +27,14 @@ if ($gruppe == "bwh"){
     if (mysqli_stmt_prepare($stmt, $sql)) {
       mysqli_stmt_bind_param($stmt, "i", $bid);
       mysqli_stmt_execute($stmt);
-      $erfolg = "BewährungshilferIn \"$username\" mit id \"$bid\" wurde erfolgreich gelöscht!";
-      echo "<script type='text/javascript'>
-        alert('$erfolg'); window.location = 'index_admin.php' </script>";
+      if (mysqli_stmt_execute ($stmt) == TRUE){
+        $erfolg = "Admin-Nutzer \"$username\" mit id \"$bid\" wurde erfolgreich gelöscht!";
+        echo "<script type='text/javascript'>
+          alert('$erfolg'); window.location = 'index_admin.php' </script>";
+      } else {
+        echo "ERROR: ";
+        echo mysqli_stmt_error($stmt);
+      }
       mysqli_stmt_close($stmt);
       mysqli_close($conn);
     } else {
