@@ -47,7 +47,7 @@
             <div class="form-check">
               <h2>Anmeldung</h2>
               <input type="checkbox" class="form-check-input checkbox"  id="betreuer" >
-              <label for="betreuer">Betreuer</label>
+              <label for="betreuer">Bewährungshelfer</label>
             </div>
         </form>
         <form class="form-signin">
