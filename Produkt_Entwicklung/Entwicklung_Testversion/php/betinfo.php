@@ -35,7 +35,7 @@ if ($check !== "admin") {
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <title>Registrierung Betreuer</title>
-
+  <link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
 </head>
 
 <style>
@@ -296,27 +296,36 @@ $erfolg = "";
 				</div>
 			</div>
 			<br>
+			<div class="container">
+			<div class="row">
+			<div class="col-lg-4">
 				<button type="submit" class="btn btn-outline-danger" name="bet-aendern-submit">Änderungen speichern</button>
-
-			</form>
+			</div>
+				
+	<div class="col-lg-4">
       <form action= "loginupdate_bwh.php" method = "POST">
         <input type = "hidden" name = "bid" value = "<?php echo $bid; ?>">
         <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
         <button type="submit" class="btn btn-outline-danger" name="loginfo-aendern-bet-submit">Login-Info ändern</button>
       </form>
-
+	</div>
+				
       <?php
       echo "<script type='text/javascript'>
         function warnung(){
           return confirm ('Wollen Sie NutzerIn \"$username\" wirklich löschen?')} </script>";
       ?>
-
+				
+	<div class="col-lg-4">
       <form action= "delete_bwh.php" method = "POST" onsubmit = "return warnung(this);">
         <input type = "hidden" name = "bid" value = "<?php echo $bid; ?>">
         <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
         <input type = "hidden" name = "gruppe" value = "bwh">
         <button type="submit" class="btn btn-outline-danger" name="delete-bwh-submit">Bwh löschen</button>
       </form>
+	</div>
+	</div>
+	</div>			
       <br>
       <!--<div class = "success"><?php //echo $erfolg; ?></div>-->
 		</main>
