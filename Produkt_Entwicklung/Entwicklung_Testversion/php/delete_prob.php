@@ -41,7 +41,7 @@ if ($gruppe == "prob"){
     $sql = "DELETE From aktivität where PID = ?";
     $stmt = mysqli_stmt_init($conn);
     if (mysqli_stmt_prepare($stmt, $sql)) {
-      mysqli_stmt_bind_param($stmt, "s", $pid);
+      mysqli_stmt_bind_param($stmt, "i", $pid);
       mysqli_stmt_execute($stmt);
       mysqli_stmt_close($stmt);
     //    header('Location: index_betreuer.php');
