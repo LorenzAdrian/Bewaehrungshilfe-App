@@ -168,23 +168,32 @@ if (mysqli_num_rows($result) > 0) {
             </form>
           </table>
           -->
-          <?php include 'meineNachrichtenBild.php'; ?>
-        <!--
           <table class="">
             <form class="" action="upload_bet.php" method="POST" name="DAFORM" enctype="multipart/form-data" target="_self">
               <tr>
                 <td>
-                  <input id="upload" name="upload" class="" type="file" >
+                 <!-- <input id="upload" name="upload" class="" type="file" >-->
+				  <label for="file-upload" class="custom-file-upload">
+					<i class="fa fa-cloud-upload"> </i> Datei hochladen
+					</label>
+					
+					<input id="file-upload" id="dateien" name="upload" type="file"/> 
+
+					<font id="file-anzeige"> </font>
+					
                    <input id="terPID" name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
                 </td>
               </tr>
               <tr>
                 <td>
-                  <button type="submit" class="">Absenden</button>
+                  <button id="bild-absenden" type="submit" class="btn btn-unsichtbar"><i data-feather="send"></i> &nbsp; Datei absenden</button>
                 </td>
               </tr>
             </form>
-          </table>-->
+          </table>
+		  <script>
+			feather.replace()
+		  </script>
           <form id="saveMsgFeed" method='POST' action ="messageFeed.php">
             <input type="submit" value='Nachrichtenfeed herunterladen'>
             <input type='hidden' value='<?php echo $_SESSION['userId'] ?>' name='userID'>
