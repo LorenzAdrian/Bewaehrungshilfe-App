@@ -45,6 +45,7 @@ if(isset($_POST['but_logout'])){
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
   <title>Start</title>
+  <link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
 </head>
 
 <body>
