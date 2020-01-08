@@ -79,7 +79,7 @@ if(isset($_POST['but_logout'])){
         <ul class="list-unstyled components">
                 <p></p>
             <li>
-              <a id="betlisteBtn">Betreuer verwalten</a>
+              <a id="betlisteBtn">Bewährungshelfer verwalten</a>
               <!--
            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Betreuer verwalten</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -140,7 +140,7 @@ if(isset($_POST['but_logout'])){
         <?php include 'dataTbl_bet.php';?>
         <br>
         <form class="buttonform" action="anlegen_bet.php" method="post">
-          <input class="btn btn-outline-danger" type="submit" name="bet-anlegen" value="Betreuer anlegen">
+          <input class="btn btn-outline-danger" type="submit" name="bet-anlegen" value="Bewährungshelfer anlegen">
         <!--<input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" > -->
         </form>
       </div>
