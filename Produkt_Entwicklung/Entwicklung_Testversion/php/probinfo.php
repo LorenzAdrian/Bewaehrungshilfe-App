@@ -176,11 +176,11 @@ if (mysqli_num_rows($result) > 0) {
 				  <label for="file-upload" class="custom-file-upload">
 					<i class="fa fa-cloud-upload"> </i> Datei hochladen
 					</label>
-					
-					<input id="file-upload" id="dateien" name="upload" type="file"/> 
+
+					<input id="file-upload" id="dateien" name="upload" type="file"/>
 
 					<font id="file-anzeige"> </font>
-					
+
                    <input id="terPID" name="hiddenProbID" type='hidden' value="<?php echo $probID?>">
                 </td>
               </tr>
@@ -220,7 +220,7 @@ if (mysqli_num_rows($result) > 0) {
         <!-- <details> ist ein HTML5-Element, das das Ausklappen ermöglicht. Kein Button notwendig. <summary> legt den Text fest, der vor dem Ausklappen sichtbar ist. -->
          <div class="container first-container">
            <div class="row">
-             <div class="col-lg-9 col-md-9 col-sm-6">
+             <div class="col-lg-8 col-md-9 col-sm-6">
                 <details>
                   <summary class="btn btn-outline-danger" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> Termin anlegen </summary>
                   <form class="form" action = "terminetest_insert.php" method = "post">
@@ -242,28 +242,27 @@ if (mysqli_num_rows($result) > 0) {
                   </details>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-back">
+                        <form action="probinfo_verwalten.php" method="post">
+                          <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
+                          <input type = "hidden" name = "vorname" value = "<?php echo $vorname; ?>">
+                          <input type = "hidden" name = "nachname" value = "<?php echo $nachname; ?>">
+                          <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
+                          <input type = "hidden" name = "email" value = "<?php echo $email; ?>">
+                          <input type = "hidden" name = "telnr" value = "<?php echo $telnr; ?>">
+                          <input type = "hidden" name = "akte" value = "<?php echo $akte; ?>">
+                          <input type = "hidden" name = "betanfang" value = "<?php echo $betanfang; ?>">
+                          <input type = "hidden" name = "betende" value = "<?php echo $betende; ?>">
+                          <input type = "hidden" name = "bid" value = "<?php echo $bid; ?>">
+                          <button class="btn btn-outline-danger" type="submit">Proband bearbeiten</button>
+                        </form>
+                      </div>
+                <div class="col-lg-1 col-md-3 col-sm-6 col-back">
                   <form action="index_betreuer.php" method="post">
                     <button class="btn btn-outline-danger" type="submit" value="Zurück">Zurück</button>
                   </form>
                 </div>
             </div>
           </div>
-          <br>
-          <div class="col-lg-3 col-md-3 col-sm-6 col-back">
-                  <form action="probinfo_verwalten.php" method="post">
-                    <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
-                    <input type = "hidden" name = "vorname" value = "<?php echo $vorname; ?>">
-                    <input type = "hidden" name = "nachname" value = "<?php echo $nachname; ?>">
-                    <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
-                    <input type = "hidden" name = "email" value = "<?php echo $email; ?>">
-                    <input type = "hidden" name = "telnr" value = "<?php echo $telnr; ?>">
-                    <input type = "hidden" name = "akte" value = "<?php echo $akte; ?>">
-                    <input type = "hidden" name = "betanfang" value = "<?php echo $betanfang; ?>">
-                    <input type = "hidden" name = "betende" value = "<?php echo $betende; ?>">
-                    <input type = "hidden" name = "bid" value = "<?php echo $bid; ?>">
-                    <button class="btn btn-outline-danger" type="submit">Proband Info verwalten</button>
-                  </form>
-                </div>
 
       <!-- Kalender -->
       <div class="container container-calender">
