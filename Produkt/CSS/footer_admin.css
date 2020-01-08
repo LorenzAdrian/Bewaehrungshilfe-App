@@ -1,0 +1,32 @@
+#sticky-footer ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    list-style: none;
+}
+
+#sticky-footer ul li a {
+    color: maroon;
+}
+
+#sticky-footer ul li a:hover {
+    color: rgba(128, 100, 0, 1);
+	text-decoration: underline;  
+ }
+
+#sticky-footer {
+/*	border-top: 2px maroon solid;*/
+	flex-shrink: none;
+	height: 4vh;
+	align-items: center;
+	display: flex;
+}
+
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+	margin-left: 80px;
+	z-index: 1;
+}

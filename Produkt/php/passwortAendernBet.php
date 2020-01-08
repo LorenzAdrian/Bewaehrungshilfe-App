@@ -35,7 +35,7 @@ if(isset($_POST['but_logout'])){
     <link rel="stylesheet" href="../CSS/termine_proband.css">
 		<link rel="stylesheet" href="../CSS/header_prob.css">
 		<link rel="stylesheet" href="../CSS/footer_pro.css">
-		<link rel="stylesheet" href="../CSS/passwortAendern.css">
+		<link rel="stylesheet" href="../CSS/passwortAendernBet.css">
     <!--Schriftart aus google fonts------------------------->
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
@@ -76,52 +76,38 @@ if(isset($_POST['but_logout'])){
 
 </head>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
-   <a class="navbar-brand w-100" href="#">
-  <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
-	 </a>
 
-   <div class="navbar-collapse collapse w-100" id="navbar5">
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="../php/index_proband.php">Startseite</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap 	   nav-h">
+
+    <a class="navbar-brand w-100" href="#">
+      <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
+	  </a>
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
+     <div class="navbar-collapse collapse w-100" id="navbar5">
+        <ul class="navbar-nav mx-auto">
+		<!-- Aktuelle Seite -->
+      <li class="nav-item active">
+        <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../php/termine_proband.php">Termine </a>
+	   <li class="nav-item active">
+        <a class="nav-link" href="passwortAendernBet.php">Passwort&nbsp;ändern<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../php/MeineNachrichten.php">Nachrichten</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../php/Dokumente.php">Dokumente</a>
-      </li>
-	    <li class="nav-item">
-        <a class="nav-link" href="Informationen.php">Informationen</a>
-      </li>
-	    <li class="nav-item">
-        <a class="nav-link" href="Leitfaden_Proband.pdf">Leitfaden</a>
-      </li>
-	    <li class="nav-item">
-        <a class="nav-link" href="Notfall.php">Notfall</a>
-      </li>
-	<!-- Aktuelle Seite -->
-	  <li class="nav-item active">
-        <a class="nav-link" href="passwortAendern.php">Passwort&nbsp;ändern<span class="sr-only">(current)</span></a>
+	   <li class="nav-item">
+        <a class="nav-link" href="login.php">Abmelden</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0" method='post' action="">
-        <button class="button-sodi btn-outline-sodi my-1 my-sm-0" name="but_logout" type="submit">Abmelden</button>
-	</form> 
-  </div>
-  
-  <div class="w-100">
-  </div>
-  
+    </div>
+    <div class="w-100"><!--spacer--></div>
+
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-</nav>
-  <hr class="hr-sodi"> <!-- Gehört zum Header -->
+  </nav>
 </header>
 
 <?php
@@ -172,7 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   //Überprüfung des alten Passworts
-    $sql = "SELECT * FROM proband WHERE PID = $userID";
+    $sql = "SELECT * FROM betreuer WHERE BID = $userID";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
        while($row = mysqli_fetch_assoc($result)) {
@@ -188,7 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   //Wenn nicht, dann Passwort aktualisieren
   else {
-    $sql = "UPDATE proband SET Passwort = ? WHERE PID = ?";
+    $sql = "UPDATE betreuer SET Passwort = ? WHERE BID = ?";
     $stmt = mysqli_stmt_init($conn);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
         }
@@ -215,7 +201,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		
 		<div class="form-group">
         <div class="form-check">
-          <h2>Passwort ändern</h2>
+          <h2>Passwort ändern </h2>
 		  <br>
         </div>
 		<div class="form-label-group input-group">
@@ -267,24 +253,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		</div>
 </form>
 </main>
-		
-	<!--Footer-->
-	<footer id="sticky-footer" class="mb-0 mt-footer py-4 bg-light text-white-50">
-      <div class="pt-2 container text-center">
-
-              <ul>
-                <li>
-                  <a href="Impressum_Proband.php">Impressum</a>
-                </li>
-                <li>
-                    <a href="Datenschutz_Proband.php">Datenschutz</a>
-                </li>
-                <li>
-                  <a href="Kontakt_Proband.php">Kontakt</a>
-                </li>
-              </ul>
-
-      </div>
-    </footer>
 </html>
-

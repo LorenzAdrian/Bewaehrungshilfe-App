@@ -74,15 +74,12 @@ else {
 			$_SESSION['rolle'] = $rolle;
 			$_SESSION['vorname'] = $row['Vorname'];
 			$_SESSION['nachname'] = $row['Nachname'];
-			//header("Location: login.php?login=success");
 		}
 		else {
-			//header("Location: login.php?wrongpswd");
 			echo 0;
 		}
 	}
 	else {
-		//header("Location: login.php?nouser");
 		echo 0;
 	}
 }

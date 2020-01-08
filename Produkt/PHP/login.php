@@ -1,7 +1,4 @@
 <?php
-//require "header_Betreuer.php";
-//include ("includes/login.inc.php");
-
 
 // Die Login Seite.
  ?>
@@ -31,12 +28,15 @@
 <body>
 <!-- Header -->
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
-    <a class="navbar-brand" href="#">
-      <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
-    </a>
-    <h4>Herzlich Willkommen</h4>
-  </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+
+<a class="navbar-brand w-100" href="#">
+  <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
+</a>
+<div class="text">
+<h3>Herzlich Willkommen</h3>
+</div>
+
 </header>
 
 	<!-- LOGIN CONTAINER -->
@@ -71,7 +71,8 @@
       </div>
     </div>
   </div>
-        <div class = "message" id = "message" style= "text-align: center"></div>
+  <br>
+        <div class="message" id ="message" style= "text-align: center"></div>
 
 	<!-- FOOTER -->
  	<footer id="sticky-footer" class="py-2 bg-dark text-white-50">

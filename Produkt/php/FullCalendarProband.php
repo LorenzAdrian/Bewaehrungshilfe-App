@@ -113,14 +113,14 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 		   dateClick: function(info) {
 		   var clickedDate = info.dateStr;
 		   calendar.changeView('timeGridDay',clickedDate);
-        alert(clickedDate);
+        //alert(clickedDate);
 
       },
 
 
 		//Event zum annehmen oder ablehnen eines Termins
 	  eventClick: function(info) {
-		  if (info.event.backgroundColor == "blue") {
+		  if (info.event.backgroundColor == "#d3d3d3") {
 				var tid = parseInt(info.event.id, 10);
 				var status;
 				if(confirm("Möchten Sie diesen Termin akzeptieren?")) {

@@ -1,5 +1,4 @@
 <?php
-//include '../includes/events_aktualisieren.inc.php';
 
 include 'dbh.inc.php';
 if(!isset($_SESSION))
@@ -40,6 +39,8 @@ if(isset($_POST['but_logout'])){
 
   <!--- Pfad zur style.css--------------------------->
   <link rel="stylesheet" href="../CSS/betreuer_index.css">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
   <title>Start</title>
   <link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
@@ -66,7 +67,10 @@ if(isset($_POST['but_logout'])){
       <li class="nav-item active">
         <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span></a>
       </li>
-	    <li class="nav-item">
+	   <li class="nav-item active">
+        <a class="nav-link" href="passwortAendernBet.php">Passwort&nbsp;ändern<span class="sr-only">(current)</span></a>
+      </li>
+	   <li class="nav-item">
         <a class="nav-link" href="login.php">Abmelden</a>
       </li>
     </ul>
@@ -83,7 +87,9 @@ if(isset($_POST['but_logout'])){
   <div class="container hallo-container">
     <div class="row hallo-row">
       <div class="col-lg-12 hallo-col">
-        <h2>Guten Tag <?php echo $_SESSION['vorname']; echo " "; echo $_SESSION['nachname'] ?> </h2>
+      <div class="intro">
+      <h1 class="animated fadeInDown delay-1s">Hallo <?php echo $_SESSION['vorname']; echo " "; echo $_SESSION['nachname']?> </h1>
+      </div>
         <p>Zum Verwalten klicken Sie bitte auf den gewünschten Probanden</p>
       </div>
     </div>
@@ -95,8 +101,8 @@ if(isset($_POST['but_logout'])){
       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-col">
         <?php include 'dataTbl.php';?>
         <br>
-        <form class="buttonform" action="Signup.php" method="post">
-          <input class="btn btn-outline-danger" type="submit" name="signupcheck-submit" value="Proband anlegen">
+        <form class="buttonform" action="anlegen_prob.php" method="post">
+          <input class="btn btn-outline-danger" type="submit" name="prob-anlegen" value="Proband anlegen">
           <!--<input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" > -->
         </form>
       </div>
@@ -130,6 +136,6 @@ if(isset($_POST['but_logout'])){
     </div>
   </footer>
   -->
-
+  <script src="../javascript/app.js"></script>
 </body>
 </html>

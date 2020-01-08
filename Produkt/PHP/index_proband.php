@@ -34,7 +34,7 @@ if(isset($_POST['but_logout'])){
 
 	<!--- Pfad zur style.css--------------------------->
     <link rel="stylesheet" href="../CSS/index_proband.css">
-	<link rel="stylesheet" href="../CSS/header_prob.css">
+	<link rel="stylesheet" href="../CSS/header_prob.css"> 
 	<link rel="stylesheet" href="../CSS/footer_pro.css">
 <!--	<link rel="stylesheet" href="../CSS/footer.css">-->
     <!--Schriftart aus google fonts------------------>
@@ -48,15 +48,15 @@ if(isset($_POST['but_logout'])){
 </head>
 
 <body>
-<div id="seite">
+<div id="seite"> 
 
 
 <nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
-
+   
    <a class="navbar-brand w-100" href="#">
-          		   <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
+          		  <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
 			</a>
-
+   
      <div class="navbar-collapse collapse w-100" id="navbar5">
         <ul class="navbar-nav mx-auto">
 
@@ -65,7 +65,7 @@ if(isset($_POST['but_logout'])){
         <a class="nav-link" href="../php/index_proband.php">Startseite<span class="sr-only">(current)</span></a>
       </li>
 <!-- Weiterführung zu allen anderen Seiten -->
-      <li class="nav-item ">
+      <li class="nav-item "> 
         <a class="nav-link" href="../php/termine_proband.php">Termine</a>
       </li>
       <li class="nav-item">
@@ -74,7 +74,7 @@ if(isset($_POST['but_logout'])){
        <li class="nav-item">
         <a class="nav-link" href="../php/Dokumente.php">Dokumente</a>
       </li>
-
+	  
 	    <li class="nav-item">
         <a class="nav-link" href="Informationen.php">Informationen</a>
       </li>
@@ -86,12 +86,12 @@ if(isset($_POST['but_logout'])){
 	    <li class="nav-item">
         <a class="nav-link" href="Notfall.php">Notfall</a>
       </li>
-
+	  
 	   <li class="nav-item">
         <a class="nav-link" href="passwortAendern.php">Passwort&nbsp;ändern</a>
       </li>
-
-        </ul>
+			   
+        </ul>	
 		<form class="form-inline my-2 my-lg-0" method='post' action="">
             <button class="button-sodi btn-outline-sodi my-1 my-sm-0" name="but_logout" type="submit">Abmelden</button>
 		</form>
@@ -99,7 +99,7 @@ if(isset($_POST['but_logout'])){
     <div class="w-100">
 
 	</div>
-
+				
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -108,7 +108,7 @@ if(isset($_POST['but_logout'])){
 
   <hr class="hr-sodi"> <!-- Gehört zum Header -->
 
- <div id="inhalt">
+ <div id="inhalt"> 
 	<!-- Überschrift der Seite -->
     <!--Begrüßungscontainer -->
   <div class="container hallo-container">
@@ -118,92 +118,75 @@ if(isset($_POST['but_logout'])){
       </div>
     </div>
   </div>
-
+ 
 
 
 <div class="container-fluid">
-<!--Links zu den anderen Seiten-->
+<!--Links zu den anderen Seiten-->	
 	<div class="row">
 
-		<div class="col-0 col-sm-1 col-md-3 col-lg-3">
-		</div>
-
-		<div class="col-6 col-sm-5 col-md-3 col-lg-3">
+		<div class="col">
      		<a href="MeineNachrichten.php">
-				<div class="icon">
+				<div class="icon rounded-top">
 					<i class="fa fa-envelope " ></i></div>
-
-				<div class="name">Nachrichten</div>
+					
+				<div class="name rounded-bottom">Nachrichten</div>
 			</a>
 		</div>
-
-		<div class="col-6 col-sm-5 col-md-3 col-lg-3">
+		
+		<div class="col">
 			<a href="termine_proband.php">
-				<div class="icon">
+				<div class="icon rounded-top">
 					<i class="fa fa-calendar"></i></div>
-				<div class="name">Termine</div>
+				<div class="name rounded-bottom">Termine</div>
 			</a>
 		</div>
-
-		<div class="col-0 col-sm-1 col-md-3 col-lg-3">
-		</div>
-
-	</div>
-
-	<div class="row">
-
-		<div class="col-0 col-sm-1 col-md-3 col-lg-3">
-		</div>
-
-		<div class="col-6 col-sm-5 col-md-3 col-lg-3">
+	
+	<div class="w-100 d-block d-md-none"></div>
+	
+		<div class="col">
 			<a href="Informationen.php">
-				<div class="icon">
+				<div class="icon rounded-top">
 					<i class="fa fa-info-circle"></i></div>
-				<div class="name">Informationen</div>
+				<div class="name rounded-bottom">Informationen</div>
 			</a>
 		</div>
-
-		<div class="col-6 col-sm-5 col-md-3 col-lg-3">
+		
+		<div class="w-100 d-none d-md-block"></div>
+		
+		<div class="col">
 			<a href="Dokumente.php">
-				<div class="icon">
+				<div class="icon rounded-top">
 					<i class="fa fa-file"></i></div>
-				<div class="name">Dokumente</div>
+				<div class="name rounded-bottom">Dokumente</div>
 			</a>
 		</div>
 
-		<div class="col-0 col-sm-1 col-md-3 col-lg-3">
-		</div>
-
-	</div>
-
-	<div class="row">
-
-		<div class="col-0 col-sm-1 col-md-3 col-lg-3">
-		</div>
-
-		<div class="col-6 col-sm-5 col-md-3 col-lg-3">
-      		<a href="Notfall.php">
-				<div class="icon">
+		<div class="w-100 d-block d-md-none"></div>
+		
+	
+		<div class="col">
+			<a href="Notfall.php">
+				<div class="icon rounded-top">
 					<i class="fa fa-ambulance " ></i></div>
-				<div class="name">Notfall</div>
+				<div class="name rounded-bottom">Notfall</div>
 			</a>
 		</div>
-
-		<div class="col-6 col-sm-5 col-md-3 col-lg-3">
-	 		<a href="Leitfaden_Proband.pdf">
-				<div class="icon">
+   
+		<div class="col">
+			<a href="Leitfaden_Proband.pdf">
+				<div class="icon rounded-top">
 					<i class="fa fa-list-alt " ></i></div>
-				<div class="name">Leitfaden</div>
+				<div class="name rounded-bottom">Leitfaden</div>
 			</a>
+
 		</div>
 
-		<div class="col-0 col-sm-1 col-md-3 col-lg-3">
 		</div>
-
-  </div>
+	
   </div>
    </div>
-
+ 
        <footer id="sticky-footer" class="py-4 bg-light text-white-50">
       <div class="container text-center">
 

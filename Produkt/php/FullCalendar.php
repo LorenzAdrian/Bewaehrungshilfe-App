@@ -116,7 +116,7 @@ var mycalendar = new FullCalendar.Calendar(calendarEl, {
 		   dateClick: function(info) {
 		   var clickedDate = info.dateStr;
 		   mycalendar.changeView('timeGridDay',clickedDate);
-        alert(clickedDate);
+        //alert(clickedDate);
 
       },
 

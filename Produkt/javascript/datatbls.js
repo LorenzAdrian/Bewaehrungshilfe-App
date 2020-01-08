@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $('#example').DataTable({
     bInfo: false,
     scrollY: '52vh',
@@ -23,12 +23,12 @@ $(document).ready(function() {
       "targets": [1]
     }],
     columns: [{
-      data: null,
-      render: function(data, type, row) {
-        // Vorname und Nachname zusammen unter der Spalte "Name" in der Tabelle darstellen
-        return data.Vorname + ' ' + data.Nachname;
-      }
-    },
+        data: null,
+        render: function (data, type, row) {
+          // Vorname und Nachname zusammen unter der Spalte "Name" in der Tabelle darstellen
+          return data.Vorname + ' ' + data.Nachname;
+        }
+      },
       {
         data: 'ungeleseneNachrichten'
       },
@@ -38,11 +38,17 @@ $(document).ready(function() {
   var table = $('#example').DataTable();
   /* Click bzw. Double Click: https://datatables.net/examples/advanced_init/events_live.html */
   /* Jquery on Method: https://www.w3schools.com/jquery/event_on.asp */
-  $('#example tbody').on('dblclick', 'tr', function() {
+  $('#example tbody').on('dblclick', 'tr', function () {
     var data = table.row(this).data();
+    var pid = data['PID'];
     var vorname = data['Vorname'];
     var nachname = data['Nachname'];
-    var pid = data['PID'];
+    var username = data['Username'];
+    var email = data['Email'];
+    var telnr = data['TelNr'];
+    var akte = data['Aktenzeichen'];
+    var betanfang = data['Betreuungsanfang'];
+    var betende = data['Betreuungsende'];
     var bid = data['BID'];
     // Alert-Ausgabe für Debugging
     //alert("bid = "+bid+ " und pid = "+pid);
@@ -50,7 +56,17 @@ $(document).ready(function() {
     // Javascript, die wie eine Post-Formular Funktioniert
     $.redirect('probinfo.php', {
       betreuer: bid,
-      proband: pid
+      proband: pid,
+      pid: pid,
+      vorname: vorname,
+      nachname: nachname,
+      username: username,
+      mail: email,
+      telnr: telnr,
+      akte: akte,
+      betanfang: betanfang,
+      betende: betende,
+      bid: bid
     });
 
 
@@ -60,7 +76,7 @@ $(document).ready(function() {
 
 
     // Console-Ausgabe für Debugging
-    console.log(probliste, vorname, nachname, pid, bid);
+    //console.log(probliste, vorname, nachname, pid, bid);
 
   });
 });

@@ -20,8 +20,6 @@ if(isset($_POST['but_logout'])){
 }
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
 
@@ -37,67 +35,134 @@ if(isset($_POST['but_logout'])){
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!--Javascript Datei-->
+  <script src="../javascript/index_admin.js"></script>
 
   <!--- Pfad zur style.css--------------------------->
-  <link rel="stylesheet" href="../CSS/betreuer_index.css">
-  <!--Schriftart aus google fonts------------------>
+  <link rel="stylesheet" href="../CSS/admin_index.css">
+  <link rel="stylesheet" href="../CSS/header_prob.css">
+  <!--  Schriftart aus google fonts------------------>
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
   <title>Start</title>
-
 </head>
 
 <body>
-<!-- HEADER -->
-<header>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+<nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
 
-    <a class="navbar-brand w-100" href="#">
-      <img src="../CSS/image/Baericon.jpeg"  width="30" height="30" alt="Logo" > &nbsp;&nbsp;Sodi 4u
-	  </a>
+   <a class="navbar-brand w-100" href="#">
+          		   <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
+			</a>
 
-     <div class="navbar-collapse collapse w-100" id="navbar5">
-        <ul class="navbar-nav mx-auto">
-		<!-- Aktuelle Seite -->
-      <li class="nav-item active">
-        <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span></a>
-      </li>
-	    <li class="nav-item">
-        <a class="nav-link" href="To_Do_Liste.php">Leitfaden</a>
-      </li>
-	    <li class="nav-item">
-        <a class="nav-link" href="login.php">Abmelden</a>
-      </li>
-    </ul>
-    </div>
-    <div class="w-100"><!--spacer--></div>
+		<form class="form-inline my-2 my-lg-0" method='post' action="">
+            <button class="button-sodi btn-outline-sodi my-1 my-sm-0" name="but_logout" type="submit">Abmelden</button>
+		</form>
 
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   </nav>
-</header>
-  <!--Begrüßungscontainer -->
+
+  <hr class="hr-sodi"> <!-- Gehört zum Header -->
+
+<div class="wrapper">
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menü </h3>
+        </div>
+
+        <ul class="list-unstyled components">
+                <p></p>
+            <li>
+              <a id="betlisteBtn">Bewährungshelfer verwalten</a>
+              <!--
+           <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Betreuer verwalten</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#betliste">Betreuer anzeigen</a>
+                    </li>
+                    <li>
+                        <a href="#">Betreuer anlegen</a>
+                    </li>
+					<li>
+                        <a href="#">Betreuer löschen</a>
+                    </li>
+                </ul>
+              -->
+            </li>
+            <li>
+              <a id="adminlisteBtn">Administratoren verwalten</a>
+              <!--
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Admin verwalten</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Admin anzeigen</a>
+                    </li>
+                    <li>
+                        <a href="#">Admin anlegen</a>
+                    </li>
+                     <li>
+                        <a href="#">Admin löschen</a>
+                    </li>
+				         </ul>
+                -->
+			    </ul>
+      </nav>
+
+    <!-- Page Content -->
+    <div id="content">
+        <!-- We'll fill this with dummy content -->
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button type="button" id="sidebarCollapse" class="button-sodi btn-outline-sodi my-1 my-sm-0" style="display: none;">
+            <!--<i class="fas fa-align-left"></i>-->
+ <span class="navbar-toggler-icon"></span>               <span>Menü</span> 
+            </button> 
+        </div>
+      </nav>
+	  <!--Begrüßungscontainer -->
   <div class="container hallo-container">
     <div class="row hallo-row">
       <div class="col-lg-12 hallo-col">
         <h2>Guten Tag <?php echo $_SESSION['vorname']; echo " "; echo $_SESSION['nachname'] ?> </h2>
-
       </div>
     </div>
   </div>
+  <!-- DataTable Betreuer-Liste -->
+  <div class="container table-container" id="betliste" style="display: none;">
+ <!--Melinas vorläufige Änderungen   <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-col"> -->
+        <?php include 'dataTbl_bet.php';?>
+        <br>
+        <form class="buttonform" action="anlegen_bet.php" method="post">
+          <input class="btn btn-outline-danger" type="submit" name="bet-anlegen" value="Bewährungshelfer anlegen">
+        <!--<input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" > -->
+        </form>
+      </div>
+ <!--   </div>
+  </div> -->
+  <!-- DataTable Admin-Liste -->
+  <div class="container table-container" id="adminliste" style="display: none;">
+ <!--Melinas vorläufige Änderungen   <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-col"> -->
+        <?php include 'dataTbl_admin.php';?>
+        <br>
+        <form class="buttonform" action="anlegen_admin.php" method="post">
+          <input class="btn btn-outline-danger" type="submit" name="admin-anlegen" value="Admin anlegen">
+        <!--<input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" > -->
+        </form>
+      </div>
+  <!--  </div>
+  </div> -->
 
+    </div>
 
-   <!--Footer-->
-      <footer id="sticky-footer" class="py-2 bg-dark text-white-50">
-        <div class="container footer-container">
-          <small>Datenschutz</small>
-          <small>Impressum</small>
-          <small>Kontakt</small>
-        </div>
-      </footer>
+</div>
 
 </body>
 </html>
