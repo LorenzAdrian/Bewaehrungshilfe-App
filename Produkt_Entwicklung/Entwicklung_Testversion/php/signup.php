@@ -81,7 +81,7 @@ if(isset($_POST['signupcheck-submit'])) {
 		</header>
 
 			<main>
-				<h1>Neuen Betreuer anlegen</h1>
+				<h1>Neuen Bewährungshelfer anlegen</h1>
 				<p>Bitte füllen Sie alle Felder aus.</p>
 				<form action="signup.inc.php" method="POST">
 					<input type="hidden" name="rolle" value="betreuer">
