@@ -184,7 +184,8 @@ if (isset ($_POST['prob-self-submit'])){
             $erfolg = "$username erfolgreich angelegt!";
             echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'anlegen_prob.php'</script>";
           } else {
-            echo "<script type='text/javascript'>alert('ERROR'); window.location = 'anlegen_prob.php'</script>";
+            echo "ERROR: ";
+            echo mysqli_stmt_error($stmt);
           }
 					//header("Location: login.php?signup=success.$username");
 					//exit();
@@ -272,11 +273,11 @@ if (isset ($_POST['prob-self-submit'])){
     </div>
     <br>
     <button type="submit" class="btn btn-outline-danger" name="prob-self-submit">Registrieren</button>
-  
+
 	<div class = "error"><?php echo $usernameerr; ?></div>
     <div class = "error"><?php echo $usernamevergeben; ?></div>
 	<div class = "error"><?php echo $emailerr; ?></div>
 	<div class = "error"><?php echo $pwdrpterr; ?></div>
-	
+
   </form>
   </main>
