@@ -50,11 +50,6 @@ header {
   border-bottom: 2px maroon solid;
 }
 
-.form-group{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
 
 h1{
 	font-weight: 300;
@@ -64,9 +59,10 @@ h4{
 	font-weight: 300;
 }
 
-label{
-	text-align: left;
+.form-group{
+  text-align:left;
 }
+
 
 .error {color: #FF0000;}
 .success {color: #00CC00;}
@@ -74,7 +70,7 @@ label{
 </style>
 
 <header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+<nav class="navbar navbar-expand-lg navbar-light flex-nowrap">
 <a class="navbar-brand w-100" href="#">
   <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
   </a>
@@ -199,27 +195,66 @@ $erfolg = "";
 				<input type="hidden" name="rolle" value="prob">
         <input type="hidden" name="pid" value="<?php echo $pid; ?>">
 				<br>
-				    <div class="form-group row">
-      <label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Username:</label>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <input type="text" class="form-control" id="username" name="username" placeholder="Username" value="<?php if ( isset($username) ) {echo $username;} ?>" required readonly>
-        <!-- <span class = "error"><?php echo $usernameerr; ?></span>
-        <span class = "error"><?php echo $usernamevergeben; ?></span> -->
-      </div>
-    </div>
-            <div class="form-group row">
-        <label for="pid" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">ID:</label>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <input type="text" class="form-control" id="pid" name="pid" placeholder="id" value="<?php if ( isset($pid) ) {echo $pid;} ?>" required readonly>
-        </div>
-        </div>
-			     <div class="form-group row">
-				<label for="email" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">E-Mail:</label>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-				<input type="email" class="form-control" id="email" name="email" placeholder="E-mail" value="<?php if ( isset($email) ) {echo $email;} ?>" required>
-				<span class = "error"><?php echo $emailerr; ?></span>
-				</div>
-			</div>
+        <form>
+				    <div class="form-row">
+            <div class="form-group col-lg-1">
+            </div>
+            <div class="form-group col-lg-3">
+                <label for="vorname">Vorname:</label>
+				        <input type="text" class="form-control" id="vorname" name="vorname" placeholder="Vorname" value="<?php if ( isset($vorname) ) {echo $vorname;} ?>" required>
+              </div>
+              <div class="form-group col-lg-3">
+                <label for="nachname">Nachname:</label>
+                <input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname" value="<?php if ( isset($nachname) ) {echo $nachname;} ?>" required>
+              </div>
+              <div class="form-group col-lg-3">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" value="<?php if ( isset($username) ) {echo $username;} ?>" required readonly>
+                <!-- <span class = "error"><?php echo $usernameerr; ?></span>
+                <span class = "error"><?php echo $usernamevergeben; ?></span> -->
+              </div>
+              <div class="form-group col-lg-1">
+                <label for="pid">ID:</label>
+                <input type="text" class="form-control" id="pid" name="pid" placeholder="id" value="<?php if ( isset($pid) ) {echo $pid;} ?>" required readonly>
+              </div>
+            </div>
+            <br>
+            <div class="form-row">
+              <div class="form-group col-lg-1">
+              </div>
+              <div class="form-group col-lg-3">
+                <label for="email">E-Mail:</label>
+				        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" value="<?php if ( isset($email) ) {echo $email;} ?>" required>
+				        <span class = "error"><?php echo $emailerr; ?></span>
+              </div>
+              <div class="form-group col-lg-3">
+                <label for="telnr">Telefonnummer:</label>
+                <input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer" value="<?php if ( isset($telnr) ) {echo $telnr;} ?>" required>
+              </div>
+            </div> 
+            <br>
+            <div class="form-row">
+              <div class="form-group col-lg-1">
+              </div>
+              <div class="form-group col-lg-3">
+                <label for="betanfang">Betreuungsanfang:</label> 
+					      <input type="date" class="form-control" id="betanfang" name="betanfang" placeholder="Betreuungsanfang" value="<?php if ( isset($betanfang) ) {echo $betanfang;} ?>" required>
+				      </div>
+              <div class="form-group col-lg-3">
+                <label for="betende">Betreuungsende:</label>
+                <input type="date" class="form-control" id="betende" name="betende" placeholder="Betreuungsende" value="<?php if ( isset($betende) ) {echo $betende;} ?>">
+              </div>
+              <div class="form-group col-lg-3">
+                <label for="bid">Bewährungshelfer:</label>
+					      <input type="number" class="form-control" id="bid" name="bid" placeholder="Bewährungshelfer-ID" value="<?php if ( isset($bid) ) {echo $bid;} ?>" required>
+				      </div>
+              <div class="form-group col-lg-1">
+                <label for="akte">Aktenzeichen:</label>
+					      <input type="text" class="form-control" id="akte" name="akte" placeholder="Aktenzeichen" value="<?php if ( isset($akte) ) {echo $akte;} ?>" required>
+				      </div>
+            </div>
+          </form>
+
   <!--
    <div class="form-group row">
       <label for="password" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort:</label>
@@ -236,78 +271,37 @@ $erfolg = "";
       </div>
     </div>
   -->
-		<div class="form-group row">
-				<label for="vorname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Vorname:</label>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-				<input type="text" class="form-control" id="vorname" name="vorname" placeholder="Vorname" value="<?php if ( isset($vorname) ) {echo $vorname;} ?>" required>
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="nachname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Nachname:</label>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname" value="<?php if ( isset($nachname) ) {echo $nachname;} ?>" required>
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="telnr" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Telefonnummer:</label>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer" value="<?php if ( isset($telnr) ) {echo $telnr;} ?>" required>
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="akte" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Aktenzeichen:</label>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<input type="text" class="form-control" id="akte" name="akte" placeholder="Aktenzeichen" value="<?php if ( isset($akte) ) {echo $akte;} ?>" required>
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="betanfang" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuungsanfang:</label>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<input type="date" class="form-control" id="betanfang" name="betanfang" placeholder="Betreuungsanfang" value="<?php if ( isset($betanfang) ) {echo $betanfang;} ?>" required>
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="betende" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuungsende:</label>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<input type="date" class="form-control" id="betende" name="betende" placeholder="Betreuungsende" value="<?php if ( isset($betende) ) {echo $betende;} ?>">
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="bid" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Bewährungshelfer:</label>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-					<input type="number" class="form-control" id="bid" name="bid" placeholder="Bewährungshelfer-ID" value="<?php if ( isset($bid) ) {echo $bid;} ?>" required>
-				</div>
-			</div>
+	
 			<br>
-      <div class="container">
-      <div class="row">
-      <div class="col-lg-4">
-      
-				<button type="submit" class="btn btn-outline-danger" name="prob-aendern-submit">Änderungen speichern</button>
+      <form>
+        <div class="form-row">
+        <div class="form-group col-lg-1">
         </div>
-        <div class="col-lg-4">
-      <form action= "loginupdate_proband.php" method = "POST">
-        <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
-        <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
-        <button type="submit" class="btn btn-outline-danger" name="loginfo-aendern-proband-submit">Login-Info ändern</button>
-      </form>
-
-      <?php
-      echo "<script type='text/javascript'>
-        function warnung(){
-          return confirm ('Wollen Sie NutzerIn \"$username\" wirklich löschen?')} </script>";
-      ?>
-      	</div>
-<div class="col-lg-4">
-      <form action= "delete_prob.php" method = "POST" onsubmit = "return warnung(this);">
-        <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
-        <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
-        <input type = "hidden" name = "gruppe" value = "prob">
-        <button type="submit" class="btn btn-outline-danger" name="delete-prob-submit">ProbandIn löschen</button>
-      </form>
-      </div>
-      </div>
-      </div>
+         <div class="form-group col-lg-3">
+            <button type="submit" class="btn btn-outline-primary" name="prob-aendern-submit">Änderungen speichern</button>
+          </div>
+          <div class="form-group col-lg-3">
+            <form action= "loginupdate_proband.php" method = "POST">
+              <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
+              <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
+              <button type="submit" class="btn btn-outline-primary" name="loginfo-aendern-proband-submit">Login-Info ändern</button>
+            </form>
+              <?php
+              echo "<script type='text/javascript'>
+              function warnung(){
+              return confirm ('Wollen Sie NutzerIn \"$username\" wirklich löschen?')} </script>";
+              ?>
+      	    </div>
+            <div class="form-group col-lg-3">
+              <form action= "delete_prob.php" method = "POST" onsubmit = "return warnung(this);">
+                <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
+                <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
+                <input type = "hidden" name = "gruppe" value = "prob">
+                <button type="submit" class="btn btn-danger" name="delete-prob-submit">ProbandIn löschen</button>
+              </form>
+      	    </div>
+          </div>
+        </form>
       <br>
       <!--<div class = "success"><?php //echo $erfolg; ?></div>-->
 		</main>
