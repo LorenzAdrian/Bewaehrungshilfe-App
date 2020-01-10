@@ -278,13 +278,13 @@ $erfolg = "";
         <div class="form-group col-lg-1">
         </div>
          <div class="form-group col-lg-3">
-            <button type="submit" class="btn btn-outline-primary" name="prob-aendern-submit">Änderungen speichern</button>
+            <button type="submit" class="btn btn-primary" name="prob-aendern-submit">Änderungen speichern</button>
           </div>
           <div class="form-group col-lg-3">
             <form action= "loginupdate_proband.php" method = "POST">
               <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
               <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
-              <button type="submit" class="btn btn-outline-primary" name="loginfo-aendern-proband-submit">Login-Info ändern</button>
+              <button type="submit" class="btn btn-primary" name="loginfo-aendern-proband-submit">Login-Info ändern</button>
             </form>
               <?php
               echo "<script type='text/javascript'>
