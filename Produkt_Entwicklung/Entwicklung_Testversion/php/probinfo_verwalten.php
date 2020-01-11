@@ -197,7 +197,7 @@ $erfolg = "";
 				<br>
         <form>
 				    <div class="form-row">
-            <div class="form-group col-lg-1">
+            <div class="form-group col-lg-3">
             </div>
             <div class="form-group col-lg-3">
                 <label for="vorname">Vorname:</label>
@@ -206,6 +206,10 @@ $erfolg = "";
               <div class="form-group col-lg-3">
                 <label for="nachname">Nachname:</label>
                 <input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname" value="<?php if ( isset($nachname) ) {echo $nachname;} ?>" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-lg-3">
               </div>
               <div class="form-group col-lg-3">
                 <label for="username">Username:</label>
@@ -218,9 +222,8 @@ $erfolg = "";
                 <input type="text" class="form-control" id="pid" name="pid" placeholder="id" value="<?php if ( isset($pid) ) {echo $pid;} ?>" required readonly>
               </div>
             </div>
-            <br>
             <div class="form-row">
-              <div class="form-group col-lg-1">
+              <div class="form-group col-lg-3">
               </div>
               <div class="form-group col-lg-3">
                 <label for="email">E-Mail:</label>
@@ -232,9 +235,8 @@ $erfolg = "";
                 <input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer" value="<?php if ( isset($telnr) ) {echo $telnr;} ?>" required>
               </div>
             </div> 
-            <br>
             <div class="form-row">
-              <div class="form-group col-lg-1">
+              <div class="form-group col-lg-3">
               </div>
               <div class="form-group col-lg-3">
                 <label for="betanfang">Betreuungsanfang:</label> 
@@ -243,6 +245,10 @@ $erfolg = "";
               <div class="form-group col-lg-3">
                 <label for="betende">Betreuungsende:</label>
                 <input type="date" class="form-control" id="betende" name="betende" placeholder="Betreuungsende" value="<?php if ( isset($betende) ) {echo $betende;} ?>">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-lg-3">
               </div>
               <div class="form-group col-lg-3">
                 <label for="bid">Bewährungshelfer:</label>
@@ -275,12 +281,12 @@ $erfolg = "";
 			<br>
       <form>
         <div class="form-row">
-        <div class="form-group col-lg-1">
+        <div class="form-group col-lg-6">
         </div>
-         <div class="form-group col-lg-3">
+         <div class="form-group col-lg-1">
             <button type="submit" class="btn btn-primary" name="prob-aendern-submit">Änderungen speichern</button>
           </div>
-          <div class="form-group col-lg-3">
+          <div class="form-group col-lg-1">
             <form action= "loginupdate_proband.php" method = "POST">
               <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
               <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
@@ -292,14 +298,16 @@ $erfolg = "";
               return confirm ('Wollen Sie NutzerIn \"$username\" wirklich löschen?')} </script>";
               ?>
       	    </div>
-            <div class="form-group col-lg-3">
+            <div class="form-group col-lg-1">
               <form action= "delete_prob.php" method = "POST" onsubmit = "return warnung(this);">
                 <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
                 <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
                 <input type = "hidden" name = "gruppe" value = "prob">
                 <button type="submit" class="btn btn-danger" name="delete-prob-submit">ProbandIn löschen</button>
               </form>
-      	    </div>
+            </div>
+            <div class="form-group col-lg-4">
+              </div>
           </div>
         </form>
       <br>

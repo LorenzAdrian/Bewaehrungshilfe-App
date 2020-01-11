@@ -201,7 +201,7 @@ if (isset ($_POST['prob-self-submit'])){
     <br>
   <form>
     <div class="form-row">
-      <div class="form-group col-lg-1">
+      <div class="form-group col-lg-3">
       </div>
       <div class="form-group col-lg-3">
         <label for="vorname">Vorname:</label>
@@ -211,16 +211,23 @@ if (isset ($_POST['prob-self-submit'])){
         <label for="nachname">Nachname:</label>
         <input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname" value="<?php if ( isset($nachname) ) {echo $nachname;} ?>" required>
       </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-lg-3">
+      </div>
       <div class="form-group col-lg-3">
         <label for="username">Username:</label>
         <input type="text" class="form-control" id="username" name="uid" placeholder="Username" value="<?php if ( isset($username) ) {echo $username;} ?>" required>
         <!-- <span class = "error"><?php //echo $usernameerr; ?></span>
         <span class = "error"><?php //echo $usernamevergeben; ?></span> -->
       </div>
+      <div class="form-group col-lg-3">
+        <label for="az">Aktenzeichen:</label>
+        <input type="text" class="form-control" id="az" name="az" placeholder="Aktenzeichen" value="<?php if ( isset($az) ) {echo $az;} ?>" required>
+      </div>
     </div>
-    <br>
     <div class="form-row">
-      <div class="form-group col-lg-1">
+      <div class="form-group col-lg-3">
       </div>
       <div class="form-group col-lg-3">
         <label for="email">E-Mail:</label>
@@ -232,9 +239,8 @@ if (isset ($_POST['prob-self-submit'])){
         <input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer" value="<?php if ( isset($telnr) ) {echo $telnr;} ?>" required>
       </div>
     </div>
-    <br>
     <div class="form-row">
-      <div class="form-group col-lg-1">
+      <div class="form-group col-lg-3">
       </div>
       <div class="form-group col-lg-3">
         <label for="password">Passwort:</label>
@@ -247,17 +253,12 @@ if (isset ($_POST['prob-self-submit'])){
         <!--<span class = "error"><?php //echo $pwdrpterr; ?></span>-->
       </div>
     </div>
-    <br>
     <div class="form-row">
-      <div class="form-group col-lg-1">
+      <div class="form-group col-lg-3">
       </div>
       <div class="form-group col-lg-3">
         <label for="ende">Betreuungsende:</label>
         <input type="date" class="form-control" id="ende" name="ende" placeholder="Betreuungsende" value="<?php if ( isset($ende) ) {echo $ende;} ?>" required>
-      </div>
-      <div class="form-group col-lg-3">
-        <label for="az">Aktenzeichen:</label>
-        <input type="text" class="form-control" id="az" name="az" placeholder="Aktenzeichen" value="<?php if ( isset($az) ) {echo $az;} ?>" required>
       </div>
       <div class="form-group col-lg-3">
         <label for="betreuer">Bewährungshelfer-ID:</label>

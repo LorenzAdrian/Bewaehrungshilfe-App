@@ -70,7 +70,7 @@ if(isset($_POST['but_logout'])){
 	   <li class="nav-item active">
         <a class="nav-link" href="passwortAendernBet.php">Passwort&nbsp;ändern<span class="sr-only">(current)</span></a>
       </li>
-	   <li class="nav-item">
+	   <li class="nav-item-active">
         <a class="nav-link" href="login.php">Abmelden</a>
       </li>
     </ul>
