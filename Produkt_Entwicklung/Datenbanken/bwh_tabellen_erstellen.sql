@@ -67,14 +67,14 @@ CREATE TABLE termin(
 CREATE TABLE nachricht(
 	NID int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	Zeitstempel datetime NOT NULL,
-	Text text NOT NULL,
+	Text text NULL,
   Status varchar(20) NOT NULL,
 	BID int(30) NOT NULL,
 	PID int(30) NOT NULL,
 	BSender tinyint(1) NOT NULL,
-	image mediumblob NOT NULL,
-	dateiname varchar(50) NOT NULL,
-	dateityp char(4) NOT NULL,
+	image mediumblob  NULL,
+	dateiname varchar(50) NULL,
+	dateityp char(4) NULL,
 	FOREIGN KEY(BID) REFERENCES Betreuer(BID),
 	FOREIGN KEY(PID) REFERENCES Proband(PID)
 );
