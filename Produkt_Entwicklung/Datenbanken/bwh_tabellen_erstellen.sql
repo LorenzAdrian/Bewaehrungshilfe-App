@@ -85,11 +85,9 @@ CREATE TABLE admin(
 	Username varchar(30) NOT NULL UNIQUE,
 	Passwort varchar(100) NOT NULL,
 	Email varchar(30) NOT NULL UNIQUE,
-	TelNr varchar(20) NOT NULL UNIQUE,
+	TelNr varchar(20) NOT NULL,
 	Stellenzeichen varchar(30),
 	Zimmernr varchar(10) NOT NULL,
 	Vertretung int(30) NULL,
-  	AGID int(30) NOT NULL,
-	FOREIGN KEY(Vertretung) REFERENCES Betreuer(AGID),
-  	FOREIGN KEY(AGID) REFERENCES Arbeitsgruppe(AGID)
+  	AGID int(30) NOT NULL
 );
