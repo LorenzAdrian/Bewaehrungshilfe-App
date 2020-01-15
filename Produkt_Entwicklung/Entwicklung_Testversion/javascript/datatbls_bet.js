@@ -18,10 +18,10 @@ $(document).ready(function() {
     //keys: true,
     /* Spaltendarstellung: https://editor.datatables.net/examples/advanced/formOnlyData.html
        Nur die DataTable javascript Zeile sind hier relevant, Editor spielt keine Rolle*/
-    //columnDefs: [{
-    //  "className": "dt-center",
-    //  "targets": [1]
-    //}],
+    columnDefs: [{
+      "className": "dt-center",
+      "targets": [1, 5, 6, 7, 8]
+    }],
     columns: [{
       data: null,
       render: function(data, type, row) {
