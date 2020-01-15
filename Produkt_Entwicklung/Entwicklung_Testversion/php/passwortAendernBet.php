@@ -96,7 +96,7 @@ if(isset($_POST['but_logout'])){
 	   <li class="nav-item active">
         <a class="nav-link" href="passwortAendernBet.php">Passwort&nbsp;ändern<span class="sr-only">(current)</span></a>
       </li>
-	   <li class="nav-item">
+	   <li class="nav-item active">
         <a class="nav-link" href="login.php">Abmelden</a>
       </li>
     </ul>
@@ -242,7 +242,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 		</div>
 		  <br>
-			<button class="btn btn-lg btn-danger btn-block" type="submit" name="passwortAendern" id="passwortAendern" >Passwort ändern</button>
+			<button class="btn btn-lg btn-outline-danger btn-block" type="submit" name="passwortAendern" id="passwortAendern" >Passwort ändern</button>
 		
 		<div class="success"> <?php echo $pwdErfolg;?></div>
 		<div class="error"><?php echo $pwdTatErr;?></div>
