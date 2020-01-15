@@ -279,14 +279,11 @@ $erfolg = "";
   -->
 	
 			<br>
-      <form>
-        <div class="form-row">
-        <div class="form-group col-lg-6">
-        </div>
-         <div class="form-group col-lg-1">
+        <div class="row">
+         <div class="col-lg-4">
             <button type="submit" class="btn btn-outline-danger" name="prob-aendern-submit">Änderungen speichern</button>
           </div>
-          <div class="form-group col-lg-1">
+          <div class="col-lg-4">
             <form action= "loginupdate_proband.php" method = "POST">
               <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
               <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
@@ -298,7 +295,7 @@ $erfolg = "";
               return confirm ('Wollen Sie NutzerIn \"$username\" wirklich löschen?')} </script>";
               ?>
       	    </div>
-            <div class="form-group col-lg-1">
+            <div class="col-lg-4">
               <form action= "delete_prob.php" method = "POST" onsubmit = "return warnung(this);">
                 <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
                 <input type = "hidden" name = "username" value = "<?php echo $username; ?>">
@@ -306,8 +303,6 @@ $erfolg = "";
                 <button type="submit" class="btn btn-outline-danger" name="delete-prob-submit">ProbandIn löschen</button>
               </form>
             </div>
-            <div class="form-group col-lg-4">
-              </div>
           </div>
         </form>
       <br>
