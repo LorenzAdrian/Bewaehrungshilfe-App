@@ -116,7 +116,7 @@ if (mysqli_num_rows($result) > 0) {
       <li class="nav-item active">
         <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span></a>
       </li>
-	    <li class="nav-item">
+	    <li class="nav-item active">
         <a class="nav-link" href="login.php">Abmelden</a>
       </li>
         </ul>
