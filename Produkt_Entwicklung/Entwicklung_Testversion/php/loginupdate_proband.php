@@ -66,6 +66,18 @@ if ($check !== "betreuer") {
 	<style>
 	.error {color: #FF0000;}
 	.success {color: #00CC00;}
+  main{
+	align-items: center;
+	padding-top: 20px;
+	text-align: center;
+}
+  main h1{
+	font-weight: 300;
+}
+  form{
+    width: 50%;
+    margin-left : 25%
+  }
 	</style>
 
 </head>
@@ -143,33 +155,33 @@ if (isset ($_POST['loginInfoAendern'])) {
 ?>
 
 <main>
-  <h1 style="text-align: center;">Bearbeiten</h1>
-  <p style="text-align: center;">Login-Info (ProbandIn)</p>
+  <h1 style="text-align: center;">Login-Info bearbeiten</h1>
+  <p style="text-align: center;">(ProbandIn)</p>
   <!--<p><span class="error">* erforderliche Eingabe</span></p>-->
 <form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
 	<!--<input type="hidden" name="uid" value="<?php echo $userID;?>">-->
-
-<div class="container passwortAendern-container text-align-center d-flex justify-content-center">
-<div class="row">
-<div class="col-lg-12 ">
-
-		<div class="form-group">
-        <div class="form-check">
-          <h2>Login-Info ändern</h2>
-		      <br>
-        </div>
-
-		<div class="form-label-group input-group">
-        <label>ID-Nummer:&nbsp</label>
-          <input type="text" class="form-control" name="pid" autocomplete="off" value="<?php if (isset($pid)) {echo $pid;} ?>" readonly>
-		 </div>
-     <div class="form-label-group input-group">
-          <label>Username:&nbsp</label>
-            <input type="text" class="form-control" name="username" autocomplete="off" value="<?php if (isset($username)) {echo $username;} ?>" required>
-      </div>
-		 <br>
-
-		<br>
+<br>
+<br>
+<div class="form-row">
+  <div class="form-group col-lg-12 ">
+    <label>ID-Nummer:&nbsp</label>
+    <input type="text" class="form-control" name="pid" autocomplete="off" value="<?php if (isset($pid)) {echo $pid;} ?>" readonly>
+	</div>
+</div>
+<div class="form-row">
+  <div class="form-group col-lg-12 ">
+    <label>Username:&nbsp</label>
+    <input type="text" class="form-control" name="username" autocomplete="off" value="<?php if (isset($username)) {echo $username;} ?>" required>
+  </div>
+</div>
+<br>
+<div class="form-row">
+  <div class="form-group col-lg-12">
+    <label>Passwortänderung:</label> 
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-group col-lg-12">  
 		<div class="form-label-group input-group">
 		  <input type="password" class="form-control"  name="pwd-neu" id="pwd-neu"
           placeholder="Geben Sie das neue Passwort ein." size="50" required>
@@ -194,6 +206,5 @@ if (isset ($_POST['loginInfoAendern'])) {
 
 		<div class="error4"><?php echo $pwdRptErr;?></div>
 
-		</div>
 </form>
 </main>
