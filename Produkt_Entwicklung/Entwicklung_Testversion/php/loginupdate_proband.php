@@ -82,7 +82,7 @@ if ($check !== "betreuer") {
 
 </head>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+  <nav class="navbar navbar-expand-lg navbar-light flex-nowrap">
   <a class="navbar-brand w-100" href="#">
     <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
     </a>
@@ -155,7 +155,7 @@ if (isset ($_POST['loginInfoAendern'])) {
 ?>
 
 <main>
-  <h1 style="text-align: center;">Login-Info bearbeiten</h1>
+  <h1 style="text-align: center;">Bearbeiten</h1>
   <p style="text-align: center;">(ProbandIn)</p>
   <!--<p><span class="error">* erforderliche Eingabe</span></p>-->
 <form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
