@@ -28,7 +28,6 @@ if ($check !== "betreuer") {
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!--- Pfad zu den CSS Dateien--------------------------->
-    <link rel="stylesheet" href="../CSS/termine_proband.css">
 		<link rel="stylesheet" href="../CSS/header_prob.css">
 		<link rel="stylesheet" href="../CSS/footer_pro.css">
 		<link rel="stylesheet" href="../CSS/passwortAendern.css">
@@ -50,10 +49,7 @@ if ($check !== "betreuer") {
 	<!-- Funktion, um Passwort anzuzeigen -->
 	<script src="../javascript/passwortAendernAuge.js"></script>
 
-	<!--- Pfad zur style.css--------------------------->
-	<link rel="stylesheet" href="../CSS/index_proband.css">
-	<link rel="stylesheet" href="../CSS/header_prob.css">
-		<link rel="stylesheet" href="../CSS/passwortAendern.css">
+
 	<!--Schriftart aus google fonts------------------>
 	<link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700&display=swap"  rel="stylesheet">
 	<!-- Stylesheet für Icons-->
@@ -71,7 +67,7 @@ if ($check !== "betreuer") {
 	padding-top: 20px;
 	text-align: center;
 }
-  main h1{
+  h1{
 	font-weight: 300;
 }
   form{
