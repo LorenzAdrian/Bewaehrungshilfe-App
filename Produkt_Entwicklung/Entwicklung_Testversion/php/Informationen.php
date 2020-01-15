@@ -26,7 +26,7 @@ if(isset($_POST['but_logout'])){
 	<link rel="stylesheet" href="../CSS/footer_pro.css">
     <!--Schriftart aus google fonts------------------>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
      <!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -39,25 +39,25 @@ if(isset($_POST['but_logout'])){
 
     <title>SoDi4U - Informationen</title>
 	<link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
-	
+
 </head>
 
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
-   
+
    <a class="navbar-brand w-100" href="#">
           		  <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
 			</a>
-   
+
      <div class="navbar-collapse collapse w-100" id="navbar5">
         <ul class="navbar-nav mx-auto">
       <li class="nav-item">
         <a class="nav-link" href="../php/index_proband.php">Startseite</a>
-      </li>	 
-      <li class="nav-item"> 
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="../php/termine_proband.php">Termine </a>
-      </li>	
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="../php/MeineNachrichten.php">Nachrichten</a>
       </li>
@@ -75,12 +75,12 @@ if(isset($_POST['but_logout'])){
 	    <li class="nav-item">
         <a class="nav-link" href="Notfall.php">Notfall</a>
       </li>
-	  
+
 	   <li class="nav-item">
         <a class="nav-link" href="passwortAendern.php">Passwort&nbsp;ändern</a>
       </li>
-			   
-        </ul>	
+
+        </ul>
 		<form class="form-inline my-2 my-lg-0" method='post' action="">
         <button class="button-sodi btn-outline-sodi my-1 my-sm-0" name="but_logout" type="submit">Abmelden</button>
 		</form>
@@ -88,7 +88,7 @@ if(isset($_POST['but_logout'])){
     <div class="w-100">
 
 	</div>
-				
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -97,11 +97,22 @@ if(isset($_POST['but_logout'])){
 
   <hr class="hr-sodi"> <!-- Gehört zum Header -->
 
+<style>
+.links{
+  padding-left: 20px;
+}
+</style>
+  <a href = "https://www.netzwerk-haftentlassung-berlin.de/" class="links">Hilfeangebote: Startseite</a><br>
+  <a href = "https://www.netzwerk-haftentlassung-berlin.de/index.php/adressen-und-kontakte/" class="links">Hilfeangebote: Adressen und Kontakte</a><br>
+  <a href = "https://www.netzwerk-haftentlassung-berlin.de/index.php/uebergangsmanagement-in-berlin" class="links">Hilfeangebote: Übergangsmanagement</a>
 
+<!--
+  Bezüglich der Links der Hilfeangebote möchten wir gern die Verlinkung auf diese Website angemerkt wissen: https://www.netzwerk-haftentlassung-berlin.de/
 
+  Unter der Rubrik „Adressen und Kontakte“ befinden sich aktuelle Hilfeeinrichtungen (Gesundheit/Schulden usw.), welche immer auf dem neusten Stand gehalten werden. https://www.netzwerk-haftentlassung-berlin.de/index.php/adressen-und-kontakte
 
-
-hier ist Platz für Informationen
+  Unter der Rubrik „Übergangsmanagement“ sind u.a. Angebote für den Bereich Wohnen und Arbeit (MUNIA) aufgelistet und beschrieben. https://www.netzwerk-haftentlassung-berlin.de/index.php/uebergangsmanagement-in-berlin
+-->
 
   <!--Footer-->
  <footer id="sticky-footer" class="mb-0 mt-footer py-4 bg-light text-white-50">
@@ -124,4 +135,3 @@ hier ist Platz für Informationen
 </body>
 
 </html>
-
