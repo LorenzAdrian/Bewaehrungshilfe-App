@@ -41,7 +41,9 @@ if(isset($_POST['but_logout'])){
   <link rel="stylesheet" href="../CSS/betreuer_index.css">
   <!-- Animate CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
+  <!--Pfad zu ICON Fontawesome-->
+  <link rel="stylesheet" href="../CSS/css/all.min.css">  
+  
   <title>Start</title>
   <link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
 
@@ -102,7 +104,8 @@ if(isset($_POST['but_logout'])){
         <?php include 'dataTbl.php';?>
         <br>
         <form class="buttonform" action="anlegen_prob.php" method="post">
-          <input class="btn btn-outline-danger" type="submit" name="prob-anlegen" value="Proband anlegen">
+          <input class="btn btn-outline-danger" type="submit" name="prob-anlegen" value="Proband anlegen"><i class="fas fa-user-plus"></i>
+          
           <!--<input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" > -->
         </form>
       </div>
