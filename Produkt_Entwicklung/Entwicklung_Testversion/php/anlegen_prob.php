@@ -58,6 +58,11 @@ h4{
 	font-weight: 300;
 }
 
+.form-row{
+  display: flex;
+  align-items: center;
+}
+
 .form-group{
   text-align:left;
 }
@@ -196,72 +201,91 @@ if (isset ($_POST['prob-self-submit'])){
   <h1>Neuen Proband anlegen</h1>
   <p>Bitte füllen Sie alle Felder aus.</p>
   <form  action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
-
     <input type="hidden" name="rolle" value="proband">
     <br>
   <form>
     <div class="form-row">
-      <div class="form-group col-lg-3">
-      </div>
-      <div class="form-group col-lg-3">
+    <div class="form-group col-lg-1">
+    </div>
+    <div class="form-group col-lg-2 col-md-2">
         <label for="vorname">Vorname:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="text" class="form-control" id="vorname" name="vorname" placeholder="Vorname" value="<?php if ( isset($vorname) ) {echo $vorname;} ?>" required>
       </div>
-      <div class="form-group col-lg-3">
+      <div class="form-group col-lg-2 col-md-2">
         <label for="nachname">Nachname:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname" value="<?php if ( isset($nachname) ) {echo $nachname;} ?>" required>
       </div>
     </div>
     <div class="form-row">
-      <div class="form-group col-lg-3">
+      <div class="form-group col-lg-1">
       </div>
-      <div class="form-group col-lg-3">
+      <div class="form-group col-lg-2 col-md-2">
         <label for="username">Username:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="text" class="form-control" id="username" name="uid" placeholder="Username" value="<?php if ( isset($username) ) {echo $username;} ?>" required>
         <!-- <span class = "error"><?php //echo $usernameerr; ?></span>
         <span class = "error"><?php //echo $usernamevergeben; ?></span> -->
       </div>
-      <div class="form-group col-lg-3">
+      <div class="form-group col-lg-2 col-md-2">
         <label for="az">Aktenzeichen:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="text" class="form-control" id="az" name="az" placeholder="Aktenzeichen" value="<?php if ( isset($az) ) {echo $az;} ?>" required>
       </div>
     </div>
     <div class="form-row">
-      <div class="form-group col-lg-3">
+      <div class="form-group col-lg-1">
       </div>
-      <div class="form-group col-lg-3">
+      <div class="form-group col-lg-2 col-md-2">
         <label for="email">E-Mail:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="email" class="form-control" id="email" name="mail" placeholder="E-mail" value="<?php if ( isset($email) ) {echo $email;} ?>" required>
         <!-- <span class = "error"><?php //echo $emailerr; ?></span> -->
       </div>
-      <div class="form-group col-lg-3">
+      <div class="form-group col-lg-2 col-md-2">
         <label for="telnr">Telefonnummer:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer" value="<?php if ( isset($telnr) ) {echo $telnr;} ?>" required>
       </div>
     </div>
     <div class="form-row">
-      <div class="form-group col-lg-3">
+      <div class="form-group col-lg-1">
       </div>
-      <div class="form-group col-lg-3">
+      <div class="form-group col-lg-2 col-md-2">
         <label for="password">Passwort:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="password" class="form-control" id="password" name="pwd" placeholder="Passwort" required>
         <!-- <span class = "error"><?php //echo //$pwdrpterr; ?></span> -->
       </div>
-      <div class="form-group col-lg-3">
+      <div class="form-group col-lg-2 col-md-2">
         <label for="password-repeat">Passwort bestätigen:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="password" class="form-control" id="password-repeat" name="pwd-repeat" placeholder="Passwort bestätigen" required>
         <!--<span class = "error"><?php //echo $pwdrpterr; ?></span>-->
       </div>
     </div>
     <div class="form-row">
-      <div class="form-group col-lg-3">
+      <div class="form-group col-lg-1">
       </div>
-      <div class="form-group col-lg-3">
+      <div class="form-group col-lg-2 col-md-2">
         <label for="ende">Betreuungsende:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="date" class="form-control" id="ende" name="ende" placeholder="Betreuungsende" value="<?php if ( isset($ende) ) {echo $ende;} ?>" required>
       </div>
-      <div class="form-group col-lg-3">
+      <div class="form-group col-lg-2 col-md-2">
         <label for="betreuer">Bewährungshelfer-ID:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="number" class="form-control" id="betreuer" name="betreuer" placeholder="Bewährungshelfer-ID" value="<?php if ( isset($betreuer) ) {echo $betreuer;} ?>" required>
       </div>
     </div>
