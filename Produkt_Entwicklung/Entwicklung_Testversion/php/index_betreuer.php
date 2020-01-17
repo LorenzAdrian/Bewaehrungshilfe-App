@@ -86,6 +86,7 @@ if(isset($_POST['but_logout'])){
   </nav>
 </header>
   <!--Begrüßungscontainer -->
+    
   <div class="container hallo-container">
     <div class="row hallo-row">
       <div class="col-lg-12 hallo-col">
@@ -104,7 +105,7 @@ if(isset($_POST['but_logout'])){
         <?php include 'dataTbl.php';?>
         <br>
         <form class="buttonform" action="anlegen_prob.php" method="post">
-          <input class="btn btn-outline-danger" type="submit" name="prob-anlegen" value="Proband anlegen"><i class="fas fa-user-plus"></i>
+          <button class="btn btn-outline-danger" type="submit" name="prob-anlegen" value="Proband anlegen">Proband anlegen <i class="fas fa-user-plus"></i></button>
           
           <!--<input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" > -->
         </form>
@@ -115,13 +116,7 @@ if(isset($_POST['but_logout'])){
       </div>
     </div>
   </div>
-  <div class="container btn-container">
-    <div class="row btn-row">
-      <div class="col-lg-6">
-
-    </div>
-  </div>
-</div>
+ 
 
    <!--Footer
 
