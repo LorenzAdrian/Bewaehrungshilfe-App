@@ -12,6 +12,11 @@ header {
   max-width: 15%;
 }
 
+.collapse-anlegen {
+  padding-top: 20px;
+}
+
+
 input {
   font-size: 12pt;
   background-color: white;
@@ -21,13 +26,17 @@ input {
   padding-top: 150px;
 }
 
-.col-back {
-  display: flex;
-  justify-content: flex-end;
+.container {
+  padding-top: 5px;
 }
 
 .first-container {
   padding-top: 30px;
+}
+
+.message-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .container-calender {
@@ -39,6 +48,12 @@ input {
   font-weight: 300;
   margin-bottom: -10px;
   padding-top: 20px;
+}
+
+.animated {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .footer-container li {
