@@ -30,6 +30,8 @@ input {
   padding-top: 5px;
 }
 
+
+
 .first-container {
   padding-top: 30px;
 }
@@ -54,6 +56,10 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.floatright {
+  float: right;
 }
 
 .footer-container li {
