@@ -31,7 +31,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white flex-nowrap">
 
 <a class="navbar-brand w-100" href="#">
-  <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
+  <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
 </a>
 <div class="text">
 <h3>Herzlich Willkommen</h3>

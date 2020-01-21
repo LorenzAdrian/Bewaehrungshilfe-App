@@ -56,7 +56,7 @@ if(isset($_POST['but_logout'])){
 <nav class="navbar navbar-expand-lg navbar-light flex-nowrap">
 
     <a class="navbar-brand w-100" href="#">
-      <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
+      <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
     </a>
     <div class="w-100"><!--spacer--></div>
     <div class="w-100"><!--spacer--></div>
