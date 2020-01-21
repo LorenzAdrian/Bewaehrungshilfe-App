@@ -289,6 +289,8 @@ if (isset ($_POST['prob-self-submit'])){
         <input type="number" class="form-control" id="betreuer" name="betreuer" placeholder="Bewährungshelfer-ID" value="<?php if ( isset($betreuer) ) {echo $betreuer;} ?>" required>
       </div>
     </div>
+    <br>
+    <button type="submit" class="btn btn-outline-danger" name="prob-self-submit">Registrieren</button>
     </form>
 
 
