@@ -19,7 +19,7 @@ if(!isset($_SESSION['userId'])){
 // logout
 if(isset($_POST['but_logout'])){
     session_destroy();
-    header('Location: Login.php');
+    header('Location: login.php');
 }
 
 //Dieser Teil wurde in meineNachrichtenAnzeigen.php verlagert

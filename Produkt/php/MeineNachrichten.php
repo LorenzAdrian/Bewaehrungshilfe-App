@@ -17,7 +17,7 @@ if(!isset($_SESSION['userId'])){
 // logout
 if(isset($_POST['but_logout'])){
     session_destroy();
-    header('Location: Login.php');
+    header('Location: login.php');
 }
 
 /*if($_SESSION['rolle'] == 'proband') {
@@ -76,7 +76,7 @@ if ($conn->query($sql) != TRUE) {
 	<script src="../javascript/feather.js"></script>
 
   	<title>SoDi4U - Nachrichten</title>
-	<link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
+	<link rel="icon" type="image/x-icon" href="../CSS/image/sodibaer.png" >
 
 <!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
 

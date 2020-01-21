@@ -20,15 +20,15 @@
   <!-- LINK TEST -->
   <script src="../javascript/button.js"></script>
 
-  <title>Startseite</title>
-  <link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
+  <title>Login</title>
+  <link rel="icon" type="image/x-icon" href="../CSS/image/sodibaer.png" >
 		
 	</head>
 
 <body>
 <!-- Header -->
 <header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+<nav class="navbar navbar-expand-lg navbar-light bg-white flex-nowrap">
 
 <a class="navbar-brand w-100" href="#">
   <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
@@ -47,7 +47,7 @@
             <div class="form-check">
               <h2>Anmeldung</h2>
               <input type="checkbox" class="form-check-input checkbox"  id="betreuer" >
-              <label for="betreuer">Betreuer</label>
+              <label for="betreuer">Bewährungshelfer</label>
             </div>
         </form>
         <form class="form-signin">

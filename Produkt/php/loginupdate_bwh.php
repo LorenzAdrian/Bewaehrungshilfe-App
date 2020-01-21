@@ -60,7 +60,7 @@ if ($check !== "admin") {
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<title>SoDi4U - Login-Info ändern</title>
-	<link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
+	<link rel="icon" type="image/x-icon" href="../CSS/image/sodibaer.png" >
 
 	<!-- Meldungen rot bzw. grün markieren -->
 	<style>

@@ -27,23 +27,25 @@ if(isset($_POST['but_logout'])){
 <head>
 
   <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	 <!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <!--- Pfad zur style.css--------------------------->
   <link rel="stylesheet" href="../CSS/betreuer_index.css">
   <!-- Animate CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
+  <!--Pfad zu ICON Fontawesome-->
+  <link rel="stylesheet" href="../CSS/css/all.min.css">  
+  
   <title>Start</title>
-  <link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
+  <link rel="icon" type="image/x-icon" href="../CSS/image/sodibaer.png" >
 
 </head>
 
@@ -51,11 +53,11 @@ if(isset($_POST['but_logout'])){
 <!-- HEADER -->
 <header>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+<nav class="navbar navbar-expand-lg navbar-light flex-nowrap">
 
     <a class="navbar-brand w-100" href="#">
       <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
-	  </a>
+    </a>
     <div class="w-100"><!--spacer--></div>
     <div class="w-100"><!--spacer--></div>
     <div class="w-100"><!--spacer--></div>
@@ -63,15 +65,15 @@ if(isset($_POST['but_logout'])){
     <div class="w-100"><!--spacer--></div>
      <div class="navbar-collapse collapse w-100" id="navbar5">
         <ul class="navbar-nav mx-auto">
-		<!-- Aktuelle Seite -->
+    <!-- Aktuelle Seite -->
       <li class="nav-item active">
-        <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span><i class="fas fa-home"></i></a>
       </li>
-	   <li class="nav-item active">
-        <a class="nav-link" href="passwortAendernBet.php">Passwort&nbsp;ändern<span class="sr-only">(current)</span></a>
+     <li class="nav-item active">
+        <a class="nav-link" href="passwortAendernBet.php">Passwort&nbsp;ändern<span class="sr-only">(current)</span><i class="fas fa-key"></i></a>
       </li>
-	   <li class="nav-item">
-        <a class="nav-link" href="login.php">Abmelden</a>
+     <li class="nav-item active">
+        <a class="nav-link" href="login.php">Abmelden <i class="fas fa-sign-out-alt"></i></a>
       </li>
     </ul>
     </div>
@@ -84,6 +86,7 @@ if(isset($_POST['but_logout'])){
   </nav>
 </header>
   <!--Begrüßungscontainer -->
+    
   <div class="container hallo-container">
     <div class="row hallo-row">
       <div class="col-lg-12 hallo-col">
@@ -102,7 +105,8 @@ if(isset($_POST['but_logout'])){
         <?php include 'dataTbl.php';?>
         <br>
         <form class="buttonform" action="anlegen_prob.php" method="post">
-          <input class="btn btn-outline-danger" type="submit" name="prob-anlegen" value="Proband anlegen">
+          <button class="btn btn-outline-danger" type="submit" name="prob-anlegen" value="Proband anlegen">Proband anlegen <i class="fas fa-user-plus"></i></button>
+          
           <!--<input class="btn btn-outline-danger" type="button" name="" value="Proband löschen" > -->
         </form>
       </div>
@@ -112,13 +116,7 @@ if(isset($_POST['but_logout'])){
       </div>
     </div>
   </div>
-  <div class="container btn-container">
-    <div class="row btn-row">
-      <div class="col-lg-6">
-
-    </div>
-  </div>
-</div>
+ 
 
    <!--Footer
 
@@ -139,3 +137,4 @@ if(isset($_POST['but_logout'])){
   <script src="../javascript/app.js"></script>
 </body>
 </html>
+

@@ -30,7 +30,7 @@
 					<h1>Registrieren als:</h1>
 					<br>
 					<form  action="signup.php" method="POST">
-						<input type="radio" name="rolle" value="betreuer"> Betreuer
+						<input type="radio" name="rolle" value="betreuer"> Bewährungshelfer
 						<br> 
 						<input type="radio" name="rolle" value="admin"> Admin
 						<br>

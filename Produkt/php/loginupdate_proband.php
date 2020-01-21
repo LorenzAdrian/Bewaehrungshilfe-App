@@ -28,7 +28,6 @@ if ($check !== "betreuer") {
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!--- Pfad zu den CSS Dateien--------------------------->
-    <link rel="stylesheet" href="../CSS/termine_proband.css">
 		<link rel="stylesheet" href="../CSS/header_prob.css">
 		<link rel="stylesheet" href="../CSS/footer_pro.css">
 		<link rel="stylesheet" href="../CSS/passwortAendern.css">
@@ -50,27 +49,36 @@ if ($check !== "betreuer") {
 	<!-- Funktion, um Passwort anzuzeigen -->
 	<script src="../javascript/passwortAendernAuge.js"></script>
 
-	<!--- Pfad zur style.css--------------------------->
-	<link rel="stylesheet" href="../CSS/index_proband.css">
-	<link rel="stylesheet" href="../CSS/header_prob.css">
-		<link rel="stylesheet" href="../CSS/passwortAendern.css">
+
 	<!--Schriftart aus google fonts------------------>
 	<link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700&display=swap"  rel="stylesheet">
 	<!-- Stylesheet für Icons-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<title>SoDi4U - Login-Info ändern</title>
-	<link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
+	<link rel="icon" type="image/x-icon" href="../CSS/image/sodibaer.png" >
 
 	<!-- Meldungen rot bzw. grün markieren -->
 	<style>
 	.error {color: #FF0000;}
 	.success {color: #00CC00;}
+  main{
+	align-items: center;
+	padding-top: 20px;
+	text-align: center;
+}
+  h1{
+	font-weight: 300;
+}
+  form{
+    width: 50%;
+    margin-left : 25%
+  }
 	</style>
 
 </head>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+  <nav class="navbar navbar-expand-lg navbar-light flex-nowrap">
   <a class="navbar-brand w-100" href="#">
     <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
     </a>
@@ -144,32 +152,32 @@ if (isset ($_POST['loginInfoAendern'])) {
 
 <main>
   <h1 style="text-align: center;">Bearbeiten</h1>
-  <p style="text-align: center;">Login-Info (ProbandIn)</p>
+  <p style="text-align: center;">(ProbandIn)</p>
   <!--<p><span class="error">* erforderliche Eingabe</span></p>-->
 <form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
 	<!--<input type="hidden" name="uid" value="<?php echo $userID;?>">-->
-
-<div class="container passwortAendern-container text-align-center d-flex justify-content-center">
-<div class="row">
-<div class="col-lg-12 ">
-
-		<div class="form-group">
-        <div class="form-check">
-          <h2>Login-Info ändern</h2>
-		      <br>
-        </div>
-
-		<div class="form-label-group input-group">
-        <label>ID-Nummer:&nbsp</label>
-          <input type="text" class="form-control" name="pid" autocomplete="off" value="<?php if (isset($pid)) {echo $pid;} ?>" readonly>
-		 </div>
-     <div class="form-label-group input-group">
-          <label>Username:&nbsp</label>
-            <input type="text" class="form-control" name="username" autocomplete="off" value="<?php if (isset($username)) {echo $username;} ?>" required>
-      </div>
-		 <br>
-
-		<br>
+<br>
+<br>
+<div class="form-row">
+  <div class="form-group col-lg-12 ">
+    <label>ID-Nummer:&nbsp</label>
+    <input type="text" class="form-control" name="pid" autocomplete="off" value="<?php if (isset($pid)) {echo $pid;} ?>" readonly>
+	</div>
+</div>
+<div class="form-row">
+  <div class="form-group col-lg-12 ">
+    <label>Username:&nbsp</label>
+    <input type="text" class="form-control" name="username" autocomplete="off" value="<?php if (isset($username)) {echo $username;} ?>" required>
+  </div>
+</div>
+<br>
+<div class="form-row">
+  <div class="form-group col-lg-12">
+    <label>Passwortänderung:</label> 
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-group col-lg-12">  
 		<div class="form-label-group input-group">
 		  <input type="password" class="form-control"  name="pwd-neu" id="pwd-neu"
           placeholder="Geben Sie das neue Passwort ein." size="50" required>
@@ -194,6 +202,5 @@ if (isset ($_POST['loginInfoAendern'])) {
 
 		<div class="error4"><?php echo $pwdRptErr;?></div>
 
-		</div>
 </form>
 </main>

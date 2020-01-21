@@ -34,7 +34,7 @@ if ($check !== "betreuer") {
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  <title>Registrierung Proband</title>
+  <title>Proband anlegen</title>
 
 </head>
 
@@ -50,12 +50,6 @@ header {
   border-bottom: 2px maroon solid;
 }
 
-.form-group{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
 h1{
 	font-weight: 300;
 }
@@ -64,8 +58,13 @@ h4{
 	font-weight: 300;
 }
 
-label{
-	text-align: left;
+.form-row{
+  display: flex;
+  align-items: center;
+}
+
+.form-group{
+  text-align:left;
 }
 
 .error {color: #FF0000;}
@@ -74,7 +73,7 @@ label{
 </style>
 
 <header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+<nav class="navbar navbar-expand-lg navbar-light flex-nowrap">
 <a class="navbar-brand w-100" href="#">
   <img src="../CSS/image/logoohneschatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
   </a>
@@ -202,75 +201,95 @@ if (isset ($_POST['prob-self-submit'])){
   <h1>Neuen Proband anlegen</h1>
   <p>Bitte füllen Sie alle Felder aus.</p>
   <form  action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
-
     <input type="hidden" name="rolle" value="proband">
     <br>
-
-    <div class="form-group row">
-      <label for="username" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">Username:</label>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+  <form>
+    <div class="form-row">
+    <div class="form-group col-lg-1">
+    </div>
+    <div class="form-group col-lg-2 col-md-2">
+        <label for="vorname">Vorname:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
+        <input type="text" class="form-control" id="vorname" name="vorname" placeholder="Vorname" value="<?php if ( isset($vorname) ) {echo $vorname;} ?>" required>
+      </div>
+      <div class="form-group col-lg-2 col-md-2">
+        <label for="nachname">Nachname:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
+        <input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname" value="<?php if ( isset($nachname) ) {echo $nachname;} ?>" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-lg-1">
+      </div>
+      <div class="form-group col-lg-2 col-md-2">
+        <label for="username">Username:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="text" class="form-control" id="username" name="uid" placeholder="Username" value="<?php if ( isset($username) ) {echo $username;} ?>" required>
         <!-- <span class = "error"><?php //echo $usernameerr; ?></span>
         <span class = "error"><?php //echo $usernamevergeben; ?></span> -->
       </div>
+      <div class="form-group col-lg-2 col-md-2">
+        <label for="az">Aktenzeichen:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
+        <input type="text" class="form-control" id="az" name="az" placeholder="Aktenzeichen" value="<?php if ( isset($az) ) {echo $az;} ?>" required>
+      </div>
     </div>
-    <div class="form-group row">
-      <label for="email" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">E-Mail:</label>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <div class="form-row">
+      <div class="form-group col-lg-1">
+      </div>
+      <div class="form-group col-lg-2 col-md-2">
+        <label for="email">E-Mail:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="email" class="form-control" id="email" name="mail" placeholder="E-mail" value="<?php if ( isset($email) ) {echo $email;} ?>" required>
         <!-- <span class = "error"><?php //echo $emailerr; ?></span> -->
       </div>
+      <div class="form-group col-lg-2 col-md-2">
+        <label for="telnr">Telefonnummer:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
+        <input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer" value="<?php if ( isset($telnr) ) {echo $telnr;} ?>" required>
+      </div>
     </div>
-    <div class="form-group row">
-      <label for="password" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort:</label>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <div class="form-row">
+      <div class="form-group col-lg-1">
+      </div>
+      <div class="form-group col-lg-2 col-md-2">
+        <label for="password">Passwort:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="password" class="form-control" id="password" name="pwd" placeholder="Passwort" required>
         <!-- <span class = "error"><?php //echo //$pwdrpterr; ?></span> -->
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="password-repeat" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Passwort bestätigen:</label>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <div class="form-group col-lg-2 col-md-2">
+        <label for="password-repeat">Passwort bestätigen:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="password" class="form-control" id="password-repeat" name="pwd-repeat" placeholder="Passwort bestätigen" required>
         <!--<span class = "error"><?php //echo $pwdrpterr; ?></span>-->
       </div>
     </div>
-    <div class="form-group row">
-      <label for="vorname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Vorname:</label>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <input type="text" class="form-control" id="vorname" name="vorname" placeholder="Vorname" value="<?php if ( isset($vorname) ) {echo $vorname;} ?>" required>
+    <div class="form-row">
+      <div class="form-group col-lg-1">
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="nachname" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Nachname:</label>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname" value="<?php if ( isset($nachname) ) {echo $nachname;} ?>" required>
+      <div class="form-group col-lg-2 col-md-2">
+        <label for="ende">Betreuungsende:</label>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="telnr" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Telefonnummer:</label>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <input type="text" class="form-control" id="telnr" name="telnr" placeholder="Telefonnummer" value="<?php if ( isset($telnr) ) {echo $telnr;} ?>" required>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="az" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Aktenzeichen:</label>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <input type="text" class="form-control" id="az" name="az" placeholder="Aktenzeichen" value="<?php if ( isset($az) ) {echo $az;} ?>" required>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="ende" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Betreuungsende:</label>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <div class="form-group col-lg-2 col-md-3">
         <input type="date" class="form-control" id="ende" name="ende" placeholder="Betreuungsende" value="<?php if ( isset($ende) ) {echo $ende;} ?>" required>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="betreuer" class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-form-label">Bewährungshelfer-ID:</label>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <div class="form-group col-lg-2 col-md-2">
+        <label for="betreuer">Bewährungshelfer-ID:</label>
+      </div>
+      <div class="form-group col-lg-2 col-md-3">
         <input type="number" class="form-control" id="betreuer" name="betreuer" placeholder="Bewährungshelfer-ID" value="<?php if ( isset($betreuer) ) {echo $betreuer;} ?>" required>
       </div>
     </div>
+    </form>
     <br>
     <button type="submit" class="btn btn-outline-danger" name="prob-self-submit">Registrieren</button>
 

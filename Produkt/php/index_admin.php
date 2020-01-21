@@ -45,6 +45,7 @@ if(isset($_POST['but_logout'])){
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
   <title>Start</title>
+  <link rel="icon" type="image/x-icon" href="../CSS/image/sodibaer.png" >
 </head>
 
 <body>
@@ -117,7 +118,7 @@ if(isset($_POST['but_logout'])){
     <!-- Page Content -->
     <div id="content">
         <!-- We'll fill this with dummy content -->
-		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
           <button type="button" id="sidebarCollapse" class="button-sodi btn-outline-sodi my-1 my-sm-0" style="display: none;">
             <!--<i class="fas fa-align-left"></i>-->
