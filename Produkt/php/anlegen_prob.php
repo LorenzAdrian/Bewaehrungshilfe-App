@@ -290,8 +290,7 @@ if (isset ($_POST['prob-self-submit'])){
       </div>
     </div>
     </form>
-    <br>
-    <button type="submit" class="btn btn-outline-danger" name="prob-self-submit">Registrieren</button>
+
 
 	<div class = "error"><?php echo $usernameerr; ?></div>
     <div class = "error"><?php echo $usernamevergeben; ?></div>

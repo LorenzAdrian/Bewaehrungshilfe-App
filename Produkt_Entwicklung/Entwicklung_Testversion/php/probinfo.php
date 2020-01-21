@@ -55,7 +55,7 @@ if (mysqli_num_rows($result) > 0) {
     <link rel="stylesheet" href="../CSS/probinfo.css" >
     <link rel="stylesheet" href="../CSS/meineNachrichten.css">
      <!--Pfad zu ICON Fontawesome-->
-    <link rel="stylesheet" href="../CSS/css/all.min.css"> 
+    <link rel="stylesheet" href="../CSS/css/all.min.css">
     <!-- Stylesheet für Darstellung der Nachrichten -->
     <link rel="stylesheet" href="../CSS/meineNachrichten_bet.css">
     <!-- STYLESHEET SIDEBAR -->
@@ -208,59 +208,61 @@ if (mysqli_num_rows($result) > 0) {
 
 
      <!-- Element zum Einblenden der Nachrichten-Sidebar -->
-    <div class="container message-container">        
+    <div class="container message-container">
       <div class="toggle"  id="msgbar">
         &#9776; Nachrichten
       </div>
       <form action="index_betreuer.php" method="post">
         <button class="btn btn-outline-danger" type="submit" value="Zurück">Zurück</button>
-      </form>  
+      </form>
     </div>
-    
-    
+
+
 
         <!-- <details> ist ein HTML5-Element, das das Ausklappen ermöglicht. Kein Button notwendig. <summary> legt den Text fest, der vor dem Ausklappen sichtbar ist. -->
          <div class="container first-container">
            <div class="row">
              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <button class="btn btn-outline-danger" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> Neuer Termin <i class="far fa-calendar-plus"></i></button>
-                  <div class="collapse collapse-anlegen" action ="terminetest_insert.php" method = "post" id="collapseExample">
-                    <div class="row">
-                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <label>Datum</label>
-                        <input name = "terDatum" type = "date">
-                      </div>
-                      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                        <label>Beginn</label>
-                        <input name = "terStart" type = "time">                      
-                      </div>
-                      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                          <label>Ende</label>
-                          <input name = "terEnde" type = "time"></p>
+                  <form action ="terminetest_insert.php" method = "post">
+                    <div class="collapse collapse-anlegen" id="collapseExample">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                          <label>Datum</label>
+                          <input name = "terDatum" type = "date">
                         </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <label>Titel</label>
-                        <input name = "terTitel" type = "text" placeholder = "Titel">
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                          <label>Beginn</label>
+                          <input name = "terStart" type = "time">
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                            <label>Ende</label>
+                            <input name = "terEnde" type = "time"></p>
+                          </div>
                       </div>
-                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <label>Beschreibung</label>
-                        <input name="terBeschreibung" type="text" size="45" placeholder="Beschreibung">
-                      </div>                       
-                    </div>
-                    <div class="form-row">
-                     
-                    </div>
+                      <div class="form-row">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                          <label>Titel</label>
+                          <input name = "terTitel" type = "text" placeholder = "Titel">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                          <label>Beschreibung</label>
+                          <input name="terBeschreibung" type="text" size="45" placeholder="Beschreibung">
+                        </div>
+                      </div>
+                      <div class="form-row">
 
-                    <p> </P>
-                    <p><!-- Status: --><input name = "terStatus" type = "hidden" value="2">  </p>
-                    <p><!-- PID: --><input name = "terPID" type = "hidden" value="<?php echo $probID ?>"></p>
-                    <p><!-- BID: --><input name = "terBID" type = "hidden" value="<?php echo $betrID ?>"> </p>
-                    <p>
-                    <button class="btn btn-outline-danger" type = "submit" value = "Termin speichern">Termin speichern <i class="far fa-calendar-check"></i></button>
-                
-                  </div>
+                      </div>
+
+                      <p> </P>
+                      <p><!-- Status: --><input name = "terStatus" type = "hidden" value="2">  </p>
+                      <p><!-- PID: --><input name = "terPID" type = "hidden" value="<?php echo $probID ?>"></p>
+                      <p><!-- BID: --><input name = "terBID" type = "hidden" value="<?php echo $betrID ?>"> </p>
+                      <p>
+                      <button class="btn btn-outline-danger" type = "submit" value = "Termin speichern">Termin speichern <i class="far fa-calendar-check"></i></button>
+
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -275,7 +277,7 @@ if (mysqli_num_rows($result) > 0) {
                 foreach ($probInfo as $info) {
                 echo "".$info['Vorname']." ".$info['Nachname'];
                 }
-                ?> 
+                ?>
             <form class="floatright" action="probinfo_verwalten.php" method="post">
               <input type = "hidden" name = "pid" value = "<?php echo $pid; ?>">
               <input type = "hidden" name = "vorname" value = "<?php echo $vorname; ?>">
@@ -317,4 +319,3 @@ if (mysqli_num_rows($result) > 0) {
 
   </body>
 </html>
-
