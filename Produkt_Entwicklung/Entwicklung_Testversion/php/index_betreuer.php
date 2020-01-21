@@ -65,17 +65,13 @@ if(isset($_POST['but_logout'])){
     <div class="w-100"><!--spacer--></div>
      <div class="navbar-collapse collapse w-100" id="navbar5">
         <ul class="navbar-nav mx-auto">
-    <!-- Aktuelle Seite -->
-      <li class="nav-item active">
-        <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span><i class="fas fa-home"></i></a>
-      </li>
-     <li class="nav-item active">
-        <a class="nav-link" href="passwortAendernBet.php">Passwort&nbsp;ändern<span class="sr-only">(current)</span><i class="fas fa-key"></i></a>
-      </li>
-     <li class="nav-item active">
-        <a class="nav-link" href="login.php">Abmelden <i class="fas fa-sign-out-alt"></i></a>
-      </li>
-    </ul>
+         <li class="nav-item active">
+          <a class="nav-link" href="passwortAendernBet.php">Passwort&nbsp;ändern<span class="sr-only">(current)</span><i class="fas fa-key"></i></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="login.php">Abmelden <i class="fas fa-sign-out-alt"></i></a>
+        </li>
+      </ul>
     </div>
     <div class="w-100"><!--spacer--></div>
 

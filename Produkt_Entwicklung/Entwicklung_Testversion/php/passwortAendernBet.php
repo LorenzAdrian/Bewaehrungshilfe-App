@@ -53,7 +53,8 @@ if(isset($_POST['but_logout'])){
    
 	<!-- Funktion, um Passwort anzuzeigen -->
 	<script src="../javascript/passwortAendernAuge.js"></script>
-	
+	     <!--Pfad zu ICON Fontawesome-->
+       <link rel="stylesheet" href="../CSS/css/all.min.css">
 
 
 	<!--- Pfad zur style.css--------------------------->
@@ -71,13 +72,17 @@ if(isset($_POST['but_logout'])){
 	<!-- Meldungen rot bzw. grün markieren -->
 	<style>
 	.error {color: #FF0000;}
-	.success {color: #00CC00;}
+  .success {color: #00CC00;}
+  
+  .form-check h2{
+    font-weight: 300;
+  }
 	</style>
 
 </head>
 <header>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap 	   nav-h">
+<nav class="navbar navbar-expand-lg navbar-light flex-nowrap 	   nav-h">
 
     <a class="navbar-brand w-100" href="#">
       <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
@@ -91,13 +96,10 @@ if(isset($_POST['but_logout'])){
         <ul class="navbar-nav mx-auto">
 		<!-- Aktuelle Seite -->
       <li class="nav-item active">
-        <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span><i class="fas fa-home"></i></a>
       </li>
 	   <li class="nav-item active">
-        <a class="nav-link" href="passwortAendernBet.php">Passwort&nbsp;ändern<span class="sr-only">(current)</span></a>
-      </li>
-	   <li class="nav-item active">
-        <a class="nav-link" href="login.php">Abmelden</a>
+        <a class="nav-link" href="login.php">Abmelden <i class="fas fa-sign-out-alt"></i></a>
       </li>
     </ul>
     </div>
@@ -201,7 +203,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		
 		<div class="form-group">
         <div class="form-check">
-          <h2>Passwort ändern </h2>
+          <h2 font-weight:200;>Passwort ändern </h2>
 		  <br>
         </div>
 		<div class="form-label-group input-group">

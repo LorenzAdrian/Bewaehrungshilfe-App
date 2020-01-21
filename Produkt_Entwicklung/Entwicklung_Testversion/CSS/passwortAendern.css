@@ -1,5 +1,5 @@
 body {
-    
+
     background-size: cover;
     object-fit: cover;
 }
@@ -8,15 +8,18 @@ header {
     border-bottom: 2px maroon solid;
 }
 
+
 .passwortAendern-container {
     padding-top: 40px;
-  height: 88vh;
+    height: 88vh;
 }
-.form-label-group > input {
-  height: 4.125rem;
-  padding: 0.95rem;
-  width: 350px;
+
+.form-label-group>input {
+    height: 4.125rem;
+    padding: 0.95rem;
+    width: 350px;
 }
+
 .navbar h4 {
     font-weight: 300;
 }
@@ -27,17 +30,21 @@ header {
     text-align: center;
     justify-content: center;
 }
+
 .error {
-  color: #ff0000;
+    color: #ff0000;
 }
+
 .error2 {
-  color: #ff0000;
+    color: #ff0000;
 }
+
 .error3 {
-  color: #ff0000;
+    color: #ff0000;
 }
+
 .error4 {
-  color: #ff0000;
+    color: #ff0000;
 }
 
 .form-group {

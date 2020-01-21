@@ -112,13 +112,14 @@ if (mysqli_num_rows($result) > 0) {
     <div class="w-100"><!--spacer--></div>
     <div class="w-100"><!--spacer--></div>
     <div class="w-100"><!--spacer--></div>
+    <div class="w-100"><!--spacer--></div>
     <div class="navbar-collapse collapse w-100" id="navbar5">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item active">
           <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span><i class="fas fa-home"></i></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="login.php">Abmelden <i class="fas fa-power-off"></i></a>
+          <a class="nav-link" href="login.php">Abmelden <i class="fas fa-sign-out-alt"></i></a>
         </li>
       </ul>
     </div>
@@ -213,7 +214,7 @@ if (mysqli_num_rows($result) > 0) {
         &#9776; Nachrichten
       </div>
       <form action="index_betreuer.php" method="post">
-        <button class="btn btn-outline-danger" type="submit" value="Zurück">Zurück</button>
+        <button class="btn btn-outline-danger" type="submit" value="Zurück">Zurück </button>
       </form>
     </div>
 
@@ -289,7 +290,7 @@ if (mysqli_num_rows($result) > 0) {
               <input type = "hidden" name = "betanfang" value = "<?php echo $betanfang; ?>">
               <input type = "hidden" name = "betende" value = "<?php echo $betende; ?>">
               <input type = "hidden" name = "bid" value = "<?php echo $bid; ?>">
-              <button class="btn btn-outline-danger" type="submit"><i class="fas fa-users-cog"></i></button>
+              <button class="btn btn-outline-danger" type="submit">bearbeiten <i class="fas fa-users-cog"></i></button>
             </form>
           </h1>
           <?php include 'FullCalendarProband.php';?>
