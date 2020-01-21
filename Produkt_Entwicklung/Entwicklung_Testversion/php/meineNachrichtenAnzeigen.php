@@ -14,7 +14,7 @@ if(!isset($_SESSION['userId'])){
 // logout
 if(isset($_POST['but_logout'])){
     session_destroy();
-    header('Location: Login.php');
+    header('Location: login.php');
 }
 
 //Weist den Variablen Werte zu in Abhängigkeit der Rolle des Benutzers (Proband/Betreuer)

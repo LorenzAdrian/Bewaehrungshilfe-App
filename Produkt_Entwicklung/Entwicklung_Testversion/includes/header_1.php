@@ -49,7 +49,7 @@
 						<a href="../php/Informationen.php">Informationen</a>
 						<a href="../php/">Leitfaden</a>
 						<a href="../php/Notfall.php">Notfall</a>
-						<a href="../php/Login.php">Abmelden</a>
+						<a href="../php/login.php">Abmelden</a>
 						<a href="javascript:void(0);" class="icon" id="icon" onclick="myFunction()"> Sodi - Menü
 						<i class="fa fa-bars"></i></a>
 </div>

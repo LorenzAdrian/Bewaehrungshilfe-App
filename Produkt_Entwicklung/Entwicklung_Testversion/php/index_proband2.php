@@ -4,14 +4,14 @@ session_start();
 
 // Check user login or not
 if(!isset($_SESSION['userId'])){
-    header('Location: Login.php');
+    header('Location: login.php');
 }
 
 // logout
 
 if(isset($_POST['but_logout'])){
     session_destroy();
-    header('Location: Login.php');
+    header('Location: login.php');
 }
 ?>
 

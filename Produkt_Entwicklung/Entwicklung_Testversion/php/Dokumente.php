@@ -38,7 +38,7 @@ if(isset($_POST['but_logout'])){
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <title>SoDi4U - Dokumente</title>
-	<link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
+	<link rel="icon" type="image/x-icon" href="../CSS/image/sodibaer.png" >
 	
 	
 </head>

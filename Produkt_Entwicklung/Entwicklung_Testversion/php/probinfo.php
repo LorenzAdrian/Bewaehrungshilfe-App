@@ -50,7 +50,7 @@ if (mysqli_num_rows($result) > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Nachrichten und Termine</title>
-    <link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
+    <link rel="icon" type="image/x-icon" href="../CSS/image/sodibaer.png" >
     <!-- STYLESHEET CSS -->
     <link rel="stylesheet" href="../CSS/probinfo.css" >
     <link rel="stylesheet" href="../CSS/meineNachrichten.css">

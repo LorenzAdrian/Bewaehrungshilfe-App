@@ -45,7 +45,7 @@ if(isset($_POST['but_logout'])){
   <link rel="stylesheet" href="../CSS/css/all.min.css">  
   
   <title>Start</title>
-  <link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
+  <link rel="icon" type="image/x-icon" href="../CSS/image/sodibaer.png" >
 
 </head>
 

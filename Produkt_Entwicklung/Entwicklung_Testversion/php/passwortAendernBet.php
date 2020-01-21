@@ -66,7 +66,7 @@ if(isset($_POST['but_logout'])){
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<title>SoDi4U - Passwort ändern</title>
-	<link rel="icon" type="image/x-icon" href="../css/image/sodibaer.png" >
+	<link rel="icon" type="image/x-icon" href="../CSS/image/sodibaer.png" >
 
 	<!-- Meldungen rot bzw. grün markieren -->
 	<style>
