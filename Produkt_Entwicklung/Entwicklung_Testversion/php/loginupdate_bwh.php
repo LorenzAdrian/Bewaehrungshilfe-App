@@ -64,6 +64,16 @@ if ($check !== "admin") {
 
 	<!-- Meldungen rot bzw. grün markieren -->
 	<style>
+  main{
+  align-items: center;
+  padding-top: 20px;
+  text-align: center;
+}
+form{
+  width: 50%;
+  margin-left : 25%
+}
+
 	.error {color: #FF0000;}
 	.success {color: #00CC00;}
 	</style>
@@ -149,51 +159,55 @@ if (isset ($_POST['loginInfoAendern'])) {
 <form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
 	<!--<input type="hidden" name="uid" value="<?php echo $userID;?>">-->
 
-<div class="container passwortAendern-container text-align-center d-flex justify-content-center">
-<div class="row">
-<div class="col-lg-12 ">
+        <h2>Login-Info ändern</h2>
+        <br>
 
-		<div class="form-group">
-        <div class="form-check">
-          <h2>Login-Info ändern</h2>
-		      <br>
-        </div>
 
-		<div class="form-label-group input-group">
+<div class="form-row">
+<div class="form-group col-lg-12 ">
         <label>ID-Nummer:&nbsp</label>
           <input type="text" class="form-control" name="bid" autocomplete="off" value="<?php if (isset($bid)) {echo $bid;} ?>" readonly>
 		 </div>
-     <div class="form-label-group input-group">
+     </div>
+     <div class="form-row">
+       <div class="form-group col-lg-12 ">
           <label>Username:&nbsp</label>
             <input type="text" class="form-control" name="username" autocomplete="off" value="<?php if (isset($username)) {echo $username;} ?>" required>
       </div>
-		 <br>
-
-		<br>
-		<div class="form-label-group input-group">
-		  <input type="password" class="form-control"  name="pwd-neu" id="pwd-neu"
-          placeholder="Geben Sie das neue Passwort ein." size="50" required>
-		<div class="input-group-append">
-        <span class="input-group-text">
-          <i id="eye2" class="far fa-eye-slash" onclick="showHidePwd2();"></i>
-        </span>
     </div>
-		</div>
-		<br>
-		<div class="form-label-group input-group">
-		  <input type="password" class="form-control"  name="pwd-repeat" id="pwd-repeat"
-          placeholder="Wiederholen Sie bitte das neue Passwort." size="50" required>
-		<div class="input-group-append">
-        <span class="input-group-text">
-            <i id="eye3" class="far fa-eye-slash" onclick="showHidePwd3();"></i>
-        </span>
-        </div>
+    <br>
+    <div class="form-row">
+      <div class="form-group col-lg-12 ">
+        <div class="form-label-group input-group">
+          <input type="password" class="form-control"  name="pwd-neu" id="pwd-neu"
+              placeholder="Geben Sie das neue Passwort ein." size="50" required>
+        <div class="input-group-append">
+            <span class="input-group-text">
+              <i id="eye2" class="far fa-eye-slash" onclick="showHidePwd2();"></i>
+            </span>
+    </div>
+  </div>
+</div>
+</div>
+  <br>
+  <div class="form-row">
+    <div class="form-group col-lg-12 ">
+      <div class="form-label-group input-group">
+        <input type="password" class="form-control"  name="pwd-repeat" id="pwd-repeat"
+            placeholder="Wiederholen Sie bitte das neue Passwort." size="50" required>
+      <div class="input-group-append">
+          <span class="input-group-text">
+              <i id="eye3" class="far fa-eye-slash" onclick="showHidePwd3();"></i>
+          </span>
+          </div>
+    </div>
+  </div>
 		</div>
 		  <br>
 			<button class="btn btn-lg btn-danger btn-block" type="submit" name="loginInfoAendern" id="loginInfoAendern">Login-Info ändern</button>
 
 		<div class="error4"><?php echo $pwdRptErr;?></div>
 
-		</div>
+
 </form>
 </main>
