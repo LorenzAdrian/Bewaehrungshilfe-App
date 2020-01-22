@@ -14,7 +14,7 @@ if(!isset($_SESSION['userId'])){
 // logout
 if(isset($_POST['but_logout'])){
     session_destroy();
-    header('Location: login.php');
+    header('Location: Login.php');
 }
 
 //Weist den Variablen Werte zu in Abhängigkeit der Rolle des Benutzers (Proband/Betreuer)
@@ -60,22 +60,22 @@ while ($dsatz = mysqli_fetch_assoc($res))
   //Wenn der eingeloggte Benutzer der Empfänger der Nachricht und die Nachricht neu ist.
     if($dsatz['BSender'] == $bsender && $dsatz['Status'] == 'neu')
       {
-        echo '<table class="sender nachricht neu"><tr class="sendername"><td> <font>'.$dsatz['vorname_sender'].' '.$dsatz['nachname_sender'].'</font> </td></tr><tr class="nachricht"><td> <font>'
-            .$dsatz['Text'].'</font> </td></tr><tr class="datumuhrzeit sender"><td> <font>'
-            .strftime('%a %e. %b %g, %H:%M', $datum).'</font> </td></tr></table>';
+        echo '<table class="sender nachricht neu"><tr class="sendername"><td>'.$dsatz['vorname_sender'].' '.$dsatz['nachname_sender'].'</td></tr><tr class="nachricht"><td>'
+            .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit sender"><td>'
+            .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
         }
       //Wenn der eingeloggte Benutzer der Empfänger der schon gelesenen Nachricht ist.
       elseif($dsatz['BSender'] == $bsender)
         {
-          echo '<table class="sender nachricht"><tr class="sendername"><td> <font>'.$dsatz['vorname_sender'].' '.$dsatz['nachname_sender'].'</font> </td></tr><tr class="nachricht"><td> <font>'
-              .$dsatz['Text'].'</font> </td></tr><tr class="datumuhrzeit sender"><td> <font>'
-              .strftime('%a %e. %b %g, %H:%M', $datum).'</font> </td></tr></table>';
+          echo '<table class="sender nachricht"><tr class="sendername"><td>'.$dsatz['vorname_sender'].' '.$dsatz['nachname_sender'].'</td></tr><tr class="nachricht"><td>'
+              .$dsatz['Text'].'</td></tr><tr class="datumuhrzeit sender"><td>'
+              .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
         }
       //Wenn der eingeloggte Benutzer der Sender der Nachricht ist.
       else
         {
-          echo '<table class="empfaenger nachricht"><tr class="nachricht"><td> <font>'.$dsatz['Text'].'</font> </td></tr><tr class="datumuhrzeit empfaenger"><td> <font>'
-          .strftime('%a %e. %b %g, %H:%M', $datum).'</font> </td></tr></table>';
+          echo '<table class="empfaenger nachricht"><tr class="nachricht"><td>'.$dsatz['Text'].'</td></tr><tr class="datumuhrzeit empfaenger"><td>'
+          .strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
         }
     }
     //Wenn die Nachricht eine Datei ist
@@ -84,25 +84,25 @@ while ($dsatz = mysqli_fetch_assoc($res))
       if($dsatz['BSender'] == $bsender && $dsatz['Status'] == 'neu')
         {
           echo '<table class="sender nachricht neu">
-          <tr class="sendername"><td> <font>'.$dsatz['vorname_sender'].' '.$dsatz['nachname_sender'].'</font> </td></tr>
-          <tr class="nachricht"><td> <font><a class="download" href="datei_download.php?nid='.$dsatz['NID'].'" download="'.$dsatz['dateiname'].'">'.$dsatz['dateiname'].'</a></font> </td></tr>
-          <tr class="datumuhrzeit sender"><td> <font>'.strftime('%a %e. %b %g, %H:%M', $datum).'</font> </td></tr></table>';
+          <tr class="sendername"><td>'.$dsatz['vorname_sender'].' '.$dsatz['nachname_sender'].'</td></tr>
+          <tr class="nachricht"><td><a class="download" href="datei_download.php?nid='.$dsatz['NID'].'" download="'.$dsatz['dateiname'].'">'.$dsatz['dateiname'].'</a></td></tr>
+          <tr class="datumuhrzeit sender"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr></table>';
           }
         //Wenn der eingeloggte Benutzer der Empfänger der schon gelesenen Nachricht ist.
         elseif($dsatz['BSender'] == $bsender)
           {
             echo '<table class="sender nachricht">
-            <tr class="sendername"><td> <font>'.$dsatz['vorname_sender'].' '.$dsatz['nachname_sender'].'</font> </td></tr>
-            <tr class="nachricht"><td> <font><a class="download" href="datei_download.php?nid='.$dsatz['NID'].'" download="'.$dsatz['dateiname'].'">'.$dsatz['dateiname'].'</a></font> </td></tr>
-            <tr class="datumuhrzeit sender"><td> <font>'.strftime('%a %e. %b %g, %H:%M', $datum).'</font> </td></tr>
+            <tr class="sendername"><td>'.$dsatz['vorname_sender'].' '.$dsatz['nachname_sender'].'</td></tr>
+            <tr class="nachricht"><td><a class="download" href="datei_download.php?nid='.$dsatz['NID'].'" download="'.$dsatz['dateiname'].'">'.$dsatz['dateiname'].'</a></td></tr>
+            <tr class="datumuhrzeit sender"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr>
             </table>';
           }
         //Wenn der eingeloggte Benutzer der Sender der Nachricht ist.
         else
           {
             echo '<table class="empfaenger nachricht">
-            <tr class="nachricht"><td> <font><a class="download" href="datei_download.php?nid='.$dsatz['NID'].'" download="'.$dsatz['dateiname'].'">'.$dsatz['dateiname'].'</a></font> </td></tr>
-            <tr class="datumuhrzeit empfaenger"><td> <font>'.strftime('%a %e. %b %g, %H:%M', $datum).'</font> </td></tr>
+            <tr class="nachricht"><td><a class="download" href="datei_download.php?nid='.$dsatz['NID'].'" download="'.$dsatz['dateiname'].'">'.$dsatz['dateiname'].'</a></td></tr>
+            <tr class="datumuhrzeit empfaenger"><td>'.strftime('%a %e. %b %g, %H:%M', $datum).'</td></tr>
             </table>';
 
           }
