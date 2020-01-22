@@ -141,7 +141,7 @@ if (isset ($_POST['loginInfoAendern'])) {
           mysqli_stmt_bind_param($stmt, 'ssi', $hashedPwd, $username, $pid);
           mysqli_stmt_execute($stmt);
           $erfolg = "Information für Benutzer mit ID $pid wurde erfolgreich geändert!";
-          echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'index_admin.php'</script>";
+          echo "<script type='text/javascript'>alert('$erfolg'); window.location = 'index_betreuer.php'</script>";
           //header("Location: index_proband.php?passwortAendern=success");
           //exit();
         }
@@ -173,11 +173,11 @@ if (isset ($_POST['loginInfoAendern'])) {
 <br>
 <div class="form-row">
   <div class="form-group col-lg-12">
-    <label>Passwortänderung:</label> 
+    <label>Passwortänderung:</label>
   </div>
 </div>
 <div class="form-row">
-  <div class="form-group col-lg-12">  
+  <div class="form-group col-lg-12">
 		<div class="form-label-group input-group">
 		  <input type="password" class="form-control"  name="pwd-neu" id="pwd-neu"
           placeholder="Geben Sie das neue Passwort ein." size="50" required>
