@@ -102,9 +102,9 @@ if(isset($_POST['but_logout'])){
   padding-left: 20px;
 }
 </style>
-  <a href = "https://www.netzwerk-haftentlassung-berlin.de/" class="links">Hilfeangebote: Startseite</a><br>
-  <a href = "https://www.netzwerk-haftentlassung-berlin.de/index.php/adressen-und-kontakte/" class="links">Hilfeangebote: Adressen und Kontakte</a><br>
-  <a href = "https://www.netzwerk-haftentlassung-berlin.de/index.php/uebergangsmanagement-in-berlin" class="links">Hilfeangebote: Übergangsmanagement</a>
+  <a href = "https://www.netzwerk-haftentlassung-berlin.de/" class="links" target="_blank">Hilfeangebote: Startseite</a><br>
+  <a href = "https://www.netzwerk-haftentlassung-berlin.de/index.php/adressen-und-kontakte/" class="links" target="_blank">Hilfeangebote: Adressen und Kontakte</a><br>
+  <a href = "https://www.netzwerk-haftentlassung-berlin.de/index.php/uebergangsmanagement-in-berlin" class="links" target="_blank">Hilfeangebote: Übergangsmanagement</a>
 
 <!--
   Bezüglich der Links der Hilfeangebote möchten wir gern die Verlinkung auf diese Website angemerkt wissen: https://www.netzwerk-haftentlassung-berlin.de/
