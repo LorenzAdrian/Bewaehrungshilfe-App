@@ -301,13 +301,14 @@ $erfolg = "";
 			<div class="row">
 			<div class="col-lg-4">
 				<button type="submit" class="btn btn-outline-danger" name="admin-aendern-submit">Änderungen speichern</button>
+      </form>
 			</div>
 	<div class="col-lg-4">
-	      <form action= "loginupdate_admin.php" method = "POST">
+	 <form action= "loginupdate_admin.php" method = "POST">
 		<input type = "hidden" name = "adid" value = "<?php echo $adid; ?>">
 		<input type = "hidden" name = "username" value = "<?php echo $username; ?>">
 		<button type="submit" class="btn btn-outline-danger" name="loginfo-aendern-admin-submit">Login-Info ändern</button>
-	      </form>
+	 </form>
 	</div>
       <?php
       echo "<script type='text/javascript'>
