@@ -86,9 +86,9 @@ if(isset($_POST['but_logout'])){
   <div class="container hallo-container">
     <div class="row hallo-row">
       <div class="col-lg-12 hallo-col">
-      <div class="intro">
-      <h1 class="animated fadeInDown delay-1s">Hallo <?php echo $_SESSION['vorname']; echo " "; echo $_SESSION['nachname']?> </h1>
-      </div>
+        <div class="intro">
+          <h1 class="animated fadeInDown delay-1s">Hallo <?php echo $_SESSION['vorname']; echo " "; echo $_SESSION['nachname']?> </h1>
+        </div>
         <p>Zum Verwalten klicken Sie bitte auf den gewünschten Probanden</p>
       </div>
     </div>
@@ -126,7 +126,6 @@ if(isset($_POST['but_logout'])){
       </li>
     </div>
   </footer>
-  <script src="../javascript/app.js"></script>
 </body>
 </html>
 
