@@ -64,13 +64,22 @@ if ($check !== "admin") {
 
 	<!-- Meldungen rot bzw. grün markieren -->
 	<style>
+    main{
+  align-items: center;
+  padding-top: 20px;
+  text-align: center;
+}
+form{
+  width: 50%;
+  margin-left : 25%
+}
 	.error {color: #FF0000;}
 	.success {color: #00CC00;}
 	</style>
 
 </head>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+  <nav class="navbar navbar-expand-lg navbar-light flex-nowrap">
   <a class="navbar-brand w-100" href="#">
     <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
     </a>
@@ -82,7 +91,7 @@ if ($check !== "admin") {
     <ul class="navbar-nav mx-auto">
     <!-- Aktuelle Seite -->
     <li class="nav-item active">
-    <a class="nav-link" href="../php/index_admin.php">Zurück zur Startseite<span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="../php/index_admin.php">Zurück zur Startseite<span class="sr-only">(current)</span><br><i class="fas fa-home"></i></a>
     </li>
   </ul>
   </div>
@@ -149,25 +158,22 @@ if (isset ($_POST['loginInfoAendern'])) {
 <form action="<?php echo ($_SERVER["PHP_SELF"]);?>" method="POST">
 	<!--<input type="hidden" name="uid" value="<?php echo $userID;?>">-->
 
-<div class="container passwortAendern-container text-align-center d-flex justify-content-center">
-<div class="row">
-<div class="col-lg-12 ">
-
-		<div class="form-group">
-        <div class="form-check">
           <h2>Login-Info ändern</h2>
-		      <br>
-        </div>
+          <br>
+	
+<div class="form-row">
+  <div class="form-group col-lg-12">
+    <label>ID-Nummer:&nbsp</label>
+    <input type="text" class="form-control" name="adid" autocomplete="off" value="<?php if (isset($adid)) {echo $adid;} ?>" readonly>
+  </div>
+</div>
 
-		<div class="form-label-group input-group">
-        <label>ID-Nummer:&nbsp</label>
-          <input type="text" class="form-control" name="adid" autocomplete="off" value="<?php if (isset($adid)) {echo $adid;} ?>" readonly>
-		 </div>
-     <div class="form-label-group input-group">
-          <label>Username:&nbsp</label>
-            <input type="text" class="form-control" name="username" autocomplete="off" value="<?php if (isset($username)) {echo $username;} ?>" required>
-      </div>
-		 <br>
+<div class="form-row">
+  <div class="form-group col-lg-12">
+    <label>Username:&nbsp</label>
+    <input type="text" class="form-control" name="username" autocomplete="off" value="<?php if (isset($username)) {echo $username;} ?>" required>
+  </div>
+</div>
 
 		<br>
 		<div class="form-label-group input-group">

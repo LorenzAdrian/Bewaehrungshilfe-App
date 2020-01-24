@@ -66,10 +66,10 @@ if(isset($_POST['but_logout'])){
      <div class="navbar-collapse collapse w-100" id="navbar5">
         <ul class="navbar-nav mx-auto">
          <li class="nav-item active">
-          <a class="nav-link" href="passwortAendernBet.php">Passwort&nbsp;ändern<span class="sr-only">(current)</span><i class="fas fa-key"></i></a>
+          <a class="nav-link" href="passwortAendernBet.php">Passwort&nbsp;ändern<span class="sr-only">(current)</span><br><i class="fas fa-key"></i></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="login.php">Abmelden <i class="fas fa-sign-out-alt"></i></a>
+          <a class="nav-link" href="login.php">Abmelden<br><i class="fas fa-sign-out-alt"></i></a>
         </li>
       </ul>
     </div>

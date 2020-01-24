@@ -116,10 +116,10 @@ if (mysqli_num_rows($result) > 0) {
     <div class="navbar-collapse collapse w-100" id="navbar5">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span><i class="fas fa-home"></i></a>
+          <a class="nav-link" href="../php/index_betreuer.php">Startseite<span class="sr-only">(current)</span><br><i class="fas fa-home"></i></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="login.php">Abmelden <i class="fas fa-sign-out-alt"></i></a>
+          <a class="nav-link" href="login.php">Abmelden<br><i class="fas fa-sign-out-alt"></i></a>
         </li>
       </ul>
     </div>

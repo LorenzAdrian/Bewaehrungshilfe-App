@@ -90,7 +90,7 @@ if ($check !== "betreuer") {
     <ul class="navbar-nav mx-auto">
     <!-- Aktuelle Seite -->
     <li class="nav-item active">
-    <a class="nav-link" href="../php/index_betreuer.php">Zurück zur Startseite<span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="../php/index_betreuer.php">Zurück zur Startseite<span class="sr-only">(current)</span><br><i class="fas fa-home"></i></a>
     </li>
   </ul>
   </div>

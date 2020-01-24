@@ -50,7 +50,7 @@ if(isset($_POST['but_logout'])){
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-sodi bg-light flex-nowrap nav-h">
+<nav class="navbar navbar-expand-lg navbar-sodi flex-nowrap nav-h">
 
    <a class="navbar-brand w-100" href="#">
           		   <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U

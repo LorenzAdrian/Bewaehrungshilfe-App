@@ -80,7 +80,7 @@ form{
 
 </head>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
+  <nav class="navbar navbar-expand-lg navbar-light flex-nowrap">
   <a class="navbar-brand w-100" href="#">
     <img src="../CSS/image/LogoOhneSchatten.png"  width="50" height="50" alt="Logo" > &nbsp;&nbsp;SoDi4U
     </a>
@@ -92,7 +92,7 @@ form{
     <ul class="navbar-nav mx-auto">
     <!-- Aktuelle Seite -->
     <li class="nav-item active">
-    <a class="nav-link" href="../php/index_admin.php">Zurück zur Startseite<span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="../php/index_admin.php">Zurück zur Startseite<span class="sr-only">(current)</span><br><i class="fas fa-home"></i></a>
     </li>
   </ul>
   </div>
