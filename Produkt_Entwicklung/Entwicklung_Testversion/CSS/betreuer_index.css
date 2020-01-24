@@ -45,6 +45,7 @@ h2 {
 
 .table-container {
   padding-top: 30px;
+  min-height: 80vh;
 }
 
 .btn-container {

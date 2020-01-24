@@ -112,9 +112,6 @@ if(isset($_POST['but_logout'])){
       </div>
     </div>
   </div>
- 
-
-   <!--Footer
 
      <footer id="sticky-footer" class="py-2 bg-dark text-white-50">
     <div class="container footer-container">
@@ -129,7 +126,6 @@ if(isset($_POST['but_logout'])){
       </li>
     </div>
   </footer>
-  -->
   <script src="../javascript/app.js"></script>
 </body>
 </html>
